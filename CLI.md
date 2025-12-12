@@ -1,63 +1,63 @@
-# CLI : Command Line
+# CLI : Línea de Comandos
 
 <figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
 
-The **Chloros CLI** provides powerful command-line access to the Chloros image processing engine, enabling automation, scripting, and headless operation for your imaging workflows.
+El **CLI de Chloros** proporciona potente acceso de línea de comandos al motor de procesamiento de imágenes de Chloros, permitiendo automatización, scripting y operación sin interfaz gráfica para sus flujos de trabajo de imágenes.
 
-### Key Features
+### Características Clave
 
-* 🚀 **Automation** - Script batch processing of multiple datasets
-* 🔗 **Integration** - Embed in existing workflows and pipelines
-* 💻 **Headless Operation** - Run without GUI
-* 🌍 **Multi-Language** - Support for 38 languages
-* ⚡ **Parallel Processing** - Dynamically scales to your CPU (up to 16 parallel workers)
+* 🚀 **Automatización** - Script de procesamiento por lotes de múltiples conjuntos de datos
+* 🔗 **Integración** - Incrustar en flujos de trabajo y pipelines existentes
+* 💻 **Operación Sin Interfaz** - Ejecutar sin GUI
+* 🌍 **Multi-Idioma** - Soporte para 38 idiomas
+* ⚡ **Procesamiento Paralelo** - Se escala dinámicamente a su CPU (hasta 16 workers paralelos)
 
-### Requirements
+### Requisitos
 
-| Requirement          | Details                                                             |
-| -------------------- | ------------------------------------------------------------------- |
-| **Operating System** | Windows 10/11 (64-bit)                                              |
-| **License**          | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
-| **Memory**           | 8GB RAM minimum (16GB recommended)                                  |
-| **Internet**         | Required for license activation                                     |
-| **Disk Space**       | Varies by project size                                              |
+| Requisito              | Detalles                                                              |
+| ---------------------- | --------------------------------------------------------------------- |
+| **Sistema Operativo**  | Windows 10/11 (64-bit)                                                |
+| **Licencia**           | Chloros+ ([plan pago requerido](https://cloud.mapir.camera/pricing)) |
+| **Memoria**            | 8GB RAM mínimo (16GB recomendado)                                     |
+| **Internet**           | Requerido para activación de licencia                                 |
+| **Espacio en Disco**   | Varía según el tamaño del proyecto                                    |
 
 {% hint style="warning" %}
-**License Requirement**: The CLI requires a paid Chloros+ subscription. Standard (free) plans do not have CLI access. Visit [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) to upgrade.
+**Requisito de Licencia**: El CLI requiere una suscripción paga de Chloros+. Los planes estándar (gratuitos) no tienen acceso CLI. Visite [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) para actualizar.
 {% endhint %}
 
-## Quick Start
+## Inicio Rápido
 
-### Installation
+### Instalación
 
-The CLI is automatically included with the Chloros installer:
+El CLI se incluye automáticamente con el instalador de Chloros:
 
-1. Download and run **Chloros Installer.exe**
-2. Complete the installation wizard
-3. CLI installed to: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
+1. Descargue y ejecute **Chloros Installer.exe**
+2. Complete el asistente de instalación
+3. CLI instalado en: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
 {% hint style="success" %}
-The installer automatically adds `chloros-cli` to your system PATH. Restart your terminal after installation.
+El instalador agrega automáticamente `chloros-cli` a su PATH del sistema. Reinicie su terminal después de la instalación.
 {% endhint %}
 
-### First-Time Setup
+### Configuración Inicial
 
-Before using the CLI, activate your Chloros+ license:
+Antes de usar el CLI, active su licencia Chloros+:
 
 ```bash
-# Login with your Chloros+ account
-chloros-cli login user@example.com 'your_password'
+# Inicie sesión con su cuenta Chloros+
+chloros-cli login usuario@ejemplo.com 'su_contraseña'
 
-# Check license status
+# Verifique el estado de la licencia
 chloros-cli status
 
-# Process your first project
+# Procese su primer proyecto
 chloros-cli process "C:\Images\Dataset001"
 ```
 
-### Basic Usage
+### Uso Básico
 
-Process a folder with default settings:
+Procese una carpeta con configuración predeterminada:
 
 ```powershell
 chloros-cli process "C:\Images\Dataset001"
@@ -65,251 +65,251 @@ chloros-cli process "C:\Images\Dataset001"
 
 ***
 
-## Command Reference
+## Referencia de Comandos
 
-### General Syntax
+### Sintaxis General
 
 ```
-chloros-cli [global-options] <command> [command-options]
+chloros-cli [opciones-globales] <comando> [opciones-comando]
 ```
 
 ***
 
-## Commands
+## Comandos
 
-### `process` - Process Images
+### `process` - Procesar Imágenes
 
-Process images in a folder with calibration.
+Procese imágenes en una carpeta con calibración.
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
-chloros-cli process <input-folder> [options]
+chloros-cli process <carpeta-entrada> [opciones]
 ```
 
-**Example:**
+**Ejemplo:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 ```
 
-#### Process Command Options
+#### Opciones del Comando Process
 
-| Option                | Type    | Default        | Description                                                                            |
-| --------------------- | ------- | -------------- | -------------------------------------------------------------------------------------- |
-| `<input-folder>`      | Path    | _Required_     | Folder containing RAW/JPG multispectral images                                         |
-| `-o, --output`        | Path    | Same as input  | Output folder for processed images                                                     |
-| `-n, --project-name`  | String  | Auto-generated | Custom project name                                                                    |
-| `--vignette`          | Flag    | Enabled        | Enable vignette correction                                                             |
-| `--no-vignette`       | Flag    | -              | Disable vignette correction                                                            |
-| `--reflectance`       | Flag    | Enabled        | Enable reflectance calibration                                                         |
-| `--no-reflectance`    | Flag    | -              | Disable reflectance calibration                                                        |
-| `--ppk`               | Flag    | Disabled       | Apply PPK corrections from .daq light sensor data                                      |
-| `--format`            | Choice  | TIFF (16-bit)  | Output format: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
-| `--min-target-size`   | Integer | Auto           | Minimum target size in pixels for calibration panel detection                          |
-| `--target-clustering` | Integer | Auto           | Target clustering threshold (0-100)                                                    |
-| `--exposure-pin-1`    | String  | None           | Lock exposure for camera model (Pin 1)                                                 |
-| `--exposure-pin-2`    | String  | None           | Lock exposure for camera model (Pin 2)                                                 |
-| `--recal-interval`    | Integer | Auto           | Recalibration interval in seconds                                                      |
-| `--timezone-offset`   | Integer | 0              | Timezone offset in hours                                                               |
+| Opción                | Tipo    | Predeterminado  | Descripción                                                                               |
+| --------------------- | ------- | --------------- | ----------------------------------------------------------------------------------------- |
+| `<carpeta-entrada>`   | Path    | _Requerido_     | Carpeta que contiene imágenes multiespectrales RAW/JPG                                    |
+| `-o, --output`        | Path    | Mismo que entry | Carpeta de salida para imágenes procesadas                                                |
+| `-n, --project-name`  | String  | Auto-generado   | Nombre de proyecto personalizado                                                          |
+| `--vignette`          | Flag    | Habilitado      | Habilitar corrección de viñeta                                                            |
+| `--no-vignette`       | Flag    | -               | Deshabilitar corrección de viñeta                                                         |
+| `--reflectance`       | Flag    | Habilitado      | Habilitar calibración de reflectancia                                                     |
+| `--no-reflectance`    | Flag    | -               | Deshabilitar calibración de reflectancia                                                  |
+| `--ppk`               | Flag    | Deshabilitado   | Aplicar correcciones PPK desde datos del sensor de luz .daq                               |
+| `--format`            | Choice  | TIFF (16-bit)   | Formato de salida: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
+| `--min-target-size`   | Integer | Auto            | Tamaño mínimo de objetivo en píxeles para detección de panel de calibración              |
+| `--target-clustering` | Integer | Auto            | Umbral de agrupación de objetivo (0-100)                                                  |
+| `--exposure-pin-1`    | String  | None            | Bloquear exposición para modelo de cámara (Pin 1)                                         |
+| `--exposure-pin-2`    | String  | None            | Bloquear exposición para modelo de cámara (Pin 2)                                         |
+| `--recal-interval`    | Integer | Auto            | Intervalo de recalibración en segundos                                                    |
+| `--timezone-offset`   | Integer | 0               | Desplazamiento de zona horaria en horas                                                   |
 
 ***
 
-### `login` - Authenticate Account
+### `login` - Autenticar Cuenta
 
-Login with your Chloros+ credentials to enable CLI processing.
+Inicie sesión con sus credenciales de Chloros+ para habilitar el procesamiento CLI.
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
-chloros-cli login <email> <password>
+chloros-cli login <correo> <contraseña>
 ```
 
-**Example:**
+**Ejemplo:**
 
 ```powershell
-chloros-cli login user@example.com 'MyP@ssw0rd123'
+chloros-cli login usuario@ejemplo.com 'MiC0ntraseñ@123'
 ```
 
 {% hint style="warning" %}
-**Special Characters**: Use single quotes around passwords containing characters like `$`, `!`, or spaces.
+**Caracteres Especiales**: Use comillas simples alrededor de contraseñas que contengan caracteres como `$`, `!`, o espacios.
 {% endhint %}
 
-**Output:**
+**Salida:**
 
 <figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
 
 ***
 
-### `logout` - Clear Credentials
+### `logout` - Borrar Credenciales
 
-Clear stored credentials and logout from your account.
+Borre las credenciales almacenadas y cierre sesión de su cuenta.
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
 chloros-cli logout
 ```
 
-**Example:**
+**Ejemplo:**
 
 ```powershell
 chloros-cli logout
 ```
 
-**Output:**
+**Salida:**
 
 ```
-✓ Logout successful
-ℹ Credentials cleared from cache
+✓ Cierre de sesión exitoso
+ℹ Credenciales borradas de la caché
 ```
 
 ***
 
-### `status` - Check License Status
+### `status` - Verificar Estado de Licencia
 
-Display current license and authentication status.
+Mostrar el estado actual de licencia y autenticación.
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
 chloros-cli status
 ```
 
-**Example:**
+**Ejemplo:**
 
 ```powershell
 chloros-cli status
 ```
 
-**Output:**
+**Salida:**
 
 ```
 ╔══════════════════════════════════════╗
-║     LICENSE & ACCOUNT INFORMATION    ║
+║  INFORMACIÓN DE LICENCIA Y CUENTA    ║
 ╚══════════════════════════════════════╝
 
-📧 Email: user@example.com
-📋 Plan: Chloros+ Professional
-🔓 API/CLI Access: Enabled
-✓ Status: Active
+📧 Correo: usuario@ejemplo.com
+📋 Plan: Chloros+ Profesional
+🔓 Acceso API/CLI: Habilitado
+✓ Estado: Activo
 ```
 
 ***
 
-### `export-status` - Check Export Progress
+### `export-status` - Verificar Progreso de Exportación
 
-Monitor Thread 4 export progress during or after processing.
+Monitorear el progreso de exportación del Hilo 4 durante o después del procesamiento.
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
 chloros-cli export-status
 ```
 
-**Example:**
+**Ejemplo:**
 
 ```powershell
 chloros-cli export-status
 ```
 
-**Use Case:** Call this command while processing is running to check export progress.
+**Caso de Uso:** Llame a este comando mientras el procesamiento se está ejecutando para verificar el progreso de exportación.
 
 ***
 
-### `language` - Manage Interface Language
+### `language` - Gestionar Idioma de Interfaz
 
-View or change the CLI interface language.
+Ver o cambiar el idioma de interfaz del CLI.
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
-# Show current language
+# Mostrar idioma actual
 chloros-cli language
 
-# List all available languages
+# Listar todos los idiomas disponibles
 chloros-cli language --list
 
-# Set a specific language
-chloros-cli language <language-code>
+# Establecer un idioma específico
+chloros-cli language <código-idioma>
 ```
 
-**Examples:**
+**Ejemplos:**
 
 ```powershell
-# View current language
+# Ver idioma actual
 chloros-cli language
 
-# List all 38 supported languages
+# Listar los 38 idiomas compatibles
 chloros-cli language --list
 
-# Change to Spanish
+# Cambiar a español
 chloros-cli language es
 
-# Change to Japanese
+# Cambiar a japonés
 chloros-cli language ja
 ```
 
-#### Supported Languages (38 Total)
+#### Idiomas Compatibles (38 en Total)
 
-| Code    | Language              | Native Name      |
-| ------- | --------------------- | ---------------- |
-| `en`    | English               | English          |
-| `es`    | Spanish               | Español          |
-| `pt`    | Portuguese            | Português        |
-| `fr`    | French                | Français         |
-| `de`    | German                | Deutsch          |
-| `it`    | Italian               | Italiano         |
-| `ja`    | Japanese              | 日本語              |
-| `ko`    | Korean                | 한국어              |
-| `zh`    | Chinese (Simplified)  | 简体中文             |
-| `zh-TW` | Chinese (Traditional) | 繁體中文             |
-| `ru`    | Russian               | Русский          |
-| `nl`    | Dutch                 | Nederlands       |
-| `ar`    | Arabic                | العربية          |
-| `pl`    | Polish                | Polski           |
-| `tr`    | Turkish               | Türkçe           |
-| `hi`    | Hindi                 | हिंदी            |
-| `id`    | Indonesian            | Bahasa Indonesia |
-| `vi`    | Vietnamese            | Tiếng Việt       |
-| `th`    | Thai                  | ไทย              |
-| `sv`    | Swedish               | Svenska          |
-| `da`    | Danish                | Dansk            |
-| `no`    | Norwegian             | Norsk            |
-| `fi`    | Finnish               | Suomi            |
-| `el`    | Greek                 | Ελληνικά         |
-| `cs`    | Czech                 | Čeština          |
-| `hu`    | Hungarian             | Magyar           |
-| `ro`    | Romanian              | Română           |
-| `uk`    | Ukrainian             | Українська       |
+| Código  | Idioma                | Nombre Nativo        |
+| ------- | --------------------- | -------------------- |
+| `en`    | English               | English              |
+| `es`    | Spanish               | Español              |
+| `pt`    | Portuguese            | Português            |
+| `fr`    | French                | Français             |
+| `de`    | German                | Deutsch              |
+| `it`    | Italian               | Italiano             |
+| `ja`    | Japanese              | 日本語                  |
+| `ko`    | Korean                | 한국어                  |
+| `zh`    | Chinese (Simplified)  | 简体中文                 |
+| `zh-TW` | Chinese (Traditional) | 繁體中文                 |
+| `ru`    | Russian               | Русский              |
+| `nl`    | Dutch                 | Nederlands           |
+| `ar`    | Arabic                | العربية              |
+| `pl`    | Polish                | Polski               |
+| `tr`    | Turkish               | Türkçe               |
+| `hi`    | Hindi                 | हिंदी                |
+| `id`    | Indonesian            | Bahasa Indonesia     |
+| `vi`    | Vietnamese            | Tiếng Việt           |
+| `th`    | Thai                  | ไทย                  |
+| `sv`    | Swedish               | Svenska              |
+| `da`    | Danish                | Dansk                |
+| `no`    | Norwegian             | Norsk                |
+| `fi`    | Finnish               | Suomi                |
+| `el`    | Greek                 | Ελληνικά             |
+| `cs`    | Czech                 | Čeština              |
+| `hu`    | Hungarian             | Magyar               |
+| `ro`    | Romanian              | Română               |
+| `uk`    | Ukrainian             | Українська           |
 | `pt-BR` | Brazilian Portuguese  | Português Brasileiro |
-| `zh-HK` | Cantonese             | 粵語             |
-| `ms`    | Malay                 | Bahasa Melayu    |
-| `sk`    | Slovak                | Slovenčina       |
-| `bg`    | Bulgarian             | Български        |
-| `hr`    | Croatian              | Hrvatski         |
-| `lt`    | Lithuanian            | Lietuvių         |
-| `lv`    | Latvian               | Latviešu         |
-| `et`    | Estonian              | Eesti            |
-| `sl`    | Slovenian             | Slovenščina      |
+| `zh-HK` | Cantonese             | 粵語                   |
+| `ms`    | Malay                 | Bahasa Melayu        |
+| `sk`    | Slovak                | Slovenčina           |
+| `bg`    | Bulgarian             | Български            |
+| `hr`    | Croatian              | Hrvatski             |
+| `lt`    | Lithuanian            | Lietuvių             |
+| `lv`    | Latvian               | Latviešu             |
+| `et`    | Estonian              | Eesti                |
+| `sl`    | Slovenian             | Slovenščina          |
 
 {% hint style="success" %}
-**Automatic Persistence**: Your language preference is saved to `~/.chloros/cli_language.json` and persists across all sessions.
+**Persistencia Automática**: Su preferencia de idioma se guarda en `~/.chloros/cli_language.json` y persiste en todas las sesiones.
 {% endhint %}
 
 ***
 
-### `set-project-folder` - Set Default Project Folder
+### `set-project-folder` - Establecer Carpeta de Proyecto Predeterminada
 
-Change the default project folder location (shared with GUI).
+Cambiar la ubicación predeterminada de la carpeta de proyecto (compartida con GUI).
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
-chloros-cli set-project-folder <folder-path>
+chloros-cli set-project-folder <ruta-carpeta>
 ```
 
-**Example:**
+**Ejemplo:**
 
 ```powershell
 chloros-cli set-project-folder "C:\Projects\2025"
@@ -317,35 +317,35 @@ chloros-cli set-project-folder "C:\Projects\2025"
 
 ***
 
-### `get-project-folder` - Show Project Folder
+### `get-project-folder` - Mostrar Carpeta de Proyecto
 
-Display the current default project folder location.
+Mostrar la ubicación actual de la carpeta de proyecto predeterminada.
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
 chloros-cli get-project-folder
 ```
 
-**Example:**
+**Ejemplo:**
 
 ```powershell
 chloros-cli get-project-folder
 ```
 
-**Output:**
+**Salida:**
 
 ```
-ℹ Current project folder: C:\Projects\2025
+ℹ Carpeta de proyecto actual: C:\Projects\2025
 ```
 
 ***
 
-### `reset-project-folder` - Reset to Default
+### `reset-project-folder` - Restablecer a Predeterminado
 
-Reset the project folder to the default location.
+Restablecer la carpeta de proyecto a la ubicación predeterminada.
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
 chloros-cli reset-project-folder
@@ -353,19 +353,19 @@ chloros-cli reset-project-folder
 
 ***
 
-## Global Options
+## Opciones Globales
 
-These options apply to all commands:
+Estas opciones se aplican a todos los comandos:
 
-| Option          | Type    | Default       | Description                                      |
-| --------------- | ------- | ------------- | ------------------------------------------------ |
-| `--backend-exe` | Path    | Auto-detected | Path to backend executable                       |
-| `--port`        | Integer | 5000          | Backend API port number                          |
-| `--restart`     | Flag    | -             | Force restart backend (kills existing processes) |
-| `--version`     | Flag    | -             | Show version information and exit                |
-| `--help`        | Flag    | -             | Show help information and exit                   |
+| Opción          | Tipo    | Predeterminado | Descripción                                                   |
+| --------------- | ------- | -------------- | ------------------------------------------------------------- |
+| `--backend-exe` | Path    | Auto-detectado | Ruta al ejecutable backend                                    |
+| `--port`        | Integer | 5000           | Número de puerto API backend                                  |
+| `--restart`     | Flag    | -              | Forzar reinicio del backend (mata procesos existentes)        |
+| `--version`     | Flag    | -              | Mostrar información de versión y salir                        |
+| `--help`        | Flag    | -              | Mostrar información de ayuda y salir                          |
 
-**Example with Global Options:**
+**Ejemplo con Opciones Globales:**
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Survey_001"
@@ -373,133 +373,133 @@ chloros-cli --port 5001 process "C:\Datasets\Survey_001"
 
 ***
 
-## Processing Settings Guide
+## Guía de Configuración de Procesamiento
 
-### Parallel Processing
+### Procesamiento Paralelo
 
-Chloros+ CLI **automatically scales** parallel processing to match your computer's capabilities:
+El CLI de Chloros+ **escala automáticamente** el procesamiento paralelo para coincidir con las capacidades de su computadora:
 
-**How It Works:**
+**Cómo Funciona:**
 
-* Detects your CPU cores and RAM
-* Allocates workers: **2× CPU cores** (uses hyperthreading)
-* **Maximum: 16 parallel workers** (for stability)
+* Detecta sus núcleos de CPU y RAM
+* Asigna workers: **2× núcleos de CPU** (usa hyperthreading)
+* **Máximo: 16 workers paralelos** (para estabilidad)
 
-**System Tiers:**
+**Niveles de Sistema:**
 
-| System Type   | CPU        | RAM      | Workers  | Performance     |
-| ------------- | ---------- | -------- | -------- | --------------- |
-| **High-End**  | 16+ cores  | 32+ GB   | Up to 16 | Maximum speed   |
-| **Mid-Range** | 8-15 cores | 16-31 GB | 8-16     | Excellent speed |
-| **Low-End**   | 4-7 cores  | 8-15 GB  | 4-8      | Good speed      |
-
-{% hint style="success" %}
-**Automatic Optimization**: The CLI automatically detects your system specs and configures optimal parallel processing. No manual configuration needed!
-{% endhint %}
-
-### Debayer Methods
-
-The CLI uses **High Quality (Faster)** as the default and recommended debayer algorithm:
-
-| Method                      | Quality | Speed | Description                                 |
-| --------------------------- | ------- | ----- | ------------------------------------------- |
-| **High Quality (Faster)** ⭐ | ⭐⭐⭐⭐    | ⚡⚡⚡   | Edge-aware algorithm (default, recommended) |
-
-### Vignette Correction
-
-**What it does:** Corrects light falloff at image edges (darker corners common in camera imagery).
-
-* **Enabled by default** - Most users should keep this enabled
-* Use `--no-vignette` to disable
+| Tipo de Sistema  | CPU        | RAM      | Workers  | Rendimiento         |
+| ---------------- | ---------- | -------- | -------- | ------------------- |
+| **Gama Alta**    | 16+ núcleos | 32+ GB   | Hasta 16 | Velocidad máxima    |
+| **Gama Media**   | 8-15 núcleos | 16-31 GB | 8-16     | Excelente velocidad |
+| **Gama Baja**    | 4-7 núcleos  | 8-15 GB  | 4-8      | Buena velocidad     |
 
 {% hint style="success" %}
-**Recommendation**: Always enable vignette correction to ensure uniform brightness across the frame.
+**Optimización Automática**: El CLI detecta automáticamente las especificaciones de su sistema y configura el procesamiento paralelo óptimo. ¡No se necesita configuración manual!
 {% endhint %}
 
-### Reflectance Calibration
+### Métodos de Debayer
 
-Converts raw sensor values to standardized reflectance percentages using calibration panels.
+El CLI usa **Alta Calidad (Más Rápido)** como algoritmo de debayer predeterminado y recomendado:
 
-* **Enabled by default** - Essential for vegetation analysis
-* Requires calibration target panels in images
-* Use `--no-reflectance` to disable
+| Método                         | Calidad | Velocidad | Descripción                                             |
+| ------------------------------ | ------- | --------- | ------------------------------------------------------- |
+| **Alta Calidad (Más Rápido)** ⭐ | ⭐⭐⭐⭐    | ⚡⚡⚡       | Algoritmo con detección de bordes (predeterminado, recomendado) |
+
+### Corrección de Viñeta
+
+**Qué hace:** Corrige la caída de luz en los bordes de la imagen (esquinas más oscuras comunes en imágenes de cámara).
+
+* **Habilitado por defecto** - La mayoría de los usuarios deben mantener esto habilitado
+* Use `--no-vignette` para deshabilitar
+
+{% hint style="success" %}
+**Recomendación**: Siempre habilite la corrección de viñeta para garantizar un brillo uniforme en todo el cuadro.
+{% endhint %}
+
+### Calibración de Reflectancia
+
+Convierte valores crudos del sensor a porcentajes de reflectancia estandarizados usando paneles de calibración.
+
+* **Habilitado por defecto** - Esencial para análisis de vegetación
+* Requiere paneles objetivo de calibración en las imágenes
+* Use `--no-reflectance` para deshabilitar
 
 {% hint style="info" %}
-**Requirements**: Ensure calibration panels are properly exposed and visible in your images for accurate reflectance conversion.
+**Requisitos**: Asegúrese de que los paneles de calibración estén correctamente expuestos y visibles en sus imágenes para una conversión de reflectancia precisa.
 {% endhint %}
 
-### PPK Corrections
+### Correcciones PPK
 
-**What it does:** Applies Post-Processed Kinematic corrections using DAQ-A-SD log data for improved GPS accuracy.
+**Qué hace:** Aplica correcciones Cinemáticas Post-Procesadas usando datos de registro DAQ-A-SD para mejorar la precisión del GPS.
 
-* **Disabled by default**
-* Use `--ppk` to enable
-* Requires .daq files in project folder from MAPIR DAQ-A-SD light sensor.
+* **Deshabilitado por defecto**
+* Use `--ppk` para habilitar
+* Requiere archivos .daq en la carpeta del proyecto del sensor de luz MAPIR DAQ-A-SD.
 
-### Output Formats
+### Formatos de Salida
 
-<table><thead><tr><th width="197">Format</th><th width="130.20001220703125">Bit Depth</th><th width="116.5999755859375">File Size</th><th>Best For</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>16-bit integer</td><td>Large</td><td>GIS analysis, photogrammetry (recommended)</td></tr><tr><td><strong>TIFF (32-bit, Percent)</strong></td><td>32-bit float</td><td>Very Large</td><td>Scientific analysis, research</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>8-bit integer</td><td>Medium</td><td>Visual inspection, web sharing</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>8-bit integer</td><td>Small</td><td>Quick preview, compressed output</td></tr></tbody></table>
+<table><thead><tr><th width="197">Formato</th><th width="130.20001220703125">Profundidad de Bits</th><th width="116.5999755859375">Tamaño de Archivo</th><th>Mejor Para</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>16-bit integer</td><td>Grande</td><td>Análisis GIS, fotogrametría (recomendado)</td></tr><tr><td><strong>TIFF (32-bit, Porcentaje)</strong></td><td>32-bit float</td><td>Muy Grande</td><td>Análisis científico, investigación</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>8-bit integer</td><td>Medio</td><td>Inspección visual, compartir en web</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>8-bit integer</td><td>Pequeño</td><td>Vista previa rápida, salida comprimida</td></tr></tbody></table>
 
 ***
 
-## Automation & Scripting
+## Automatización y Scripting
 
-### PowerShell Batch Processing
+### Procesamiento por Lotes en PowerShell
 
-Process multiple dataset folders automatically:
+Procese múltiples carpetas de conjuntos de datos automáticamente:
 
 ```powershell
-# process_all_datasets.ps1
+# procesar_todos_datasets.ps1
 
 $datasets = Get-ChildItem "C:\Datasets\2025" -Directory
 
 foreach ($dataset in $datasets) {
-    Write-Host "Processing $($dataset.Name)..." -ForegroundColor Cyan
+    Write-Host "Procesando $($dataset.Name)..." -ForegroundColor Cyan
     
     chloros-cli process $dataset.FullName `
         --vignette `
         --reflectance
     
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "✓ $($dataset.Name) complete" -ForegroundColor Green
+        Write-Host "✓ $($dataset.Name) completo" -ForegroundColor Green
     } else {
-        Write-Host "✗ $($dataset.Name) failed" -ForegroundColor Red
+        Write-Host "✗ $($dataset.Name) falló" -ForegroundColor Red
     }
 }
 
-Write-Host "All datasets processed!" -ForegroundColor Green
+Write-Host "¡Todos los conjuntos de datos procesados!" -ForegroundColor Green
 ```
 
-### Windows Batch Script
+### Script de Lote de Windows
 
-Simple loop for batch processing:
+Bucle simple para procesamiento por lotes:
 
 ```batch
 @echo off
-echo Starting batch processing...
+echo Iniciando procesamiento por lotes...
 
 for /d %%i in (C:\Datasets\2025\*) do (
     echo.
     echo ========================================
-    echo Processing: %%i
+    echo Procesando: %%i
     echo ========================================
     chloros-cli process "%%i"
     
     if %ERRORLEVEL% EQU 0 (
-        echo SUCCESS: %%i processed
+        echo ÉXITO: %%i procesado
     ) else (
-        echo ERROR: %%i failed
+        echo ERROR: %%i falló
     )
 )
 
 echo.
-echo All datasets processed!
+echo ¡Todos los conjuntos de datos procesados!
 pause
 ```
 
-### Python Automation Script
+### Script de Automatización en Python
 
-Advanced automation with error handling:
+Automatización avanzada con manejo de errores:
 
 ```python
 import subprocess
@@ -508,68 +508,68 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-def process_dataset(input_folder):
-    """Process a folder using Chloros CLI"""
-    cmd = ['chloros-cli', 'process', str(input_folder)]
+def procesar_dataset(carpeta_entrada):
+    """Procesar una carpeta usando Chloros CLI"""
+    cmd = ['chloros-cli', 'process', str(carpeta_entrada)]
     
-    # Execute command
-    result = subprocess.run(
+    # Ejecutar comando
+    resultado = subprocess.run(
         cmd, 
         capture_output=True, 
         text=True,
         encoding='utf-8'
     )
     
-    return result.returncode == 0, result.stdout, result.stderr
+    return resultado.returncode == 0, resultado.stdout, resultado.stderr
 
 def main():
-    """Process all datasets in a directory"""
-    datasets_dir = Path('C:/Datasets/2025')
-    log_file = Path('processing_log.txt')
+    """Procesar todos los conjuntos de datos en un directorio"""
+    dir_datasets = Path('C:/Datasets/2025')
+    archivo_log = Path('registro_procesamiento.txt')
     
-    successful = []
-    failed = []
+    exitosos = []
+    fallidos = []
     
-    # Start processing
-    print(f"Starting batch processing: {datetime.now()}")
-    print(f"Scanning: {datasets_dir}")
+    # Iniciar procesamiento
+    print(f"Iniciando procesamiento por lotes: {datetime.now()}")
+    print(f"Escaneando: {dir_datasets}")
     print("=" * 60)
     
-    for dataset_folder in sorted(datasets_dir.iterdir()):
-        if not dataset_folder.is_dir():
+    for carpeta_dataset in sorted(dir_datasets.iterdir()):
+        if not carpeta_dataset.is_dir():
             continue
         
-        print(f"\nProcessing: {dataset_folder.name}")
+        print(f"\nProcesando: {carpeta_dataset.name}")
         
-        success, stdout, stderr = process_dataset(dataset_folder)
+        exito, stdout, stderr = procesar_dataset(carpeta_dataset)
         
-        if success:
-            print(f"✓ {dataset_folder.name} - SUCCESS")
-            successful.append(dataset_folder.name)
+        if exito:
+            print(f"✓ {carpeta_dataset.name} - ÉXITO")
+            exitosos.append(carpeta_dataset.name)
         else:
-            print(f"✗ {dataset_folder.name} - FAILED")
-            failed.append(dataset_folder.name)
+            print(f"✗ {carpeta_dataset.name} - FALLÓ")
+            fallidos.append(carpeta_dataset.name)
             
-            # Log error details
-            with open(log_file, 'a', encoding='utf-8') as f:
-                f.write(f"\n=== {dataset_folder.name} - {datetime.now()} ===\n")
+            # Registrar detalles de error
+            with open(archivo_log, 'a', encoding='utf-8') as f:
+                f.write(f"\n=== {carpeta_dataset.name} - {datetime.now()} ===\n")
                 f.write(f"STDOUT:\n{stdout}\n")
                 f.write(f"STDERR:\n{stderr}\n")
     
-    # Print summary
+    # Imprimir resumen
     print("\n" + "=" * 60)
-    print(f"SUMMARY - Completed: {datetime.now()}")
-    print(f"  Successful: {len(successful)}")
-    print(f"  Failed: {len(failed)}")
+    print(f"RESUMEN - Completado: {datetime.now()}")
+    print(f"  Exitosos: {len(exitosos)}")
+    print(f"  Fallidos: {len(fallidos)}")
     
-    if failed:
-        print(f"\nFailed folders:")
-        for folder in failed:
-            print(f"  - {folder}")
-        print(f"\nCheck {log_file} for error details")
+    if fallidos:
+        print(f"\nCarpetas fallidas:")
+        for carpeta in fallidos:
+            print(f"  - {carpeta}")
+        print(f"\nRevise {archivo_log} para detalles de errores")
         sys.exit(1)
     else:
-        print("\nAll datasets processed successfully!")
+        print("\n¡Todos los conjuntos de datos procesados con éxito!")
         sys.exit(0)
 
 if __name__ == '__main__':
@@ -578,94 +578,94 @@ if __name__ == '__main__':
 
 ***
 
-## Processing Workflow
+## Flujo de Trabajo de Procesamiento
 
-### Standard Workflow
+### Flujo de Trabajo Estándar
 
-1. **Input**: Folder containing RAW/JPG image pairs
-2. **Discovery**: CLI auto-scans for supported image files
-3. **Processing**: Parallel mode scales to your CPU cores (Chloros+)
-4. **Output**: Creates camera-model subfolders with processed images
+1. **Entrada**: Carpeta que contiene pares de imágenes RAW/JPG
+2. **Descubrimiento**: El CLI escanea automáticamente archivos de imagen compatibles
+3. **Procesamiento**: El modo paralelo se escala a sus núcleos de CPU (Chloros+)
+4. **Salida**: Crea subcarpetas de modelo de cámara con imágenes procesadas
 
-### Example Output Structure
+### Ejemplo de Estructura de Salida
 
 ```
-MyProject/
-├── project.json                             # Project metadata
-├── 2025_0203_193056_008.JPG                # Original JPG
-├── 2025_0203_193055_007.RAW                # Original RAW
-└── Survey3N_RGN/                           # Processed outputs ✓
-    ├── 2025_0203_193056_008_Reflectance.tif   # Calibrated reflectance
-    ├── 2025_0203_193056_008_Target.tif        # Target detection
+MiProyecto/
+├── project.json                             # Metadatos del proyecto
+├── 2025_0203_193056_008.JPG                # JPG original
+├── 2025_0203_193055_007.RAW                # RAW original
+└── Survey3N_RGN/                           # Salidas procesadas ✓
+    ├── 2025_0203_193056_008_Reflectance.tif   # Reflectancia calibrada
+    ├── 2025_0203_193056_008_Target.tif        # Detección de objetivo
     └── ...
 ```
 
-### Processing Time Estimates
+### Estimaciones de Tiempo de Procesamiento
 
-Typical processing times for 100 images (12MP each):
+Tiempos de procesamiento típicos para 100 imágenes (12MP cada una):
 
-| Mode              | Time      | Hardware                                     |
-| ----------------- | --------- | -------------------------------------------- |
-| **Parallel Mode** | 5-10 min  | i7/Ryzen 7, 16GB RAM, SSD (up to 16 workers) |
-| **Parallel Mode** | 10-15 min | i5/Ryzen 5, 8GB RAM, HDD (up to 8 workers)   |
+| Modo              | Tiempo     | Hardware                                     |
+| ----------------- | ---------- | -------------------------------------------- |
+| **Modo Paralelo** | 5-10 min   | i7/Ryzen 7, 16GB RAM, SSD (hasta 16 workers) |
+| **Modo Paralelo** | 10-15 min  | i5/Ryzen 5, 8GB RAM, HDD (hasta 8 workers)   |
 
 {% hint style="info" %}
-**Performance Tip**: Processing time varies based on image count, resolution, and computer specs.
+**Consejo de Rendimiento**: El tiempo de procesamiento varía según el conteo de imágenes, resolución y especificaciones de la computadora.
 {% endhint %}
 
 ***
 
-## Troubleshooting
+## Solución de Problemas
 
-### CLI Not Found
+### CLI No Encontrado
 
 **Error:**
 
 ```
-'chloros-cli' is not recognized as an internal or external command
+'chloros-cli' no se reconoce como un comando interno o externo
 ```
 
-**Solutions:**
+**Soluciones:**
 
-1. Verify installation location:
+1. Verifique la ubicación de instalación:
 
 ```powershell
 dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
 ```
 
-2. Use full path if not in PATH:
+2. Use la ruta completa si no está en PATH:
 
 ```powershell
 "C:\Program Files\Chloros\resources\cli\chloros-cli.exe" process "C:\Datasets\Field_A"
 ```
 
-3. Add to PATH manually:
-   * Open System Properties → Environment Variables
-   * Edit PATH variable
-   * Add: `C:\Program Files\Chloros\resources\cli`
-   * Restart terminal
+3. Agregue a PATH manualmente:
+   * Abra Propiedades del Sistema → Variables de Entorno
+   * Edite la variable PATH
+   * Agregue: `C:\Program Files\Chloros\resources\cli`
+   * Reinicie la terminal
 
 ***
 
-### Backend Failed to Start
+### Fallo al Iniciar Backend
 
 **Error:**
 
 ```
-Backend failed to start within 30 seconds
+El backend no pudo iniciarse en 30 segundos
 ```
 
-**Solutions:**
+**Soluciones:**
 
-1. Check if backend already running (close it first)
-2. Check Windows Firewall is not blocking
-3. Try different port:
+1. Verifique si el backend ya está en ejecución (ciérrelo primero)
+2. Verifique que el Firewall de Windows no esté bloqueando
+3. Pruebe con un puerto diferente:
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
 ```
 
-4. Force restart backend:
+4. Fuerce el reinicio del backend:
 
 ```powershell
 chloros-cli --restart process "C:\Datasets\Field_A"
@@ -673,71 +673,71 @@ chloros-cli --restart process "C:\Datasets\Field_A"
 
 ***
 
-### License / Authentication Issues
+### Problemas de Licencia / Autenticación
 
 **Error:**
 
 ```
-Chloros+ license required for CLI access
+Se requiere licencia Chloros+ para acceso CLI
 ```
 
-**Solutions:**
+**Soluciones:**
 
-1. Verify you have an active Chloros+ subscription
-2. Login with your credentials:
+1. Verifique que tiene una suscripción activa de Chloros+
+2. Inicie sesión con sus credenciales:
 
 ```powershell
-chloros-cli login user@example.com 'password'
+chloros-cli login usuario@ejemplo.com 'contraseña'
 ```
 
-3. Check license status:
+3. Verifique el estado de la licencia:
 
 ```powershell
 chloros-cli status
 ```
 
-4. Contact support: info@mapir.camera
+4. Contacte soporte: info@mapir.camera
 
 ***
 
-### No Images Found
+### No Se Encontraron Imágenes
 
 **Error:**
 
 ```
-No images found in the specified folder
+No se encontraron imágenes en la carpeta especificada
 ```
 
-**Solutions:**
+**Soluciones:**
 
-1. Verify folder contains supported formats (.RAW, .TIF, .JPG)
-2. Check folder path is correct (use quotes for paths with spaces)
-3. Ensure you have read permissions for the folder
-4. Check file extensions are correct
-
-***
-
-### Processing Stalls or Hangs
-
-**Solutions:**
-
-1. Check available disk space (ensure enough for output)
-2. Close other applications to free memory
-3. Reduce image count (process in batches)
+1. Verifique que la carpeta contiene formatos compatibles (.RAW, .TIF, .JPG)
+2. Verifique que la ruta de la carpeta es correcta (use comillas para rutas con espacios)
+3. Asegúrese de tener permisos de lectura para la carpeta
+4. Verifique que las extensiones de archivo son correctas
 
 ***
 
-### Port Already in Use
+### El Procesamiento se Estanca o Cuelga
+
+**Soluciones:**
+
+1. Verifique el espacio disponible en disco (asegure suficiente para salida)
+2. Cierre otras aplicaciones para liberar memoria
+3. Reduzca el conteo de imágenes (procese en lotes)
+
+***
+
+### Puerto Ya en Uso
 
 **Error:**
 
 ```
-Port 5000 is already in use
+El puerto 5000 ya está en uso
 ```
 
-**Solution:**
+**Solución:**
 
-Specify a different port:
+Especifique un puerto diferente:
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
@@ -745,35 +745,35 @@ chloros-cli --port 5001 process "C:\Datasets\Field_A"
 
 ***
 
-## FAQ
+## Preguntas Frecuentes
 
-### Q: Do I need a license for the CLI?
+### P: ¿Necesito una licencia para el CLI?
 
-**A:** Yes! The CLI requires a paid **Chloros+ license**.
+**R:** ¡Sí! El CLI requiere una **licencia Chloros+ pagada**.
 
-* ❌ Standard (free) plan: CLI disabled
-* ✅ Chloros+ (paid) plans: CLI fully enabled
+* ❌ Plan estándar (gratuito): CLI deshabilitado
+* ✅ Planes Chloros+ (pagados): CLI completamente habilitado
 
-Subscribe at: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
-
-***
-
-### Q: Can I use the CLI on a server without GUI?
-
-**A:** Yes! The CLI runs completely headless. Requirements:
-
-* Windows Server 2016 or later
-* Visual C++ Redistributable installed
-* Sufficient RAM (8GB minimum, 16GB recommended)
-* One-time GUI license activation on any machine
+Suscríbase en: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ***
 
-### Q: Where are processed images saved?
+### P: ¿Puedo usar el CLI en un servidor sin GUI?
 
-**A:** By default, processed images are saved in the **same folder as input** in camera-model subfolders (e.g., `Survey3N_RGN/`).
+**R:** ¡Sí! El CLI se ejecuta completamente sin interfaz. Requisitos:
 
-Use `-o` option to specify different output folder:
+* Windows Server 2016 o posterior
+* Visual C++ Redistributable instalado
+* RAM suficiente (8GB mínimo, 16GB recomendado)
+* Activación de licencia GUI única en cualquier máquina
+
+***
+
+### P: ¿Dónde se guardan las imágenes procesadas?
+
+**R:** Por defecto, las imágenes procesadas se guardan en **la misma carpeta que la entrada** en subcarpetas de modelo de cámara (ej., `Survey3N_RGN/`).
+
+Use la opción `-o` para especificar una carpeta de salida diferente:
 
 ```powershell
 chloros-cli process "C:\Input" -o "D:\Output"
@@ -781,55 +781,55 @@ chloros-cli process "C:\Input" -o "D:\Output"
 
 ***
 
-### Q: Can I process multiple folders at once?
+### P: ¿Puedo procesar múltiples carpetas a la vez?
 
-**A:** Not directly in one command, but you can use scripting to process folders sequentially. See [Automation & Scripting](CLI.md#automation--scripting) section.
+**R:** No directamente en un comando, pero puede usar scripting para procesar carpetas secuencialmente. Consulte la sección [Automatización y Scripting](CLI.md#automatización-y-scripting).
 
 ***
 
-### Q: How do I save CLI output to a log file?
+### P: ¿Cómo guardo la salida del CLI en un archivo de registro?
 
 **PowerShell:**
 
 ```powershell
-chloros-cli process "C:\Datasets\Field_A" | Tee-Object -FilePath "processing.log"
+chloros-cli process "C:\Datasets\Field_A" | Tee-Object -FilePath "procesamiento.log"
 ```
 
 **Batch:**
 
 ```batch
-chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
+chloros-cli process "C:\Datasets\Field_A" > procesamiento.log 2>&1
 ```
 
 ***
 
-### Q: What happens if I press Ctrl+C during processing?
+### P: ¿Qué sucede si presiono Ctrl+C durante el procesamiento?
 
-**A:** The CLI will:
+**R:** El CLI:
 
-1. Stop processing gracefully
-2. Shut down the backend
-3. Exit with code 130
+1. Detendrá el procesamiento gradualmente
+2. Apagará el backend
+3. Saldrá con código 130
 
-Partially processed images may remain in the output folder.
-
-***
-
-### Q: Can I automate CLI processing?
-
-**A:** Absolutely! The CLI is designed for automation. See [Automation & Scripting](CLI.md#automation--scripting) for PowerShell, Batch, and Python examples.
+Las imágenes parcialmente procesadas pueden permanecer en la carpeta de salida.
 
 ***
 
-### Q: How do I check the CLI version?
+### P: ¿Puedo automatizar el procesamiento CLI?
 
-**A:**
+**R:** ¡Absolutamente! El CLI está diseñado para automatización. Consulte [Automatización y Scripting](CLI.md#automatización-y-scripting) para ejemplos de PowerShell, Batch y Python.
+
+***
+
+### P: ¿Cómo verifico la versión del CLI?
+
+**R:**
 
 ```powershell
 chloros-cli --version
 ```
 
-**Output:**
+**Salida:**
 
 ```
 Chloros CLI 1.0.2
@@ -837,35 +837,35 @@ Chloros CLI 1.0.2
 
 ***
 
-## Getting Help
+## Obtener Ayuda
 
-### Command-Line Help
+### Ayuda de Línea de Comandos
 
-View help information directly in the CLI:
+Ver información de ayuda directamente en el CLI:
 
 ```powershell
-# General help
+# Ayuda general
 chloros-cli --help
 
-# Command-specific help
+# Ayuda específica del comando
 chloros-cli process --help
 chloros-cli login --help
 chloros-cli language --help
 ```
 
-### Support Channels
+### Canales de Soporte
 
-* **Email**: info@mapir.camera
-* **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Pricing**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
+* **Correo**: info@mapir.camera
+* **Sitio web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **Precios**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ***
 
-## Complete Examples
+## Ejemplos Completos
 
-### Example 1: Basic Processing
+### Ejemplo 1: Procesamiento Básico
 
-Process with default settings (vignette, reflectance):
+Procese con configuración predeterminada (viñeta, reflectancia):
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A_2025_01_15"
@@ -873,9 +873,9 @@ chloros-cli process "C:\Datasets\Field_A_2025_01_15"
 
 ***
 
-### Example 2: High-Quality Scientific Output
+### Ejemplo 2: Salida Científica de Alta Calidad
 
-32-bit float TIFF:
+TIFF flotante de 32 bits:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -886,9 +886,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 3: Fast Preview Processing
+### Ejemplo 3: Procesamiento de Vista Previa Rápida
 
-8-bit PNG without calibration for quick review:
+PNG de 8 bits sin calibración para revisión rápida:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -899,9 +899,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 4: PPK-Corrected Processing
+### Ejemplo 4: Procesamiento Corregido con PPK
 
-Apply PPK corrections with reflectance:
+Aplicar correcciones PPK con reflectancia:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -911,9 +911,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 5: Custom Output Location
+### Ejemplo 5: Ubicación de Salida Personalizada
 
-Process to different drive with specific format:
+Procese a una unidad diferente con formato específico:
 
 ```powershell
 chloros-cli process "C:\Input\Raw_Images" ^
@@ -923,40 +923,40 @@ chloros-cli process "C:\Input\Raw_Images" ^
 
 ***
 
-### Example 6: Authentication Workflow
+### Ejemplo 6: Flujo de Trabajo de Autenticación
 
-Complete authentication flow:
+Flujo de autenticación completo:
 
 ```powershell
-# Step 1: Login
-chloros-cli login user@example.com 'MyP@ssw0rd'
+# Paso 1: Inicio de sesión
+chloros-cli login usuario@ejemplo.com 'MiC0ntraseñ@'
 
-# Step 2: Verify status
+# Paso 2: Verificar estado
 chloros-cli status
 
-# Step 3: Process images
+# Paso 3: Procesar imágenes
 chloros-cli process "C:\Datasets\Field_A"
 
-# Step 4: Logout (optional, when switching accounts)
+# Paso 4: Cierre de sesión (opcional, al cambiar cuentas)
 chloros-cli logout
 ```
 
 ***
 
-### Example 7: Multi-Language Usage
+### Ejemplo 7: Uso Multi-Idioma
 
-Change interface language:
+Cambiar idioma de interfaz:
 
 ```powershell
-# List available languages
+# Listar idiomas disponibles
 chloros-cli language --list
 
-# Change to Spanish
+# Cambiar a español
 chloros-cli language es
 
-# Process with Spanish interface
+# Procesar con interfaz en español
 chloros-cli process "C:\Vuelos\Campo_A"
 
-# Change back to English
+# Cambiar de vuelta a inglés
 chloros-cli language en
 ```

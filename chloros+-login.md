@@ -1,43 +1,43 @@
-# Chloros+ Login
+# Inicio de Sesión Chloros+
 
-## Chloros and Chloros (Browser) Login
+## Inicio de Sesión en Chloros y Chloros (Navegador)
 
-The user <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> sidebar menu allows you to log into your Chloros+ account and unlock additional features.
+El menú lateral de usuario <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> le permite iniciar sesión en su cuenta Chloros+ y desbloquear funciones adicionales.
 
-When logged in your account details will be shown:
+Cuando inicie sesión, se mostrarán los detalles de su cuenta:
 
 <figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
 
-## CLI Login
+## Inicio de Sesión CLI
 
-Login with your Chloros+ credentials to enable CLI processing.
+Inicie sesión con sus credenciales de Chloros+ para habilitar el procesamiento CLI.
 
-**Syntax:**
+**Sintaxis:**
 
 ```bash
-chloros-cli login <email> <password>
+chloros-cli login <correo> <contraseña>
 ```
 
-**Example:**
+**Ejemplo:**
 
 ```powershell
-chloros-cli login user@example.com 'MyP@ssw0rd123'
+chloros-cli login usuario@ejemplo.com 'MiC0ntraseñ@123'
 ```
 
 {% hint style="warning" %}
-**Special Characters**: Use single quotes around passwords containing characters like `$`, `!`, or spaces.
+**Caracteres Especiales**: Use comillas simples alrededor de contraseñas que contengan caracteres como `$`, `!`, o espacios.
 {% endhint %}
 
-**Output:**
+**Salida:**
 
 <figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
 
-### Plan Expiration
+### Expiración del Plan
 
-The plan expiration in the GUI shows when your license will become invalid. For recurring monthly subscriptions the expiration is at the end of the month. For yearly subscriptions it is a year after you started the subscription. The license check requires a monthly internet connection to verify, with a 30 day grace period.
+La expiración del plan en la GUI muestra cuándo su licencia dejará de ser válida. Para suscripciones mensuales recurrentes, la expiración es al final del mes. Para suscripciones anuales, es un año después de que comenzó la suscripción. La verificación de licencia requiere una conexión a internet mensual para verificar, con un período de gracia de 30 días.
 
-### Device Limit
+### Límite de Dispositivos
 
-Each Chloros+ plan offers a different number of registered devices. Each device you log into with a Chloros+ account will count towards your number of registered devices. You can rename and remove a device on your MAPIR Cloud account page.
+Cada plan Chloros+ ofrece un número diferente de dispositivos registrados. Cada dispositivo en el que inicie sesión con una cuenta Chloros+ contará para su número de dispositivos registrados. Puede renombrar y eliminar un dispositivo en la página de su cuenta MAPIR Cloud.
 
-<table><thead><tr><th width="168.5999755859375" align="right">Chloros+ Plan</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Devices Supported</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
+<table><thead><tr><th width="168.5999755859375" align="right">Plan Chloros+</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Dispositivos Soportados</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>

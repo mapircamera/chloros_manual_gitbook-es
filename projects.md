@@ -1,17 +1,17 @@
-# Projects
+# Proyectos
 
-Chloros allows you to create projects which can be reopened in the future.
+Chloros le permite crear proyectos que pueden reabrirse en el futuro.
 
-## New Project
+## Nuevo Proyecto
 
 <figure><img src=".gitbook/assets/project_new.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "New Project" from the main menu and enter a unique name for your project.
+Seleccione "Nuevo Proyecto" del menú principal e ingrese un nombre único para su proyecto.
 
-## Open Project
+## Abrir Proyecto
 
 <figure><img src=".gitbook/assets/project_open.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "Open Project" to see a list of existing projects in the Project Folder. If no projects exist the secondary side menu will not open. You can see some GUI created projects (t1, t2, t3) listed in the above photo. The DATE\_TIME projects were created by the CLI using the default project naming scheme. Clicking any project name will open it.
+Seleccione "Abrir Proyecto" para ver una lista de proyectos existentes en la Carpeta de Proyectos. Si no existen proyectos, el menú lateral secundario no se abrirá. Puede ver algunos proyectos creados por la GUI (t1, t2, t3) listados en la foto de arriba. Los proyectos FECHA\_HORA fueron creados por el CLI usando el esquema de nomenclatura de proyectos predeterminado. Al hacer clic en cualquier nombre de proyecto, se abrirá.
 
-Clicking the "Open Project Folder" button opens your computer's file explorer at the project path. You can adjust the project path in the [Project Settings](project-settings/page-2.md).
+Al hacer clic en el botón "Abrir Carpeta de Proyecto" se abre el explorador de archivos de su computadora en la ruta del proyecto. Puede ajustar la ruta del proyecto en la [Configuración del Proyecto](project-settings/page-2.md).
