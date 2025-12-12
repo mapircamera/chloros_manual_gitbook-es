@@ -1,306 +1,306 @@
-# Finishing the Processing
+# Finalización del procesamiento
 
-Once Chloros completes processing, it's time to review your results, verify output quality, and prepare your processed images for use in your workflow. This page guides you through the final steps and next actions.
+Una vez que Chloros haya completado el procesamiento, es el momento de revisar los resultados, verificar la calidad de salida y preparar las imágenes procesadas para su uso en el flujo de trabajo. Esta página le guía a través de los pasos finales y las siguientes acciones.
 
-## Processing Complete Indication
+## Indicación de procesamiento completado
 
-When processing finishes successfully, you'll see several indicators:
+Cuando el procesamiento finalice correctamente, verá varios indicadores:
 
-* ✅ **Progress bar**: Reaches 100% completion
-* ✅ **Debug Log**: Shows "Processing Complete" message
-* ✅ **Start button**: Becomes enabled again (ready for next processing run)
-* ✅ **Output files**: All processed images saved to camera model subfolder
-
-***
-
-## Locating Your Processed Images
-
-### Opening the Output Folder
-
-1. Click the **Main Menu** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> icon (top left)
-2. Select **"Open Project Folder"**
-3. Your file explorer opens to the project directory
-4. Locate your project by name
+* ✅ **Barra de progreso**: alcanza el 100 % de finalización
+* ✅ **Registro de depuración**: muestra el mensaje «Procesamiento completado»
+* ✅ **Botón de inicio**: se vuelve a habilitar (listo para la siguiente ejecución del procesamiento)
+* ✅ **Archivos de salida**: todas las imágenes procesadas se guardan en la subcarpeta del modelo de cámara
 
 ***
 
-## Reviewing Processed Images
+## Localización de las imágenes procesadas
 
-### Quick Preview in File Explorer
+### Apertura de la carpeta de salida
 
-**Windows built-in preview:**
-
-1. Navigate to camera model subfolder
-2. Select an image file
-3. Preview appears in Windows Explorer preview pane
-4. Use arrow keys to browse through images
-
-### Preview in External Image Viewers
-
-**Recommended viewers:**
-
-* **QGIS** - Free GIS software (best for georeferenced multispectral analysis)
-* **IrfanView** - Fast, lightweight image viewer (supports TIFF)
-* **Adobe Photoshop** - Professional editing (TIFF support)
-* **GIMP** - Free alternative to Photoshop
-* **Windows Photos** - Basic viewing (may not support 16-bit TIFF)
-
-### Preview in Chloros Image Viewer
-
-Use Chloros's built-in Image Viewer for advanced visualization:
-
-1. Click an image thumbnail in the File Browser
-2. Image opens in the main preview area
-3. Click **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab in left sidebar
-4. Use [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) for interactive analysis
-
-See [Image Viewer](../image-viewer-gui/page-3.md) for detailed instructions.
+1. Haga clic en el icono **Menú principal** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (arriba a la izquierda).
+2. Seleccione **«Abrir carpeta del proyecto»**.
+3. Se abrirá el explorador de archivos en el directorio del proyecto.
+4. Localice su proyecto por su nombre.
 
 ***
 
-## Reviewing the Debug Log
+## Revisar las imágenes procesadas
 
-### Check for Warnings or Errors
+### Vista previa rápida en el explorador de archivos
 
-1. Open **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> tab
-2. Scroll through messages
-3. Look for yellow warnings or red errors
-4. Review any issues noted
-5. Contact MAPIR support for assistance
+**Vista previa integrada en Windows:**
 
-### Saving the Log
+1. Navegue hasta la subcarpeta del modelo de cámara.
+2. Seleccione un archivo de imagen.
+3. La vista previa aparecerá en el panel de vista previa del explorador Windows.
+4. Utilice las teclas de flecha para navegar por las imágenes.
 
-To keep a record of processing or to send to MAPIR Support:
+### Vista previa en visores de imágenes externos
 
-1. Click **"Copy"** or **"Download"** button
-2. Save as text file in project folder
-3. Include with project documentation
-4. Send to MAPIR support if issues encountered
+**Visores recomendados:**
 
-***
+* **QGIS**: software GIS gratuito (ideal para análisis multiespectral georreferenciado).
+* **IrfanView**: visor de imágenes rápido y ligero (compatible con TIFF).
+* **Adobe Photoshop**: edición profesional (compatible con TIFF).
+* **GIMP**: alternativa gratuita a Photoshop.
+* **Windows Photos**: visualización básica (puede que no sea compatible con TIFF de 16 bits).
 
-## Common Output Issues and Solutions
+### Vista previa en el visor de imágenes Chloros
 
-### Issue: Missing Output Files
+Utilice el visor de imágenes integrado en Chloros para una visualización avanzada:
 
-**Possible causes:**
+1. Haga clic en una miniatura de imagen en el explorador de archivos.
+2. La imagen se abre en el área de vista previa principal.
+3. Haga clic en la pestaña **Visor de imágenes** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> en la barra lateral izquierda.
+4. Utilice [Índice/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) para realizar análisis interactivos.
 
-* Files didn't meet processing criteria
-* Target-only images (excluded from export)
-* Disk space ran out during export
-* File corruption during processing
-
-**Solutions:**
-
-1. Check Debug Log for skip/error messages
-2. Verify disk space was sufficient
-3. Count files: Should match (original count - target count) × (indices + 1)
-4. Re-import and reprocess any missing files
-
-### Issue: Dark or Bright Edges (Vignetting Still Visible)
-
-**Possible causes:**
-
-* Vignette correction disabled
-* Camera/lens not in Chloros profile database
-* Extreme vignetting beyond correction capability
-
-**Solutions:**
-
-1. Verify vignette correction was enabled in Project Settings
-2. Check camera model correctly detected
-3. Contact MAPIR support if vignetting persists
-
-### Issue: Incorrect Colors or Values
-
-**Possible causes:**
-
-* No calibration targets detected
-* Wrong calibration target model selected
-* Reflectance calibration disabled
-* Poor quality target images
-
-**Solutions:**
-
-1. Verify reflectance calibration was enabled
-2. Check "Target found" messages in Debug Log
-3. Review target image quality
-4. Reprocess with proper targets marked
-
-### Issue: NDVI Values Seem Wrong
-
-**Expected NDVI ranges:**
-
-* **Water, rocks, soil**: -0.1 to 0.2
-* **Sparse/unhealthy vegetation**: 0.2 to 0.4
-* **Moderate vegetation**: 0.4 to 0.6
-* **Healthy, dense vegetation**: 0.6 to 0.9
-
-**If values are outside these ranges:**
-
-1. Verify reflectance calibration was applied
-2. Verify light sensor log was included
-3. Check calibration targets were detected
-4. Ensure correct camera model was detected
-5. Review target image capture timing and conditions
+Consulte [Visor de imágenes](../image-viewer-gui/opening-an-image-full-screen.md) para obtener instrucciones detalladas.
 
 ***
 
-## Using Your Processed Images
+## Revisión del registro de depuración
 
-### For Photogrammetry / Orthomosaic Creation
+### Compruebe si hay advertencias o errores
 
-**Recommended workflow:**
+1. Abra la pestaña **Registro de depuración** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> .
+2. Desplácese por los mensajes.
+3. Busque advertencias amarillas o errores rojos.
+4. Revise cualquier problema detectado.
+5. Póngase en contacto con el servicio de asistencia de MAPIR para obtener ayuda.
 
-1. **Import calibrated reflectance images** into photogrammetry software:
+### Guardar el registro
+
+Para mantener un registro del procesamiento o enviarlo al servicio de asistencia de MAPIR:
+
+1. Haga clic en el botón **«Copiar»** o **«Descargar»**.
+2. Guarde el archivo como archivo de texto en la carpeta del proyecto.
+3. Incluya la documentación del proyecto.
+4. Envíelo al servicio de asistencia de MAPIR si encuentra algún problema.
+
+***
+
+## Problemas comunes de salida y soluciones
+
+### Problema: Faltan archivos de salida
+
+**Posibles causas:**
+
+* Los archivos no cumplían los criterios de procesamiento.
+* Imágenes solo de destino (excluidas de la exportación).
+* Se agotó el espacio en disco durante la exportación.
+* Corrupción de archivos durante el procesamiento.
+
+**Soluciones:**
+
+1. Compruebe el registro de depuración en busca de mensajes de omisión/error.
+2. Verifique que haya suficiente espacio en disco.
+3. Cuente los archivos: deben coincidir (recuento original - recuento de destino) × (índices + 1)
+4. Vuelva a importar y procesar los archivos que faltan.
+
+### Problema: bordes oscuros o brillantes (el viñeteado sigue siendo visible)
+
+**Posibles causas:**
+
+* Corrección de viñeteado desactivada.
+* Cámara/lente no incluida en la base de datos de perfiles Chloros.
+* Viñeteado extremo más allá de la capacidad de corrección.
+
+**Soluciones:**
+
+1. Compruebe que la corrección del viñeteado está habilitada en la configuración del proyecto.
+2. Compruebe que el modelo de cámara se ha detectado correctamente.
+3. Póngase en contacto con el servicio de asistencia de MAPIR si el viñeteado persiste.
+
+### Problema: colores o valores incorrectos.
+
+**Posibles causas:**
+
+* No se han detectado objetivos de calibración.
+* Se ha seleccionado un modelo de objetivo de calibración incorrecto.
+* La calibración de la reflectancia está desactivada.
+* Imágenes de objetivos de mala calidad.
+
+**Soluciones:**
+
+1. Compruebe que la calibración de la reflectancia está habilitada.
+2. Compruebe los mensajes «Objetivo encontrado» en el registro de depuración.
+3. Revise la calidad de la imagen del objetivo.
+4. Vuelva a procesar con los objetivos adecuados marcados.
+
+### Problema: los valores NDVI parecen incorrectos.
+
+**Rangos NDVI esperados:**
+
+* **Agua, rocas, suelo**: de -0,1 a 0,2.
+* **Vegetación escasa/poco saludable**: de 0,2 a 0,4.
+* **Vegetación moderada**: de 0,4 a 0,6.
+* **Vegetación saludable y densa**: de 0,6 a 0,9.
+
+**Si los valores están fuera de estos rangos:**
+
+1. Verifique que se haya aplicado la calibración de reflectancia.
+2. Verifique que se haya incluido el registro del sensor de luz.
+3. Compruebe que se hayan detectado los objetivos de calibración.
+4. Asegúrese de que se haya detectado el modelo de cámara correcto.
+5. Revise el momento y las condiciones de captura de la imagen objetivo.
+
+***
+
+## Uso de las imágenes procesadas
+
+### Para fotogrametría/creación de ortomosaicos
+
+**Flujo de trabajo recomendado:**
+
+1. **Importe imágenes de reflectancia calibradas** al software de fotogrametría:
    * Pix4Dmapper
    * Agisoft Metashape
    * DroneDeploy
    * WebODM
-2. **Keep EXIF metadata**: Ensure GPS data preserved for geotagging
-3. **Calibrated workflows**: Use reflectance images for scientific accuracy
-4. **Process index mosaics**: Create NDVI orthomosaics from individual index images
-5. **Export georeferenced GeoTIFF**: For use in GIS applications
+2. **Conserve los metadatos EXIF**: asegúrese de que se conservan los datos GPS para el geoetiquetado.
+3. **Flujos de trabajo calibrados**: utilice imágenes de reflectancia para obtener precisión científica.
+4. **Procese mosaicos de índice**: Cree ortomosaicos NDVI a partir de imágenes índice individuales.
+5. **Exporte GeoTIFF georreferenciado**: para su uso en aplicaciones SIG.
 
-### For GIS Analysis
+### Para análisis SIG
 
-**Recommended workflow:**
+**Flujo de trabajo recomendado:**
 
-1. **Load into QGIS, ArcGIS, or similar**
-2. **Use 16-bit TIFF** reflectance images for multi-band analysis
-3. **Use index images** (NDVI, NDRE) as ready-to-use vegetation layers
-4. **Raster calculator**: Combine bands for custom analysis
-5. **Export**: Create classification maps, change detection, vegetation health maps
+1. **Cargue en QGIS, ArcGIS o similar**.
+2. **Utilizar imágenes de reflectancia de 16 bits TIFF** para análisis multibanda.
+3. **Utilizar imágenes de índice** (NDVI, NDRE) como capas de vegetación listas para usar.
+4. **Calculadora ráster**: combinar bandas para análisis personalizados.
+5. **Exportar**: cree mapas de clasificación, detección de cambios y mapas de salud de la vegetación.
 
-### For Direct Analysis / Reporting
+### Para análisis directo/informes
 
-**Recommended workflow:**
+**Flujo de trabajo recomendado:**
 
-1. **Use index images with LUT colors** for visual reports
-2. **Extract statistics**: Mean NDVI per field/plot
-3. **Time series**: Compare indices across multiple sessions
-4. **Generate reports**: Include maps, statistics, and visualizations
-
-***
-
-## Archiving and Backup
-
-### Recommended Backup Strategy
-
-**What to save:**
-
-* ✅ **Original RAW/JPG images** - Archive on separate drive/cloud
-* ✅ **Processed outputs** - Keep calibrated images and indices
-* ✅ **Project file** - Contains all settings for reprocessing if needed
-* ✅ **Debug Log** - Documents processing details
-* ✅ **Calibration target images** - For verification and reprocessing
-
-**Storage recommendations:**
-
-* **Immediate backup**: External hard drive
-* **Long-term archive**: Cloud storage (Google Drive, Dropbox, etc.)
-* **Critical data**: Keep 2-3 copies in different locations
+1. **Utilice imágenes de índice con colores LUT** para informes visuales.
+2. **Extraiga estadísticas**: media NDVI por campo/parcela.
+3. **Series temporales**: comparar índices entre varias sesiones.
+4. **Generar informes**: incluir mapas, estadísticas y visualizaciones.
 
 ***
 
-## Next Processing Runs
+## Archivado y copia de seguridad
 
-### Reusing Project Settings
+### Estrategia de copia de seguridad recomendada
 
-If processing similar datasets in the future:
+**Qué guardar:**
 
-1. **Save Project Template** (if not already done)
-2. **Create new project** using saved template
-3. **Import new images**
-4. **Process** with identical settings for consistency
+* ✅ **Imágenes RAW/JPG originales**: archivar en una unidad/nube independiente.
+* ✅ **Resultados procesados**: conserve las imágenes calibradas y los índices
+* ✅ **Archivo del proyecto**: contiene todos los ajustes para volver a procesar si es necesario
+* ✅ **Registro de depuración**: documenta los detalles del procesamiento
+* ✅ **Imágenes de calibración**: para verificación y reprocesamiento
 
-### Batch Processing Multiple Sessions
+**Recomendaciones de almacenamiento:**
 
-For multiple sessions/datasets:
-
-**Option 1: GUI - Multiple Projects**
-
-* Create separate project for each session
-* Use consistent template settings
-* Process one at a time
-
-**Option 2: Chloros CLI (Chloros+ only)**
-
-* Automate batch processing
-* Process multiple folders with scripts
-* See [CLI Documentation](../CLI.md)
-
-**Option 3: Python SDK (Chloros+ only)**
-
-* Programmatic control
-* Integration with analysis pipelines
-* See [API Documentation](../api-python-sdk.md)
+* **Copia de seguridad inmediata**: disco duro externo
+* **Archivo a largo plazo**: almacenamiento en la nube (Google Drive, Dropbox, etc.)
+* **Datos críticos**: guarde 2-3 copias en diferentes ubicaciones
 
 ***
 
-## Troubleshooting Post-Processing
+## Próximas ejecuciones de procesamiento
 
-### Re-Processing with Different Settings
+### Reutilización de la configuración del proyecto
 
-If results aren't satisfactory:
+Si va a procesar conjuntos de datos similares en el futuro:
 
-1. Keep original images (never delete)
-2. Open same project in Chloros
-3. Adjust settings in Project Settings panel
-4. Process again - outputs will overwrite previous results
+1. **Guarde la plantilla del proyecto** (si aún no lo ha hecho)
+2. **Cree un nuevo proyecto** utilizando la plantilla guardada
+3. **Importe nuevas imágenes**
+4. **Procese** con la misma configuración para mantener la coherencia
 
-### Processing Subset of Images
+### Procesamiento por lotes de varias sesiones
 
-To reprocess only specific images:
+Para varias sesiones/conjuntos de datos:
 
-1. Create new project
-2. Import only the images needing reprocessing
-3. Use same settings template
-4. Process smaller dataset
+**Opción 1: GUI - Varios proyectos**
 
-### Getting Help
+* Cree un proyecto independiente para cada sesión
+* Utilice una configuración de plantilla coherente
+* Procese uno por uno
 
-If you encounter issues:
+**Opción 2: Chloros CLI (solo Chloros+)**
 
-* 📧 **Email**: info@mapir.camera (include Debug Log)
-* 🌐 **Support**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **FAQ**: [Frequently Asked Questions](../faq.md)
-* 📖 **Documentation**: [Chloros Manual](../)
+* Automatizar el procesamiento por lotes.
+* Procesar varias carpetas con scripts.
+* Consulte la [Documentación de CLI](../CLI.md)
 
-***
+**Opción 3: Python SDK (solo Chloros+)**
 
-## Summary: Complete Workflow
-
-You've now completed the full Chloros processing workflow:
-
-1. ✅ **Created project** - See [Projects](../projects.md)
-2. ✅ **Added files** - See [Adding Files](page-1.md)
-3. ✅ **Adjusted settings** - See [Adjusting Project Settings](adjusting-project-settings.md)
-4. ✅ **Marked targets** - See [Choosing Target Images](choosing-target-images.md)
-5. ✅ **Started processing** - See [Starting the Processing](starting-the-processing.md)
-6. ✅ **Monitored progress** - See [Monitoring the Processing](monitoring-the-processing.md)
-7. ✅ **Reviewed results** - This page
-
-**Your calibrated, reflectance-corrected multispectral images are ready for analysis!**
+* Control programático
+* Integración con procesos de análisis
+* Consulte la [Documentación de API](../api-python-sdk.md)
 
 ***
 
-## Additional Resources
+## Solución de problemas de posprocesamiento
 
-### Advanced Features
+### Reprocesamiento con diferentes ajustes
 
-* [**Image Viewer**](../image-viewer-gui/page-3.md) - Interactive visualization and analysis
-* [**Index/LUT Sandbox**](../image-viewer-gui/index-lut-sandbox.md) - Custom index testing
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Complete index reference
+Si los resultados no son satisfactorios:
 
-### Automation & Integration
+1. Conserve las imágenes originales (no las elimine nunca)
+2. Abra el mismo proyecto en Chloros
+3. Ajuste la configuración en el panel Configuración del proyecto
+4. Vuelva a procesar: los resultados sobrescribirán los anteriores
 
-* [**CLI Documentation**](../CLI.md) - Command-line batch processing
-* [**Python SDK**](../api-python-sdk.md) - Programmatic automation
-* [**Chloros+ Features**](../#chloros) - Advanced processing capabilities
+### Procesamiento de un subconjunto de imágenes
 
-### Support & Learning
+Para volver a procesar solo imágenes específicas:
 
-* [**FAQ**](../faq.md) - Common questions answered
-* [**Calibration Targets**](../calibration-targets.md) - Understanding reflectance calibration
-* [**Supported Cameras**](../supported-cameras.md) - Compatible hardware
+1. Cree un nuevo proyecto
+2. Importe solo las imágenes que necesiten volver a procesarse
+3. Utilice la misma plantilla de configuración
+4. Procese un conjunto de datos más pequeño
+
+### Obtener ayuda
+
+Si tiene algún problema:
+
+* 📧 **Correo electrónico**: info@mapir.camera (incluya el registro de depuración).
+* 🌐 **Asistencia técnica**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact).
+* 📚 **Preguntas frecuentes**: [Preguntas frecuentes](../faq.md)
+* 📖 **Documentación**: [Manual de Chloros](../)
+
+***
+
+## Resumen: flujo de trabajo completo
+
+Ya ha completado el flujo de trabajo completo de procesamiento de Chloros:
+
+1. ✅ **Proyecto creado**: consulte [Proyectos](../projects.md)
+2. ✅ **Añadido archivos** - Ver [Añadir archivos](adding-files-to-a-project.md)
+3. ✅ **Ajustado la configuración** - Ver [Ajustar la configuración del proyecto](adjusting-project-settings.md)
+4. ✅ **Objetivos marcados**: consulte [Selección de imágenes objetivo](choosing-target-images.md)
+5. ✅ **Procesamiento iniciado**: consulte [Inicio del procesamiento](starting-the-processing.md)
+6. ✅ **Progreso supervisado**: consulte [Supervisar el procesamiento](monitoring-the-processing.md)
+7. ✅ **Resultados revisados**: esta página
+
+**¡Sus imágenes multiespectrales calibradas y con corrección de reflectancia están listas para su análisis!**
+
+***
+
+## Recursos adicionales
+
+### Funciones avanzadas
+
+* [**Visor de imágenes**](../image-viewer-gui/opening-an-image-full-screen.md): visualización y análisis interactivos.
+* [**Sandbox de índices/LUT**](../image-viewer-gui/index-lut-sandbox.md): pruebas de índices personalizados.
+* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md): referencia completa de índices
+
+### Automatización e integración
+
+* [**Documentación de CLI**](../CLI.md): procesamiento por lotes desde la línea de comandos
+* [**Python SDK**](../api-python-sdk.md) - Automatización programática
+* [**Características de Chloros+**](../#chloros) - Capacidades de procesamiento avanzadas
+
+### Asistencia y aprendizaje
+
+* [**Preguntas frecuentes**](../faq.md) - Respuestas a preguntas comunes
+* [**Objetivos de calibración**](../calibration-targets.md) - Comprensión de la calibración de la reflectancia
+* [**Cámaras compatibles**](../supported-cameras.md) - Hardware compatible

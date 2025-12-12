@@ -1,43 +1,39 @@
-# Inicio de Sesión Chloros+
+# Chloros+ Inicio de sesión
 
-## Inicio de Sesión en Chloros y Chloros (Navegador)
+## Chloros y Chloros (navegador) Inicio de sesión
 
-El menú lateral de usuario <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> le permite iniciar sesión en su cuenta Chloros+ y desbloquear funciones adicionales.
+El <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> barra lateral del usuario le permite iniciar sesión en su cuenta Chloros+ y desbloquear funciones adicionales.
 
-Cuando inicie sesión, se mostrarán los detalles de su cuenta:
+Al iniciar sesión, se mostrarán los detalles de su cuenta:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Iniciar sesión
 
-## Inicio de Sesión CLI
-
-Inicie sesión con sus credenciales de Chloros+ para habilitar el procesamiento CLI.
+Inicie sesión con sus credenciales de Chloros+ para habilitar el procesamiento de CLI.
 
 **Sintaxis:**
 
 ```bash
-chloros-cli login <correo> <contraseña>
+chloros-cli login <email> <password>
 ```
 
 **Ejemplo:**
 
 ```powershell
-chloros-cli login usuario@ejemplo.com 'MiC0ntraseñ@123'
+chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% hint style="warning" %}
-**Caracteres Especiales**: Use comillas simples alrededor de contraseñas que contengan caracteres como `$`, `!`, o espacios.
+{% hint style=&quot;warning&quot; %}
+**Caracteres especiales**: utilice comillas simples alrededor de las contraseñas que contengan caracteres como `$`, `!` o espacios.
 {% endhint %}
 
 **Salida:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### Caducidad del plan
 
-### Expiración del Plan
+La caducidad del plan en la interfaz gráfica de usuario muestra cuándo dejará de ser válida su licencia. En el caso de las suscripciones mensuales recurrentes, la caducidad es al final del mes. En el caso de las suscripciones anuales, es un año después de haber iniciado la suscripción. La comprobación de la licencia requiere una conexión a Internet mensual para verificarla, con un periodo de gracia de 30 días.
 
-La expiración del plan en la GUI muestra cuándo su licencia dejará de ser válida. Para suscripciones mensuales recurrentes, la expiración es al final del mes. Para suscripciones anuales, es un año después de que comenzó la suscripción. La verificación de licencia requiere una conexión a internet mensual para verificar, con un período de gracia de 30 días.
+### Límite de dispositivos
 
-### Límite de Dispositivos
+Cada plan Chloros+ ofrece un número diferente de dispositivos registrados. Cada dispositivo en el que inicie sesión con una cuenta Chloros+ contará para su número de dispositivos registrados. Puede cambiar el nombre y eliminar un dispositivo en la página de su cuenta MAPIR Cloud.
 
-Cada plan Chloros+ ofrece un número diferente de dispositivos registrados. Cada dispositivo en el que inicie sesión con una cuenta Chloros+ contará para su número de dispositivos registrados. Puede renombrar y eliminar un dispositivo en la página de su cuenta MAPIR Cloud.
-
-<table><thead><tr><th width="168.5999755859375" align="right">Plan Chloros+</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Dispositivos Soportados</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
+<table><thead><tr><th width="168.5999755859375" align="right">Plan Chloros</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">PLATA</th><th align="center">ORO</th></tr></thead><tbody><tr><td align="right">Dispositivos compatibles</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
