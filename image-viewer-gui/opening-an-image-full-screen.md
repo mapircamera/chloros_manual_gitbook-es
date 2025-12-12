@@ -9,9 +9,9 @@ El visor de imágenes Chloros proporciona una interfaz dedicada a pantalla compl
 La forma más habitual de abrir una imagen en el visor de imágenes:
 
 1. Asegúrese de que se encuentra en la pestaña **Explorador de archivos**. <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Haga clic en cualquier **miniatura de imagen** de la cuadrícula de imágenes
-3. La imagen se abre en el **área de vista previa principal** (centro de la pantalla)
-4. La imagen ya está cargada y lista para su visualización a pantalla completa
+2. Haga clic en cualquier **miniatura de imagen** de la cuadrícula de imágenes.
+3. La imagen se abre en el **área de vista previa principal** (centro de la pantalla).
+4. La imagen ya está cargada y lista para su visualización a pantalla completa.
 
 ### Abrir la pestaña del visor de imágenes
 
@@ -56,13 +56,13 @@ Ajuste el aumento para inspeccionar los detalles de la imagen:
 
 * Haga clic en el botón **+** (más).
 * Pulse la tecla **+** o **=**.
-* Desplace la rueda del ratón **hacia arriba**.
+* Desplácese con la rueda del ratón **hacia arriba**.
 
 **Alejar:**
 
 * Haga clic en el botón **−** (menos).
 * Pulse la tecla **−** (menos).
-* Desplace la rueda del ratón **hacia abajo**.
+* Desplácese con la rueda del ratón **hacia abajo**.
 
 **Ajustar a la pantalla:**
 
@@ -70,7 +70,7 @@ Ajuste el aumento para inspeccionar los detalles de la imagen:
 * Pulse la tecla **0** (cero).
 * Haga doble clic en la imagen.
 
-#### Desplazamiento al ampliar
+#### Desplazamiento con zoom
 
 Cuando se amplía más allá del tamaño de la pantalla:
 
@@ -112,9 +112,9 @@ A medida que mueve el cursor del ratón sobre la imagen, los valores de los píx
 
 **Después del procesamiento:**
 
-* Viñeta corregida
-* Reflectancia calibrada
-* Multibanda TIFF (Red, Green, NIR, etc.)
+* Viñeta corregida.
+* Reflectancia calibrada.
+* Multibanda TIFF (Red, Green, NIR, etc.).
 * Datos científicos listos para su análisis.
 
 ### Imágenes de índice
@@ -135,7 +135,7 @@ Aplique índices multiespectrales y tablas de consulta de colores:
 1. Localice **Index/LUT Sandbox** en la <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
 2. Seleccione el índice de vegetación (NDVI, NDRE, etc.)
 3. Seleccione la fórmula multiespectral o cree una personalizada (solo Chloros+)
-4. Aplique un gradiente de tabla de consulta de colores (LUT) para la visualización
+4. Aplique un degradado de tabla de consulta de colores (LUT) para la visualización
 5. Ajuste los rangos de valores y los umbrales
 
 Consulte [Índice/LUT Sandbox](index-lut-sandbox.md) para obtener instrucciones detalladas.
@@ -238,7 +238,7 @@ Compruebe que los índices se han calculado correctamente:
 
 Ahora que puede ver las imágenes a pantalla completa:
 
-* [**Capas de imagen**](image-layers.md): aprenda sobre la visualización multibanda.
+* [**Capas de imagen**](image-layers.md): obtenga información sobre la visualización multibanda.
 * [**Sandbox de índices/LUT**](index-lut-sandbox.md): aplique índices personalizados y mapeo de colores.
 * [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md): comprenda los índices disponibles.
 

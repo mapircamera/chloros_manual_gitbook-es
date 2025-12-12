@@ -14,7 +14,7 @@ Antes de hacer clic en el botón Iniciar, compruebe que todo está listo:
 * [ ] **Formato de exportación elegido**: formato de salida adecuado para su flujo de trabajo
 
 {% hint style=&quot;info&quot; %}
-**Consejo**: Haga clic en algunas imágenes del explorador de archivos para verificar que se hayan cargado correctamente antes de procesarlas.
+**Consejo**: Haga clic en algunas imágenes del explorador de archivos para comprobar que se han cargado correctamente antes de procesarlas.
 {% endhint %}
 
 ***
@@ -31,7 +31,7 @@ El botón de inicio/reproducción se encuentra en la barra superior de Chloros:
 
 ### Haga clic para iniciar
 
-1. Haga clic en el **botón Reproducir/Iniciar** en el encabezado superior
+1. Haga clic en el **botón Reproducir/Iniciar** en la parte superior del encabezado
 2. El procesamiento comienza inmediatamente
 3. El botón se deshabilita (aparece en gris) durante el procesamiento
 4. La barra de progreso se actualiza y muestra el estado del procesamiento
@@ -68,7 +68,7 @@ Chloros funciona en dos modos de procesamiento diferentes, dependiendo de su lic
 
 ### Modo Chloros+ (procesamiento paralelo)
 
-**Requiere licencia Chloros+.**
+**Requiere la licencia Chloros+.**
 
 **Cómo funciona:**
 
@@ -81,20 +81,20 @@ Chloros funciona en dos modos de procesamiento diferentes, dependiendo de su lic
 
 1. **Detección**: búsqueda de objetivos de calibración
 2. **Análisis**: examen de los metadatos de la imagen y preparación del proceso
-3. **Calibración**: aplicación de correcciones y calibraciones
-4. **Exportación**: guardado de imágenes procesadas e índices
+3. **Calibración**: aplicación de correcciones y calibraciones.
+4. **Exportación**: guardado de imágenes procesadas e índices.
 
 **Interacción con la barra de progreso:**
 
-* **Pase el ratón** por encima de la barra para ver el panel desplegable detallado de 4 etapas
-* **Haga clic** en la barra de progreso para congelar el panel desplegable en su lugar
-* **Haga clic de nuevo** para desbloquear y ocultar el panel.
+* **Pase el ratón** por encima de la barra para ver el panel desplegable detallado de las 4 etapas.
+* **Haga clic** en la barra de progreso para congelar el panel desplegable en su lugar.
+* **Vuelva a hacer clic** para descongelar y ocultar el panel.
 
 **Tiempo de procesamiento:**
 
-* Significativamente más rápido que el modo libre.
-* Se adapta al número de núcleos de la CPU.
-* La aceleración de la GPU mejora aún más la velocidad.
+* Significativamente más rápido que el modo gratuito
+* Se adapta al número de núcleos de la CPU
+* La aceleración de la GPU mejora aún más la velocidad
 
 {% hint style=&quot;info&quot; %}
 **Chloros+ Velocidad**: el procesamiento paralelo puede ser entre 5 y 10 veces más rápido que el modo secuencial para conjuntos de datos grandes. Un proyecto de 500 imágenes que tarda 2 horas en el modo gratuito puede completarse en 15-20 minutos con Chloros+.
@@ -141,8 +141,8 @@ Chloros funciona en dos modos de procesamiento diferentes, dependiendo de su lic
 **Qué hace Chloros:**
 
 * Calcula los índices multiespectrales configurados (NDVI, NDRE, etc.).
-* Aplica matemáticas de banda a las imágenes calibradas.
-* Genera imágenes de índice para cada índice seleccionado.
+* Aplica matemáticas de banda a las imágenes calibradas
+* Genera imágenes de índice para cada índice seleccionado
 
 **Duración:** unos segundos por imagen
 
@@ -155,7 +155,7 @@ Chloros funciona en dos modos de procesamiento diferentes, dependiendo de su lic
 * Escribe archivos en subcarpetas del modelo de cámara
 * Conserva los nombres de archivo originales con sufijos
 
-**Duración:** Varía según el formato de exportación y el tamaño del archivo.
+**Duración:** varía según el formato de exportación y el tamaño del archivo
 
 ***
 
@@ -165,9 +165,9 @@ Chloros funciona en dos modos de procesamiento diferentes, dependiendo de su lic
 
 Una vez iniciada, toda la canalización se ejecuta automáticamente:
 
-* No se necesita la interacción del usuario.
-* Todos los pasos configurados se ejecutan en secuencia.
-* Las actualizaciones del progreso se muestran en tiempo real.
+* No se necesita interacción del usuario
+* Todos los pasos configurados se ejecutan en secuencia
+* Las actualizaciones del progreso se muestran en tiempo real
 
 ### Uso del ordenador durante el procesamiento
 
@@ -208,7 +208,7 @@ Mientras se ejecuta el procesamiento, puede:
 * **Ver la barra de progreso**: vea el porcentaje de finalización general.
 * **Ver la etapa actual**: detectar, analizar, calibrar o exportar.
 * **Comprobar la pestaña de registro**: vea mensajes y advertencias detallados del procesamiento.
-* **Obtener una vista previa de las imágenes completadas**: algunos archivos de exportación pueden aparecer durante el procesamiento.
+* **Previsualizar imágenes completadas**: algunos archivos de exportación pueden aparecer durante el procesamiento.
 
 Para obtener información detallada sobre la supervisión, consulte [Supervisión del procesamiento](monitoring-the-processing.md).
 
@@ -322,19 +322,19 @@ El tiempo de procesamiento real varía mucho en función de:
 
 1. Revise [Selección de imágenes objetivo](choosing-target-images.md).
 2. Marque las imágenes adecuadas en la columna Objetivo.
-3. Compruebe que los objetivos sean visibles en las imágenes marcadas.
+3. Compruebe que los objetivos son visibles en las imágenes marcadas.
 4. Ajuste la configuración de detección de objetivos si es necesario.
 
 ***
 
 ## Consejos para un procesamiento satisfactorio
 
-### Antes de comenzar
+### Antes de empezar
 
 1. **Pruebe primero con un pequeño subconjunto**: procese entre 10 y 20 imágenes para verificar la configuración.
-2. **Compruebe el espacio disponible en disco**: asegúrese de tener libre entre 2 y 3 veces el tamaño del conjunto de datos.
+2. **Compruebe el espacio disponible en el disco**: asegúrese de tener libre entre 2 y 3 veces el tamaño del conjunto de datos.
 3. **Cierre las aplicaciones innecesarias**: libere recursos del sistema.
-4. **Verifique las imágenes objetivo**: previsualice los objetivos marcados para garantizar la calidad.
+4. **Verifique las imágenes objetivo**: obtenga una vista previa de los objetivos marcados para garantizar la calidad.
 5. **Guarde el proyecto**: el proyecto se guarda automáticamente, pero es recomendable guardarlo manualmente.
 
 ### Durante el procesamiento
@@ -355,7 +355,7 @@ Si utiliza la aceleración de GPU NVIDIA:
 
 ***
 
-## Próximos pasos
+## Pasos siguientes
 
 Una vez iniciado el procesamiento:
 

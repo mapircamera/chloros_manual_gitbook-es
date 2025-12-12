@@ -10,7 +10,7 @@
 * [Chloros+ Inicio de sesión](chloros+-login.md)
 * [Objetivos de calibración](calibration-targets.md)
 * [Idiomas compatibles](supported-languages.md)
-* [Descarga](download.md)
+* [Descargar](download.md)
 * [Preguntas frecuentes](faq.md)
 
 ## Procesamiento de imágenes (GUI)

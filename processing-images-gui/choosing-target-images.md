@@ -94,8 +94,8 @@ Antes de procesar, compruebe lo siguiente:
 
 **Calendario de buenas prácticas:**
 
-* Capturar 3-5 imágenes poco después de que el sensor de luz comience a grabar.
-* Girar la cámara entre capturas para obtener los mejores resultados.
+* Capture entre 3 y 5 imágenes poco después de que el sensor de luz comience a grabar.
+* Gire la cámara entre capturas para obtener los mejores resultados.
 * Opcional: periódicamente a mitad de la sesión si las condiciones de iluminación cambian constantemente.
 
 ***
@@ -126,7 +126,7 @@ Utilice esta columna para verificar que ha marcado los objetivos para cada tipo 
 
 ## Ajustes de detección de objetivos
 
-### Ajuste de la sensibilidad de detección
+### Ajustar la sensibilidad de detección
 
 Si Chloros no detecta correctamente sus objetivos, ajuste estos parámetros en [Ajustes del proyecto](adjusting-project-settings.md):
 
@@ -181,13 +181,13 @@ Si Chloros no detecta correctamente sus objetivos, ajuste estos parámetros en [
 
 ## Lista de verificación
 
-Antes de iniciar el procesamiento, verifique la selección de imágenes de objetivos:
+Antes de comenzar el procesamiento, verifique la selección de imágenes objetivo:
 
-* [ ] Al menos 1 imagen de objetivo marcada por sesión.
-* [ ] Las casillas de verificación de la columna Objetivo están marcadas para todas las imágenes de objetivos.
-* [ ] Imágenes de objetivos capturadas en el mismo intervalo de tiempo que el estudio.
+* [ ] Al menos 1 imagen objetivo marcada por sesión.
+* [ ] Las casillas de verificación de la columna Objetivo están marcadas para todas las imágenes objetivo.
+* [ ] Imágenes objetivo capturadas en el mismo intervalo de tiempo que el estudio.
 * [ ] Objetivos claramente visibles en la vista previa al hacer clic.
-* [ ] Los 4 paneles de calibración visibles en cada imagen de objetivo.
+* [ ] Los 4 paneles de calibración visibles en cada imagen objetivo.
 * [ ] No hay sombras ni obstrucciones en los objetivos.
 * [ ] Para cámaras duales: objetivos marcados para ambos tipos de cámara.
 

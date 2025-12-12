@@ -131,7 +131,7 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 3. El explorador de archivos muestra el modelo de cámara en la columna Modelo de cámara.
 4. El procesamiento aplica la configuración correcta para cada tipo de cámara.
 
-**Ejemplo de escenario**: Survey3W RGN + Survey3N OCN configuración de doble cámara.
+**Ejemplo**: Survey3W RGN + Survey3N OCN configuración de doble cámara.
 
 ***
 
@@ -139,7 +139,7 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 
 ### Organizar antes de importar
 
-* Mantenga las imágenes de calibración en la misma carpeta que las imágenes de la encuesta.
+* Mantenga las imágenes de calibración en la misma carpeta que las imágenes del estudio.
 * Mantenga la estructura original de carpetas de su cámara/tarjeta SD.
 * No mezcle conjuntos de datos de diferentes sesiones en un mismo proyecto.
 
@@ -154,7 +154,7 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 * Incluya siempre 1-2 imágenes de calibración por sesión.
 * Capture los objetivos antes y después de la sesión de captura.
 * Coloque los objetivos en las mismas condiciones de iluminación que el área de captura.
-* Marque las imágenes de calibración con la casilla Objetivo para acelerar el procesamiento.
+* Marque las imágenes de calibración con la casilla de verificación Objetivo para acelerar el procesamiento.
 
 ***
 
@@ -191,7 +191,7 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 
 ***
 
-## Siguiente paso
+## Pasos siguientes
 
 Una vez importados los archivos:
 
@@ -199,6 +199,6 @@ Una vez importados los archivos:
 2. **Compruebe los modelos de cámara**: verifique que la detección de la cámara es correcta.
 3. **Marque las imágenes de destino**: consulte [Selección de imágenes de destino](choosing-target-images.md).
 4. **Ajuste la configuración**: configure las opciones de procesamiento en [Configuración del proyecto](adjusting-project-settings.md).
-5. **Inicie el procesamiento**: consulte [Iniciar el procesamiento](starting-the-processing.md).
+5. **Inicie el procesamiento**: consulte [Inicio del procesamiento](starting-the-processing.md).
 
-Para obtener información detallada sobre la configuración del proyecto, consulte [Ajustar la configuración del proyecto](adjusting-project-settings.md).
+Para obtener información detallada sobre la configuración del proyecto, consulte [Ajuste de la configuración del proyecto](adjusting-project-settings.md).

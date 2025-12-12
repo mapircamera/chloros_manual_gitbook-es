@@ -24,9 +24,9 @@ $$
 EVI = 2.5 *  {(NIR - Red) \over (NIR + 6 * Red - 7.5 * Blue + 1)}
 $$
 
-Los valores EVI deben oscilar entre 0 y 1 para los píxeles de vegetación. Las características brillantes, como las nubes y los edificios blancos, junto con las características oscuras, como el agua, pueden dar lugar a valores de píxeles anómalos en una imagen EVI. Antes de crear una imagen EVI, se deben enmascarar las nubes y los elementos brillantes de la imagen de reflectancia y, opcionalmente, establecer un umbral para los valores de píxeles de 0 a 1.
+Los valores EVI deben oscilar entre 0 y 1 para los píxeles de vegetación. Las características brillantes, como las nubes y los edificios blancos, junto con las características oscuras, como el agua, pueden dar lugar a valores de píxeles anómalos en una imagen EVI. Antes de crear una imagen EVI, debe enmascarar las nubes y las características brillantes de la imagen de reflectancia y, opcionalmente, establecer un umbral para los valores de píxeles de 0 a 1.
 
-_Referencia: Huete, A., et al. «Overview of the Radiometric and Biophysical Performance of the MODIS Vegetation Indices» (Descripción general del rendimiento radiométrico y biofísico de los índices de vegetación MODIS). Remote Sensing of Environment 83 (2002):195–213._
+_Referencia: Huete, A., et al. «Overview of the Radiometric and Biophysical Performance of the MODIS Vegetation Indices» (Resumen del rendimiento radiométrico y biofísico de los índices de vegetación MODIS). Remote Sensing of Environment 83 (2002):195-213._
 
 ***
 
@@ -38,7 +38,7 @@ $$
 FCI1 = Red * RedEdge
 $$
 
-Las zonas boscosas tendrán valores FCI1 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro de la cubierta forestal.
+Las zonas boscosas tendrán valores FCI1 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro de la copa.
 
 _Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
 
@@ -46,13 +46,13 @@ _Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices 
 
 ## FCI2 - Índice de cobertura forestal 2
 
-Este índice distingue las copas de los árboles de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que no incluyen una banda roja.
+Este índice distingue las copas de los árboles de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que no incluyen una banda de borde rojo.
 
 $$
 FCI2 = Red * NIR
 $$
 
-Las zonas boscosas tendrán valores FCI2 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro de la cubierta forestal.
+Las zonas boscosas tendrán valores FCI2 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro del dosel.
 
 _Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
 
@@ -78,7 +78,7 @@ _Referencia: Pinty, B. y M. Verstraete. GEMI: un índice no lineal para supervis
 
 ## GARI - Green Índice resistente a la atmósfera
 
-Este índice es más sensible a una amplia gama de concentraciones de clorofila y menos sensible a los efectos atmosféricos que NDVI.
+Este índice es más sensible a una amplia gama de concentraciones de clorofila y menos sensible a los efectos atmosféricos que el NDVI.
 
 $$
 GARI = {NIR - [Green - \gamma(Blue - Red)] \over NIR + [Green - \gamma(Blue - Red)]   }
@@ -92,7 +92,7 @@ _Referencia: Gitelson, A., Y. Kaufman y M. Merzylak. «Uso de un canal Green en 
 
 ## GCI - Green Índice de clorofila
 
-Este índice se utiliza para estimar el contenido de clorofila en las hojas de una amplia gama de especies vegetales.
+Este índice se utiliza para estimar el contenido de clorofila de las hojas en una amplia gama de especies vegetales.
 
 $$
 GCI = {NIR \over Green} - 1
@@ -100,7 +100,7 @@ $$
 
 Disponer de amplias longitudes de onda NIR y verdes proporciona una mejor predicción del contenido de clorofila, al tiempo que permite una mayor sensibilidad y una relación señal-ruido más alta.
 
-_Referencia: Gitelson, A., Y. Gritz y M. Merzlyak. «Relaciones entre el contenido de clorofila en las hojas y la reflectancia espectral y algoritmos para la evaluación no destructiva de la clorofila en las hojas de plantas superiores». Journal of Plant Physiology 160 (2003): 271-282._
+_Referencia: Gitelson, A., Y. Gritz y M. Merzlyak. «Relaciones entre el contenido de clorofila de las hojas y la reflectancia espectral y algoritmos para la evaluación no destructiva de la clorofila en las hojas de plantas superiores». Journal of Plant Physiology 160 (2003): 271-282._
 
 ***
 
@@ -126,7 +126,7 @@ $$
 GNDVI = {(NIR - Green) \over (NIR + Green)  }
 $$
 
-_Referencia: Gitelson, A., y M. Merzlyak. «Remote Sensing of Chlorophyll Concentration in Higher Plant Leaves» (Teledetección de la concentración de clorofila en las hojas de las plantas superiores). Advances in Space Research 22 (1998): 689-692._
+_Referencia: Gitelson, A. y M. Merzlyak. «Remote Sensing of Chlorophyll Concentration in Higher Plant Leaves» (Teledetección de la concentración de clorofila en las hojas de las plantas superiores). Advances in Space Research 22 (1998): 689-692._
 
 ***
 
@@ -138,19 +138,19 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno del maíz durante la temporada mediante fotografía aérea infrarroja en color». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
+_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea en color infrarrojo». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
 
 ***
 
 ## GRVI - Green Índice de vegetación de relación
 
-Este índice es sensible a las tasas de fotosíntesis en las copas de los bosques, ya que las reflectancias verde y roja se ven muy influidas por los cambios en los pigmentos de las hojas.
+Este índice es sensible a las tasas de fotosíntesis en las copas de los árboles, ya que las reflectancias verde y roja se ven muy influidas por los cambios en los pigmentos de las hojas.
 
 $$
 GRVI = {NIR \over Green }
 $$
 
-_Referencia: Sripada, R., et al. «Fotografía aérea en color infrarrojo para determinar las necesidades de nitrógeno del maíz al inicio de la temporada». Agronomy Journal 98 (2006): 968-977._
+_Referencia: Sripada, R., et al. «Fotografía aérea en infrarrojo para determinar las necesidades de nitrógeno del maíz al inicio de la temporada». Agronomy Journal 98 (2006): 968-977._
 
 ***
 
@@ -198,7 +198,7 @@ _Referencia: Datt, B. «Teledetección del contenido de agua en las hojas de euc
 
 ***
 
-## MNLI: índice no lineal modificado
+## MNLI - Índice no lineal modificado
 
 Este índice es una mejora del índice no lineal (NLI) que incorpora el índice de vegetación ajustado al suelo (SAVI) para tener en cuenta el fondo del suelo. ENVI utiliza un valor de factor de ajuste del fondo del dosel (_L_) de 0,5.
 
@@ -242,7 +242,7 @@ $$
 
 El valor de este índice oscila entre -1 y 1. El rango común para la vegetación verde es de 0,2 a 0,8.
 
-_Referencia: Rouse, J., R. Haas, J. Schell y D. Deering. Monitorización de los sistemas de vegetación en las Grandes Llanuras con ERTS. Tercer Simposio ERTS, NASA (1973): 309-317._
+_Referencia: Rouse, J., R. Haas, J. Schell y D. Deering. Monitoring Vegetation Systems in the Great Plains with ERTS. Tercer Simposio ERTS, NASA (1973): 309-317._
 
 ***
 
@@ -294,9 +294,9 @@ _Referencia: Huete, A. «A Soil-Adjusted Vegetation Index (SAVI)». Remote Sensi
 
 ***
 
-## TDVI: índice de vegetación de diferencia transformada
+## TDVI - Índice de vegetación por diferencia transformada
 
-Este índice es útil para supervisar la cobertura vegetal en entornos urbanos. No se satura como NDVI y SAVI.
+Este índice es útil para monitorizar la cobertura vegetal en entornos urbanos. No se satura como NDVI y SAVI.
 
 $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
@@ -320,7 +320,7 @@ _Referencia: Gitelson, A., et al. «Vegetación y líneas de suelo en el espacio
 
 ## WDRVI - Índice de vegetación de amplio rango dinámico
 
-Este índice es similar al NDVI, pero utiliza un coeficiente de ponderación (_a_) para reducir la disparidad entre las contribuciones de las señales del infrarrojo cercano y el rojo al NDVI. El WDRVI es especialmente eficaz en escenas con una densidad de vegetación de moderada a alta cuando el NDVI supera 0,6. El NDVI tiende a estabilizarse cuando aumentan la fracción de vegetación y el índice de área foliar (LAI), mientras que el WDRVI es más sensible a un rango más amplio de fracciones de vegetación y a los cambios en el LAI.
+Este índice es similar al NDVI, pero utiliza un coeficiente de ponderación (_a_) para reducir la disparidad entre las contribuciones de las señales del infrarrojo cercano y el rojo al NDVI. El WDRVI es especialmente eficaz en escenas con una densidad de vegetación de moderada a alta cuando el NDVI supera 0,6. El NDVI tiende a estabilizarse cuando aumentan la fracción de vegetación y el índice de área foliar (LAI), mientras que el WDRVI es más sensible a una gama más amplia de fracciones de vegetación y a los cambios en el LAI.
 
 $$
 WDRVI = {(\alpha * NIR- Red) \over (\alpha * NIR + Red)}
@@ -332,4 +332,4 @@ _Referencias_
 
 _Gitelson, A. «Índice de vegetación de amplio rango dinámico para la cuantificación remota de las características biofísicas de la vegetación». Journal of Plant Physiology 161, n.º 2 (2004): 165-173._
 
-_Henebry, G., A. Viña y A. Gitelson. «The Wide Dynamic Range Vegetation Index and its Potential Utility for Gap Analysis» (El índice de vegetación de amplio rango dinámico y su utilidad potencial para el análisis de brechas). Gap Analysis Bulletin 12: 50-56._
+_Henebry, G., A. Viña y A. Gitelson. «El índice de vegetación de amplio rango dinámico y su utilidad potencial para el análisis de brechas». Gap Analysis Bulletin 12: 50-56._

@@ -16,7 +16,7 @@ Antes de procesar las imágenes, es importante configurar los ajustes del proyec
 
 ## Configuración rápida para flujos de trabajo comunes
 
-### Configuración predeterminada (recomendada para la mayoría de los usuarios)
+### Ajustes predeterminados (recomendados para la mayoría de los usuarios)
 
 Para los flujos de trabajo típicos de la cámara MAPIR Survey3, la configuración predeterminada funciona bien:
 
@@ -39,14 +39,14 @@ Controla cómo Chloros identifica los objetivos de calibración en sus imágenes
 
 **Configuración clave:**
 
-* **Área mínima de muestra de calibración**: umbral de tamaño para la detección de objetivos (predeterminado: 25 píxeles).
-* **Agrupación mínima de objetivos**: umbral de similitud para agrupar regiones objetivo (predeterminado: 60).
+* **Área mínima de muestra de calibración**: umbral de tamaño para la detección de objetivos (predeterminado: 25 píxeles)
+* **Agrupación mínima de objetivos**: umbral de similitud para agrupar regiones objetivo (predeterminado: 60)
 
 **Cuándo ajustar:**
 
 * Aumente el área de muestra si obtiene detecciones falsas.
 * Disminúyala si no se detectan los objetivos.
-* Ajuste la agrupación si los objetivos se dividen en varias detecciones.
+* Ajuste la agrupación si los objetivos se dividen en múltiples detecciones.
 
 ### Procesamiento
 
@@ -61,13 +61,13 @@ Opciones principales de procesamiento y calibración de imágenes.
 
 **Ajustes avanzados:**
 
-* **Desfase de zona horaria del sensor de luz**: Para la sincronización horaria PPK (por defecto: 0)
+* **Desplazamiento de zona horaria del sensor de luz**: Para la sincronización horaria PPK (por defecto: 0)
 * **Aplicar correcciones PPK**: Utiliza datos GPS/pin de exposición de archivos .daq
 * **Pin de exposición 1/2**: asigna cámaras a pines de exposición para configuraciones de doble cámara
 
 ### Índice (índices multiespectrales)
 
-Configure qué índices de vegetación calcular y exportar.
+Configure qué índices de vegetación se deben calcular y exportar.
 
 **Cómo añadir índices:**
 
@@ -98,8 +98,8 @@ Controla el formato y la calidad del archivo de salida.
 
 **Formatos disponibles:**
 
-* **TIFF (16 bits)**: Recomendado para SIG y análisis científico (rango de 0 a 65 535).
-* **TIFF (32 bits, porcentaje)**: Valores de reflectancia en coma flotante (rango de 0,0 a 1,0).
+* **TIFF (16 bits)**: recomendado para SIG y análisis científico (rango de 0 a 65 535).
+* **TIFF (32 bits, porcentaje)**: valores de reflectancia en coma flotante (rango de 0,0 a 1,0).
 * **PNG (8 bits)**: compresión sin pérdidas para visualización (rango de 0 a 255).
 * **JPG (8 bits)**: archivos más pequeños, compresión con pérdidas (rango de 0 a 255).
 
@@ -133,7 +133,7 @@ Al crear un nuevo proyecto:
 
 ### Directorio de trabajo
 
-La configuración **«Guardar carpeta del proyecto»** especifica dónde se crean los nuevos proyectos de forma predeterminada:
+La configuración **«Guardar carpeta de proyecto»** especifica dónde se crean los nuevos proyectos de forma predeterminada:
 
 * **Ubicación predeterminada**: `C:\Users\[Username]\Chloros Projects`.
 * **Cambiar ubicación**: haga clic en el icono de edición y seleccione una nueva carpeta.
@@ -158,7 +158,7 @@ Si utiliza registradores DAQ MAPIR con GPS para una geolocalización precisa:
 
 1. Coloque el archivo de registro .daq en la carpeta de su proyecto
 2. En la configuración del proyecto, active la casilla **«Aplicar correcciones PPK»**
-3. Configure **«Desfase horario del sensor de luz»** si es necesario (por defecto: 0 para UTC)
+3. Establezca la **«Diferencia horaria del sensor de luz»** si es necesario (por defecto: 0 para UTC)
 4. Asigne las cámaras a los pines de exposición:
    * **Cámara única**: Asignada automáticamente al pin 1.
    * **Dos cámaras**: Asigne manualmente cada cámara al pin correcto.
@@ -223,12 +223,12 @@ Antes de comenzar el procesamiento, revise estos ajustes clave:
 
 ***
 
-## Próximos pasos
+## Pasos siguientes
 
 Una vez configurados los ajustes:
 
-1. **Marque las imágenes de calibración**: consulte [Selección de imágenes de calibración](choosing-target-images.md).
-2. **Inicie el procesamiento**: consulte [Inicio del procesamiento](starting-the-processing.md).
-3. **Supervise el progreso**: consulte [Supervisión del procesamiento](monitoring-the-processing.md).
+1. **Marque las imágenes objetivo de calibración**: consulte [Selección de imágenes objetivo](choosing-target-images.md)
+2. **Inicie el procesamiento**: consulte [Inicio del procesamiento](starting-the-processing.md)
+3. **Supervise el progreso**: consulte [Supervisar el procesamiento](monitoring-the-processing.md).
 
 Para obtener información detallada sobre todos los ajustes disponibles, consulte la documentación de referencia [Ajustes del proyecto](../project-settings/project-settings.md).

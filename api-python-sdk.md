@@ -88,7 +88,7 @@ Antes de instalar SDK, asegúrese de que tiene:
 
 1. **Chloros Desktop** instalado ([descargar](download.md))
 2. **Python 3.7+** instalado ([python.org](https://www.python.org))
-3. **Licencia Chloros+ activa** ([actualización](https://cloud.mapir.camera/pricing))
+3. **Licencia Chloros+ activa** ([actualizar](https://cloud.mapir.camera/pricing))
 
 ### Instalación mediante pip
 
@@ -132,10 +132,10 @@ El SDK utiliza la misma licencia que el Chloros, el Chloros (navegador) y el Chl
 3. La licencia se almacena en la caché local (persiste tras los reinicios)
 
 {% hint style=&quot;success&quot; %}
-**Configuración única**: Después de iniciar sesión a través de la GUI o CLI, SDK utiliza automáticamente la licencia almacenada en caché. ¡No se necesita autenticación adicional!
+**Configuración única**: después de iniciar sesión a través de la GUI o CLI, SDK utiliza automáticamente la licencia almacenada en caché. ¡No se necesita autenticación adicional!
 {% endhint %}
 
-### Probar conexión
+### Prueba de conexión
 
 Compruebe que SDK puede conectarse a Chloros:
 
@@ -258,10 +258,10 @@ Configurar los ajustes de procesamiento.
 
 | Parámetro                 | Tipo | Predeterminado                 | Descripción                     |
 | ------------------------- | ---- | ----------------------- | ------------------------------- |
-| `debayer`                 | str  | «Alta calidad (más rápido)» | Método Debayer                  |
+| `debayer`                 | str  | «Alta calidad (más rápido)&quot; | Método Debayer                  |
 | `vignette_correction`     | bool | `True`                  | Habilitar corrección de viñeta      |
 | `reflectance_calibration` | bool | `True`                  | Habilitar calibración de reflectancia  |
-| `indices`                 | list | `None`                  | Índices de vegetación para calcular |
+| `indices`                 | lista | `None`                  | Índices de vegetación para calcular |
 | `export_format`           | str  | «TIFF (16 bits)»         | Formato de salida                   |
 | `ppk`                     | bool | `False`                 | Habilitar correcciones PPK          |
 | `custom_settings`         | dict | `None`                  | Ajustes personalizados avanzados        |
@@ -313,10 +313,10 @@ Procesar las imágenes del proyecto.
 | `progress_callback` | callable | `None`       | Función de devolución de llamada de progreso (progreso, msg) |
 | `poll_interval`     | float    | `2.0`        | Intervalo de sondeo para el progreso (segundos)   |
 
-**Devuelve:** `dict` - Procesando resultados
+**Devuelve:** `dict` - Resultados del procesamiento
 
 {% hint style=&quot;warning&quot; %}
-**Modo paralelo**: Requiere licencia Chloros+. Se adapta automáticamente a los núcleos de la CPU (hasta 16 trabajadores).
+**Modo paralelo**: Requiere la licencia Chloros+. Se adapta automáticamente a los núcleos de la CPU (hasta 16 trabajadores).
 {% endhint %}
 
 **Ejemplo:**
@@ -343,7 +343,7 @@ chloros.process(wait=False)
 
 #### `get_config()`
 
-Obtiene la configuración actual del proyecto.
+Obtener la configuración actual del proyecto.
 
 **Devuelve:** `dict`: configuración actual del proyecto.
 
@@ -358,7 +358,7 @@ print(config['Project Settings'])
 
 #### `get_status()`
 
-Obtiene información sobre el estado del backend.
+Obtener información sobre el estado del backend.
 
 **Devuelve:** `dict`: estado del backend.
 
@@ -402,7 +402,7 @@ Función de conveniencia de una línea para procesar una carpeta.
 | `reflectance_calibration` | bool     | `True`          | Habilitar calibración de reflectancia |
 | `export_format`           | str      | «TIFF (16 bits)» | Formato de salida                  |
 | `mode`                    | str      | `"parallel"`    | Modo de procesamiento                |
-| `progress_callback`       | callable | `None`          | Retorno de llamada de progreso              |
+| `progress_callback`       | invocable | `None`          | Retorno de llamada de progreso              |
 
 **Devuelve:** `dict` - Resultados del procesamiento
 
@@ -961,21 +961,21 @@ python -c "import sys; print(sys.path)"
 
 **Soluciones:**
 
-1. Aumente el tiempo de espera:
+1. Aumentar el tiempo de espera:
 
 ```python
 chloros = ChlorosLocal(timeout=120)  # 2 minutes
 ```
 
-2. Procese lotes más pequeños.
-3. Compruebe el espacio disponible en disco.
-4. Supervise los recursos del sistema.
+2. Procesar lotes más pequeños
+3. Comprobar el espacio disponible en disco
+4. Supervisar los recursos del sistema
 
 ***
 
 ### Puerto ya en uso
 
-**Problema:** Puerto 5000 del backend ocupado.
+**Problema:** Puerto 5000 del backend ocupado
 
 **Soluciones:**
 
@@ -997,7 +997,7 @@ Get-NetTCPConnection -LocalPort 5000
 
 ### Optimizar la velocidad de procesamiento
 
-1. **Utilice el modo paralelo** (requiere Chloros+)
+1. **Utilizar el modo paralelo** (requiere Chloros+)
 
 ```python
 chloros.process(mode="parallel")  # Up to 16 workers
@@ -1153,8 +1153,8 @@ chloros.process(progress_callback=notebook_progress)
 
 **R:** El código SDK se puede integrar en sus aplicaciones, pero:
 
-* Los usuarios finales deben tener instalado Chloros.
-* Los usuarios finales deben tener licencias activas de Chloros+.
+* Los usuarios finales necesitan tener instalado Chloros
+* Los usuarios finales necesitan licencias Chloros+ activas
 * La distribución comercial requiere una licencia OEM.
 
 Póngase en contacto con info@mapir.camera para consultas sobre OEM.
@@ -1183,7 +1183,7 @@ Project_Path/
 
 ### P: ¿Puedo procesar imágenes desde scripts Python que se ejecutan de forma programada?
 
-**R:** ¡Sí! Utilice el programador de tareas Windows con scripts Python:
+**R:** ¡Sí! Utilice el Programador de tareas Windows con scripts Python:
 
 ```python
 # scheduled_processing.py
@@ -1193,7 +1193,7 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\Flights\\Today")
 ```
 
-Programe la ejecución diaria mediante el programador de tareas.
+Programe la ejecución diaria mediante el Programador de tareas.
 
 ***
 
@@ -1219,7 +1219,7 @@ thread.start()
 
 ### Documentación
 
-* **Referencia de API**: esta página
+* **Referencia de API**: Esta página
 
 ### Canales de asistencia
 

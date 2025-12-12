@@ -1,6 +1,6 @@
 # Supervisión del procesamiento
 
-Una vez iniciado el procesamiento, Chloros ofrece varias formas de supervisar el progreso, comprobar si hay problemas y comprender qué está sucediendo con su conjunto de datos. En esta página se explica cómo realizar un seguimiento del procesamiento e interpretar la información que proporciona Chloros.
+Una vez iniciado el procesamiento, Chloros ofrece varias formas de supervisar el progreso, comprobar si hay problemas y comprender lo que está sucediendo con su conjunto de datos. En esta página se explica cómo realizar un seguimiento del procesamiento e interpretar la información que proporciona Chloros.
 
 ## Descripción general de la barra de progreso
 
@@ -21,7 +21,7 @@ Para usuarios sin licencia Chloros+:
 * Nombre de la etapa actual
 * Visualización sencilla con barra horizontal
 
-### Barra de progreso de Chloros+
+### Barra de progreso Chloros+
 
 Para usuarios con licencia Chloros+:
 
@@ -34,7 +34,7 @@ Para usuarios con licencia Chloros+:
 
 **Funciones interactivas:**
 
-* **Pase el cursor por encima** de la barra de progreso para ver el panel ampliado de 4 etapas
+* **Pase el cursor sobre** la barra de progreso para ver el panel ampliado de 4 etapas
 * **Haga clic** en la barra de progreso para congelar/fijar el panel ampliado
 * **Vuelva a hacer clic** para descongelarlo y ocultarlo automáticamente al retirar el ratón
 * Cada etapa muestra el progreso individual (0-100 %)
@@ -45,7 +45,7 @@ Para usuarios con licencia Chloros+:
 
 ### Etapa 1: Detección (detección de objetivos)
 
-**Qué ocurre:**
+**Qué está sucediendo:**
 
 * Chloros escanea las imágenes marcadas con la casilla Objetivo
 * Los algoritmos de visión artificial identifican los 4 paneles de calibración
@@ -88,13 +88,13 @@ Para usuarios con licencia Chloros+:
 **A qué hay que prestar atención:**
 
 * Debe progresar de forma constante sin pausas
-* Las advertencias sobre metadatos faltantes aparecerán en el registro de depuración
+* Las advertencias sobre metadatos que faltan aparecerán en el registro de depuración
 
 ### Etapa 3: Calibración
 
 **Qué está sucediendo:**
 
-* **Desbayerización**: conversión del patrón Bayer RAW a 3 canales
+* **Debayering**: Conversión del patrón Bayer RAW a 3 canales
 * **Corrección de viñeta**: eliminación del oscurecimiento del borde de la lente.
 * **Calibración de reflectancia**: normalización con valores objetivo.
 * **Cálculo de índices**: cálculo de índices multiespectrales.
@@ -112,7 +112,7 @@ Para usuarios con licencia Chloros+:
 
 * **Modo libre**: procesa una imagen a la vez de forma secuencial
 * **Modo Chloros+**: procesa hasta 16 imágenes simultáneamente
-* **Aceleración GPU**: Acelera significativamente esta etapa.
+* **Aceleración GPU**: acelera significativamente esta etapa.
 
 **A qué hay que prestar atención:**
 
@@ -124,12 +124,12 @@ Para usuarios con licencia Chloros+:
 
 **Qué está sucediendo:**
 
-* Escribir imágenes calibradas en el disco en el formato seleccionado
-* Exportar imágenes de índice multiespectral con colores LUT
-* Crear subcarpetas de modelos de cámara
-* Conservar los nombres de archivo originales con los sufijos adecuados
+* Escribe las imágenes calibradas en el disco en el formato seleccionado.
+* Exporta imágenes de índice multiespectral con colores LUT.
+* Crea subcarpetas de modelos de cámara.
+* Conserva los nombres de archivo originales con los sufijos adecuados.
 
-**Duración:** 10-20 % del tiempo total de procesamiento
+**Duración:** 10-20 % del tiempo total de procesamiento.
 
 **Indicador de progreso:**
 
@@ -157,7 +157,7 @@ El Registro de depuración proporciona información detallada sobre el progreso 
 
 ### Comprensión de los mensajes de registro
 
-#### Mensajes de información (blancos/grises)
+#### Mensajes informativos (blanco/gris)
 
 Actualizaciones de procesamiento normales:
 
@@ -169,7 +169,7 @@ Actualizaciones de procesamiento normales:
 [INFO] Processing complete
 ```
 
-#### Mensajes de advertencia (amarillos)
+#### Mensajes de advertencia (amarillo)
 
 Problemas no críticos que no detienen el procesamiento:
 
@@ -266,7 +266,7 @@ Cuando la aceleración de la GPU está habilitada:
 * Administrador de tareas → Rendimiento → GPU.
 * GPU-Z o herramienta de supervisión similar.
 
-### E/S de disco
+### E/S del disco
 
 **Qué esperar:**
 

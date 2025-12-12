@@ -110,7 +110,7 @@ Desbloquee funciones avanzadas con una suscripción a Chloros+:
 * Pruebe la versión Chloros (navegador).
 * Compruebe que Windows 10/11 (64 bits) está instalado.
 * Actualice los controladores gráficos.
-* Compruebe el visor de eventos Windows para obtener detalles del error.
+* Compruebe el visor de eventos Windows para obtener detalles sobre el error.
 * Póngase en contacto con el servicio de asistencia con los registros de errores.
 
 **Problemas con la activación de la licencia:**
