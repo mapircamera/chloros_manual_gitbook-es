@@ -1,6 +1,6 @@
 # Ajuste de la configuración del proyecto
 
-Antes de procesar las imágenes, es importante configurar los ajustes del proyecto para que se adapten a los requisitos de su flujo de trabajo. El panel de configuración del proyecto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> ofrece un control completo sobre la calibración, las opciones de procesamiento, los índices multiespectrales y los formatos de exportación.
+Antes de procesar las imágenes, es importante configurar los ajustes del proyecto para que se adapten a los requisitos de su flujo de trabajo. El panel Configuración del proyecto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> ofrece un control completo sobre la calibración, las opciones de procesamiento, los índices multiespectrales y los formatos de exportación.
 
 ## Acceso a la configuración del proyecto
 
@@ -39,8 +39,8 @@ Controla cómo Chloros identifica los objetivos de calibración en sus imágenes
 
 **Configuración clave:**
 
-* **Área mínima de muestra de calibración**: umbral de tamaño para la detección de objetivos (predeterminado: 25 píxeles)
-* **Agrupación mínima de objetivos**: umbral de similitud para agrupar regiones objetivo (predeterminado: 60)
+* **Área mínima de muestra de calibración**: umbral de tamaño para la detección de objetivos (predeterminado: 25 píxeles).
+* **Agrupación mínima de objetivos**: umbral de similitud para agrupar regiones objetivo (predeterminado: 60).
 
 **Cuándo ajustar:**
 
@@ -61,13 +61,13 @@ Opciones principales de procesamiento y calibración de imágenes.
 
 **Ajustes avanzados:**
 
-* **Desplazamiento de zona horaria del sensor de luz**: Para la sincronización horaria PPK (por defecto: 0)
+* **Desfase de zona horaria del sensor de luz**: Para la sincronización horaria PPK (por defecto: 0)
 * **Aplicar correcciones PPK**: Utiliza datos GPS/pin de exposición de archivos .daq
 * **Pin de exposición 1/2**: asigna cámaras a pines de exposición para configuraciones de doble cámara
 
 ### Índice (índices multiespectrales)
 
-Configure qué índices de vegetación se deben calcular y exportar.
+Configure qué índices de vegetación calcular y exportar.
 
 **Cómo añadir índices:**
 
@@ -133,7 +133,7 @@ Al crear un nuevo proyecto:
 
 ### Directorio de trabajo
 
-La configuración **«Guardar carpeta de proyecto»** especifica dónde se crean los nuevos proyectos de forma predeterminada:
+La configuración **«Guardar carpeta del proyecto»** especifica dónde se crean los nuevos proyectos de forma predeterminada:
 
 * **Ubicación predeterminada**: `C:\Users\[Username]\Chloros Projects`.
 * **Cambiar ubicación**: haga clic en el icono de edición y seleccione una nueva carpeta.
@@ -158,7 +158,7 @@ Si utiliza registradores DAQ MAPIR con GPS para una geolocalización precisa:
 
 1. Coloque el archivo de registro .daq en la carpeta de su proyecto
 2. En la configuración del proyecto, active la casilla **«Aplicar correcciones PPK»**
-3. Establezca la **«Diferencia horaria del sensor de luz»** si es necesario (por defecto: 0 para UTC)
+3. Configure **«Desfase horario del sensor de luz»** si es necesario (por defecto: 0 para UTC)
 4. Asigne las cámaras a los pines de exposición:
    * **Cámara única**: Asignada automáticamente al pin 1.
    * **Dos cámaras**: Asigne manualmente cada cámara al pin correcto.
@@ -223,7 +223,7 @@ Antes de comenzar el procesamiento, revise estos ajustes clave:
 
 ***
 
-## Pasos siguientes
+## Próximos pasos
 
 Una vez configurados los ajustes:
 

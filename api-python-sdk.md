@@ -135,7 +135,7 @@ El SDK utiliza la misma licencia que el Chloros, el Chloros (navegador) y el Chl
 **Configuración única**: después de iniciar sesión a través de la GUI o CLI, SDK utiliza automáticamente la licencia almacenada en caché. ¡No se necesita autenticación adicional!
 {% endhint %}
 
-### Prueba de conexión
+### Probar conexión
 
 Compruebe que SDK puede conectarse a Chloros:
 
@@ -156,7 +156,7 @@ print(f"Backend running: {status['running']}")
 
 ### Clase ChlorosLocal
 
-Clase principal para el procesamiento de imágenes locales Chloros.
+Clase principal para el procesamiento de imágenes Chloros local.
 
 #### Constructor
 
@@ -202,7 +202,7 @@ chloros = ChlorosLocal(timeout=60)
 
 #### `create_project(project_name, camera=None)`
 
-Crear un nuevo proyecto Chloros.
+Crea un nuevo proyecto Chloros.
 
 **Parámetros:**
 
@@ -211,7 +211,7 @@ Crear un nuevo proyecto Chloros.
 | `project_name` | str  | Sí      | Nombre del proyecto                                     |
 | `camera`       | str  | No       | Plantilla de cámara (por ejemplo, «Survey3N\_RGN», «Survey3W\_OCN») |
 
-**Devuelve:** `dict` - Respuesta de creación del proyecto.
+**Devuelve:** `dict`: respuesta de creación del proyecto
 
 **Ejemplo:**
 
@@ -227,14 +227,14 @@ chloros.create_project("DroneField_A", camera="Survey3N_RGN")
 
 #### `import_images(folder_path, recursive=False)`
 
-Importa imágenes desde una carpeta.
+Importar imágenes desde una carpeta.
 
 **Parámetros:**
 
 | Parámetro     | Tipo     | Obligatorio | Descripción                        |
 | ------------- | -------- | -------- | ---------------------------------- |
 | `folder_path` | str/Path | Sí      | Ruta a la carpeta con imágenes         |
-| `recursive`   | bool     | No       | Buscar subcarpetas (predeterminado: Falso) |
+| `recursive`   | bool     | No       | Buscar subcarpetas (por defecto: Falso) |
 
 **Devuelve:** `dict`: resultados de la importación con recuento de archivos.
 
@@ -258,7 +258,7 @@ Configurar los ajustes de procesamiento.
 
 | Parámetro                 | Tipo | Predeterminado                 | Descripción                     |
 | ------------------------- | ---- | ----------------------- | ------------------------------- |
-| `debayer`                 | str  | «Alta calidad (más rápido)&quot; | Método Debayer                  |
+| `debayer`                 | str  | «Alta calidad (más rápido)» | Método Debayer                  |
 | `vignette_correction`     | bool | `True`                  | Habilitar corrección de viñeta      |
 | `reflectance_calibration` | bool | `True`                  | Habilitar calibración de reflectancia  |
 | `indices`                 | lista | `None`                  | Índices de vegetación para calcular |
@@ -310,10 +310,10 @@ Procesar las imágenes del proyecto.
 | ------------------- | -------- | ------------ | ----------------------------------------- |
 | `mode`              | str      | `"parallel"` | Modo de procesamiento: «paralelo» o «serie»   |
 | `wait`              | bool     | `True`       | Esperar a que finalice                       |
-| `progress_callback` | callable | `None`       | Función de devolución de llamada de progreso (progreso, msg) |
+| `progress_callback` | callable | `None`       | Función de devolución de llamada de progreso (progreso, mensaje) |
 | `poll_interval`     | float    | `2.0`        | Intervalo de sondeo para el progreso (segundos)   |
 
-**Devuelve:** `dict` - Resultados del procesamiento
+**Devuelve:** `dict` - Procesamiento de resultados
 
 {% hint style=&quot;warning&quot; %}
 **Modo paralelo**: Requiere la licencia Chloros+. Se adapta automáticamente a los núcleos de la CPU (hasta 16 trabajadores).
@@ -343,7 +343,7 @@ chloros.process(wait=False)
 
 #### `get_config()`
 
-Obtener la configuración actual del proyecto.
+Obtiene la configuración actual del proyecto.
 
 **Devuelve:** `dict`: configuración actual del proyecto.
 
@@ -360,7 +360,7 @@ print(config['Project Settings'])
 
 Obtener información sobre el estado del backend.
 
-**Devuelve:** `dict`: estado del backend.
+**Devuelve:** `dict` - Estado del backend.
 
 **Ejemplo:**
 
@@ -402,9 +402,9 @@ Función de conveniencia de una línea para procesar una carpeta.
 | `reflectance_calibration` | bool     | `True`          | Habilitar calibración de reflectancia |
 | `export_format`           | str      | «TIFF (16 bits)» | Formato de salida                  |
 | `mode`                    | str      | `"parallel"`    | Modo de procesamiento                |
-| `progress_callback`       | invocable | `None`          | Retorno de llamada de progreso              |
+| `progress_callback`       | callable | `None`          | Retorno de llamada de progreso              |
 
-**Devuelve:** `dict` - Resultados del procesamiento
+**Devuelve:** `dict` - Resultados del procesamiento.
 
 **Ejemplo:**
 
@@ -514,7 +514,7 @@ print("Processing complete!")
 
 ### Ejemplo 3: Procesamiento por lotes de varias carpetas
 
-Procesar varios conjuntos de datos de vuelos:
+Procesar varios conjuntos de datos de vuelo:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -861,7 +861,7 @@ while True:
 print("Processing complete!")
 ```
 
-### Gestión de memoria
+### Gestión de la memoria
 
 Para conjuntos de datos grandes, procese por lotes:
 
@@ -975,7 +975,7 @@ chloros = ChlorosLocal(timeout=120)  # 2 minutes
 
 ### Puerto ya en uso
 
-**Problema:** Puerto 5000 del backend ocupado
+**Problema:** Puerto backend 5000 ocupado
 
 **Soluciones:**
 
@@ -1003,7 +1003,7 @@ Get-NetTCPConnection -LocalPort 5000
 chloros.process(mode="parallel")  # Up to 16 workers
 ```
 
-2. **Reduzca la resolución de salida** (si es aceptable)
+2. **Reducir la resolución de salida** (si es aceptable)
 
 ```python
 chloros.configure(export_format="PNG (8-bit)")  # Faster than TIFF
@@ -1121,7 +1121,7 @@ chloros.process(progress_callback=notebook_progress)
 
 ## Preguntas frecuentes
 
-### P: ¿SDK requiere conexión a Internet?
+### P: ¿El SDK requiere conexión a Internet?
 
 **R:** Solo para la activación inicial de la licencia. Después de iniciar sesión a través de Chloros, Chloros (navegador) o Chloros CLI, la licencia se almacena en la caché local y funciona sin conexión durante 30 días.
 
@@ -1153,8 +1153,8 @@ chloros.process(progress_callback=notebook_progress)
 
 **R:** El código SDK se puede integrar en sus aplicaciones, pero:
 
-* Los usuarios finales necesitan tener instalado Chloros
-* Los usuarios finales necesitan licencias Chloros+ activas
+* Los usuarios finales necesitan tener instalado Chloros.
+* Los usuarios finales necesitan tener licencias Chloros+ activas.
 * La distribución comercial requiere una licencia OEM.
 
 Póngase en contacto con info@mapir.camera para consultas sobre OEM.
@@ -1183,7 +1183,7 @@ Project_Path/
 
 ### P: ¿Puedo procesar imágenes desde scripts Python que se ejecutan de forma programada?
 
-**R:** ¡Sí! Utilice el Programador de tareas Windows con scripts Python:
+**R:** ¡Sí! Utilice el programador de tareas Windows con scripts Python:
 
 ```python
 # scheduled_processing.py
@@ -1193,7 +1193,7 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\Flights\\Today")
 ```
 
-Programe la ejecución diaria mediante el Programador de tareas.
+Programe la ejecución diaria mediante el programador de tareas.
 
 ***
 
@@ -1219,7 +1219,7 @@ thread.start()
 
 ### Documentación
 
-* **Referencia de API**: Esta página
+* **Referencia de API**: esta página
 
 ### Canales de asistencia
 
@@ -1237,4 +1237,4 @@ Todos los ejemplos que se incluyen aquí se han probado y están listos para su 
 
 **Software propietario** - Copyright (c) 2025 MAPIR Inc.
 
-SDK requiere una suscripción activa a Chloros+. Queda prohibido el uso, la distribución o la modificación no autorizados.
+SDK requiere una suscripción activa a Chloros+. Se prohíbe el uso, la distribución o la modificación no autorizados.

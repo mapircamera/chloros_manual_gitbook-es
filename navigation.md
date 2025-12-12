@@ -28,7 +28,7 @@ El menú de la barra lateral izquierda contiene varios iconos con los que intera
 
 #### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Configuración del proyecto](project-settings/project-settings.md)
 
-La pestaña Configuración del proyecto le permite ajustar la configuración global del proyecto y la configuración de procesamiento del proyecto. Ajuste estos parámetros antes de comenzar a procesar sus archivos.
+La pestaña Configuración del proyecto le permite ajustar la configuración global y de procesamiento del proyecto. Ajústela antes de comenzar a procesar sus archivos.
 
 #### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Explorador de archivos
 
@@ -44,4 +44,4 @@ Revise el registro para ver las impresiones de depuración cuando se produzcan p
 
 #### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Inicio de sesión de usuario](chloros+-login.md)
 
-La barra lateral de inicio de sesión del usuario le permite iniciar sesión en su cuenta Chloros+ para desbloquear funciones avanzadas. También puede ver la versión actual de la aplicación, así como ajustar el idioma del texto que se muestra en Chloros GUI y CLI.
+La barra lateral de inicio de sesión de usuario le permite iniciar sesión en su cuenta Chloros+ para desbloquear funciones avanzadas. También puede ver la versión actual de la aplicación, así como ajustar el idioma del texto que se muestra en Chloros GUI y CLI.

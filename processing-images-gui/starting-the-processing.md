@@ -9,12 +9,12 @@ Antes de hacer clic en el botón Iniciar, compruebe que todo está listo:
 * [ ] **Archivos importados**: todas las imágenes aparecen en el explorador de archivos.
 * [ ] **Imágenes objetivo marcadas**: columna Objetivo marcada para las imágenes de calibración.
 * [ ] **Modelos de cámara detectados**: la columna Modelo de cámara muestra las cámaras correctas
-* [ ] **Configuración configurada**: configuración del proyecto revisada y ajustada
+* [ ] **Configuración configurada**: ajustes del proyecto revisados y ajustados
 * [ ] **Índices seleccionados**: índices multiespectrales deseados añadidos (si es necesario)
 * [ ] **Formato de exportación elegido**: formato de salida adecuado para su flujo de trabajo
 
 {% hint style=&quot;info&quot; %}
-**Consejo**: Haga clic en algunas imágenes del explorador de archivos para comprobar que se han cargado correctamente antes de procesarlas.
+**Consejo**: Haga clic en algunas imágenes del explorador de archivos para verificar que se hayan cargado correctamente antes de procesarlas.
 {% endhint %}
 
 ***
@@ -31,7 +31,7 @@ El botón de inicio/reproducción se encuentra en la barra superior de Chloros:
 
 ### Haga clic para iniciar
 
-1. Haga clic en el **botón Reproducir/Iniciar** en la parte superior del encabezado
+1. Haga clic en el **botón Reproducir/Iniciar** en la barra superior
 2. El procesamiento comienza inmediatamente
 3. El botón se deshabilita (aparece en gris) durante el procesamiento
 4. La barra de progreso se actualiza y muestra el estado del procesamiento
@@ -81,23 +81,23 @@ Chloros funciona en dos modos de procesamiento diferentes, dependiendo de su lic
 
 1. **Detección**: búsqueda de objetivos de calibración
 2. **Análisis**: examen de los metadatos de la imagen y preparación del proceso
-3. **Calibración**: aplicación de correcciones y calibraciones.
-4. **Exportación**: guardado de imágenes procesadas e índices.
+3. **Calibración**: aplicación de correcciones y calibraciones
+4. **Exportación**: guardado de imágenes procesadas e índices
 
 **Interacción con la barra de progreso:**
 
-* **Pase el ratón** por encima de la barra para ver el panel desplegable detallado de las 4 etapas.
-* **Haga clic** en la barra de progreso para congelar el panel desplegable en su lugar.
-* **Vuelva a hacer clic** para descongelar y ocultar el panel.
+* **Pase el ratón** por encima de la barra para ver el panel desplegable detallado de 4 etapas
+* **Haga clic** en la barra de progreso para congelar el panel desplegable en su lugar
+* **Haga clic de nuevo** para desbloquear y ocultar el panel.
 
 **Tiempo de procesamiento:**
 
-* Significativamente más rápido que el modo gratuito
-* Se adapta al número de núcleos de la CPU
-* La aceleración de la GPU mejora aún más la velocidad
+* Significativamente más rápido que el modo libre.
+* Se adapta al número de núcleos de la CPU.
+* La aceleración de la GPU mejora aún más la velocidad.
 
 {% hint style=&quot;info&quot; %}
-**Chloros+ Velocidad**: el procesamiento paralelo puede ser entre 5 y 10 veces más rápido que el modo secuencial para conjuntos de datos grandes. Un proyecto de 500 imágenes que tarda 2 horas en el modo gratuito puede completarse en 15-20 minutos con Chloros+.
+**Chloros+ Velocidad**: El procesamiento paralelo puede ser entre 5 y 10 veces más rápido que el modo secuencial para conjuntos de datos grandes. Un proyecto de 500 imágenes que tarda 2 horas en el modo gratuito puede completarse en 15-20 minutos con Chloros+.
 {% endhint %}
 
 ***
@@ -134,13 +134,13 @@ Chloros funciona en dos modos de procesamiento diferentes, dependiendo de su lic
 * Aplica correcciones en todas las bandas/canales.
 * Utiliza el objetivo de calibración adecuado para cada imagen en función de la marca de tiempo.
 
-**Duración:** la mayor parte del tiempo de procesamiento.
+**Duración:** La mayor parte del tiempo de procesamiento
 
 ### Etapa 4: Cálculo del índice
 
 **Qué hace Chloros:**
 
-* Calcula los índices multiespectrales configurados (NDVI, NDRE, etc.).
+* Calcula los índices multiespectrales configurados (NDVI, NDRE, etc.)
 * Aplica matemáticas de banda a las imágenes calibradas
 * Genera imágenes de índice para cada índice seleccionado
 
@@ -153,9 +153,9 @@ Chloros funciona en dos modos de procesamiento diferentes, dependiendo de su lic
 * Guarda las imágenes calibradas en el formato seleccionado
 * Exporta imágenes de índice con colores LUT configurados
 * Escribe archivos en subcarpetas del modelo de cámara
-* Conserva los nombres de archivo originales con sufijos
+* Conserva los nombres de archivo originales con sufijos.
 
-**Duración:** varía según el formato de exportación y el tamaño del archivo
+**Duración:** varía según el formato de exportación y el tamaño del archivo.
 
 ***
 
@@ -165,9 +165,9 @@ Chloros funciona en dos modos de procesamiento diferentes, dependiendo de su lic
 
 Una vez iniciada, toda la canalización se ejecuta automáticamente:
 
-* No se necesita interacción del usuario
-* Todos los pasos configurados se ejecutan en secuencia
-* Las actualizaciones del progreso se muestran en tiempo real
+* No se necesita la interacción del usuario.
+* Todos los pasos configurados se ejecutan en secuencia.
+* Las actualizaciones del progreso se muestran en tiempo real.
 
 ### Uso del ordenador durante el procesamiento
 
@@ -179,8 +179,8 @@ Una vez iniciada, toda la canalización se ejecuta automáticamente:
 
 **Chloros+ Modo paralelo:**
 
-* Alto uso de la CPU (multihilo, hasta 16 núcleos).
-* Con aceleración de la GPU: alto uso de la GPU.
+* Alto uso de la CPU (multisubprocesos, hasta 16 núcleos).
+* Con aceleración de GPU: alto uso de la GPU.
 * El ordenador puede responder menos durante el procesamiento.
 * Evite iniciar otras tareas que requieran un uso intensivo de la CPU.
 
@@ -298,10 +298,10 @@ El tiempo de procesamiento real varía mucho en función de:
 
 **Posibles causas:**
 
-* No hay imágenes válidas en el proyecto.
-* Archivos de imagen dañados.
-* Espacio en disco insuficiente.
-* Memoria insuficiente (RAM).
+* No hay imágenes válidas en el proyecto
+* Archivos de imagen dañados
+* Espacio en disco insuficiente
+* Memoria insuficiente (RAM)
 
 **Soluciones:**
 
@@ -322,14 +322,14 @@ El tiempo de procesamiento real varía mucho en función de:
 
 1. Revise [Selección de imágenes objetivo](choosing-target-images.md).
 2. Marque las imágenes adecuadas en la columna Objetivo.
-3. Compruebe que los objetivos son visibles en las imágenes marcadas.
+3. Compruebe que los objetivos sean visibles en las imágenes marcadas.
 4. Ajuste la configuración de detección de objetivos si es necesario.
 
 ***
 
 ## Consejos para un procesamiento satisfactorio
 
-### Antes de empezar
+### Antes de comenzar
 
 1. **Pruebe primero con un pequeño subconjunto**: procese entre 10 y 20 imágenes para verificar la configuración.
 2. **Compruebe el espacio disponible en el disco**: asegúrese de tener libre entre 2 y 3 veces el tamaño del conjunto de datos.
@@ -355,7 +355,7 @@ Si utiliza la aceleración de GPU NVIDIA:
 
 ***
 
-## Pasos siguientes
+## Siguiente paso
 
 Una vez iniciado el procesamiento:
 

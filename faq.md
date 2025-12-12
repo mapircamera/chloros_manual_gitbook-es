@@ -35,7 +35,7 @@ No. Chloros asume que los datos de entrada no han sido modificados. No cambie lo
 
 <summary>¿Puedo configurar mis cámaras MAPIR Survey3 en exposición automática y procesar las imágenes en Chloros?</summary>
 
-No. Los conjuntos de datos de imágenes Survey3 deben tener una exposición fija/bloqueada, por lo que no se permite la velocidad de obturación automática ni el ISO automático. Todas las imágenes del mismo modelo de cámara deben tener una velocidad de obturación y un ISO (exposición) idénticos.
+No. Los conjuntos de datos de imágenes Survey3 deben tener una exposición fija/bloqueada, por lo que no se permite la velocidad de obturación automática ni el ISO automático. Todas las imágenes del mismo modelo de cámara deben tener una velocidad de obturación e ISO (exposición) idénticos.
 
 </details>
 
@@ -57,7 +57,7 @@ En la tabla del explorador de archivos, si preselecciona las imágenes objetivo 
 
 <details>
 
-<summary>Si voy a subir mis imágenes a <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud,</a> ¿debo procesarlas en Chloros antes de subirlas?</summary>
+<summary>Si voy a cargar mis imágenes en <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud,</a> ¿debo procesarlas en Chloros antes de cargarlas?</summary>
 
 Si tiene previsto subirlas a nuestra plataforma de procesamiento en línea [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), no edite las imágenes antes de subirlas. Cloud realizará el mismo procesamiento y mucho más.
 
@@ -65,8 +65,8 @@ Si tiene previsto subirlas a nuestra plataforma de procesamiento en línea [MAPI
 
 <details>
 
-<summary>¿MAPIR admitirá alguna vez la función X? Me gustaría mucho que MAPIR ofreciera X.</summary>
+<summary>¿MAPIR será compatible alguna vez con la función X? Me gustaría mucho que MAPIR ofreciera X.</summary>
 
-Siempre estamos interesados en recibir comentarios sobre nuestros productos. Si encuentra algún problema con nuestros productos o tiene alguna sugerencia sobre cómo podemos mejorarlos, póngase en contacto con nosotros (https://www.mapir.camera/community/contact) para compartir sus opiniones. La mayor parte de nuestra I+D se guía por las necesidades más importantes de nuestros clientes.
+Siempre nos interesa recibir comentarios sobre nuestros productos. Si encuentra algún problema con nuestros productos o tiene alguna sugerencia sobre cómo podemos mejorarlos, póngase en contacto con nosotros (https://www.mapir.camera/community/contact) para compartir sus opiniones. La mayor parte de nuestra I+D se guía por las necesidades más importantes de nuestros clientes.
 
 </details>

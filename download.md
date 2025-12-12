@@ -35,7 +35,7 @@ Descargue la última versión de Chloros para Windows y comience a trabajar con 
 **Chloros Instalador para Windows**
 
 * **Versión**: 1.0.3
-* **Fecha de lanzamiento**: ¿Diciembre de 2025?
+* **Fecha de lanzamiento**: diciembre de 2025
 * **Tamaño del archivo**: 1,6 GB
 * **Tipo de archivo**: .exe (instalador de Windows)
 
@@ -45,7 +45,7 @@ Descargue la última versión de Chloros para Windows y comience a trabajar con 
 2. Haga doble clic en el instalador para comenzar la instalación
 3. Siga las instrucciones del asistente de instalación
 4. Elija el directorio de instalación (predeterminado: `C:\Program Files\Chloros\`)
-5. Complete la instalación y ejecute Chloros
+5. Complete la instalación e inicie Chloros
 6. Inicie sesión con su cuenta MAPIR Cloud Chloros+ (o continúe con la versión gratuita).
 
 {% hint style=&quot;success&quot; %}
@@ -90,7 +90,7 @@ Desbloquee funciones avanzadas con una suscripción a Chloros+:
 * ⚡ **Aceleración GPU (CUDA)**: aprovecha la potencia de la GPU NVIDIA
 * 💻 **Acceso CLI**: automatiza con herramientas de línea de comandos
 * 🐍 **Python SDK** - Acceso programático a API
-* 📱 **Múltiples dispositivos**: utilícelo en entre 2 y más de 10 dispositivos (dependiendo del plan)
+* 📱 **Varios dispositivos**: utilícelo en entre 2 y más de 10 dispositivos (dependiendo del plan)
 * 🧮 **Fórmulas personalizadas**: cree índices multiespectrales personalizados
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planes y precios de Chloros+</a></p>***

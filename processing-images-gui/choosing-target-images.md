@@ -34,7 +34,7 @@ Cuando marca la columna Objetivo para imágenes específicas:
 
 Revise las imágenes importadas en el explorador de archivos e identifique cuáles contienen objetivos de calibración.
 
-**Situaciones habituales:**
+**Escenarios comunes:**
 
 * **Objetivo previo a la captura**: capturado antes de iniciar la sesión.
 * **Objetivo posterior a la captura**: capturado después de completar la sesión.
@@ -66,13 +66,13 @@ Antes de procesar, compruebe lo siguiente:
 
 **Momento:**
 
-* Capture las imágenes objetivo inmediatamente antes y durante la sesión de captura.
+* Capture imágenes objetivo inmediatamente antes y durante la sesión de captura.
 * En las mismas condiciones de iluminación que el sensor de luz DAQ.
 * Lo ideal es capturar imágenes de objetivos con la mayor frecuencia posible para obtener los mejores resultados. De lo contrario, se utilizarán los datos del sensor de luz para ajustar la calibración a lo largo del tiempo.
 
 **Posición de la cámara:**
 
-* Sostenga la cámara sobre el objetivo de manera que quede centrada y ocupe entre el 40 y el 60 % del centro de la imagen.
+* Sostenga la cámara por encima del objetivo de manera que quede centrada y ocupe entre el 40 y el 60 % del centro de la imagen.
 * Mantenga la cámara paralela/nadir a la superficie del objetivo.
 
 **Iluminación:**
@@ -94,8 +94,8 @@ Antes de procesar, compruebe lo siguiente:
 
 **Calendario de buenas prácticas:**
 
-* Capture entre 3 y 5 imágenes poco después de que el sensor de luz comience a grabar.
-* Gire la cámara entre capturas para obtener los mejores resultados.
+* Capturar 3-5 imágenes poco después de que el sensor de luz empiece a grabar.
+* Girar la cámara entre capturas para obtener los mejores resultados.
 * Opcional: periódicamente a mitad de la sesión si las condiciones de iluminación cambian constantemente.
 
 ***

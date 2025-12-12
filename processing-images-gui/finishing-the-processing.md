@@ -8,7 +8,7 @@ Cuando el procesamiento finalice correctamente, verá varios indicadores:
 
 * ✅ **Barra de progreso**: alcanza el 100 % de finalización
 * ✅ **Registro de depuración**: muestra el mensaje «Procesamiento completado»
-* ✅ **Botón de inicio**: se vuelve a habilitar (listo para la siguiente ejecución del procesamiento)
+* ✅ **Botón de inicio**: se vuelve a habilitar (listo para la siguiente ejecución de procesamiento)
 * ✅ **Archivos de salida**: todas las imágenes procesadas se guardan en la subcarpeta del modelo de cámara
 
 ***
@@ -94,7 +94,7 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 1. Compruebe el registro de depuración en busca de mensajes de omisión/error.
 2. Verifique que haya suficiente espacio en disco.
-3. Cuente los archivos: deben coincidir (recuento original - recuento de destino) × (índices + 1)
+3. Cuente los archivos: deben coincidir (recuento original - recuento de destino) × (índices + 1).
 4. Vuelva a importar y procesar los archivos que faltan.
 
 ### Problema: bordes oscuros o brillantes (el viñeteado sigue siendo visible)
@@ -107,8 +107,8 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Soluciones:**
 
-1. Compruebe que la corrección del viñeteado está habilitada en la configuración del proyecto.
-2. Compruebe que el modelo de cámara se ha detectado correctamente.
+1. Verifique que la corrección de viñeteado esté habilitada en la configuración del proyecto.
+2. Compruebe que el modelo de cámara se haya detectado correctamente.
 3. Póngase en contacto con el servicio de asistencia de MAPIR si el viñeteado persiste.
 
 ### Problema: colores o valores incorrectos
@@ -127,21 +127,21 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 3. Revise la calidad de la imagen del objetivo.
 4. Vuelva a procesar con los objetivos adecuados marcados.
 
-### Problema: los valores de NDVI parecen incorrectos
+### Problema: los valores NDVI parecen incorrectos.
 
-**Rangos esperados de NDVI:**
+**Rangos NDVI esperados:**
 
 * **Agua, rocas, suelo**: de -0,1 a 0,2.
 * **Vegetación escasa/poco saludable**: de 0,2 a 0,4.
 * **Vegetación moderada**: de 0,4 a 0,6.
-* **Vegetación densa y saludable**: de 0,6 a 0,9
+* **Vegetación saludable y densa**: de 0,6 a 0,9.
 
 **Si los valores están fuera de estos rangos:**
 
-1. Compruebe que se ha aplicado la calibración de la reflectancia.
-2. Compruebe que se ha incluido el registro del sensor de luz.
-3. Compruebe que se han detectado los objetivos de calibración.
-4. Asegúrese de que se ha detectado el modelo de cámara correcto.
+1. Verifique que se haya aplicado la calibración de reflectancia.
+2. Verifique que se haya incluido el registro del sensor de luz.
+3. Compruebe que se hayan detectado los objetivos de calibración.
+4. Asegúrese de que se haya detectado el modelo de cámara correcto.
 5. Revise el momento y las condiciones de captura de la imagen objetivo.
 
 ***
@@ -159,17 +159,17 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
    * WebODM
 2. **Conserve los metadatos EXIF**: asegúrese de que se conservan los datos GPS para el geoetiquetado.
 3. **Flujos de trabajo calibrados**: utilice imágenes de reflectancia para obtener precisión científica.
-4. **Procese mosaicos de índice**: cree ortomosaicos NDVI a partir de imágenes de índice individuales.
-5. **Exportar GeoTIFF georreferenciado**: para su uso en aplicaciones SIG.
+4. **Procese mosaicos de índice**: Cree ortomosaicos NDVI a partir de imágenes índice individuales.
+5. **Exporte GeoTIFF georreferenciado**: para su uso en aplicaciones SIG.
 
 ### Para análisis SIG
 
 **Flujo de trabajo recomendado:**
 
-1. **Cargar en QGIS, ArcGIS o similar**.
-2. **Utilice imágenes de reflectancia de 16 bits TIFF** para el análisis multibanda.
-3. **Utilice imágenes de índice** (NDVI, NDRE) como capas de vegetación listas para usar.
-4. **Calculadora ráster**: combine bandas para realizar análisis personalizados.
+1. **Cargue en QGIS, ArcGIS o similar**.
+2. **Utilizar imágenes de reflectancia TIFF** de 16 bits para análisis multibanda.
+3. **Utilizar imágenes de índice** (NDVI, NDRE) como capas de vegetación listas para usar.
+4. **Calculadora ráster**: combinar bandas para análisis personalizados.
 5. **Exportar**: cree mapas de clasificación, detección de cambios y mapas de salud de la vegetación.
 
 ### Para análisis directo/informes
@@ -189,7 +189,7 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Qué guardar:**
 
-* ✅ **Imágenes RAW/JPG originales**: archivarlas en una unidad/nube independiente.
+* ✅ **Imágenes RAW/JPG originales**: archivar en una unidad/nube independiente.
 * ✅ **Resultados procesados**: conserve las imágenes calibradas y los índices
 * ✅ **Archivo del proyecto**: contiene todos los ajustes para volver a procesar si es necesario
 * ✅ **Registro de depuración**: documenta los detalles del procesamiento
@@ -209,10 +209,10 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 Si va a procesar conjuntos de datos similares en el futuro:
 
-1. **Guarde la plantilla del proyecto** (si aún no lo ha hecho).
-2. **Cree un nuevo proyecto** utilizando la plantilla guardada.
-3. **Importe nuevas imágenes**.
-4. **Procese** con la misma configuración para mantener la coherencia.
+1. **Guarde la plantilla del proyecto** (si aún no lo ha hecho)
+2. **Cree un nuevo proyecto** utilizando la plantilla guardada
+3. **Importe nuevas imágenes**
+4. **Procese** con la misma configuración para mantener la coherencia
 
 ### Procesamiento por lotes de varias sesiones
 
@@ -220,14 +220,14 @@ Para varias sesiones/conjuntos de datos:
 
 **Opción 1: GUI - Varios proyectos**
 
-* Cree un proyecto independiente para cada sesión.
-* Utilice una configuración de plantilla coherente.
-* Procese uno por uno.
+* Cree un proyecto independiente para cada sesión
+* Utilice una configuración de plantilla coherente
+* Procese uno por uno
 
 **Opción 2: Chloros CLI (solo Chloros+)**
 
-* Automatice el procesamiento por lotes.
-* Procese varias carpetas con scripts.
+* Automatizar el procesamiento por lotes.
+* Procesar varias carpetas con scripts.
 * Consulte la [Documentación de CLI](../CLI.md)
 
 **Opción 3: Python SDK (solo Chloros+)**
@@ -238,7 +238,7 @@ Para varias sesiones/conjuntos de datos:
 
 ***
 
-## Solución de problemas Posprocesamiento
+## Solución de problemas de posprocesamiento
 
 ### Reprocesamiento con diferentes ajustes
 

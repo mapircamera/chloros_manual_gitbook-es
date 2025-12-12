@@ -1,6 +1,6 @@
 # Supervisión del procesamiento
 
-Una vez iniciado el procesamiento, Chloros ofrece varias formas de supervisar el progreso, comprobar si hay problemas y comprender lo que está sucediendo con su conjunto de datos. En esta página se explica cómo realizar un seguimiento del procesamiento e interpretar la información que proporciona Chloros.
+Una vez iniciado el procesamiento, Chloros ofrece varias formas de supervisar el progreso, comprobar si hay problemas y comprender qué está sucediendo con su conjunto de datos. En esta página se explica cómo realizar un seguimiento del procesamiento e interpretar la información que proporciona Chloros.
 
 ## Descripción general de la barra de progreso
 
@@ -27,14 +27,14 @@ Para usuarios con licencia Chloros+:
 
 **Visualización del progreso en 4 etapas:**
 
-1. **Detección**: búsqueda de objetivos de calibración
-2. **Análisis**: examen de imágenes y preparación del proceso
-3. **Calibración**: aplicación de correcciones de viñeta y reflectancia
-4. **Exportación**: guardado de archivos procesados
+1. **Detección**: búsqueda de objetivos de calibración.
+2. **Análisis**: examen de imágenes y preparación del proceso.
+3. **Calibración**: aplicación de correcciones de viñeta y reflectancia.
+4. **Exportación**: guardado de archivos procesados.
 
 **Funciones interactivas:**
 
-* **Pase el cursor sobre** la barra de progreso para ver el panel ampliado de 4 etapas
+* **Pase el cursor sobre** la barra de progreso para ver el panel ampliado de 4 etapas.
 * **Haga clic** en la barra de progreso para congelar/fijar el panel ampliado
 * **Vuelva a hacer clic** para descongelarlo y ocultarlo automáticamente al retirar el ratón
 * Cada etapa muestra el progreso individual (0-100 %)
@@ -45,7 +45,7 @@ Para usuarios con licencia Chloros+:
 
 ### Etapa 1: Detección (detección de objetivos)
 
-**Qué está sucediendo:**
+**Qué ocurre:**
 
 * Chloros escanea las imágenes marcadas con la casilla Objetivo
 * Los algoritmos de visión artificial identifican los 4 paneles de calibración
@@ -94,7 +94,7 @@ Para usuarios con licencia Chloros+:
 
 **Qué está sucediendo:**
 
-* **Debayering**: Conversión del patrón Bayer RAW a 3 canales
+* **Desbayerización**: conversión del patrón Bayer RAW a 3 canales
 * **Corrección de viñeta**: eliminación del oscurecimiento del borde de la lente.
 * **Calibración de reflectancia**: normalización con valores objetivo.
 * **Cálculo de índices**: cálculo de índices multiespectrales.
@@ -112,7 +112,7 @@ Para usuarios con licencia Chloros+:
 
 * **Modo libre**: procesa una imagen a la vez de forma secuencial
 * **Modo Chloros+**: procesa hasta 16 imágenes simultáneamente
-* **Aceleración GPU**: acelera significativamente esta etapa.
+* **Aceleración GPU**: Acelera significativamente esta etapa.
 
 **A qué hay que prestar atención:**
 
@@ -124,12 +124,12 @@ Para usuarios con licencia Chloros+:
 
 **Qué está sucediendo:**
 
-* Escribe las imágenes calibradas en el disco en el formato seleccionado.
-* Exporta imágenes de índice multiespectral con colores LUT.
-* Crea subcarpetas de modelos de cámara.
-* Conserva los nombres de archivo originales con los sufijos adecuados.
+* Escribir imágenes calibradas en el disco en el formato seleccionado
+* Exportar imágenes de índice multiespectral con colores LUT
+* Crear subcarpetas de modelos de cámara
+* Conservar los nombres de archivo originales con los sufijos adecuados
 
-**Duración:** 10-20 % del tiempo total de procesamiento.
+**Duración:** 10-20 % del tiempo total de procesamiento
 
 **Indicador de progreso:**
 
@@ -157,7 +157,7 @@ El Registro de depuración proporciona información detallada sobre el progreso 
 
 ### Comprensión de los mensajes de registro
 
-#### Mensajes informativos (blanco/gris)
+#### Mensajes de información (blanco/gris)
 
 Actualizaciones de procesamiento normales:
 
@@ -210,8 +210,8 @@ Para copiar el registro con fines de resolución de problemas o asistencia técn
 
 1. Abra el panel Registro de depuración.
 2. Haga clic en el botón **«Copiar registro»** (o haga clic con el botón derecho → Seleccionar todo).
-3. Péguelo en un archivo de texto o en un correo electrónico.
-4. Envíelo a la asistencia técnica de MAPIR si es necesario.
+3. Pegue el contenido en un archivo de texto o en un correo electrónico.
+4. Envíelo al servicio de asistencia técnica de MAPIR si es necesario.
 
 ***
 
@@ -264,7 +264,7 @@ Cuando la aceleración de la GPU está habilitada:
 
 * Icono de la bandeja del sistema NVIDIA.
 * Administrador de tareas → Rendimiento → GPU.
-* GPU-Z o herramienta de supervisión similar.
+* GPU-Z o una herramienta de supervisión similar.
 
 ### E/S del disco
 
@@ -318,7 +318,7 @@ Detenga el procesamiento si ve:
 
 1. Haga clic en el **botón Detener/Cancelar** (sustituye al botón Iniciar).
 2. El procesamiento se detiene y se pierde el progreso
-3. Solucione los problemas y vuelva a empezar desde el principio
+3. Solucione los problemas y reinicie desde el principio
 
 ***
 

@@ -131,7 +131,7 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 3. El explorador de archivos muestra el modelo de cámara en la columna Modelo de cámara.
 4. El procesamiento aplica la configuración correcta para cada tipo de cámara.
 
-**Ejemplo**: Survey3W RGN + Survey3N OCN configuración de doble cámara.
+**Ejemplo de escenario**: Survey3W RGN + Survey3N OCN configuración de doble cámara.
 
 ***
 
@@ -140,7 +140,7 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 ### Organizar antes de importar
 
 * Mantenga las imágenes de calibración en la misma carpeta que las imágenes del estudio.
-* Mantenga la estructura original de carpetas de su cámara/tarjeta SD.
+* Mantenga la estructura de carpetas original de su cámara/tarjeta SD.
 * No mezcle conjuntos de datos de diferentes sesiones en un mismo proyecto.
 
 ### Nombres de archivos
@@ -154,7 +154,7 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 * Incluya siempre 1-2 imágenes de calibración por sesión.
 * Capture los objetivos antes y después de la sesión de captura.
 * Coloque los objetivos en las mismas condiciones de iluminación que el área de captura.
-* Marque las imágenes de calibración con la casilla de verificación Objetivo para acelerar el procesamiento.
+* Marque las imágenes de calibración con la casilla Objetivo para acelerar el procesamiento.
 
 ***
 
@@ -165,7 +165,7 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 **Posibles causas:**
 
 * Formato de archivo no compatible (solo RAW+JPG y JPG de cámaras MAPIR).
-* Las imágenes proceden de cámaras que no son MAPIR (consulte [Cámaras compatibles](../supported-cameras.md)).
+* Las imágenes son de cámaras que no son MAPIR (consulte [Cámaras compatibles](../supported-cameras.md)).
 * Archivo dañado o transferencia incompleta desde la tarjeta SD.
 
 **Solución**: Verifique la compatibilidad del formato de archivo y el modelo de cámara.

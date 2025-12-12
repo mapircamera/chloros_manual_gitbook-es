@@ -30,8 +30,8 @@
 
 El CLI se incluye automáticamente con el instalador Chloros:
 
-1. Descargue y ejecute **Chloros Installer.exe**.
-2. Complete el asistente de instalación.
+1. Descargue y ejecute **Chloros Installer.exe**
+2. Complete el asistente de instalación
 3. CLI instalado en: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
 {% hint style=&quot;success&quot; %}
@@ -109,7 +109,7 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 | `--exposure-pin-1`    | Cadena  | Ninguno           | Bloquear exposición para modelo de cámara (Pin 1)                                                 |
 | `--exposure-pin-2`    | Cadena  | Ninguno           | Bloquear exposición para modelo de cámara (Pin 2)                                                 |
 | `--recal-interval`    | Entero | Auto           | Intervalo de recalibración en segundos                                                      |
-| `--timezone-offset`   | Entero | 0              | Desfase horario en horas                                                               |
+| `--timezone-offset`   | Entero | 0              | Desviación horaria en horas                                                               |
 
 ***
 
@@ -137,7 +137,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 <figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
 
-### `logout` - Borrar credenciales
+### `logout`: borrar credenciales
 
 Borra las credenciales almacenadas y cierra la sesión de tu cuenta.
 
@@ -295,7 +295,7 @@ chloros-cli language ja
 
 ***
 
-### `set-project-folder` - Establecer carpeta predeterminada del proyecto
+### `set-project-folder`: establecer la carpeta predeterminada del proyecto
 
 Cambia la ubicación predeterminada de la carpeta del proyecto (compartida con la GUI).
 
@@ -377,9 +377,9 @@ Chloros+ CLI **escala automáticamente** el procesamiento paralelo para adaptars
 
 **Cómo funciona:**
 
-* Detecta los núcleos de la CPU y la RAM
-* Asigna trabajadores: **2× núcleos de CPU** (utiliza hiperprocesamiento)
-* **Máximo: 16 trabajadores paralelos** (para mayor estabilidad)
+* Detecta los núcleos de la CPU y la RAM.
+* Asigna trabajadores: **2× núcleos de CPU** (utiliza hiperprocesamiento).
+* **Máximo: 16 trabajadores en paralelo** (para mayor estabilidad).
 
 **Niveles del sistema:**
 
@@ -401,7 +401,7 @@ El CLI utiliza **Alta calidad (más rápido)** como algoritmo Debayer predetermi
 | --------------------------- | ------- | ----- | ------------------------------------------- |
 | **Alta calidad (más rápido)** ⭐ | ⭐⭐⭐⭐    | ⚡⚡⚡   | Algoritmo sensible a los bordes (predeterminado, recomendado) |
 
-### Corrección de viñeteado
+### Corrección de viñeta
 
 **Qué hace:** corrige la pérdida de luz en los bordes de la imagen (esquinas más oscuras comunes en las imágenes de cámara).
 
@@ -430,7 +430,7 @@ Convierte los valores brutos del sensor en porcentajes de reflectancia estandari
 
 * **Desactivado por defecto**
 * Utilice `--ppk` para activarlo
-* Requiere archivos .daq en la carpeta del proyecto del sensor de luz DAQ-A-SD MAPIR.
+* Requiere archivos .daq en la carpeta del proyecto del sensor de luz MAPIR DAQ-A-SD.
 
 ### Formatos de salida
 
@@ -576,7 +576,7 @@ if __name__ == '__main__':
 
 ### Flujo de trabajo estándar
 
-1. **Entrada**: carpeta que contiene pares de imágenes RAW/JPG
+1. **Entrada**: Carpeta que contiene pares de imágenes RAW/JPG
 2. **Detección**: CLI busca automáticamente los archivos de imagen compatibles
 3. **Procesamiento**: El modo paralelo se adapta a los núcleos de su CPU (Chloros+)
 4. **Salida**: Crea subcarpetas por modelo de cámara con las imágenes procesadas

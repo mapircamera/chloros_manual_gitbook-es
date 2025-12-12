@@ -26,7 +26,7 @@ $$
 
 Los valores EVI deben oscilar entre 0 y 1 para los píxeles de vegetación. Las características brillantes, como las nubes y los edificios blancos, junto con las características oscuras, como el agua, pueden dar lugar a valores de píxeles anómalos en una imagen EVI. Antes de crear una imagen EVI, debe enmascarar las nubes y las características brillantes de la imagen de reflectancia y, opcionalmente, establecer un umbral para los valores de píxeles de 0 a 1.
 
-_Referencia: Huete, A., et al. «Overview of the Radiometric and Biophysical Performance of the MODIS Vegetation Indices» (Resumen del rendimiento radiométrico y biofísico de los índices de vegetación MODIS). Remote Sensing of Environment 83 (2002):195-213._
+_Referencia: Huete, A., et al. «Overview of the Radiometric and Biophysical Performance of the MODIS Vegetation Indices» (Resumen del rendimiento radiométrico y biofísico de los índices de vegetación MODIS). Remote Sensing of Environment 83 (2002): 195-213._
 
 ***
 
@@ -52,7 +52,7 @@ $$
 FCI2 = Red * NIR
 $$
 
-Las zonas boscosas tendrán valores FCI2 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro del dosel.
+Las zonas boscosas tendrán valores FCI2 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro de la copa.
 
 _Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
 
@@ -86,13 +86,13 @@ $$
 
 La constante gamma es una función de ponderación que depende de las condiciones de los aerosoles en la atmósfera. ENVI utiliza un valor de 1,7, que es el valor recomendado por Gitelson, Kaufman y Merzylak (1996, página 296).
 
-_Referencia: Gitelson, A., Y. Kaufman y M. Merzylak. «Uso de un canal Green en la teledetección de la vegetación global desde EOS-MODIS». Teledetección del medio ambiente 58 (1996): 289-298._
+_Referencia: Gitelson, A., Y. Kaufman y M. Merzylak. «Use of a Green Channel in Remote Sensing of Global Vegetation from EOS-MODIS». Remote Sensing of Environment 58 (1996): 289-298._
 
 ***
 
 ## GCI - Green Índice de clorofila
 
-Este índice se utiliza para estimar el contenido de clorofila de las hojas en una amplia gama de especies vegetales.
+Este índice se utiliza para estimar el contenido de clorofila en las hojas de una amplia gama de especies vegetales.
 
 $$
 GCI = {NIR \over Green} - 1
@@ -138,7 +138,7 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea en color infrarrojo». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
+_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea en infrarrojo». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
 
 ***
 
@@ -150,7 +150,7 @@ $$
 GRVI = {NIR \over Green }
 $$
 
-_Referencia: Sripada, R., et al. «Fotografía aérea en infrarrojo para determinar las necesidades de nitrógeno del maíz al inicio de la temporada». Agronomy Journal 98 (2006): 968-977._
+_Referencia: Sripada, R., et al. «Fotografía aérea en color infrarrojo para determinar las necesidades de nitrógeno del maíz al inicio de la temporada». Agronomy Journal 98 (2006): 968-977._
 
 ***
 
@@ -162,7 +162,7 @@ $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
 $$
 
-_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea en color infrarrojo». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
+_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea infrarroja en color». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
 
 ***
 
@@ -242,7 +242,7 @@ $$
 
 El valor de este índice oscila entre -1 y 1. El rango común para la vegetación verde es de 0,2 a 0,8.
 
-_Referencia: Rouse, J., R. Haas, J. Schell y D. Deering. Monitoring Vegetation Systems in the Great Plains with ERTS. Tercer Simposio ERTS, NASA (1973): 309-317._
+_Referencia: Rouse, J., R. Haas, J. Schell y D. Deering. Monitorización de los sistemas de vegetación en las Grandes Llanuras con ERTS. Tercer Simposio ERTS, NASA (1973): 309-317._
 
 ***
 
@@ -272,7 +272,7 @@ _Referencia: Rondeaux, G., M. Steven y F. Baret. «Optimization of Soil-Adjusted
 
 ## RDVI: índice de vegetación de diferencia renormalizada
 
-Este índice utiliza la diferencia entre las longitudes de onda del infrarrojo cercano y el rojo, junto con el NDVI, para resaltar la vegetación sana. Es insensible a los efectos del suelo y la geometría de observación solar.
+Este índice utiliza la diferencia entre las longitudes de onda del infrarrojo cercano y el rojo, junto con el NDVI, para resaltar la vegetación sana. Es insensible a los efectos del suelo y la geometría de visión del sol.
 
 $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
