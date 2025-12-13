@@ -1,11 +1,10 @@
 ---
-description: This page lists some multispectral indices that Chloros uses
+description: This page lists some multispectral indices that Chloros uses.
 metaLinks:
   alternates:
     - >-
       https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/multispectral-index-formulas
 ---
-
 # Fórmulas del índice multiespectral
 
 Las siguientes fórmulas del índice utilizan una combinación de los rangos de transmisión media del filtro Survey3:
@@ -26,13 +25,13 @@ $$
 
 Los valores EVI deben oscilar entre 0 y 1 para los píxeles de vegetación. Las características brillantes, como las nubes y los edificios blancos, junto con las características oscuras, como el agua, pueden dar lugar a valores de píxeles anómalos en una imagen EVI. Antes de crear una imagen EVI, debe enmascarar las nubes y las características brillantes de la imagen de reflectancia y, opcionalmente, establecer un umbral para los valores de píxeles de 0 a 1.
 
-_Referencia: Huete, A., et al. «Overview of the Radiometric and Biophysical Performance of the MODIS Vegetation Indices» (Resumen del rendimiento radiométrico y biofísico de los índices de vegetación MODIS). Remote Sensing of Environment 83 (2002): 195-213._
+_Referencia: Huete, A., et al. «Overview of the Radiometric and Biophysical Performance of the MODIS Vegetation Indices» (Resumen del rendimiento radiométrico y biofísico de los índices de vegetación MODIS). Remote Sensing of Environment 83 (2002): 195-213.
 
 ***
 
 ## FCI1 - Índice de cobertura forestal 1
 
-Este índice distingue las copas de los árboles de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que incluyen una banda de borde rojo.
+Este índice distingue las copas de los bosques de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que incluyen una banda de borde rojo.
 
 $$
 FCI1 = Red * RedEdge
@@ -52,7 +51,7 @@ $$
 FCI2 = Red * NIR
 $$
 
-Las zonas boscosas tendrán valores FCI2 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro de la copa.
+Las zonas boscosas tendrán valores FCI2 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro del dosel.
 
 _Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
 
@@ -60,25 +59,25 @@ _Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices 
 
 ## GEMI - Índice de monitorización medioambiental global
 
-Este índice de vegetación no lineal se utiliza para la vigilancia medioambiental global a partir de imágenes satelitales e intenta corregir los efectos atmosféricos. Es similar al NDVI, pero es menos sensible a los efectos atmosféricos. Se ve afectado por el suelo desnudo, por lo que no se recomienda su uso en zonas con vegetación escasa o moderadamente densa.
+Este índice de vegetación no lineal se utiliza para la monitorización medioambiental global a partir de imágenes satelitales e intenta corregir los efectos atmosféricos. Es similar al NDVI, pero es menos sensible a los efectos atmosféricos. Se ve afectado por el suelo desnudo, por lo que no se recomienda su uso en zonas con vegetación escasa o moderadamente densa.
 
 $$
 GEMI = eta (1 - 0.25 * eta) - {Red - 0.125 \over 1 - Red}
 $$
 
-Dónde:
+Donde:
 
 $$
 eta = {2(NIR^{2}-Red^{2}) + 1.5 * NIR + 0.5 *  Red \over NIR + Red + 0.5}
 $$
 
-_Referencia: Pinty, B. y M. Verstraete. GEMI: un índice no lineal para supervisar la vegetación global desde satélites. Vegetation 101 (1992): 15-20._
+_Referencia: Pinty, B. y M. Verstraete. GEMI: un índice no lineal para monitorizar la vegetación global a partir de satélites. Vegetación 101 (1992): 15-20._
 
 ***
 
 ## GARI - Green Índice resistente a la atmósfera
 
-Este índice es más sensible a una amplia gama de concentraciones de clorofila y menos sensible a los efectos atmosféricos que el NDVI.
+Este índice es más sensible a una amplia gama de concentraciones de clorofila y menos sensible a los efectos atmosféricos que NDVI.
 
 $$
 GARI = {NIR - [Green - \gamma(Blue - Red)] \over NIR + [Green - \gamma(Blue - Red)]   }
@@ -92,7 +91,7 @@ _Referencia: Gitelson, A., Y. Kaufman y M. Merzylak. «Use of a Green Channel in
 
 ## GCI - Green Índice de clorofila
 
-Este índice se utiliza para estimar el contenido de clorofila en las hojas de una amplia gama de especies vegetales.
+Este índice se utiliza para estimar el contenido de clorofila de las hojas en una amplia gama de especies vegetales.
 
 $$
 GCI = {NIR \over Green} - 1
@@ -100,7 +99,7 @@ $$
 
 Disponer de amplias longitudes de onda NIR y verdes proporciona una mejor predicción del contenido de clorofila, al tiempo que permite una mayor sensibilidad y una relación señal-ruido más alta.
 
-_Referencia: Gitelson, A., Y. Gritz y M. Merzlyak. «Relaciones entre el contenido de clorofila de las hojas y la reflectancia espectral y algoritmos para la evaluación no destructiva de la clorofila en las hojas de plantas superiores». Journal of Plant Physiology 160 (2003): 271-282._
+_Referencia: Gitelson, A., Y. Gritz y M. Merzlyak. «Relaciones entre el contenido de clorofila en las hojas y la reflectancia espectral y algoritmos para la evaluación no destructiva de la clorofila en las hojas de plantas superiores». Journal of Plant Physiology 160 (2003): 271-282._
 
 ***
 
@@ -138,13 +137,13 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea en infrarrojo». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
+_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno del maíz durante la temporada mediante fotografía aérea infrarroja en color». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
 
 ***
 
 ## GRVI - Green Índice de vegetación de relación
 
-Este índice es sensible a las tasas de fotosíntesis en las copas de los árboles, ya que las reflectancias verde y roja se ven muy influidas por los cambios en los pigmentos de las hojas.
+Este índice es sensible a las tasas de fotosíntesis en las copas de los bosques, ya que las reflectancias verde y roja se ven muy influidas por los cambios en los pigmentos de las hojas.
 
 $$
 GRVI = {NIR \over Green }
@@ -162,7 +161,7 @@ $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
 $$
 
-_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea infrarroja en color». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
+_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea en color infrarrojo». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
 
 ***
 
@@ -198,7 +197,7 @@ _Referencia: Datt, B. «Teledetección del contenido de agua en las hojas de euc
 
 ***
 
-## MNLI - Índice no lineal modificado
+## MNLI: índice no lineal modificado
 
 Este índice es una mejora del índice no lineal (NLI) que incorpora el índice de vegetación ajustado al suelo (SAVI) para tener en cuenta el fondo del suelo. ENVI utiliza un valor de factor de ajuste del fondo del dosel (_L_) de 0,5.
 
@@ -212,7 +211,7 @@ _Referencia: Yang, Z., P. Willis y R. Mueller. «Impacto de la imagen AWIFS mejo
 
 ## MSAVI2 - Índice de vegetación ajustado al suelo modificado 2
 
-Este índice es una versión más simple del índice MSAVI propuesto por Qi et al. (1994), que mejora el índice de vegetación ajustado al suelo (SAVI). Reduce el ruido del suelo y aumenta el rango dinámico de la señal de vegetación. MSAVI2 se basa en un método inductivo que no utiliza un valor _L_ constante (como en SAVI) para resaltar la vegetación sana.
+Este índice es una versión más simple del índice MSAVI propuesto por Qi et al (1994), que mejora el índice de vegetación ajustado al suelo (SAVI). Reduce el ruido del suelo y aumenta el rango dinámico de la señal de vegetación. El MSAVI2 se basa en un método inductivo que no utiliza un valor _L_ constante (como en el caso del SAVI) para resaltar la vegetación sana.
 
 $$
 MSAVI2 = {2 * NIR + 1 - \sqrt{(2 * NIR + 1)^{2} - 8(NIR - Red)} \over 2}
@@ -272,7 +271,7 @@ _Referencia: Rondeaux, G., M. Steven y F. Baret. «Optimization of Soil-Adjusted
 
 ## RDVI: índice de vegetación de diferencia renormalizada
 
-Este índice utiliza la diferencia entre las longitudes de onda del infrarrojo cercano y el rojo, junto con el NDVI, para resaltar la vegetación sana. Es insensible a los efectos del suelo y la geometría de visión del sol.
+Este índice utiliza la diferencia entre las longitudes de onda del infrarrojo cercano y el rojo, junto con el NDVI, para resaltar la vegetación sana. Es insensible a los efectos del suelo y la geometría de observación solar.
 
 $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
@@ -302,7 +301,7 @@ $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Referencia: Bannari, A., H. Asalhi y P. Teillet. «Índice de vegetación por diferencia transformada (TDVI) para la cartografía de la cobertura vegetal». En Actas del Simposio de Geociencias y Teledetección, IGARSS &#x27;02, IEEE International, volumen 5 (2002)._
+_Referencia: Bannari, A., H. Asalhi y P. Teillet. «Índice de vegetación transformado (TDVI) para la cartografía de la cobertura vegetal». En Actas del Simposio de Geociencias y Teledetección, IGARSS &#x27;02, IEEE International, volumen 5 (2002)._
 
 ***
 
@@ -332,4 +331,4 @@ _Referencias_
 
 _Gitelson, A. «Índice de vegetación de amplio rango dinámico para la cuantificación remota de las características biofísicas de la vegetación». Journal of Plant Physiology 161, n.º 2 (2004): 165-173._
 
-_Henebry, G., A. Viña y A. Gitelson. «El índice de vegetación de amplio rango dinámico y su utilidad potencial para el análisis de brechas». Gap Analysis Bulletin 12: 50-56._
+_Henebry, G., A. Viña y A. Gitelson. «The Wide Dynamic Range Vegetation Index and its Potential Utility for Gap Analysis» (El índice de vegetación de amplio rango dinámico y su utilidad potencial para el análisis de brechas). Gap Analysis Bulletin 12: 50-56._
