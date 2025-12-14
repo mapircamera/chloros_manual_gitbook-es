@@ -27,14 +27,14 @@ Para usuarios con licencia Chloros+:
 
 **Visualización del progreso en 4 etapas:**
 
-1. **Detección**: búsqueda de objetivos de calibración.
-2. **Análisis**: examen de imágenes y preparación del proceso.
-3. **Calibración**: aplicación de correcciones de viñeta y reflectancia.
-4. **Exportación**: guardado de archivos procesados.
+1. **Detección**: búsqueda de objetivos de calibración
+2. **Análisis**: examen de imágenes y preparación del proceso
+3. **Calibración**: aplicación de correcciones de viñeteado y reflectancia
+4. **Exportación**: guardado de archivos procesados
 
 **Funciones interactivas:**
 
-* **Pase el cursor sobre** la barra de progreso para ver el panel ampliado de 4 etapas.
+* **Pase el cursor sobre** la barra de progreso para ver el panel ampliado de 4 etapas
 * **Haga clic** en la barra de progreso para congelar/fijar el panel ampliado
 * **Vuelva a hacer clic** para descongelarlo y ocultarlo automáticamente al retirar el ratón
 * Cada etapa muestra el progreso individual (0-100 %)
@@ -73,12 +73,12 @@ Para usuarios con licencia Chloros+:
 
 **Qué está sucediendo:**
 
-* Lectura de metadatos EXIF de la imagen (marcas de tiempo, ajustes de exposición).
-* Determinación de la estrategia de calibración basada en las marcas de tiempo de los objetivos.
-* Organización de la cola de procesamiento de imágenes.
-* Preparación de los trabajadores de procesamiento paralelo (solo Chloros+).
+* Lectura de metadatos EXIF de la imagen (marcas de tiempo, ajustes de exposición)
+* Determinación de la estrategia de calibración basada en las marcas de tiempo de los objetivos
+* Organización de la cola de procesamiento de imágenes
+* Preparación de los trabajadores de procesamiento paralelo (solo Chloros+)
 
-**Duración:** 5-30 segundos.
+**Duración:** 5-30 segundos
 
 **Indicador de progreso:**
 
@@ -112,7 +112,7 @@ Para usuarios con licencia Chloros+:
 
 * **Modo libre**: procesa una imagen a la vez de forma secuencial
 * **Modo Chloros+**: procesa hasta 16 imágenes simultáneamente
-* **Aceleración GPU**: Acelera significativamente esta etapa.
+* **Aceleración GPU**: acelera significativamente esta etapa.
 
 **A qué hay que prestar atención:**
 
@@ -157,7 +157,7 @@ El Registro de depuración proporciona información detallada sobre el progreso 
 
 ### Comprensión de los mensajes de registro
 
-#### Mensajes de información (blanco/gris)
+#### Mensajes informativos (blanco/gris)
 
 Actualizaciones de procesamiento normales:
 

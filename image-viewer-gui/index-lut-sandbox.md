@@ -47,7 +47,7 @@ El entorno de pruebas le permite:
 * **Aplicar nuevos índices y gradientes de color (LUT)** para visualizar los datos.
 * **Ajustar la configuración de visualización** de forma interactiva.
 * **Ver** imágenes de índices ya calculadas.
-* **Inspeccionar** los valores de píxeles en todos los niveles de zoom.
+* **Inspeccionar** los valores de los píxeles en todos los niveles de zoom.
 
 ### Abrir el entorno de pruebas
 
@@ -68,7 +68,7 @@ Para trabajar con un índice en el Sandbox del visor de imágenes <img src="../.
 
 ### Aplicación de un índice a una imagen
 
-Una vez que la imagen esté a pantalla completa y la barra lateral de la pestaña **Visor de imágenes** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> esté abierta:
+Una vez que la imagen esté en pantalla completa y la barra lateral de la pestaña **Visor de imágenes** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> esté abierta:
 
 1. Marque la casilla Índice en la parte superior de la barra lateral.
 2. Elija el filtro de su cámara en el menú desplegable de la izquierda.
@@ -125,7 +125,7 @@ Una vez que tenga una imagen de índice que muestre
 
 1. Haga clic en el <img src="../.gitbook/assets/image.png" alt="" data-size="line"> botón «+Añadir LUT»
 2. Seleccione el degradado de color
-3. Ajuste los puntos finales mínimo/máximo del recorte
+3. Ajuste los puntos finales mínimo/máximo de recorte
 4. Ajuste el modo de recorte
 5. Marque la casilla Índice en la barra lateral del **Visor de imágenes** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> para aplicar la LUT.
 
@@ -139,7 +139,7 @@ Una vez que tenga una imagen de índice que muestre
 4. La imagen **se actualiza inmediatamente** con los nuevos colores cuando se marca la casilla Índice.
 
 {% hint style=&quot;success&quot; %}
-**Práctica recomendada**: Para índices de vegetación como NDVI, el degradado Red-Amarillo-Green es el más intuitivo, ya que se ajusta a las asociaciones de colores naturales (verde = saludable, amarillo = moderado, rojo = estresado).
+**Práctica recomendada**: Para índices de vegetación como NDVI, el degradado Red-Amarillo-Green es el más intuitivo, ya que se alinea con las asociaciones de colores naturales (verde = saludable, amarillo = moderado, rojo = estresado).
 {% endhint %}
 
 ### Ajuste de las clases de color
@@ -148,15 +148,15 @@ El **control Clases** determina cuántos pasos de color discretos aparecen en el
 
 **Opciones de recuento de clases:**
 
-* **2-5 clases**: categorías muy amplias, zonas distintas.
-* **6-10 clases**: equilibradas, buenas para la clasificación.
-* **11-20 clases**: degradados suaves, apariencia continua.
-* **Más de 20 clases**: casi continuas, máxima suavidad.
+* **2-5 clases**: Categorías muy amplias, zonas distintas
+* **6-10 clases**: Equilibradas, buenas para la clasificación
+* **11-20 clases**: Degradados suaves, apariencia continua
+* **Más de 20 clases**: Casi continuas, suavidad máxima
 
 **Cómo ajustar:**
 
-1. En el panel LUT, localice los **cuadrados de muestras de color debajo de la barra de degradado**.
-2. Ajuste el número de clases añadiendo con el botón +.
+1. En el panel LUT, localice los **cuadrados de muestras de color debajo de la barra de degradado**
+2. Ajuste el número de clases añadiendo con el botón +
 3. Elimine el número de clases haciendo doble clic en una muestra de color.
 4. El degradado se actualiza **en tiempo real** en la imagen.
 
@@ -169,8 +169,8 @@ El **control Clases** determina cuántos pasos de color discretos aparecen en el
 **Cuándo utilizarlo:**
 
 * **Pocas clases (3-5)**: diapositivas de presentación, mapas de clasificación, informes sencillos.
-* **Clases medianas (6-10)**: análisis general, detalle equilibrado, informes estándar.
-* **Muchas clases (15-20)**: análisis científico, inspección detallada, resultados con calidad de publicación.
+* **Clases medias (6-10)**: análisis general, detalle equilibrado, informes estándar.
+* **Muchas clases (15-20)**: Análisis científico, inspección detallada, resultados con calidad de publicación.
 
 ### Ajuste de los rangos de valores
 
@@ -178,16 +178,16 @@ Los **controles de rango de valores** determinan qué valores de índice se asig
 
 **Controles de rango en el panel LUT:**
 
-* **Valor mínimo**: límite inferior de la escala de colores.
-* **Valor máximo**: límite superior de la escala de colores.
-* **Valores intermedios**: se distribuyen automáticamente entre el mínimo y el máximo (en función del recuento de clases).
+* **Valor mínimo**: Límite inferior de la escala de colores.
+* **Valor máximo**: Límite superior de la escala de colores.
+* **Valores intermedios**: distribuidos automáticamente entre el mínimo y el máximo (basados en el recuento de clases)
 
 #### Ajuste de los valores mínimos/máximos
 
 **Para ajustar los rangos de valores:**
 
-1. En el panel LUT, localice los campos de entrada **Valor mínimo** y **Valor máximo**.
-2. Haga clic en el campo **Valor mínimo**.
+1. En el panel LUT, localice los campos de entrada **Valor mínimo** y **Valor máximo**
+2. Haga clic en el campo **Valor mínimo**
 3. Escriba el valor mínimo deseado (por ejemplo, `0.2`).
 4. Pulse **Intro** o haga clic fuera del campo.
 5. Repita el proceso para el campo **Valor máximo** (por ejemplo, `0.9`).
@@ -200,7 +200,7 @@ Los **controles de rango de valores** determinan qué valores de índice se asig
 **Ejemplo de ajustes de rango NDVI:**
 
 * **Rango completo**: `-1.0` a `1.0` (mostrar todos los valores posibles)
-* **Centrado en la vegetación**: `0.2` a `0.9` (excluir suelo desnudo y agua)
+* **Centrado en la vegetación**: `0.2` a `0.9` (excluye el suelo desnudo y el agua)
 * **Solo vegetación sana**: `0.5` a `0.9` (resaltar solo las plantas vigorosas)
 * **Detección de estrés**: `0.2` a `0.5` (enfatizar las áreas problemáticas)
 * **Rango personalizado**: ajustar en función de los valores de píxeles observados
@@ -214,7 +214,7 @@ Los **controles de rango de valores** determinan qué valores de índice se asig
 
 ### Recortar valores fuera de rango
 
-Cuando los valores de píxeles quedan fuera del rango mínimo/máximo definido, puede controlar cómo se muestran utilizando los **modos de recorte**.
+Cuando los valores de píxeles quedan fuera del rango mínimo/máximo definido, puede controlar cómo se muestran utilizando **modos de recorte**.
 
 #### **Opciones de modo de recorte disponibles:**
 
@@ -222,18 +222,18 @@ Cuando los valores de píxeles quedan fuera del rango mínimo/máximo definido, 
 
 * Píxeles **por debajo del mínimo** → visualización utilizando el **primer color** del degradado (por ejemplo, rojo)
 * Píxeles **por encima del máximo** → visualización utilizando el **último color** del degradado (por ejemplo, verde)
-* **Caso de uso**: enfatizar los extremos, mostrar el rango completo de datos con colores saturados en los límites
-* **Ejemplo**: los valores NDVI por debajo de 0,2 aparecen en rojo, los valores por encima de 0,9 aparecen en verde
+* **Caso de uso**: Destacar los extremos, mostrar el rango completo de datos con colores saturados en los límites.
+* **Ejemplo**: los valores NDVI por debajo de 0,2 aparecen en rojo, los valores por encima de 0,9 aparecen en verde.
 
 #### 2. Fondo transparente
 
-* Los píxeles **fuera del rango** se vuelven **totalmente transparentes**
+* Los píxeles **fuera del rango** se vuelven **totalmente transparentes**.
 * Solo los píxeles **dentro del rango** muestran el degradado de color.
 * **Caso de uso**: superposición GIS, aislamiento de rangos de valores específicos, resaltado solo de áreas de interés.
 * **Ejemplo**: mostrar solo NDVI 0,4-0,7 en color, todo lo demás transparente.
 
 {% hint style=&quot;warning&quot; %}
-**Limitación de transparencia**: los píxeles transparentes aparecerán como el color de fondo en el visor. Cuando se exportan durante el procesamiento, la transparencia se conserva en el formato PNG, pero no en JPG.
+**Limitación de transparencia**: los píxeles transparentes aparecerán como el color de fondo en el visor. Cuando se exporta durante el procesamiento, la transparencia se conserva en el formato PNG, pero no en JPG.
 {% endhint %}
 
 #### 3. Fondo del índice
@@ -245,23 +245,23 @@ Cuando los valores de píxeles quedan fuera del rango mínimo/máximo definido, 
 
 #### 4. Fondo original
 
-* Los píxeles **fuera del rango** se muestran en la **imagen multiespectral original**.
-* Los píxeles **dentro del rango** muestran un **gradiente de color**
-* **Caso de uso**: el más intuitivo: combina el contexto de la imagen natural con una superposición de colores analítica
-* **Ejemplo**: ver el aspecto real del campo/cultivo con las áreas estresadas superpuestas y codificadas por colores
+* Los píxeles **fuera del rango** muestran la **imagen multiespectral original**.
+* Los píxeles **dentro del rango** muestran **un degradado de color**
+* **Caso de uso**: El más intuitivo: combina el contexto natural de la imagen con una superposición analítica de color
+* **Ejemplo**: Vea el aspecto real del campo/cultivo con las áreas estresadas superpuestas y codificadas por colores
 
 ### Elegir el modo de recorte adecuado
 
 | Modo de recorte              | Ideal para                                   | Estilo de visualización          |
 | -------------------------- | ------------------------------------------ | ---------------------------- |
 | **Mínimo y máximo**    | Visualización completa de datos, análisis científico     | Todos los píxeles coloreados           |
-| **Fondo transparente** | Superposiciones GIS, aislamiento de rangos específicos    | Color en el rango, en blanco fuera de él |
+| **Fondo transparente** | Superposiciones GIS, aislamiento de rangos específicos    | Color en el rango, en blanco más allá |
 | **Fondo de índice**       | Énfasis sutil, manteniendo el contexto de los datos  | Color en el rango, gris más allá  |
 | **Fondo original**    | Informes, presentaciones, análisis intuitivo | Color en el rango, foto más allá |
 
 ### Creación de colores LUT personalizados
 
-Para tener un control total sobre la visualización, puede crear **gradientes de color personalizados** editando las paradas de color individuales.
+Para tener un control total sobre la visualización, puede crear **gradientes de color personalizados** editando los paradas de color individuales.
 
 **Para crear un degradado personalizado:**
 
@@ -272,20 +272,20 @@ Para tener un control total sobre la visualización, puede crear **gradientes de
 5. Elija un nuevo color utilizando:
    * **Rueda de colores**: selección visual de colores.
    * **Controles deslizantes RGB/HSV**: control preciso del color.
-   * **Entrada de código hexadecimal**: especificación exacta del color (por ejemplo, `#FF0000` para el rojo).
-6. Haga clic fuera del selector de color **para aplicar el nuevo color**.
-7. El degradado **se actualiza inmediatamente** en la imagen.
+   * **Introducción de código hexadecimal**: especificación exacta del color (por ejemplo, `#FF0000` para el rojo).
+6. Haga clic fuera del selector de colores **para aplicar el nuevo color**.
+7. El degradado **se actualiza inmediatamente** en la imagen
 
 **Añadir o eliminar paradas de color:**
 
-* **Añadir una parada**: haga clic en el icono + para añadir una nueva muestra al final.
-* **Eliminar una parada**: haga doble clic en el cuadrado de color para eliminar la muestra.
+* **Añadir una parada**: haga clic en el icono + para añadir una nueva muestra al final
+* **Eliminar una parada**: haga doble clic en el cuadrado de color para eliminar la muestra
 
 **Estrategias de personalización:**
 
-* **Invertir degradado**: invierta el orden de los colores para invertir el significado (por ejemplo, verde = bajo, rojo = alto).
+* **Invertir degradado**: Invierta el orden de los colores para invertir el significado (por ejemplo, verde = bajo, rojo = alto).
 * **Colores de marca**: combine la paleta de colores de su organización para los informes.
-* **Apto para daltónicos**: utilice combinaciones de naranja y azul o morado y amarillo.
+* **Apto para daltónicos**: utilice combinaciones de naranja-azul o morado-amarillo.
 * **Optimización de la impresión**: elija colores que funcionen tanto en la impresión en color como en escala de grises.
 * **Múltiples umbrales**: utilice colores distintos en umbrales de valores específicos para la clasificación.
 
@@ -308,23 +308,23 @@ Todos los ajustes de LUT en el entorno de pruebas actualizan la imagen **de form
 * **Modificar recorte** → La visualización del fondo cambia al instante
 * **Editar colores** → El degradado personalizado se aplica inmediatamente
 
-**No es necesario el botón «Aplicar»**: ¡todos los cambios son en vivo e interactivos!
+**No es necesario el botón «Aplicar»**: ¡todos los cambios son en directo e interactivos!
 
 {% hint style=&quot;success&quot; %}
-**Comentarios en vivo**: los comentarios visuales instantáneos le permiten experimentar rápidamente con diferentes configuraciones hasta encontrar la visualización óptima para sus necesidades de análisis.
+**Comentarios en directo**: los comentarios visuales instantáneos le permiten experimentar rápidamente con diferentes ajustes hasta encontrar la visualización óptima para sus necesidades de análisis.
 {% endhint %}
 
 ### Flujo de trabajo de refinamiento iterativo
 
 **Flujo de trabajo típico de optimización de LUT:**
 
-1. **Seleccione la capa de índice** (por ejemplo, RAW (reflectancia)).
-2. **Aplique el índice**: elija el filtro de la cámara y la fórmula del índice, arrastre los círculos de color a la ubicación adecuada en la fórmula del índice.
-3. **Aplicar gradiente LUT**: comience con el ajuste preestablecido Red-Yellow-Green.
-4. **Inspeccionar los valores de los píxeles**: mueva el cursor y observe los rangos de valores.
-5. **Ajustar mín./máx.**: reduzca el rango para centrarse en la vegetación (por ejemplo, de 0,2 a 0,9).
-6. **Elija el recorte**: pruebe «Fondo original» para el contexto.
-7. **Refine los colores**: personalice el gradiente si es necesario para enfatizar algo específico.
+1. **Seleccionar capa de índice** (por ejemplo, RAW (reflectancia))
+2. **Aplicar índice**: elija el filtro de la cámara y la fórmula del índice, arrastre los círculos de color a la ubicación adecuada en la fórmula del índice
+3. **Aplicar gradiente LUT**: comience con el ajuste preestablecido Red-Yellow-Green
+4. **Inspeccionar los valores de los píxeles**: mueva el cursor y observe los rangos de valores
+5. **Ajustar mín./máx.: reduzca el rango para centrarse en la vegetación (por ejemplo, de 0,2 a 0,9)
+6. **Elija recorte**: pruebe «Fondo original» para el contexto.
+7. **Refine los colores**: personalice el degradado si es necesario para enfatizar algo específico.
 8. **Finalice la configuración**: documente la configuración y cópiela en la configuración del proyecto para el procesamiento de exportación.
 
 ### Inspección del valor de los píxeles
@@ -340,23 +340,23 @@ Comprender los valores reales de los píxeles es fundamental para establecer ran
 5. **Tome nota** de los rangos de valores para las diferentes características:
    * **Vegetación sana**: por ejemplo, NDVI 0,55-0,85.
    * **Vegetación estresada**: por ejemplo, NDVI 0,30-0,50.
-   * **Suelo desnudo**: por ejemplo, NDVI 0,05-0,25
-   * **Agua** (si está presente): por ejemplo, NDVI -0,05 a 0,10
+   * **Suelo desnudo**: p. ej., NDVI 0,05-0,25
+   * **Agua** (si está presente): p. ej., NDVI -0,05 a 0,10
 
-**Uso de valores de píxeles para establecer rangos LUT:**
+**Uso de valores de píxeles para establecer rangos de LUT:**
 
 Después de inspeccionar los valores de píxeles, ajuste el mínimo y el máximo de LUT según corresponda:
 
-**Ejemplo de escenario:**
+**Ejemplo:**
 
 * **Observación**: Valores del suelo = 0,05-0,25, estresado = 0,25-0,50, sano = 0,50-0,85
-* **Objetivo**: Visualizar solo la salud de las plantas (excluir el suelo)
-* **Ajustes LUT**: Mín. = `0.25`, Máx. = `0.85`
-* **Recorte**: «Fondo original» para ver el suelo en su color natural
-* **Resultado**: El degradado de color solo se aplica a la vegetación, el suelo se muestra como en la imagen original
+* **Objetivo**: Visualizar solo la salud de las plantas (excluir el suelo).
+* **Configuración de LUT**: Mínimo = `0.25`, Máximo = `0.85`.
+* **Recorte**: «Fondo original» para ver el suelo en su color natural.
+* **Resultado**: El degradado de color solo se aplica a la vegetación, el suelo se muestra como en la imagen original.
 
 {% hint style=&quot;info&quot; %}
-**Rango dinámico**: los diferentes cultivos, estaciones y etapas de crecimiento tendrán diferentes rangos de valores. Compruebe siempre los valores de píxeles en su conjunto de datos específico antes de establecer los rangos LUT.
+**Rango dinámico**: Los diferentes cultivos, estaciones y etapas de crecimiento tendrán diferentes rangos de valores. Compruebe siempre los valores de píxeles en su conjunto de datos específico antes de establecer los rangos de LUT.
 {% endhint %}
 
 ***
@@ -373,7 +373,7 @@ Después de inspeccionar los valores de píxeles, ajuste el mínimo y el máximo
 
 1. **Abra la configuración del proyecto** (antes del procesamiento) o la barra lateral del visor de imágenes.
 2. Vaya al **menú desplegable de fórmulas de índice**.
-3. Busque la opción **«Personalizado»** (debe haber iniciado sesión con la licencia Chloros+).
+3. Busque la opción **«Personalizado»** (debe iniciar sesión con la licencia Chloros+).
 4. **Defina su fórmula** utilizando variables de banda:
    * Nombres de banda: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, etc.
    * Operadores: `+`, `-`, `*`, `/`, `^` (exponente)
@@ -399,21 +399,21 @@ Exponential index:
 ```
 
 {% hint style=&quot;warning&quot; %}
-**Validación de fórmulas**: asegúrese de que su fórmula utilice bandas disponibles en su cámara. Por ejemplo, RedEdge solo está disponible en cámaras con un filtro RedEdge.
+**Validación de fórmulas**: asegúrese de que su fórmula utiliza bandas disponibles en su cámara. Por ejemplo, RedEdge solo está disponible en cámaras con un filtro RedEdge.
 {% endhint %}
 
 ***
 
 ## Próximos pasos
 
-Ahora que ya conoce el Index/LUT Sandbox:
+Ahora que ya conoce el índice/LUT Sandbox:
 
-* **Aplicar al procesamiento**: utilice los ajustes descubiertos en [Ajustes del proyecto](../project-settings/project-settings.md)
+* **Aplicar al procesamiento**: utilice la configuración descubierta en [Configuración del proyecto](../project-settings/project-settings.md)
 * **Procesamiento por lotes**: aplique los índices optimizados a conjuntos de datos completos
 * **Más información**: lea [Fórmulas de índices multiespectrales](../project-settings/multispectral-index-formulas.md)
 
 Documentación relacionada:
 
 * [**Capas de imagen**](image-layers.md) - Gestión y visualización de capas
-* [**Abrir una imagen a pantalla completa**](opening-an-image-full-screen.md) - Conceptos básicos del visor de imágenes
-* [**Procesamiento de imágenes (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Flujo de trabajo de procesamiento completo
+* [**Abrir una imagen a pantalla completa**](opening-an-image-full-screen.md): conceptos básicos del visor de imágenes
+* [**Procesamiento de imágenes (GUI)**](../processing-images-gui/adding-files-to-a-project.md): flujo de trabajo completo de procesamiento

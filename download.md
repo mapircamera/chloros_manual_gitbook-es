@@ -3,7 +3,6 @@ metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/download
 ---
-
 # Descargar
 
 Descargue la última versión de Chloros para Windows y comience a trabajar con el procesamiento de imágenes multiespectrales.
@@ -41,11 +40,11 @@ Descargue la última versión de Chloros para Windows y comience a trabajar con 
 
 #### **Pasos de instalación:**
 
-1. Descargue el archivo `CHLOROS INSTALLER - CURRENT VERSION.exe`
-2. Haga doble clic en el instalador para comenzar la instalación
-3. Siga las instrucciones del asistente de instalación
-4. Elija el directorio de instalación (predeterminado: `C:\Program Files\Chloros\`)
-5. Complete la instalación e inicie Chloros
+1. Descargue el archivo `CHLOROS INSTALLER - CURRENT VERSION.exe`.
+2. Haga doble clic en el instalador para comenzar la instalación.
+3. Siga las instrucciones del asistente de instalación.
+4. Elija el directorio de instalación (predeterminado: `C:\Program Files\Chloros\`).
+5. Complete la instalación y ejecute Chloros.
 6. Inicie sesión con su cuenta MAPIR Cloud Chloros+ (o continúe con la versión gratuita).
 
 {% hint style=&quot;success&quot; %}
@@ -90,7 +89,7 @@ Desbloquee funciones avanzadas con una suscripción a Chloros+:
 * ⚡ **Aceleración GPU (CUDA)**: aprovecha la potencia de la GPU NVIDIA
 * 💻 **Acceso CLI**: automatiza con herramientas de línea de comandos
 * 🐍 **Python SDK** - Acceso programático a API
-* 📱 **Varios dispositivos**: utilícelo en entre 2 y más de 10 dispositivos (dependiendo del plan)
+* 📱 **Múltiples dispositivos**: utilícelo en entre 2 y más de 10 dispositivos (dependiendo del plan)
 * 🧮 **Fórmulas personalizadas**: cree índices multiespectrales personalizados
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planes y precios de Chloros+</a></p>***
@@ -166,3 +165,5 @@ Queda prohibido el uso, la distribución o la modificación no autorizados.
 **Versión gratuita**: disponible para uso personal y comercial con limitaciones de funciones.
 
 **Chloros+**: licencia basada en suscripción para funciones avanzadas e implementaciones comerciales.
+
+<figure><img src=".gitbook/assets/t3-125_2.jpg" alt=""><figcaption></figcaption></figure>

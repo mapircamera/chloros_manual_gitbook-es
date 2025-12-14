@@ -70,7 +70,7 @@ Ajuste el aumento para inspeccionar los detalles de la imagen:
 * Pulse la tecla **0** (cero).
 * Haga doble clic en la imagen.
 
-#### Desplazamiento cuando se amplía
+#### Desplazamiento al ampliar
 
 Cuando se amplía más allá del tamaño de la pantalla:
 
@@ -112,9 +112,9 @@ A medida que mueve el cursor del ratón sobre la imagen, los valores de los píx
 
 **Después del procesamiento:**
 
-* Viñeta corregida.
-* Reflectancia calibrada.
-* Multibanda TIFF (Red, Green, NIR, etc.).
+* Viñeta corregida
+* Reflectancia calibrada
+* Multibanda TIFF (Red, Green, NIR, etc.)
 * Datos científicos listos para su análisis.
 
 ### Imágenes de índice
@@ -130,12 +130,12 @@ A medida que mueve el cursor del ratón sobre la imagen, los valores de los píx
 
 ## Aplicación de índices y LUT
 
-Aplicar índices multiespectrales y tablas de consulta de colores:
+Aplique índices multiespectrales y tablas de consulta de colores:
 
-1. Localizar **Index/LUT Sandbox** en la <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
+1. Localice **Index/LUT Sandbox** en la <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
 2. Seleccione el índice de vegetación (NDVI, NDRE, etc.)
 3. Seleccione la fórmula multiespectral o cree una personalizada (solo Chloros+)
-4. Aplique un gradiente de tabla de consulta de colores (LUT) para la visualización
+4. Aplique un degradado de tabla de consulta de colores (LUT) para la visualización
 5. Ajuste los rangos de valores y los umbrales
 
 Consulte [Índice/LUT Sandbox](index-lut-sandbox.md) para obtener instrucciones detalladas.
@@ -230,7 +230,7 @@ Compruebe que los índices se han calculado correctamente:
 
 1. Verifique que está viendo el resultado procesado (compruebe la extensión del nombre del archivo).
 2. Compruebe el estado del botón del modo porcentual.
-3. Compare con imágenes correctas conocidas del mismo conjunto de datos.
+3. Compare con imágenes correctas del mismo conjunto de datos.
 
 ***
 

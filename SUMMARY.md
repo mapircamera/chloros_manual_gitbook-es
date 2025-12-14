@@ -31,4 +31,4 @@
 
 * [Abrir una imagen a pantalla completa](image-viewer-gui/opening-an-image-full-screen.md)
 * [Capas de imagen](image-viewer-gui/image-layers.md)
-* [Sandbox de índices/LUT](image-viewer-gui/index-lut-sandbox.md)
+* [Índice/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)

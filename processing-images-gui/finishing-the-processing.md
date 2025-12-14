@@ -94,7 +94,7 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 1. Compruebe el registro de depuración en busca de mensajes de omisión/error.
 2. Verifique que haya suficiente espacio en disco.
-3. Cuente los archivos: deben coincidir (recuento original - recuento de destino) × (índices + 1).
+3. Cuente los archivos: deben coincidir (recuento original - recuento de destino) × (índices + 1)
 4. Vuelva a importar y procesar los archivos que faltan.
 
 ### Problema: bordes oscuros o brillantes (el viñeteado sigue siendo visible)
@@ -107,11 +107,11 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Soluciones:**
 
-1. Verifique que la corrección de viñeteado esté habilitada en la configuración del proyecto.
-2. Compruebe que el modelo de cámara se haya detectado correctamente.
+1. Compruebe que la corrección del viñeteado está habilitada en la configuración del proyecto.
+2. Compruebe que el modelo de cámara se ha detectado correctamente.
 3. Póngase en contacto con el servicio de asistencia de MAPIR si el viñeteado persiste.
 
-### Problema: colores o valores incorrectos
+### Problema: colores o valores incorrectos.
 
 **Posibles causas:**
 
@@ -122,8 +122,8 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Soluciones:**
 
-1. Compruebe que la calibración de la reflectancia está activada.
-2. Compruebe los mensajes «Target found» (Objetivo encontrado) en el registro de depuración.
+1. Compruebe que la calibración de la reflectancia está habilitada.
+2. Compruebe los mensajes «Objetivo encontrado» en el registro de depuración.
 3. Revise la calidad de la imagen del objetivo.
 4. Vuelva a procesar con los objetivos adecuados marcados.
 
@@ -138,10 +138,10 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Si los valores están fuera de estos rangos:**
 
-1. Verifique que se haya aplicado la calibración de reflectancia.
-2. Verifique que se haya incluido el registro del sensor de luz.
-3. Compruebe que se hayan detectado los objetivos de calibración.
-4. Asegúrese de que se haya detectado el modelo de cámara correcto.
+1. Compruebe que se ha aplicado la calibración de la reflectancia.
+2. Compruebe que se ha incluido el registro del sensor de luz.
+3. Compruebe que se han detectado los objetivos de calibración.
+4. Asegúrese de que se ha detectado el modelo de cámara correcto.
 5. Revise el momento y las condiciones de captura de la imagen objetivo.
 
 ***
@@ -167,8 +167,8 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 **Flujo de trabajo recomendado:**
 
 1. **Cargue en QGIS, ArcGIS o similar**.
-2. **Utilizar imágenes de reflectancia TIFF** de 16 bits para análisis multibanda.
-3. **Utilizar imágenes de índice** (NDVI, NDRE) como capas de vegetación listas para usar.
+2. **Utilizar imágenes de reflectancia de 16 bits TIFF** para análisis multibanda.
+3. **Utilizar imágenes índice** (NDVI, NDRE) como capas de vegetación listas para usar.
 4. **Calculadora ráster**: combinar bandas para análisis personalizados.
 5. **Exportar**: cree mapas de clasificación, detección de cambios y mapas de salud de la vegetación.
 
@@ -189,7 +189,7 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Qué guardar:**
 
-* ✅ **Imágenes RAW/JPG originales**: archivar en una unidad/nube independiente.
+* ✅ **Imágenes RAW/JPG originales**: archivarlas en una unidad/nube independiente.
 * ✅ **Resultados procesados**: conserve las imágenes calibradas y los índices
 * ✅ **Archivo del proyecto**: contiene todos los ajustes para volver a procesar si es necesario
 * ✅ **Registro de depuración**: documenta los detalles del procesamiento
@@ -220,14 +220,14 @@ Para varias sesiones/conjuntos de datos:
 
 **Opción 1: GUI - Varios proyectos**
 
-* Cree un proyecto independiente para cada sesión
-* Utilice una configuración de plantilla coherente
-* Procese uno por uno
+* Cree un proyecto independiente para cada sesión.
+* Utilice una configuración de plantilla coherente.
+* Procese uno por uno.
 
 **Opción 2: Chloros CLI (solo Chloros+)**
 
-* Automatizar el procesamiento por lotes.
-* Procesar varias carpetas con scripts.
+* Automatice el procesamiento por lotes.
+* Procese varias carpetas con scripts.
 * Consulte la [Documentación de CLI](../CLI.md)
 
 **Opción 3: Python SDK (solo Chloros+)**
@@ -276,8 +276,8 @@ Ya ha completado el flujo de trabajo completo de procesamiento de Chloros:
 1. ✅ **Proyecto creado**: consulte [Proyectos](../projects.md)
 2. ✅ **Añadido archivos** - Ver [Añadir archivos](adding-files-to-a-project.md)
 3. ✅ **Ajustado la configuración** - Ver [Ajustar la configuración del proyecto](adjusting-project-settings.md)
-4. ✅ **Objetivos marcados**: consulte [Selección de imágenes objetivo](choosing-target-images.md)
-5. ✅ **Procesamiento iniciado**: consulte [Inicio del procesamiento](starting-the-processing.md)
+4. ✅ **Objetivos marcados** - Véase [Selección de imágenes objetivo](choosing-target-images.md)
+5. ✅ **Procesamiento iniciado** - Véase [Inicio del procesamiento](starting-the-processing.md)
 6. ✅ **Progreso supervisado**: consulte [Supervisar el procesamiento](monitoring-the-processing.md)
 7. ✅ **Resultados revisados**: esta página
 
@@ -291,13 +291,13 @@ Ya ha completado el flujo de trabajo completo de procesamiento de Chloros:
 
 * [**Visor de imágenes**](../image-viewer-gui/opening-an-image-full-screen.md): visualización y análisis interactivos.
 * [**Sandbox de índices/LUT**](../image-viewer-gui/index-lut-sandbox.md): pruebas de índices personalizados.
-* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md): referencia completa de índices
+* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md): referencia completa del índice
 
 ### Automatización e integración
 
 * [**Documentación de CLI**](../CLI.md): procesamiento por lotes desde la línea de comandos
 * [**Python SDK**](../api-python-sdk.md) - Automatización programática
-* [**Chloros+ Características**](../#chloros) - Capacidades de procesamiento avanzadas
+* [**Características de Chloros+**](../#chloros) - Capacidades de procesamiento avanzadas
 
 ### Asistencia y aprendizaje
 

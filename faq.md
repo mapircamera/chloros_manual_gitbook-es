@@ -1,5 +1,5 @@
 ---
-description: Preguntas frecuentes
+description: Frequently Asked Questions
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
@@ -10,7 +10,7 @@ metaLinks:
 
 <summary>¿Puedo procesar imágenes de cámaras que no sean de la marca MAPIR con Chloros?</summary>
 
-No, Chloros solo admite el procesamiento de imágenes de cámaras MAPIR. Consulte la lista de [modelos de cámaras compatibles](supported-cameras.md) para obtener más información. Ofrecemos el procesamiento de otras cámaras en MAPIR Cloud, consulte la lista completa [aquí](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
+No, Chloros solo admite el procesamiento de imágenes de cámaras MAPIR. Consulte la lista de [modelos de cámaras compatibles](supported-cameras.md) para obtener más información. Ofrecemos el procesamiento de otras cámaras en MAPIR Cloud. Consulte la lista completa [aquí](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
 </details>
 
@@ -34,7 +34,7 @@ No. Chloros asume que los datos de entrada no han sido modificados. No cambie lo
 
 <summary>¿Puedo configurar mis cámaras MAPIR Survey3 en exposición automática y procesar las imágenes en Chloros?</summary>
 
-No. Los conjuntos de datos de imágenes Survey3 deben tener una exposición fija/bloqueada, por lo que no se permite la velocidad de obturación automática ni el ISO automático. Todas las imágenes del mismo modelo de cámara deben tener una velocidad de obturación y un ISO (exposición) idénticos.
+No. Los conjuntos de datos de imágenes Survey3 deben tener una exposición fija/bloqueada, por lo que no se permite la velocidad de obturación automática ni el ISO automático. Todas las imágenes del mismo modelo de cámara deben tener una velocidad de obturación e ISO (exposición) idénticos.
 
 </details>
 

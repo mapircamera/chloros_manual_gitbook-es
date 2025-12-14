@@ -2,7 +2,7 @@
 
 ## Chloros y Chloros (navegador) Inicio de sesión
 
-El <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> barra lateral del usuario le permite iniciar sesión en su cuenta Chloros+ y desbloquear funciones adicionales.
+El menú lateral del usuario <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> barra lateral del usuario le permite iniciar sesión en su cuenta Chloros+ y desbloquear funciones adicionales.
 
 Al iniciar sesión, se mostrarán los detalles de su cuenta:
 

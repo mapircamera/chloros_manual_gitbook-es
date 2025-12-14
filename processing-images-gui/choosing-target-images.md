@@ -46,7 +46,7 @@ Revise las imágenes importadas en el explorador de archivos e identifique cuál
 Para cada imagen que contenga un objetivo de calibración:
 
 1. Localice la imagen en la tabla del explorador de archivos.
-2. Busque la columna **Objetivo** (columna situada más a la derecha).
+2. Busque la columna **Objetivo** (la columna situada más a la derecha).
 3. Haga clic en la casilla de verificación de la columna Objetivo para esa imagen.
 4. Repita el proceso para todas las imágenes que contengan objetivos.
 
@@ -60,7 +60,7 @@ Antes de procesar, compruebe lo siguiente:
 
 ***
 
-## Prácticas recomendadas para imágenes objetivo
+## Mejores prácticas para imágenes objetivo
 
 ### Directrices para la captura de objetivos
 
@@ -94,8 +94,8 @@ Antes de procesar, compruebe lo siguiente:
 
 **Calendario de buenas prácticas:**
 
-* Capturar 3-5 imágenes poco después de que el sensor de luz empiece a grabar.
-* Girar la cámara entre capturas para obtener los mejores resultados.
+* Capture entre 3 y 5 imágenes poco después de que el sensor de luz comience a grabar.
+* Gire la cámara entre capturas para obtener los mejores resultados.
 * Opcional: periódicamente a mitad de la sesión si las condiciones de iluminación cambian constantemente.
 
 ***
@@ -128,7 +128,7 @@ Utilice esta columna para verificar que ha marcado los objetivos para cada tipo 
 
 ### Ajustar la sensibilidad de detección
 
-Si Chloros no detecta correctamente sus objetivos, ajuste estos parámetros en [Ajustes del proyecto](adjusting-project-settings.md):
+Si Chloros no detecta correctamente sus objetivos, ajuste estos ajustes en [Ajustes del proyecto](adjusting-project-settings.md):
 
 **Área mínima de muestra de calibración:**
 

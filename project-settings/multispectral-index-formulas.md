@@ -17,7 +17,7 @@ Cuando se utilizan estas fórmulas, el nombre puede terminar en «\_1» o «\_2�
 
 ## EVI - Índice de vegetación mejorado
 
-Este índice se desarrolló originalmente para su uso con datos MODIS como una mejora con respecto a NDVI, optimizando la señal de vegetación en áreas con un índice de área foliar alto (LAI). Es más útil en regiones con un LAI alto, donde el NDVI puede saturarse. Utiliza la región de reflectancia azul para corregir las señales de fondo del suelo y reducir las influencias atmosféricas, incluida la dispersión de aerosoles.
+Este índice se desarrolló originalmente para su uso con datos MODIS como una mejora con respecto a NDVI, optimizando la señal de vegetación en áreas con un alto índice de área foliar (LAI). Es más útil en regiones con un LAI alto, donde el NDVI puede saturarse. Utiliza la región de reflectancia azul para corregir las señales de fondo del suelo y reducir las influencias atmosféricas, incluida la dispersión de aerosoles.
 
 $$
 EVI = 2.5 *  {(NIR - Red) \over (NIR + 6 * Red - 7.5 * Blue + 1)}
@@ -31,7 +31,7 @@ _Referencia: Huete, A., et al. «Overview of the Radiometric and Biophysical Per
 
 ## FCI1 - Índice de cobertura forestal 1
 
-Este índice distingue las copas de los bosques de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que incluyen una banda de borde rojo.
+Este índice distingue las copas de los árboles de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que incluyen una banda de borde rojo.
 
 $$
 FCI1 = Red * RedEdge
@@ -57,27 +57,27 @@ _Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices 
 
 ***
 
-## GEMI - Índice de monitorización medioambiental global
+## GEMI - Índice de vigilancia medioambiental global
 
-Este índice de vegetación no lineal se utiliza para la monitorización medioambiental global a partir de imágenes satelitales e intenta corregir los efectos atmosféricos. Es similar al NDVI, pero es menos sensible a los efectos atmosféricos. Se ve afectado por el suelo desnudo, por lo que no se recomienda su uso en zonas con vegetación escasa o moderadamente densa.
+Este índice de vegetación no lineal se utiliza para la vigilancia medioambiental global a partir de imágenes satelitales e intenta corregir los efectos atmosféricos. Es similar al NDVI, pero es menos sensible a los efectos atmosféricos. Se ve afectado por el suelo desnudo, por lo que no se recomienda su uso en zonas con vegetación escasa o moderadamente densa.
 
 $$
 GEMI = eta (1 - 0.25 * eta) - {Red - 0.125 \over 1 - Red}
 $$
 
-Donde:
+Dónde:
 
 $$
 eta = {2(NIR^{2}-Red^{2}) + 1.5 * NIR + 0.5 *  Red \over NIR + Red + 0.5}
 $$
 
-_Referencia: Pinty, B. y M. Verstraete. GEMI: un índice no lineal para monitorizar la vegetación global a partir de satélites. Vegetación 101 (1992): 15-20._
+_Referencia: Pinty, B. y M. Verstraete. GEMI: un índice no lineal para supervisar la vegetación global desde satélites. Vegetation 101 (1992): 15-20._
 
 ***
 
 ## GARI - Green Índice resistente a la atmósfera
 
-Este índice es más sensible a una amplia gama de concentraciones de clorofila y menos sensible a los efectos atmosféricos que NDVI.
+Este índice es más sensible a una amplia gama de concentraciones de clorofila y menos sensible a los efectos atmosféricos que el NDVI.
 
 $$
 GARI = {NIR - [Green - \gamma(Blue - Red)] \over NIR + [Green - \gamma(Blue - Red)]   }
@@ -137,19 +137,19 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno del maíz durante la temporada mediante fotografía aérea infrarroja en color». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
+_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea en color infrarrojo». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
 
 ***
 
 ## GRVI - Green Índice de vegetación de relación
 
-Este índice es sensible a las tasas de fotosíntesis en las copas de los bosques, ya que las reflectancias verde y roja se ven muy influidas por los cambios en los pigmentos de las hojas.
+Este índice es sensible a las tasas de fotosíntesis en las copas de los árboles, ya que las reflectancias verde y roja se ven muy influidas por los cambios en los pigmentos de las hojas.
 
 $$
 GRVI = {NIR \over Green }
 $$
 
-_Referencia: Sripada, R., et al. «Fotografía aérea en color infrarrojo para determinar las necesidades de nitrógeno del maíz al inicio de la temporada». Agronomy Journal 98 (2006): 968-977._
+_Referencia: Sripada, R., et al. «Fotografía aérea en infrarrojo para determinar las necesidades de nitrógeno del maíz al inicio de la temporada». Agronomy Journal 98 (2006): 968-977._
 
 ***
 
@@ -161,7 +161,7 @@ $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
 $$
 
-_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea en color infrarrojo». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
+_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno durante la temporada para el maíz utilizando fotografía aérea infrarroja en color». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
 
 ***
 
@@ -197,7 +197,7 @@ _Referencia: Datt, B. «Teledetección del contenido de agua en las hojas de euc
 
 ***
 
-## MNLI: índice no lineal modificado
+## MNLI - Índice no lineal modificado
 
 Este índice es una mejora del índice no lineal (NLI) que incorpora el índice de vegetación ajustado al suelo (SAVI) para tener en cuenta el fondo del suelo. ENVI utiliza un valor de factor de ajuste del fondo del dosel (_L_) de 0,5.
 
@@ -271,7 +271,7 @@ _Referencia: Rondeaux, G., M. Steven y F. Baret. «Optimization of Soil-Adjusted
 
 ## RDVI: índice de vegetación de diferencia renormalizada
 
-Este índice utiliza la diferencia entre las longitudes de onda del infrarrojo cercano y el rojo, junto con el NDVI, para resaltar la vegetación sana. Es insensible a los efectos del suelo y la geometría de observación solar.
+Este índice utiliza la diferencia entre las longitudes de onda del infrarrojo cercano y el rojo, junto con el NDVI, para resaltar la vegetación sana. Es insensible a los efectos del suelo y la geometría de visión del sol.
 
 $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
@@ -283,7 +283,7 @@ _Referencia: Roujean, J. y F. Breon. «Estimación de la PAR absorbida por la ve
 
 ## SAVI - Índice de vegetación ajustado al suelo
 
-Este índice es similar al NDVI, pero suprime los efectos de los píxeles del suelo. Utiliza un factor de ajuste del fondo del dosel, _L_, que es una función de la densidad de la vegetación y a menudo requiere un conocimiento previo de la cantidad de vegetación. Huete (1988) sugiere un valor óptimo de _L_=0,5 para tener en cuenta las variaciones de primer orden del fondo del suelo. Este índice se utiliza mejor en áreas con vegetación relativamente escasa, donde el suelo es visible a través del dosel.
+Este índice es similar al NDVI, pero suprime los efectos de los píxeles del suelo. Utiliza un factor de ajuste del fondo del dosel, _L_, que es una función de la densidad de la vegetación y a menudo requiere un conocimiento previo de la cantidad de vegetación. Huete (1988) sugiere un valor óptimo de _L_=0,5 para tener en cuenta las variaciones de fondo del suelo de primer orden. Este índice se utiliza mejor en zonas con vegetación relativamente escasa, donde el suelo es visible a través del dosel.
 
 $$
 SAVI = {1.5 * (NIR- Red) \over (NIR + Red + 0.5)  }
@@ -293,15 +293,15 @@ _Referencia: Huete, A. «A Soil-Adjusted Vegetation Index (SAVI)». Remote Sensi
 
 ***
 
-## TDVI - Índice de vegetación por diferencia transformada
+## TDVI - Índice de vegetación de diferencia transformada
 
-Este índice es útil para monitorizar la cobertura vegetal en entornos urbanos. No se satura como NDVI y SAVI.
+Este índice es útil para supervisar la cobertura vegetal en entornos urbanos. No se satura como NDVI y SAVI.
 
 $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Referencia: Bannari, A., H. Asalhi y P. Teillet. «Índice de vegetación transformado (TDVI) para la cartografía de la cobertura vegetal». En Actas del Simposio de Geociencias y Teledetección, IGARSS &#x27;02, IEEE International, volumen 5 (2002)._
+_Referencia: Bannari, A., H. Asalhi y P. Teillet. «Índice de vegetación transformado (TDVI) para la cartografía de la cobertura vegetal» en Actas del Simposio de Geociencias y Teledetección, IGARSS &#x27;02, IEEE International, volumen 5 (2002)._
 
 ***
 
@@ -313,13 +313,13 @@ $$
 VARI = {Green - Red \over Green + Red - Blue  }
 $$
 
-_Referencia: Gitelson, A., et al. «Vegetación y líneas de suelo en el espacio espectral visible: un concepto y una técnica para la estimación remota de la fracción de vegetación». Revista Internacional de Teledetección 23 (2002): 2537-2562._
+_Referencia: Gitelson, A., et al. «Vegetación y líneas de suelo en el espacio espectral visible: un concepto y una técnica para la estimación remota de la fracción de vegetación». International Journal of Remote Sensing 23 (2002): 2537−2562._
 
 ***
 
 ## WDRVI - Índice de vegetación de amplio rango dinámico
 
-Este índice es similar al NDVI, pero utiliza un coeficiente de ponderación (_a_) para reducir la disparidad entre las contribuciones de las señales del infrarrojo cercano y el rojo al NDVI. El WDRVI es especialmente eficaz en escenas con una densidad de vegetación de moderada a alta cuando el NDVI supera 0,6. El NDVI tiende a estabilizarse cuando aumentan la fracción de vegetación y el índice de área foliar (LAI), mientras que el WDRVI es más sensible a una gama más amplia de fracciones de vegetación y a los cambios en el LAI.
+Este índice es similar al NDVI, pero utiliza un coeficiente de ponderación (_a_) para reducir la disparidad entre las contribuciones de las señales del infrarrojo cercano y el rojo al NDVI. El WDRVI es especialmente eficaz en escenas con una densidad de vegetación de moderada a alta cuando el NDVI supera 0,6. El NDVI tiende a estabilizarse cuando aumentan la fracción de vegetación y el índice de área foliar (LAI), mientras que el WDRVI es más sensible a un rango más amplio de fracciones de vegetación y a los cambios en el LAI.
 
 $$
 WDRVI = {(\alpha * NIR- Red) \over (\alpha * NIR + Red)}

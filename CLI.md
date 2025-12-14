@@ -30,8 +30,8 @@
 
 El CLI se incluye automáticamente con el instalador Chloros:
 
-1. Descargue y ejecute **Chloros Installer.exe**
-2. Complete el asistente de instalación
+1. Descargue y ejecute **Chloros Installer.exe**.
+2. Complete el asistente de instalación.
 3. CLI instalado en: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
 {% hint style=&quot;success&quot; %}
@@ -96,7 +96,7 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 | Opción                | Tipo    | Predeterminado        | Descripción                                                                            |
 | --------------------- | ------- | -------------- | -------------------------------------------------------------------------------------- |
 | `<input-folder>`      | Ruta    | _Requerido_     | Carpeta que contiene imágenes multiespectrales RAW/JPG                                         |
-| `-o, --output`        | Ruta    | Igual que la entrada  | Carpeta de salida para las imágenes procesadas                                                     |
+| `-o, --output`        | Ruta    | Igual que la entrada  | Carpeta de salida para imágenes procesadas                                                     |
 | `-n, --project-name`  | Cadena  | Generado automáticamente | Nombre del proyecto personalizado                                                                    |
 | `--vignette`          | Indicador    | Habilitado        | Habilitar corrección de viñeta                                                             |
 | `--no-vignette`       | Indicador    | -              | Deshabilitar corrección de viñeta                                                            |
@@ -108,8 +108,8 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 | `--target-clustering` | Entero | Automático           | Umbral de agrupación de objetivos (0-100)                                                    |
 | `--exposure-pin-1`    | Cadena  | Ninguno           | Bloquear exposición para modelo de cámara (Pin 1)                                                 |
 | `--exposure-pin-2`    | Cadena  | Ninguno           | Bloquear exposición para modelo de cámara (Pin 2)                                                 |
-| `--recal-interval`    | Entero | Auto           | Intervalo de recalibración en segundos                                                      |
-| `--timezone-offset`   | Entero | 0              | Desviación horaria en horas                                                               |
+| `--recal-interval`    | Entero | Automático           | Intervalo de recalibración en segundos                                                      |
+| `--timezone-offset`   | Entero | 0              | Desfase horario en horas                                                               |
 
 ***
 
@@ -133,11 +133,11 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 **Caracteres especiales**: utilice comillas simples alrededor de las contraseñas que contengan caracteres como `$`, `!` o espacios.
 {% endhint %}
 
-**Resultado:**
+**Salida:**
 
 <figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
 
-### `logout`: borrar credenciales
+### `logout` - Borrar credenciales
 
 Borra las credenciales almacenadas y cierra la sesión de tu cuenta.
 
@@ -315,7 +315,7 @@ chloros-cli set-project-folder "C:\Projects\2025"
 
 ### `get-project-folder`: mostrar carpeta del proyecto
 
-Muestra la ubicación predeterminada actual de la carpeta del proyecto.
+Muestra la ubicación actual de la carpeta predeterminada del proyecto.
 
 **Sintaxis:**
 
@@ -379,7 +379,7 @@ Chloros+ CLI **escala automáticamente** el procesamiento paralelo para adaptars
 
 * Detecta los núcleos de la CPU y la RAM.
 * Asigna trabajadores: **2× núcleos de CPU** (utiliza hiperprocesamiento).
-* **Máximo: 16 trabajadores en paralelo** (para mayor estabilidad).
+* **Máximo: 16 trabajadores paralelos** (para mayor estabilidad).
 
 **Niveles del sistema:**
 
@@ -405,11 +405,11 @@ El CLI utiliza **Alta calidad (más rápido)** como algoritmo Debayer predetermi
 
 **Qué hace:** corrige la pérdida de luz en los bordes de la imagen (esquinas más oscuras comunes en las imágenes de cámara).
 
-* **Habilitado de forma predeterminada**: la mayoría de los usuarios deben mantener esta opción habilitada.
-* Utilice `--no-vignette` para deshabilitarla.
+* **Habilitado por defecto**: la mayoría de los usuarios deben mantenerlo habilitado.
+* Utilice `--no-vignette` para deshabilitarlo.
 
 {% hint style=&quot;success&quot; %}
-**Recomendación**: active siempre la corrección de viñeta para garantizar un brillo uniforme en todo el fotograma.
+**Recomendación**: active siempre la corrección de viñeteado para garantizar un brillo uniforme en todo el fotograma.
 {% endhint %}
 
 ### Calibración de reflectancia
@@ -652,7 +652,7 @@ Backend failed to start within 30 seconds
 **Soluciones:**
 
 1. Compruebe si el backend ya se está ejecutando (ciérrelo primero).
-2. Compruebe que el cortafuegos Windows no lo está bloqueando.
+2. Compruebe que Windows el cortafuegos no lo está bloqueando.
 3. Pruebe con un puerto diferente:
 
 ```powershell
@@ -667,7 +667,7 @@ chloros-cli --restart process "C:\Datasets\Field_A"
 
 ***
 
-### Problemas de licencia/autenticación
+### Problemas con la licencia/autenticación
 
 **Error:**
 
@@ -781,7 +781,7 @@ chloros-cli process "C:\Input" -o "D:\Output"
 
 ***
 
-### P: ¿Cómo guardo la salida CLI en un archivo de registro?
+### P: ¿Cómo guardo la salida de CLI en un archivo de registro?
 
 **PowerShell:**
 

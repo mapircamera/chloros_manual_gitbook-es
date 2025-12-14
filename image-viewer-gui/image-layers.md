@@ -7,9 +7,9 @@ El menú desplegable Capas de imagen del visor de imágenes Chloros le permite c
 En Chloros, las **capas** se refieren a los diferentes resultados de imagen disponibles para una sola imagen de origen. Cuando procesa imágenes, Chloros crea varias versiones:
 
 * **Imágenes originales** (archivos JPG y RAW de su cámara)
-* Resultados **calibrados por reflectancia** (si se habilitó la calibración por reflectancia)
+* Resultados **calibrados por reflectancia** (si se habilitó la calibración de reflectancia)
 * **Imágenes objetivo** (si la imagen contiene objetivos de calibración)
-* **Imágenes de índice** (NDVI, NDRE, GNDVI, etc., si se configuraron índices)
+* **Imágenes de índice** (NDVI, NDRE, GNDVI, etc. si se configuraron índices)
 
 El **menú desplegable Selector de capas** situado en la parte superior derecha del visor de imágenes le permite cambiar instantáneamente entre estas versiones sin salir del visor.
 
@@ -26,42 +26,42 @@ El **menú desplegable Selector de capas** situado en la parte superior derecha 
 
 **Cuándo verla:**
 
-* Vista previa rápida de la captura original
-* Comprobación de la composición y el encuadre de la imagen
-* Verificación de la calidad de la captura antes del procesamiento
+* Vista previa rápida de la captura original.
+* Comprobación de la composición y el encuadre de la imagen.
+* Verificación de la calidad de la captura antes del procesamiento.
 
 ### RAW (original)
 
 * Los datos originales del sensor RAW de su cámara.
-* Desbayorado sin aplicar ningún posprocesamiento.
+* Desbayered sin aplicar ningún posprocesamiento.
 * Mayor profundidad de bits que JPG (normalmente datos del sensor de 12 o 14 bits).
 
-**Cuándo verlo:**
+**Cuándo ver:**
 
-* Inspeccionar la calidad de los datos originales del sensor.
-* Comprobar si hay problemas con el sensor o artefactos.
-* Comparar los resultados antes y después del procesamiento.
+* Inspección de la calidad de los datos originales del sensor.
+* Comprobación de problemas del sensor o artefactos.
+* Comparación de los resultados antes y después del procesamiento.
 
 ### RAW (objetivo)
 
-* Solo aparece para imágenes identificadas como que contienen objetivos de calibración
-* Muestra la imagen RAW original con el objetivo detectado
-* Se utiliza para verificar que la detección del objetivo se ha realizado correctamente
+* Solo aparece para imágenes identificadas como contenedoras de objetivos de calibración.
+* Muestra la imagen RAW original con el objetivo detectado.
+* Se utiliza para verificar que la detección del objetivo se ha realizado correctamente.
 
-**Cuándo verlo:**
+**Cuándo ver:**
 
-* Confirmar que los objetivos de calibración se han detectado correctamente
-* Comprobar la calidad de la imagen del objetivo
-* Solucionar problemas de calibración
+* Confirmar que los objetivos de calibración se han detectado correctamente.
+* Comprobar la calidad de la imagen del objetivo.
+* Solucionar problemas de calibración.
 
 {% hint style=&quot;info&quot; %}
-**Capa de objetivo**: esta capa solo aparece en el menú desplegable para imágenes que contienen objetivos de calibración. Las imágenes de captura normales no tendrán esta opción.
+**Capa de objetivo**: esta capa solo aparece en el menú desplegable de las imágenes que contienen objetivos de calibración. Las imágenes de captura normales no tendrán esta opción.
 {% endhint %}
 
 ### RAW (reflectancia)
 
 * La imagen de salida de reflectancia calibrada.
-* Viñeta corregida (si está habilitada en el procesamiento).
+* Corrección de viñeta (si está habilitada en el procesamiento).
 * Reflectancia calibrada utilizando datos de objetivo (si está habilitado)
 * Multibanda TIFF con todos los canales de la cámara
 * Los valores de píxeles representan el porcentaje de reflectancia (cuando se utiliza el modo porcentaje)
@@ -82,11 +82,11 @@ El **menú desplegable Selector de capas** situado en la parte superior derecha 
 
 * Imagen del índice de vegetación calculado (NDVI en este ejemplo)
 * El nombre del índice cambia en función del índice que se haya configurado durante el procesamiento
-* Ejemplos: RAW (índice NDVI), RAW (índice NDRE), RAW (índice GNDVI), etc.
+* Ejemplos: RAW (Índice NDVI), RAW (Índice NDRE), RAW (Índice GNDVI), etc.
 * Imagen en escala de grises de banda única que muestra los resultados del cálculo del índice
-* Aparece una capa por cada índice configurado en la configuración del proyecto.
+* Aparece una capa por cada índice configurado en la configuración del proyecto
 
-**Posibles nombres de índice:**
+**Posibles nombres de índices:**
 
 * RAW (índice NDVI)
 * RAW (índice NDRE)
@@ -96,7 +96,7 @@ El **menú desplegable Selector de capas** situado en la parte superior derecha 
 * RAW (Índice SAVI)
 * Y muchos más... (véase [Fórmulas de índices multiespectrales](../project-settings/multispectral-index-formulas.md))
 
-**Cuándo visualizar:**
+**Cuándo ver:**
 
 * Examinar los resultados del cálculo del índice.
 * Comprobar los rangos de valores del índice.
@@ -138,8 +138,8 @@ No todas las capas están disponibles para todas las imágenes:
 **Disponibles de forma condicional:**
 
 * ⚠️ RAW (original): solo si la imagen se ha capturado en modo RAW o RAW+JPG.
-* ⚠️ RAW (objetivo) - Solo si la imagen contiene objetivos de calibración detectados.
-* ⚠️ RAW (reflectancia): solo después de procesar con la calibración de reflectancia habilitada.
+* ⚠️ RAW (objetivo): solo si la imagen contiene objetivos de calibración detectados.
+* ⚠️ RAW (Reflectancia): solo después de procesar con la calibración de reflectancia habilitada.
 * ⚠️ RAW (\[Índice] Índice): solo después de procesar con índices configurados.
 
 ***
@@ -153,7 +153,7 @@ Cuando navegas a una imagen diferente (utilizando las teclas de flecha o haciend
 **Se conserva la preferencia de capa:**
 
 * Si se visualiza «RAW (reflectancia)», la siguiente imagen muestra «RAW (reflectancia)» (si está disponible).
-* Si se visualiza «RAW (NDVI índice)», la siguiente imagen muestra «RAW (NDVI índice)» (si está disponible).
+* Si se visualiza «RAW (NDVI índice)», la siguiente imagen muestra «RAW (NDVI índice)». (si está disponible).
 * Si no existe la misma capa, se establece de forma predeterminada JPG.
 
 **Ejemplo de flujo de trabajo:**
@@ -251,7 +251,7 @@ Las diferentes capas muestran diferentes rangos de valores de píxeles:
 
 ### Cambio eficiente de capas
 
-* **Conocimiento de los atajos de teclado**: aunque no hay atajos de teclado para las capas, las flechas de navegación (←/→) funcionan en todas las capas
+* **Conocimiento de los atajos de teclado**: Aunque no hay atajos de teclado para las capas, las flechas de navegación (←/→) funcionan en todas las capas
 * **Flujos de trabajo coherentes**: elija una capa (por ejemplo, NDVI) y revise todo el conjunto de datos antes de cambiar a otra
 * **Comparaciones rápidas**: alterne entre Original y Reflectancia para verificar la calidad del procesamiento
 
@@ -279,14 +279,14 @@ Las diferentes capas muestran diferentes rangos de valores de píxeles:
 **Posibles causas:**
 
 * La imagen no se ha procesado (solo están disponibles JPG y RAW (original)).
-* La calibración de la reflectancia se desactivó durante el procesamiento.
-* No se ha configurado un índice específico en la configuración del proyecto.
-* La imagen es una imagen solo de destino (no se han generado índices para los destinos).
+* La calibración de reflectancia se desactivó durante el procesamiento.
+* No se configuró un índice específico en la configuración del proyecto.
+* La imagen es una imagen solo de destino (no se generaron índices para los destinos).
 
 **Soluciones:**
 
-1. Compruebe que la imagen se ha procesado (compruebe la carpeta de salida para ver los archivos procesados).
-2. Compruebe la configuración del proyecto para confirmar que se han configurado los índices.
+1. Verifique que la imagen se haya procesado (compruebe la carpeta de salida para ver los archivos procesados).
+2. Compruebe la configuración del proyecto para confirmar que se hayan configurado los índices.
 3. Vuelva a procesar con los índices deseados habilitados.
 
 ### Se muestra una capa incorrecta
@@ -297,7 +297,7 @@ Las diferentes capas muestran diferentes rangos de valores de píxeles:
 
 **Solución**: Chloros vuelve automáticamente a JPG cuando la capa preferida no está disponible; este es un comportamiento normal.
 
-### No se ven los objetivos de calibración.
+### No se pueden ver los objetivos de calibración.
 
 **Problema**: La capa RAW (objetivo) no muestra la detección de objetivos.
 
@@ -330,7 +330,7 @@ Al visualizar cualquier capa, puede utilizar:
 
 Consulte [Abrir una imagen a pantalla completa](opening-an-image-full-screen.md) para obtener la documentación completa del visor de imágenes.
 
-### Sandbox de índice/LUT
+### Índice/LUT Sandbox
 
 Para pruebas y visualización interactivas del índice:
 
@@ -338,7 +338,7 @@ Para pruebas y visualización interactivas del índice:
 * **Asignación de colores LUT**: aplique degradados de color a los índices en escala de grises.
 * **Exportar visualizaciones**: guarde imágenes de índice en color.
 
-Consulte [Área de pruebas de índices/LUT](index-lut-sandbox.md) para obtener más detalles.
+Consulte [Área de pruebas de índice/LUT](index-lut-sandbox.md) para obtener más detalles.
 
 ***
 
@@ -347,6 +347,6 @@ Consulte [Área de pruebas de índices/LUT](index-lut-sandbox.md) para obtener m
 Ahora que ya conoce las capas de imagen:
 
 * [**Abrir una imagen a pantalla completa**](opening-an-image-full-screen.md): guía completa del visor de imágenes.
-* [**Área de pruebas de índices/LUT**](index-lut-sandbox.md): visualización interactiva del índice
+* [**Index/LUT Sandbox**](index-lut-sandbox.md): visualización interactiva de índices.
 * [**Fórmulas de índices multiespectrales**](../project-settings/multispectral-index-formulas.md): referencia de índices disponibles
 * [**Finalización del procesamiento**](../processing-images-gui/finishing-the-processing.md): comprensión de los resultados procesados
