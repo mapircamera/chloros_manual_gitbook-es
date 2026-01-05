@@ -22,29 +22,22 @@ Hay dos formas principales de añadir imágenes a su proyecto:
 
 Utilice esta opción para importar archivos de imagen individuales o una pequeña selección de archivos.
 
-1. Haga clic en el botón **«Añadir archivos»** situado en la parte superior del panel del explorador de archivos.
-2. Navegue hasta la carpeta que contiene sus imágenes.
-3. Seleccione uno o varios archivos de imagen (mantenga pulsada la tecla **Ctrl** para seleccionar varios archivos).
-4. Haga clic en **«Abrir»** para importar los archivos seleccionados.
+1. Haga clic en el botón **«Añadir archivos»** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> en la parte superior del panel del explorador de archivos
+2. Navegue hasta la carpeta que contiene sus imágenes
+3. Seleccione uno o varios archivos de imagen (mantenga pulsada la tecla **Ctrl** para seleccionar varios archivos)
+4. Haga clic en **«Abrir»** para importar los archivos seleccionados
 
 ### Método 2: Añadir carpeta
 
 Utilice esta opción para importar todas las imágenes de una carpeta a la vez.
 
-1. Haga clic en el botón **«Añadir carpeta»** situado en la parte superior del panel del explorador de archivos.
+1. Haga clic en el botón **«Añadir carpeta»** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> en la parte superior del panel del explorador de archivos.
 2. Navegue hasta la carpeta que contiene las imágenes de su sesión de captura y selecciónela.
-3. Haga clic en **«Seleccionar carpeta»** para importar todas las imágenes compatibles de esa carpeta.
-
-***
+3. Haga clic en **«Seleccionar carpeta»** para importar todas las imágenes compatibles de esa carpeta.***
 
 ## Descripción de la tabla del explorador de archivos
 
 Una vez importadas las imágenes, estas aparecen en una tabla con las siguientes columnas:
-
-### Miniatura
-
-* Pequeña vista previa de cada imagen.
-* Haga clic en la miniatura para ver la imagen completa en el área de vista previa principal.
 
 ### Nombre de archivo
 
@@ -55,15 +48,15 @@ Una vez importadas las imágenes, estas aparecen en una tabla con las siguientes
 
 * Fecha y hora en que se capturó la imagen.
 * Extraída de los metadatos EXIF de la imagen.
-* Se utiliza para la sincronización PPK y la detección de objetivos de calibración
+* Se utiliza para la sincronización PPK y la detección de objetivos de calibración.
 
 ### Modelo de cámara
 
-* Configuración de la cámara y el filtro detectada automáticamente
+* Configuración de la cámara y el filtro detectada automáticamente.
 * Ejemplos: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
 * Se utiliza para aplicar los perfiles de procesamiento correctos
 
-### Columna Objetivo (casilla de verificación)
+### Columna de objetivo (casilla de verificación)
 
 * Marque esta casilla para las imágenes que contienen objetivos de calibración
 * Acelera considerablemente la detección de objetivos durante el procesamiento
@@ -78,35 +71,31 @@ Una vez importadas las imágenes, estas aparecen en una tabla con las siguientes
 Para eliminar imágenes no deseadas de su proyecto:
 
 1. Seleccione una o varias imágenes en la tabla del explorador de archivos
-2. Haga clic en el botón **«Eliminar seleccionados»**
-3. Confirme la eliminación (los archivos no se eliminan del disco, solo se eliminan del proyecto)
+2. Haga clic en el botón **«Eliminar seleccionados»** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> .
+3. Confirme la eliminación (los archivos no se eliminan del disco, solo se eliminan del proyecto).
 
 ### Ordenar y filtrar
 
-* **Ordenar por columna**: haga clic en cualquier encabezado de columna para ordenar las imágenes
-* **Ordenar por marca de tiempo**: útil para organizar secuencias de captura cronológicas.
-* **Filtro de modelo de cámara**: agrupa las imágenes por tipo de cámara si utilizas varias cámaras.
-
-***
+* **Ordenar por columna**: haga clic en cualquier encabezado de columna para ordenar las imágenes.
+* **Ordenar por fecha**: útil para organizar secuencias de captura cronológicas.
+* **Filtro de modelo de cámara**: agrupa las imágenes por tipo de cámara si utilizas varias cámaras.***
 
 ## Vista previa de imágenes
 
-### Ver la imagen completa
+### Visualización de la imagen completa
 
-Haz clic en cualquier miniatura de imagen en el explorador de archivos para mostrarla en el área de vista previa principal:
+Haz clic en cualquier miniatura de imagen del explorador de archivos para mostrarla en el área de vista previa principal:
 
 1. La imagen aparece en el panel de vista previa central.
 2. Utiliza los controles de zoom para inspeccionar los detalles de la imagen.
-3. Navegue entre las imágenes utilizando las teclas de flecha.
+3. Navega entre las imágenes con las teclas de flecha.
 
 ### Navegación rápida
 
 * **Imagen anterior**: haga clic en la flecha izquierda o pulse la tecla ←.
 * **Imagen siguiente**: haga clic en la flecha derecha o pulse la tecla →.
 * **Acercar/alejar**: utilice la rueda del ratón o los botones de zoom.
-* **Panorámica**: haga clic y arrastre sobre la imagen cuando esté ampliada.
-
-***
+* **Panorámica**: haga clic y arrastre sobre la imagen cuando esté ampliada.***
 
 ## Gestión de archivos duplicados
 
@@ -126,20 +115,18 @@ Chloros detecta e ignora automáticamente los archivos duplicados:
 
 Si su proyecto contiene imágenes de varias cámaras MAPIR:
 
-1. Chloros detecta automáticamente cada modelo de cámara
-2. Cada tipo de cámara se procesa con su perfil de calibración adecuado
-3. El explorador de archivos muestra el modelo de cámara en la columna Modelo de cámara
-4. El procesamiento aplica la configuración correcta para cada tipo de cámara
+1. Chloros detecta automáticamente cada modelo de cámara.
+2. Cada tipo de cámara se procesa con su perfil de calibración adecuado.
+3. El explorador de archivos muestra el modelo de cámara en la columna «Modelo de cámara».
+4. El procesamiento aplica la configuración correcta para cada tipo de cámara.
 
-**Ejemplo de escenario**: Survey3W RGN + Survey3N OCN configuración de doble cámara.
-
-***
+**Ejemplo de escenario**: Survey3W RGN + Survey3N OCN configuración de doble cámara.***
 
 ## Prácticas recomendadas
 
 ### Organizar antes de importar
 
-* Mantenga las imágenes de calibración en la misma carpeta que las imágenes de la encuesta.
+* Mantenga las imágenes de calibración en la misma carpeta que las imágenes del estudio.
 * Mantenga la estructura original de carpetas de su cámara/tarjeta SD.
 * No mezcle conjuntos de datos de diferentes sesiones en un mismo proyecto.
 
@@ -154,7 +141,7 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 * Incluya siempre 1-2 imágenes de calibración por sesión.
 * Capture los objetivos antes y después de la sesión de captura.
 * Coloque los objetivos en las mismas condiciones de iluminación que el área de captura.
-* Marque las imágenes de calibración con la casilla Objetivo para acelerar el procesamiento.
+* Marque las imágenes de calibración con la casilla de verificación Objetivo para acelerar el procesamiento.
 
 ***
 
@@ -187,11 +174,9 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 * Reloj de la cámara mal ajustado
 * Datos EXIF eliminados por software externo
 
-**Solución**: Compruebe que la configuración de la hora de la cámara era correcta durante la captura.
+**Solución**: Compruebe que la configuración de la hora de la cámara era correcta durante la captura.***
 
-***
-
-## Siguiente paso
+## Pasos siguientes
 
 Una vez importados los archivos:
 
@@ -199,6 +184,6 @@ Una vez importados los archivos:
 2. **Compruebe los modelos de cámara**: verifique que la detección de la cámara es correcta.
 3. **Marque las imágenes de destino**: consulte [Selección de imágenes de destino](choosing-target-images.md).
 4. **Ajuste la configuración**: configure las opciones de procesamiento en [Configuración del proyecto](adjusting-project-settings.md).
-5. **Inicie el procesamiento**: consulte [Inicio del procesamiento](starting-the-processing.md).
+5. **Inicie el procesamiento**: consulte [Iniciar el procesamiento](starting-the-processing.md).
 
-Para obtener información detallada sobre la configuración del proyecto, consulte [Ajuste de la configuración del proyecto](adjusting-project-settings.md).
+Para obtener información detallada sobre la configuración del proyecto, consulte [Ajustar la configuración del proyecto](adjusting-project-settings.md).

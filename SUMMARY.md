@@ -29,6 +29,8 @@
 
 ## VISUALIZADOR DE IMÁGENES (GUI)
 
+* [Cuadrícula de imágenes](image-viewer-gui/image-grid.md)
 * [Abrir una imagen a pantalla completa](image-viewer-gui/opening-an-image-full-screen.md)
 * [Capas de imagen](image-viewer-gui/image-layers.md)
 * [Índice/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
+* [Marcadores de mapa](image-viewer-gui/map-markers.md)

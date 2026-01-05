@@ -1,6 +1,6 @@
 # Finalización del procesamiento
 
-Una vez que Chloros haya completado el procesamiento, es el momento de revisar los resultados, verificar la calidad de salida y preparar las imágenes procesadas para su uso en el flujo de trabajo. Esta página le guía a través de los pasos finales y las siguientes acciones.
+Una vez que Chloros haya completado el procesamiento, es el momento de revisar los resultados, verificar la calidad de la salida y preparar las imágenes procesadas para su uso en el flujo de trabajo. Esta página le guía a través de los pasos finales y las siguientes acciones.
 
 ## Indicación de procesamiento completado
 
@@ -9,15 +9,13 @@ Cuando el procesamiento finalice correctamente, verá varios indicadores:
 * ✅ **Barra de progreso**: alcanza el 100 % de finalización
 * ✅ **Registro de depuración**: muestra el mensaje «Procesamiento completado»
 * ✅ **Botón de inicio**: se vuelve a habilitar (listo para la siguiente ejecución de procesamiento)
-* ✅ **Archivos de salida**: todas las imágenes procesadas se guardan en la subcarpeta del modelo de cámara
-
-***
+* ✅ **Archivos de salida**: todas las imágenes procesadas se guardan en la subcarpeta del modelo de cámara***
 
 ## Localización de las imágenes procesadas
 
 ### Apertura de la carpeta de salida
 
-1. Haga clic en el icono **Menú principal** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (arriba a la izquierda).
+1. Haga clic en el icono **Menú principal** <img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> (arriba a la izquierda).
 2. Seleccione **«Abrir carpeta del proyecto»**.
 3. Se abrirá el explorador de archivos en el directorio del proyecto.
 4. Localice su proyecto por su nombre.
@@ -37,9 +35,7 @@ Cuando el procesamiento finalice correctamente, verá varios indicadores:
 
 ### Vista previa en visores de imágenes externos
 
-**Visores recomendados:**
-
-* **QGIS**: software GIS gratuito (ideal para análisis multiespectral georreferenciado).
+**Visores recomendados:*** **QGIS**: software GIS gratuito (ideal para análisis multiespectral georreferenciado).
 * **IrfanView**: visor de imágenes rápido y ligero (compatible con TIFF).
 * **Adobe Photoshop**: edición profesional (compatible con TIFF).
 * **GIMP**: alternativa gratuita a Photoshop.
@@ -72,7 +68,7 @@ Consulte [Visor de imágenes](../image-viewer-gui/opening-an-image-full-screen.m
 
 Para mantener un registro del procesamiento o enviarlo al servicio de asistencia de MAPIR:
 
-1. Haga clic en el botón **«Copiar»** o **«Descargar»**.
+1. Haga clic en el botón **«Copiar»**o**«Descargar»**.
 2. Guarde el archivo como archivo de texto en la carpeta del proyecto.
 3. Incluya la documentación del proyecto.
 4. Envíelo al servicio de asistencia de MAPIR si encuentra algún problema.
@@ -122,26 +118,22 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Soluciones:**
 
-1. Compruebe que la calibración de la reflectancia está habilitada.
-2. Compruebe los mensajes «Objetivo encontrado» en el registro de depuración.
+1. Compruebe que la calibración de la reflectancia está activada.
+2. Compruebe los mensajes «Target found» (Objetivo encontrado) en el registro de depuración.
 3. Revise la calidad de la imagen del objetivo.
 4. Vuelva a procesar con los objetivos adecuados marcados.
 
 ### Problema: los valores NDVI parecen incorrectos.
 
-**Rangos NDVI esperados:**
-
-* **Agua, rocas, suelo**: de -0,1 a 0,2.
+**Rangos NDVI esperados:*** **Agua, rocas, suelo**: de -0,1 a 0,2.
 * **Vegetación escasa/poco saludable**: de 0,2 a 0,4.
 * **Vegetación moderada**: de 0,4 a 0,6.
-* **Vegetación saludable y densa**: de 0,6 a 0,9.
+* **Vegetación saludable y densa**: de 0,6 a 0,9.**Si los valores están fuera de estos rangos:**
 
-**Si los valores están fuera de estos rangos:**
-
-1. Compruebe que se ha aplicado la calibración de la reflectancia.
-2. Compruebe que se ha incluido el registro del sensor de luz.
-3. Compruebe que se han detectado los objetivos de calibración.
-4. Asegúrese de que se ha detectado el modelo de cámara correcto.
+1. Verifique que se haya aplicado la calibración de reflectancia.
+2. Verifique que se haya incluido el registro del sensor de luz.
+3. Compruebe que se hayan detectado los objetivos de calibración.
+4. Asegúrese de que se haya detectado el modelo de cámara correcto.
 5. Revise el momento y las condiciones de captura de la imagen objetivo.
 
 ***
@@ -152,7 +144,7 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Flujo de trabajo recomendado:**
 
-1. **Importe imágenes de reflectancia calibradas** al software de fotogrametría:
+1.**Importe imágenes de reflectancia calibradas** al software de fotogrametría:
    * Pix4Dmapper
    * Agisoft Metashape
    * DroneDeploy
@@ -166,9 +158,9 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Flujo de trabajo recomendado:**
 
-1. **Cargue en QGIS, ArcGIS o similar**.
+1.**Cargue en QGIS, ArcGIS o similar**.
 2. **Utilizar imágenes de reflectancia de 16 bits TIFF** para análisis multibanda.
-3. **Utilizar imágenes índice** (NDVI, NDRE) como capas de vegetación listas para usar.
+3. **Utilizar imágenes de índice** (NDVI, NDRE) como capas de vegetación listas para usar.
 4. **Calculadora ráster**: combinar bandas para análisis personalizados.
 5. **Exportar**: cree mapas de clasificación, detección de cambios y mapas de salud de la vegetación.
 
@@ -176,32 +168,22 @@ Para mantener un registro del procesamiento o enviarlo al servicio de asistencia
 
 **Flujo de trabajo recomendado:**
 
-1. **Utilice imágenes de índice con colores LUT** para informes visuales.
+1.**Utilice imágenes de índice con colores LUT** para informes visuales.
 2. **Extraiga estadísticas**: media NDVI por campo/parcela.
 3. **Series temporales**: comparar índices entre varias sesiones.
-4. **Generar informes**: incluir mapas, estadísticas y visualizaciones.
-
-***
+4. **Generar informes**: incluir mapas, estadísticas y visualizaciones.***
 
 ## Archivado y copia de seguridad
 
 ### Estrategia de copia de seguridad recomendada
 
-**Qué guardar:**
-
-* ✅ **Imágenes RAW/JPG originales**: archivarlas en una unidad/nube independiente.
+**Qué guardar:*** ✅ **Imágenes RAW/JPG originales**: archivarlas en una unidad/nube independiente.
 * ✅ **Resultados procesados**: conserve las imágenes calibradas y los índices
 * ✅ **Archivo del proyecto**: contiene todos los ajustes para volver a procesar si es necesario
 * ✅ **Registro de depuración**: documenta los detalles del procesamiento
-* ✅ **Imágenes de calibración**: para verificación y reprocesamiento
-
-**Recomendaciones de almacenamiento:**
-
-* **Copia de seguridad inmediata**: disco duro externo
+* ✅ **Imágenes de calibración**: para verificación y reprocesamiento**Recomendaciones de almacenamiento:*** **Copia de seguridad inmediata**: disco duro externo
 * **Archivo a largo plazo**: almacenamiento en la nube (Google Drive, Dropbox, etc.)
-* **Datos críticos**: guarde 2-3 copias en diferentes ubicaciones
-
-***
+* **Datos críticos**: guarde 2-3 copias en diferentes ubicaciones***
 
 ## Próximas ejecuciones de procesamiento
 
@@ -212,13 +194,12 @@ Si va a procesar conjuntos de datos similares en el futuro:
 1. **Guarde la plantilla del proyecto** (si aún no lo ha hecho)
 2. **Cree un nuevo proyecto** utilizando la plantilla guardada
 3. **Importe nuevas imágenes**
-4. **Procese** con la misma configuración para mantener la coherencia
+
+4.**Procese**con la misma configuración para mantener la coherencia
 
 ### Procesamiento por lotes de varias sesiones
 
-Para varias sesiones/conjuntos de datos:
-
-**Opción 1: GUI - Varios proyectos**
+Para varias sesiones/conjuntos de datos:**Opción 1: GUI - Varios proyectos**
 
 * Cree un proyecto independiente para cada sesión.
 * Utilice una configuración de plantilla coherente.
@@ -228,7 +209,7 @@ Para varias sesiones/conjuntos de datos:
 
 * Automatice el procesamiento por lotes.
 * Procese varias carpetas con scripts.
-* Consulte la [Documentación de CLI](../CLI.md)
+* Consulte la [documentación de CLI](../CLI.md)
 
 **Opción 3: Python SDK (solo Chloros+)**
 
@@ -265,9 +246,7 @@ Si tiene algún problema:
 * 📧 **Correo electrónico**: info@mapir.camera (incluya el registro de depuración).
 * 🌐 **Asistencia técnica**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact).
 * 📚 **Preguntas frecuentes**: [Preguntas frecuentes](../faq.md)
-* 📖 **Documentación**: [Manual de Chloros](../)
-
-***
+* 📖 **Documentación**: [Manual de Chloros](../)***
 
 ## Resumen: flujo de trabajo completo
 
@@ -276,12 +255,10 @@ Ya ha completado el flujo de trabajo completo de procesamiento de Chloros:
 1. ✅ **Proyecto creado**: consulte [Proyectos](../projects.md)
 2. ✅ **Añadido archivos** - Ver [Añadir archivos](adding-files-to-a-project.md)
 3. ✅ **Ajustado la configuración** - Ver [Ajustar la configuración del proyecto](adjusting-project-settings.md)
-4. ✅ **Objetivos marcados** - Véase [Selección de imágenes objetivo](choosing-target-images.md)
-5. ✅ **Procesamiento iniciado** - Véase [Inicio del procesamiento](starting-the-processing.md)
+4. ✅ **Objetivos marcados**: consulte [Selección de imágenes objetivo](choosing-target-images.md)
+5. ✅ **Procesamiento iniciado**: consulte [Inicio del procesamiento](starting-the-processing.md)
 6. ✅ **Progreso supervisado**: consulte [Supervisar el procesamiento](monitoring-the-processing.md)
-7. ✅ **Resultados revisados**: esta página
-
-**¡Sus imágenes multiespectrales calibradas y con corrección de reflectancia están listas para su análisis!**
+7. ✅ **Resultados revisados**: esta página**¡Sus imágenes multiespectrales calibradas y con corrección de reflectancia están listas para su análisis!**
 
 ***
 
@@ -297,7 +274,7 @@ Ya ha completado el flujo de trabajo completo de procesamiento de Chloros:
 
 * [**Documentación de CLI**](../CLI.md): procesamiento por lotes desde la línea de comandos
 * [**Python SDK**](../api-python-sdk.md) - Automatización programática
-* [**Características de Chloros+**](../#chloros) - Capacidades de procesamiento avanzadas
+* [**Chloros+ Características**](../#chloros) - Capacidades de procesamiento avanzadas
 
 ### Asistencia y aprendizaje
 

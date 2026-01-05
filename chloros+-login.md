@@ -4,11 +4,9 @@
 
 El menú lateral del usuario <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> barra lateral del usuario le permite iniciar sesión en su cuenta Chloros+ y desbloquear funciones adicionales.
 
-Al iniciar sesión, se mostrarán los detalles de su cuenta:
+Cuando inicie sesión, se mostrarán los detalles de su cuenta:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
-
-## CLI Iniciar sesión
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Inicio de sesión
 
 Inicie sesión con sus credenciales de Chloros+ para habilitar el procesamiento de CLI.
 
@@ -17,6 +15,10 @@ Inicie sesión con sus credenciales de Chloros+ para habilitar el procesamiento 
 ```bash
 chloros-cli login <email> <password>
 ```
+
+{% hint style=&quot;info&quot; %}
+**Usuarios de SDK**: Python SDK también proporciona un método programático `logout()` para borrar las credenciales almacenadas en la caché. Consulte la [documentación de Python SDK](api-python-sdk.md#logout) para obtener más detalles.
+{% endhint %}
 
 **Ejemplo:**
 
@@ -30,9 +32,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 **Salida:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
-
-### Caducidad del plan
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### Caducidad del plan
 
 La caducidad del plan en la interfaz gráfica de usuario muestra cuándo dejará de ser válida su licencia. En el caso de las suscripciones mensuales recurrentes, la caducidad es al final del mes. En el caso de las suscripciones anuales, es un año después de haber iniciado la suscripción. La comprobación de la licencia requiere una conexión a Internet mensual para verificarla, con un periodo de gracia de 30 días.
 
