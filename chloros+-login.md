@@ -6,7 +6,7 @@ El menú lateral del usuario <img src=".gitbook/assets/icon_user.JPG" alt="" dat
 
 Cuando inicie sesión, se mostrarán los detalles de su cuenta:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Inicio de sesión
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" data-size="line"><figcaption></figcaption></figure>## CLI Inicio de sesión
 
 Inicie sesión con sus credenciales de Chloros+ para habilitar el procesamiento de CLI.
 

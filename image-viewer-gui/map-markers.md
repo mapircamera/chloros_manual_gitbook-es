@@ -88,7 +88,7 @@ La pestaña Mapa admite dos proveedores de mosaicos para las imágenes del mapa 
 
 Puede elegir el tipo de capa del mapa (de izquierda a derecha):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terreno
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### Terreno
 
 Muestra perfiles de elevación y mosaicos de mapa con detalles (carreteras, etc.).
 
