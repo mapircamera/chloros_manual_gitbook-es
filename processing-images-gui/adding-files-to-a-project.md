@@ -8,7 +8,7 @@ Una vez que haya creado o abierto un proyecto en Chloros, el siguiente paso es a
 2. Haga clic en el icono **Explorador de archivos** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> en la barra lateral izquierda
 3. El panel Explorador de archivos mostrará la lista de archivos de su proyecto
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 **Tipos de archivos compatibles**: Chloros admite archivos de imagen RAW+JPG y JPG de las cámaras MAPIR Survey3W y Survey3N. Solo se recomiendan los archivos RAW+JPG.
 {% endhint %}
 
@@ -33,7 +33,9 @@ Utilice esta opción para importar todas las imágenes de una carpeta a la vez.
 
 1. Haga clic en el botón **«Añadir carpeta»** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> en la parte superior del panel del explorador de archivos.
 2. Navegue hasta la carpeta que contiene las imágenes de su sesión de captura y selecciónela.
-3. Haga clic en **«Seleccionar carpeta»** para importar todas las imágenes compatibles de esa carpeta.***
+3. Haga clic en **«Seleccionar carpeta»** para importar todas las imágenes compatibles de esa carpeta.
+
+***
 
 ## Descripción de la tabla del explorador de archivos
 
@@ -52,15 +54,21 @@ Una vez importadas las imágenes, estas aparecen en una tabla con las siguientes
 
 ### Modelo de cámara
 
-* Configuración de la cámara y el filtro detectada automáticamente.
+* Configuración de la cámara y el filtro detectada automáticamente
 * Ejemplos: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
 * Se utiliza para aplicar los perfiles de procesamiento correctos
 
 ### Columna de objetivo (casilla de verificación)
 
-* Marque esta casilla para las imágenes que contienen objetivos de calibración
-* Acelera considerablemente la detección de objetivos durante el procesamiento
-* Consulte [Selección de imágenes objetivo](choosing-target-images.md) para obtener más detalles
+* Marque esta casilla para las imágenes que contienen objetivos de calibración.
+* Acelera considerablemente la detección de objetivos durante el procesamiento.
+* Consulte [Selección de imágenes objetivo](choosing-target-images.md) para obtener más detalles.
+
+### Visualización de metadatos de imágenes
+
+Al hacer clic en el botón de alternancia situado en la esquina superior derecha, encima de la tabla, se muestran los metadatos de la imagen seleccionada en el área de la cuadrícula de imágenes.
+
+<figure><img src="../.gitbook/assets/chloros_grid_meta.gif" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -78,24 +86,28 @@ Para eliminar imágenes no deseadas de su proyecto:
 
 * **Ordenar por columna**: haga clic en cualquier encabezado de columna para ordenar las imágenes.
 * **Ordenar por fecha**: útil para organizar secuencias de captura cronológicas.
-* **Filtro de modelo de cámara**: agrupa las imágenes por tipo de cámara si utilizas varias cámaras.***
+* **Filtro de modelo de cámara**: agrupe las imágenes por tipo de cámara si utiliza varias cámaras.
 
-## Vista previa de imágenes
+***
+
+## Vista previa de la imagen
 
 ### Visualización de la imagen completa
 
-Haz clic en cualquier miniatura de imagen del explorador de archivos para mostrarla en el área de vista previa principal:
+Haga clic en cualquier miniatura de imagen en el explorador de archivos para mostrarla en el área de vista previa principal:
 
 1. La imagen aparece en el panel de vista previa central.
-2. Utiliza los controles de zoom para inspeccionar los detalles de la imagen.
-3. Navega entre las imágenes con las teclas de flecha.
+2. Utilice los controles de zoom para inspeccionar los detalles de la imagen.
+3. Navegue entre las imágenes utilizando las teclas de flecha.
 
 ### Navegación rápida
 
 * **Imagen anterior**: haga clic en la flecha izquierda o pulse la tecla ←.
 * **Imagen siguiente**: haga clic en la flecha derecha o pulse la tecla →.
 * **Acercar/alejar**: utilice la rueda del ratón o los botones de zoom.
-* **Panorámica**: haga clic y arrastre sobre la imagen cuando esté ampliada.***
+* **Panorámica**: haga clic y arrastre sobre la imagen cuando esté ampliada.
+
+***
 
 ## Gestión de archivos duplicados
 
@@ -105,8 +117,8 @@ Chloros detecta e ignora automáticamente los archivos duplicados:
 * Evita el doble procesamiento accidental.
 * Se muestra un mensaje de advertencia cuando se detectan duplicados.
 
-{% hint style=&quot;warning&quot; %}
-**Importante**: No renombre ni modifique los archivos de imagen originales antes de importarlos. Chloros se basa en los nombres de archivo y metadatos originales para realizar un procesamiento adecuado.
+{% hint style="warning" %}
+**Importante**: No renombre ni modifique los archivos de imagen originales antes de importarlos. Chloros se basa en los nombres de archivo y metadatos originales para un procesamiento adecuado.
 {% endhint %}
 
 ***
@@ -117,23 +129,25 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 
 1. Chloros detecta automáticamente cada modelo de cámara.
 2. Cada tipo de cámara se procesa con su perfil de calibración adecuado.
-3. El explorador de archivos muestra el modelo de cámara en la columna «Modelo de cámara».
+3. El explorador de archivos muestra el modelo de cámara en la columna Modelo de cámara.
 4. El procesamiento aplica la configuración correcta para cada tipo de cámara.
 
-**Ejemplo de escenario**: Survey3W RGN + Survey3N OCN configuración de doble cámara.***
+**Ejemplo**: Survey3W RGN + Survey3N OCN configuración de doble cámara.
+
+***
 
 ## Prácticas recomendadas
 
 ### Organizar antes de importar
 
-* Mantenga las imágenes de calibración en la misma carpeta que las imágenes del estudio.
-* Mantenga la estructura original de carpetas de su cámara/tarjeta SD.
+* Mantenga las imágenes de calibración en la misma carpeta que las imágenes del levantamiento.
+* Mantenga la estructura de carpetas original de su cámara/tarjeta SD.
 * No mezcle conjuntos de datos de diferentes sesiones en un mismo proyecto.
 
 ### Nombres de archivos
 
 * Conserve los nombres de archivo originales de la cámara (IMG\_0001.RAW, etc.).
-* No renombre los archivos antes de importarlos.
+* No cambie el nombre de los archivos antes de importarlos.
 * Los nombres originales contienen metadatos importantes.
 
 ### Imágenes de calibración
@@ -152,10 +166,10 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 **Posibles causas:**
 
 * Formato de archivo no compatible (solo RAW+JPG y JPG de cámaras MAPIR).
-* Las imágenes proceden de cámaras que no son MAPIR (consulte [Cámaras compatibles](../supported-cameras.md)).
+* Las imágenes son de cámaras que no son MAPIR (consulte [Cámaras compatibles](../supported-cameras.md)).
 * Archivo dañado o transferencia incompleta desde la tarjeta SD.
 
-**Solución**: Verifique la compatibilidad del formato de archivo y el modelo de cámara.
+**Solución**: Compruebe la compatibilidad del formato de archivo y el modelo de cámara.
 
 ### No se detecta el modelo de cámara
 
@@ -174,14 +188,16 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 * Reloj de la cámara mal ajustado
 * Datos EXIF eliminados por software externo
 
-**Solución**: Compruebe que la configuración de la hora de la cámara era correcta durante la captura.***
+**Solución**: Compruebe que la configuración de la hora de la cámara era correcta durante la captura
 
-## Pasos siguientes
+***
+
+## Próximos pasos
 
 Una vez importados los archivos:
 
-1. **Revise la lista de archivos**: asegúrese de que todas las imágenes se han cargado correctamente.
-2. **Compruebe los modelos de cámara**: verifique que la detección de la cámara es correcta.
+1. **Revise la lista de archivos**: asegúrese de que todas las imágenes se han cargado correctamente
+2. **Compruebe los modelos de cámara**: verifique que la cámara se haya detectado correctamente.
 3. **Marque las imágenes de destino**: consulte [Selección de imágenes de destino](choosing-target-images.md).
 4. **Ajuste la configuración**: configure las opciones de procesamiento en [Configuración del proyecto](adjusting-project-settings.md).
 5. **Inicie el procesamiento**: consulte [Iniciar el procesamiento](starting-the-processing.md).

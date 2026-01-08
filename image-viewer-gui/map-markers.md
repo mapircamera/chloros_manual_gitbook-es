@@ -2,14 +2,16 @@
 
 La pestaña Mapa muestra sus imágenes en un mapa 2D interactivo basado en sus coordenadas GPS. Esto proporciona una visión general geográfica de su sesión de captura y le ayuda a visualizar la cobertura espacial. También es útil cuando se importan las imágenes por primera vez para eliminar rápidamente aquellas que no necesita procesar.
 
+<figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
+
 ## Acceso a la pestaña Mapa
 
-1. Abra o cree un proyecto en Chloros
-2. Importe imágenes que contengan metadatos GPS
+1. Abra o cree un proyecto en Chloros.
+2. Importe imágenes que contengan metadatos GPS.
 3. Haga clic en la pestaña **Mapa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> en la barra lateral izquierda.
 4. El mapa mostrará marcadores en la ubicación GPS de cada imagen.
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 **Se requiere GPS**: Solo aparecerán en el mapa las imágenes con coordenadas GPS incrustadas en sus metadatos EXIF. Asegúrese de que su cámara tenga el GPS activado durante la captura.
 {% endhint %}
 
@@ -17,7 +19,7 @@ La pestaña Mapa muestra sus imágenes en un mapa 2D interactivo basado en sus c
 
 ## Ajustar imágenes desde la pestaña Mapa
 
-La pestaña **Mapa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tiene las mismas funciones de añadir  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  y eliminar  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  que la pestaña [**Explorador de archivos**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . También muestra la misma lista de archivos de proyecto, pero con diferentes encabezados de columna:
+La pestaña **Mapa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tiene las mismas funciones de añadir  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  y eliminar  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  que la pestaña [**Explorador de archivos**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . También muestra la misma lista de archivos de proyecto, pero con diferentes encabezados de columna:
 
 ### Nombre de archivo
 
@@ -36,7 +38,7 @@ La pestaña **Mapa**<img src="../.gitbook/assets/image (3).png" alt="" data-size
 
 * Altitud de la imagen
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 Al hacer clic en los encabezados de las columnas de la tabla, también se ordenan los datos de las filas.
 {% endhint %}
 
@@ -52,25 +54,25 @@ Cada imagen con datos GPS se representa con un marcador en el mapa:
 * Los marcadores agrupados pueden agruparse al alejar el zoom.
 * Acerque el zoom para ver las ubicaciones de las imágenes individuales.
 
-{% hint style=&quot;success&quot; %}
-SUPERZOOM: cuando se alcanza el nivel máximo de zoom del proveedor de mosaicos del mapa, el mosaico se amplía al seguir ampliando, lo que permite ver los marcadores que están muy juntos.
+{% hint style="success" %}
+SUPERZOOM: cuando se alcanza el nivel máximo de zoom del proveedor de mosaicos del mapa, el mosaico se amplía al acercar aún más el zoom, lo que permite ver los marcadores que están muy juntos.
 {% endhint %}
 
 ### Vista previa al pasar el cursor
 
-* **Pase el ratón** por encima de cualquier marcador para ver una vista previa en miniatura de esa imagen.
+* **Pase el cursor** sobre cualquier marcador para ver una vista previa en miniatura de esa imagen.
 * Esto permite una rápida identificación visual sin salir de la vista del mapa.
-* Útil para localizar imágenes específicas dentro de una gran sesión de captura.
+* Útil para localizar imágenes específicas dentro de una sesión de captura grande.
 
 ***
 
 ## Proveedores de mosaicos de mapas
 
-{% hint style=&quot;success&quot; %}
+{% hint style="success" %}
 **Selección automática**: Chloros elige automáticamente el servicio de mosaicos que proporciona el mejor nivel de zoom para su ubicación actual en el mapa. Si lo desea, puede cambiar manualmente entre proveedores.
 {% endhint %}
 
-La pestaña Mapa admite dos proveedores de mosaicos para las imágenes del mapa de fondo:
+La pestaña Mapa admite dos proveedores de mosaicos para las imágenes de fondo del mapa:
 
 ### Google Maps
 
@@ -115,7 +117,9 @@ Muestra mosaicos de mapa satelital con detalles añadidos (carreteras, etc.).
 
 ### Controles de desplazamiento
 
-* **Desplazamiento**: haga clic y arrastre para desplazarse por el mapa.***
+* **Desplazamiento**: haga clic y arrastre para desplazarse por el mapa.
+
+***
 
 ## Casos de uso
 
@@ -141,7 +145,7 @@ Muestra mosaicos de mapa satelital con detalles añadidos (carreteras, etc.).
 
 ## Solución de problemas
 
-### No aparecen los marcadores
+### No aparecen marcadores
 
 **Posibles causas:**
 

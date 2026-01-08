@@ -31,7 +31,7 @@ La mayor parte de la pantalla muestra la imagen:
 
 * **Resolución completa**: las imágenes se muestran con su resolución nativa.
 * **Zoomable**: utilice los controles o la rueda del ratón para ampliar
-* **Desplazable**: haga clic y arrastre para desplazarse cuando esté ampliado
+* **Desplazable**: haga clic y arrastre para desplazarse cuando se amplíe
 * **Relación de aspecto mantenida**: las imágenes se escalan proporcionalmente
 
 ***
@@ -64,13 +64,7 @@ Ajuste el aumento para inspeccionar los detalles de la imagen:
 * Pulse la tecla **−** (menos).
 * Desplácese con la rueda del ratón **hacia abajo**.
 
-**Ajustar a la pantalla:**
-
-* Haga clic en el botón **↔** (Ajustar).
-* Pulse la tecla **0** (cero).
-* Haga doble clic en la imagen.
-
-#### Desplazamiento al ampliar
+#### Desplazamiento con zoom
 
 Cuando se amplía más allá del tamaño de la pantalla:
 
@@ -85,39 +79,41 @@ Cuando se amplía más allá del tamaño de la pantalla:
 
 ## Inspección del valor de los píxeles
 
-### Visualización de los valores de los píxeles en el cursor
+### Visualización de los valores de píxeles en el cursor
 
-A medida que mueve el cursor del ratón sobre la imagen, los valores de los píxeles se muestran en tiempo real:
+A medida que mueve el cursor del ratón sobre la imagen, los valores de píxeles se muestran en tiempo real:
 
-**Ubicación de la visualización del valor:**
+**Ubicación de la visualización de valores:**
 
 * **Número flotante y línea roja en la leyenda del gradiente LUT del índice del lado derecho**
 * **Al ampliar aún más, valor flotante cerca del cursor y píxel resaltado**
 * Muestra los valores del píxel **debajo del cursor o resaltado**
-* Se actualiza al mover el ratón
+* Se actualiza al mover el ratón.
 
 ***
 
 ## Tipos de imágenes que se pueden ver
 
-### Imágenes originales (preprocesamiento)
+### JPG
 
-**Imágenes RAW + JPG de la cámara:**
+**Imágenes JPG de la cámara:**
 
-* Muestra los datos RAW tal y como se previsualizan
-* Muestra los valores originales sin corregir
-* Útil para comprobar la calidad de la imagen antes del procesamiento
+* Muestra los datos JPG tal y como se previsualizan.
+* Muestra los valores originales sin corregir.
+* Útil para comprobar la calidad de la imagen antes del procesamiento.
 
-### Imágenes de reflectancia calibradas
+### RAW (original)
+
+### RAW (reflectancia)
 
 **Después del procesamiento:**
 
 * Viñeta corregida
 * Reflectancia calibrada
 * Multibanda TIFF (Red, Green, NIR, etc.)
-* Datos científicos listos para su análisis.
+* Datos científicos listos para su análisis
 
-### Imágenes de índice
+### RAW (Índice)
 
 **NDVI, NDRE, GNDVI, etc. (archivos \_NDVI.tif):**
 
@@ -155,19 +151,7 @@ Consulte [Índice/LUT Sandbox](index-lut-sandbox.md) para obtener instrucciones 
 
 * **+** o **=**: Acercar
 * **−**: Alejar
-* **0** (cero): Ajustar a la pantalla
 * **Rueda del ratón**: Acercar/alejar
-
-### Controles de visualización
-
-* **P**: Alternar modo de porcentaje de píxeles
-* **L**: Alternar panel de capas
-* **Esc**: Cerrar pantalla completa o volver al explorador de archivos
-
-### Otros
-
-* **Ctrl+S**: Guardar imagen actual
-* **F**: Modo de pantalla completa (si está disponible)
 
 ***
 
@@ -175,14 +159,14 @@ Consulte [Índice/LUT Sandbox](index-lut-sandbox.md) para obtener instrucciones 
 
 Compruebe que los índices se han calculado correctamente:
 
-1. Abra NDVI u otra imagen del índice.
+1. Abra NDVI u otra imagen del índice
 2. Compruebe las áreas de vegetación:
-   * **NDVI**: Debe mostrar entre 0,4 y 0,9 para plantas sanas.
-   * **NDRE**: valores más altos para un crecimiento vigoroso
-   * **GNDVI**: similar a NDVI, pero sensible a la clorofila
+   * **NDVI**: Debe mostrar entre 0,4 y 0,9 para plantas sanas
+   * **NDRE**: Valores más altos para un crecimiento vigoroso
+   * **GNDVI**: similar a NDVI, pero sensible a la clorofila.
 3. Compruebe la ausencia de vegetación:
-   * **Suelo**: Cerca de 0 o ligeramente negativo.
-   * **Agua**: Valores negativos (de -0,5 a 0).
+   * **Suelo**: cerca de 0 o ligeramente negativo.
+   * **Agua**: valores negativos (de -0,5 a 0).
 
 ***
 
@@ -192,9 +176,9 @@ Compruebe que los índices se han calculado correctamente:
 
 **Posibles causas:**
 
-* Archivo dañado durante el procesamiento.
-* Formato de archivo no compatible.
-* Memoria insuficiente para imágenes grandes.
+* Archivo dañado durante el procesamiento
+* Formato de archivo no compatible
+* Memoria insuficiente para imágenes grandes
 
 **Soluciones:**
 
@@ -209,12 +193,12 @@ Compruebe que los índices se han calculado correctamente:
 
 * Rango de valores fuera de la capacidad de visualización.
 * Imagen flotante de 32 bits con valores inusuales.
-* Error en el cálculo del índice.
+* Error de cálculo del índice.
 
 **Soluciones:**
 
 1. Compruebe los valores de los píxeles: si todos son muy bajos o muy altos, ajuste el rango de visualización.
-2. Intente abrirlo en QGIS o similar con ajuste automático del rango.
+2. Intente abrirla en QGIS o similar con ajuste automático del rango.
 3. Compruebe el registro de depuración del procesamiento en busca de errores.
 
 ### Los valores de los píxeles parecen incorrectos
@@ -230,7 +214,7 @@ Compruebe que los índices se han calculado correctamente:
 
 1. Verifique que está viendo el resultado procesado (compruebe la extensión del nombre del archivo).
 2. Compruebe el estado del botón del modo porcentual.
-3. Compare con imágenes correctas del mismo conjunto de datos.
+3. Compare con imágenes que se sabe que son correctas del mismo conjunto de datos.
 
 ***
 
@@ -238,8 +222,8 @@ Compruebe que los índices se han calculado correctamente:
 
 Ahora que puede ver las imágenes a pantalla completa:
 
-* [**Capas de imagen**](image-layers.md): aprenda sobre la visualización multibanda.
-* [**Sandbox de índices/LUT**](index-lut-sandbox.md): aplique índices personalizados y mapeo de colores.
+* [**Capas de imagen**](image-layers.md): obtenga información sobre la visualización multibanda.
+* [**Sandbox de índices/LUT**](index-lut-sandbox.md): aplique índices personalizados y asignación de colores.
 * [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md): comprenda los índices disponibles.
 
 Para el flujo de trabajo de procesamiento, consulte:

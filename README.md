@@ -3,9 +3,7 @@ metaLinks: {}
 ---
 # Introducción
 
-<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
-
-Chloros es una aplicación de software de [MAPIR](https://www.mapir.camera) para procesar imágenes y otros datos de sensores.
+<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>Chloros es una aplicación de software de [MAPIR](https://www.mapir.camera) para procesar imágenes y otros datos de sensores.
 
 ***
 
@@ -33,7 +31,7 @@ Interfaz programática Python para automatización y flujos de trabajo personali
 
 Aunque Chloros es de uso gratuito para la mayoría de las tareas, es posible que desee más. Ahí es donde una licencia de pago para Chloros+ puede resultarle útil. Con una licencia Chloros+, podrá desbloquear nuevas funciones, como:
 
-* **Procesamiento multihilo**: acelere considerablemente el procesamiento de imágenes para proyectos de mayor envergadura mediante el procesamiento simultáneo de imágenes a través del canal.
+* **Procesamiento multihilo**: acelere considerablemente el procesamiento de imágenes para proyectos más grandes mediante el procesamiento simultáneo de imágenes a través del canal.
 * **Aceleración GPU (CUDA)**: aproveche las opciones de memoria GPU más altas actuales para acelerar aún más el canal de procesamiento de imágenes. Recomendamos 4 GB o más de VRAM para obtener los mejores resultados.
 * **Chloros+** [**CLI**](CLI.md) **Acceso**: ejecute Chloros+ desde la línea de comandos para automatizar e integrar en su propio software.
 * **Chloros+** [**API**](api-python-sdk.md) **Acceso:** ejecute Chloros+ desde Python para el control programático, lo que permite una integración perfecta con sus procesos de investigación, flujos de trabajo de análisis de datos y aplicaciones personalizadas.
@@ -43,5 +41,13 @@ Aunque Chloros es de uso gratuito para la mayoría de las tareas, es posible que
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary" data-icon="envira">Chloros+ Precios y registro</a></p>
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/chloros_grid_mode.gif" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/chloros_grid_meta.gif" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
 <figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
