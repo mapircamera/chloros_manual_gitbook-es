@@ -33,9 +33,7 @@ Utilice esta opción para importar todas las imágenes de una carpeta a la vez.
 
 1. Haga clic en el botón **«Añadir carpeta»** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> en la parte superior del panel del explorador de archivos.
 2. Navegue hasta la carpeta que contiene las imágenes de su sesión de captura y selecciónela.
-3. Haga clic en **«Seleccionar carpeta»** para importar todas las imágenes compatibles de esa carpeta.
-
-***
+3. Haga clic en **«Seleccionar carpeta»** para importar todas las imágenes compatibles de esa carpeta.***
 
 ## Descripción de la tabla del explorador de archivos
 
@@ -58,7 +56,7 @@ Una vez importadas las imágenes, estas aparecen en una tabla con las siguientes
 * Ejemplos: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
 * Se utiliza para aplicar los perfiles de procesamiento correctos
 
-### Columna de objetivo (casilla de verificación)
+### Columna Objetivo (casilla de verificación)
 
 * Marque esta casilla para las imágenes que contienen objetivos de calibración.
 * Acelera considerablemente la detección de objetivos durante el procesamiento.
@@ -86,9 +84,7 @@ Para eliminar imágenes no deseadas de su proyecto:
 
 * **Ordenar por columna**: haga clic en cualquier encabezado de columna para ordenar las imágenes.
 * **Ordenar por fecha**: útil para organizar secuencias de captura cronológicas.
-* **Filtro de modelo de cámara**: agrupe las imágenes por tipo de cámara si utiliza varias cámaras.
-
-***
+* **Filtro de modelo de cámara**: agrupe las imágenes por tipo de cámara si utiliza varias cámaras.***
 
 ## Vista previa de la imagen
 
@@ -105,17 +101,15 @@ Haga clic en cualquier miniatura de imagen en el explorador de archivos para mos
 * **Imagen anterior**: haga clic en la flecha izquierda o pulse la tecla ←.
 * **Imagen siguiente**: haga clic en la flecha derecha o pulse la tecla →.
 * **Acercar/alejar**: utilice la rueda del ratón o los botones de zoom.
-* **Panorámica**: haga clic y arrastre sobre la imagen cuando esté ampliada.
-
-***
+* **Desplazamiento**: haga clic y arrastre sobre la imagen cuando esté ampliada.***
 
 ## Gestión de archivos duplicados
 
 Chloros detecta e ignora automáticamente los archivos duplicados:
 
-* Se omiten los archivos con nombres idénticos.
-* Evita el doble procesamiento accidental.
-* Se muestra un mensaje de advertencia cuando se detectan duplicados.
+* Se omiten los archivos con nombres idénticos
+* Evita el doble procesamiento accidental
+* Se muestra un mensaje de advertencia cuando se detectan duplicados
 
 {% hint style="warning" %}
 **Importante**: No renombre ni modifique los archivos de imagen originales antes de importarlos. Chloros se basa en los nombres de archivo y metadatos originales para un procesamiento adecuado.
@@ -132,22 +126,20 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 3. El explorador de archivos muestra el modelo de cámara en la columna Modelo de cámara.
 4. El procesamiento aplica la configuración correcta para cada tipo de cámara.
 
-**Ejemplo**: Survey3W RGN + Survey3N OCN configuración de doble cámara.
-
-***
+**Ejemplo de escenario**: Survey3W RGN + Survey3N OCN configuración de doble cámara.***
 
 ## Prácticas recomendadas
 
 ### Organizar antes de importar
 
-* Mantenga las imágenes de calibración en la misma carpeta que las imágenes del levantamiento.
+* Mantenga las imágenes de calibración en la misma carpeta que las imágenes de la encuesta.
 * Mantenga la estructura de carpetas original de su cámara/tarjeta SD.
 * No mezcle conjuntos de datos de diferentes sesiones en un mismo proyecto.
 
 ### Nombres de archivos
 
 * Conserve los nombres de archivo originales de la cámara (IMG\_0001.RAW, etc.).
-* No cambie el nombre de los archivos antes de importarlos.
+* No renombre los archivos antes de importarlos.
 * Los nombres originales contienen metadatos importantes.
 
 ### Imágenes de calibración
@@ -188,11 +180,9 @@ Si su proyecto contiene imágenes de varias cámaras MAPIR:
 * Reloj de la cámara mal ajustado
 * Datos EXIF eliminados por software externo
 
-**Solución**: Compruebe que la configuración de la hora de la cámara era correcta durante la captura
+**Solución**: Compruebe que la configuración de la hora de la cámara era correcta durante la captura***
 
-***
-
-## Próximos pasos
+## Pasos siguientes
 
 Una vez importados los archivos:
 

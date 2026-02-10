@@ -6,22 +6,22 @@ metaLinks:
 
 # Descargar
 
-Descargue la última versión de Chloros para comenzar con el procesamiento de imágenes multiespectrales.
+Descargue la última versión de Chloros para empezar a trabajar con el procesamiento de imágenes multiespectrales.
 
 ### Requisitos del sistema
 
-| Requisito          | Mínimo                         | Recomendado                     |
-| -------------------- | ------------------------------- | ------------------------------- |
-| **Sistema operativo** | Windows 10 (64 bits)             | Windows 11 (64 bits)             |
-| **Procesador**        | Intel Core i5 o equivalente     | Intel Core i7 o superior         |
-| **Memoria (RAM)**     | 8 GB                             | 16 GB o más                    |
-| **Tarjeta gráfica**    | Compatible con DirectX 11           | GPU NVIDIA con 4 GB+ de VRAM       |
-| **Almacenamiento**          | 6 GB de espacio libre                  | SSD con 10 GB+ de espacio libre       |
-| **Pantalla**          | 1920 x 1080                       | 2560 x 1440 o superior             |
-| **Internet**         | Necesario para la activación de la licencia | Necesario para la activación de la licencia |
+| Requisito          | Mínimo                                              | Recomendado                                          |
+| -------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| **Sistema operativo** | Windows 10 (64 bits)                                  | Windows 11 (64 bits)                                  |
+| **Procesador**        | Intel Core i5 o equivalente                          | Intel Core i7 o superior                              |
+| **Memoria (RAM)**     | 8 GB                                                  | 16 GB o más                                         |
+| **Tarjeta gráfica**    | Compatible con DirectX 11                                | GPU NVIDIA con 4 GB+ de VRAM                            |
+| **Almacenamiento**          | 6 GB de espacio libre                                       | SSD con 10 GB+ de espacio libre                            |
+| **Pantalla**          | 1920 x 1080                                            | 2560 x 1440 o superior                                  |
+| **Internet**         | Necesario para la activación de la licencia [opcional] Chloros+ | Necesario para la activación de la licencia [opcional] Chloros+ |
 
-{% hint style=&quot;info&quot; %}
-**Aceleración GPU**: Los usuarios de Chloros+ con GPU NVIDIA (4 GB+ VRAM) pueden utilizar la aceleración CUDA para un procesamiento significativamente más rápido. Los usuarios de Chloros+ también obtienen un procesamiento multihilo para una velocidad máxima.
+{% hint style="info" %}
+**Aceleración GPU**: los usuarios de Chloros+ con GPU NVIDIA pueden utilizar la aceleración CUDA para un procesamiento significativamente más rápido. Los usuarios de Chloros+ también obtienen un procesamiento multihilo para una velocidad máxima.
 {% endhint %}
 
 ***
@@ -32,9 +32,9 @@ Descargue la última versión de Chloros para comenzar con el procesamiento de i
 
 ### Última versión estable
 
-**Chloros Instalador para Windows*** **Versión**: 1.0.4
-* **Fecha de lanzamiento**: 5 de enero de 2026
-* **Tamaño del archivo (descarga)**: 1,8 GB
+**Chloros Instalador para Windows*** **Versión**: 1.0.5
+* **Fecha de lanzamiento**: 10 de febrero de 2026
+* **Tamaño del archivo (descarga)**: 1,6 GB
 * **Tamaño del archivo (instalado)**: 5,7 GB
 * **Tipo de archivo**: .exe (instalador de Windows)
 
@@ -43,11 +43,11 @@ Descargue la última versión de Chloros para comenzar con el procesamiento de i
 1. Descargue el archivo `CHLOROS INSTALLER - CURRENT VERSION.exe`
 2. Haga doble clic en el instalador para comenzar la instalación
 3. Siga las instrucciones del asistente de instalación
-4. Elija el directorio de instalación (por defecto: `C:\Program Files\[USER]\Chloros\`)
-5. Complete la instalación y ejecute Chloros, Chloros (navegador) o Chloros CLI.
+4. Elija el directorio de instalación (predeterminado: `C:\Program Files\[USER]\Chloros\`)
+5. Complete la instalación y ejecute Chloros o Chloros CLI
 6. Inicie sesión con su [cuenta MAPIR Cloud Chloros+](https://cloud.mapir.camera/pricing) (o continúe con la versión gratuita).
 
-{% hint style=&quot;success&quot; %}
+{% hint style="success" %}
 El instalador añade automáticamente `chloros-cli` a la ruta PATH de su sistema para acceder a la línea de comandos.
 {% endhint %}
 
@@ -69,24 +69,24 @@ pip install chloros-sdk
 
 La instalación de Chloros incluye:
 
-* ✅ **Chloros**: interfaz gráfica con todas las funciones
-* ✅ **Chloros (navegador)**: interfaz basada en web para sistemas con especificaciones más bajas
-* ✅ **Chloros CLI**: interfaz de línea de comandos (requiere la licencia Chloros+)
-* ✅ **Chloros SDK** - Python API (requiere licencia Chloros+)
-* ✅ **Perfiles de cámara** - Plantillas de cámara MAPIR preconfiguradas***
+* ✅ **Chloros**: interfaz gráfica de usuario (GUI) con todas las funciones
+* ✅ **Chloros CLI**: interfaz de línea de comandos (requiere licencia Chloros+)
+* ✅ **Chloros SDK**: Python API (requiere licencia Chloros+)
+* ✅ **Perfiles de cámara**: plantillas de cámara MAPIR preconfiguradas***
 
-## Actualiza a Chloros+
+## Actualización a Chloros+
 
-Desbloquea funciones avanzadas con una suscripción a Chloros+:
+Desbloquee funciones avanzadas con una suscripción a Chloros+:
 
 * 🚀 **Procesamiento multihilo**: procesa imágenes en paralelo
 * ⚡ **Aceleración GPU (CUDA)**: aprovecha la potencia de la GPU NVIDIA
-* 💻 **Acceso a CLI**: automatice con herramientas de línea de comandos
+* 💻 **Acceso a CLI**: automatiza con herramientas de línea de comandos
 * 🐍 **Python SDK**: acceso programático a API
-* 📱 **Múltiples dispositivos**: utilícelo en entre 2 y más de 10 dispositivos (dependiendo del plan)
-* 🧮 **Fórmulas personalizadas**: cree índices multiespectrales personalizados
+* 📱 **Múltiples dispositivos**: úsalo en 2-10+ dispositivos (dependiendo del plan)
+* **🐻 Método avanzado de desbayorización sensible a las texturas**: una desbayorización de alta calidad sensible a los bordes combinada con un modelo de eliminación de ruido mediante IA/ML que elimina casi todo el ruido de la desbayorización. 
+* 🧮 **Fórmulas personalizadas**: crea índices multiespectrales personalizados
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planes y precios de Chloros+</a></p>***
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver Chloros+ Planes y precios</a></p>***
 
 ## Ayuda para la instalación
 
@@ -94,17 +94,16 @@ Desbloquea funciones avanzadas con una suscripción a Chloros+:
 
 **La instalación falla con el mensaje de error:**
 
-* Asegúrese de tener derechos de administrador
+* Asegúrese de que tiene derechos de administrador
 * Desactive temporalmente el software antivirus
 * Compruebe que cumple los requisitos mínimos del sistema
 
 **La aplicación no se inicia:**
 
-* Pruebe la versión Chloros (navegador).
-* Compruebe que Windows 10/11 (64 bits) está instalado.
-* Actualice los controladores gráficos.
-* Compruebe el visor de eventos Windows para obtener detalles sobre el error.
-* Póngase en contacto con el servicio de asistencia con los registros de errores.
+* Compruebe que Windows 10/11 (64 bits) está instalado
+* Actualice los controladores gráficos
+* Compruebe el visor de eventos Windows para obtener detalles del error
+* Póngase en contacto con el servicio de asistencia con los registros de errores
 
 **Problemas con la activación de la licencia:**
 
@@ -126,10 +125,21 @@ Desbloquea funciones avanzadas con una suscripción a Chloros+:
 
 <details>
 
+<summary>Versión 1.0.5</summary>
+
+#### **Fecha de lanzamiento**: 10 de febrero de 2026**Nuevas funciones*** **Método Debayer sensible a la textura \[Chloros+ Solo] -** Texture Aware utiliza un debayer sensible a los bordes de alta calidad combinado con un modelo de eliminación de ruido AI/ML que elimina casi todo el ruido del debayering.
+* **Compatibilidad con objetivos de calibración T4P*** **Procesamiento más rápido de la GPU Chloros+, mejor gestión de la memoria**
+
+**Corrección de errores*** Interfaz completamente nueva (GUI), ahora debería funcionar en todos los ordenadores Windows.
+
+</details>
+
+<details>
+
 <summary>Versión 1.0.4</summary>
 
 #### **Fecha de lanzamiento**: 5 de enero de 2026**Nuevas funciones*** **Alternar imagen/metadatos**: se ha añadido una opción en el explorador de archivos para ver los metadatos de la imagen seleccionada en una tabla en lugar de en la cuadrícula de imágenes
-* **Control deslizante de zoom de la cuadrícula de imágenes**: nuevo control deslizante de la interfaz de usuario para ajustar el tamaño de las miniaturas (también admite CTRL + rueda del ratón).
+* **Control deslizante de zoom de la cuadrícula de imágenes**: nuevo control deslizante de la interfaz de usuario para ajustar el tamaño de las miniaturas (también es compatible con CTRL + rueda del ratón).
 * **Botones de exportación de la cuadrícula de imágenes**: botones en la fila superior para cambiar las miniaturas de JPG a exportaciones procesadas (objetivos, reflectancia, índice, LUT).
 * **Pestaña Mapa**: nuevo mapa 2D interactivo que muestra los marcadores de ubicación GPS de las imágenes.
   * Compatible con Google Maps y mosaicos de mapas ESRI (selecciona automáticamente el mejor servicio de mosaicos en función de la disponibilidad del nivel de zoom).
@@ -153,7 +163,7 @@ Desbloquea funciones avanzadas con una suscripción a Chloros+:
 
 </details>***
 
-## Acuerdo de licencia**Software propietario** - Copyright (c) 2025 MAPIR Inc.
+## Acuerdo de licencia**Software propietario** - Copyright (c) 2026 MAPIR Inc.
 
 Queda prohibido el uso, la distribución o la modificación no autorizados.
 

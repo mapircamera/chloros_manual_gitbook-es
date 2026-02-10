@@ -31,10 +31,8 @@ La mayor parte de la pantalla muestra la imagen:
 
 * **Resolución completa**: las imágenes se muestran con su resolución nativa.
 * **Zoomable**: utilice los controles o la rueda del ratón para ampliar
-* **Desplazable**: haga clic y arrastre para desplazarse cuando se amplíe
-* **Relación de aspecto mantenida**: las imágenes se escalan proporcionalmente
-
-***
+* **Desplazable**: haga clic y arrastre para desplazarse cuando esté ampliado
+* **Relación de aspecto mantenida**: las imágenes se escalan proporcionalmente***
 
 ## Opciones de visualización
 
@@ -44,23 +42,17 @@ La mayor parte de la pantalla muestra la imagen:
 
 Navegue por su conjunto de imágenes utilizando atajos de teclado o botones:
 
-* **Imagen siguiente**: haga clic en el botón → o pulse la tecla **→** (flecha derecha)
-* **Imagen anterior**: haga clic en el botón ← o pulse la tecla **←** (flecha izquierda)
+* **Imagen siguiente**: haga clic en el botón → o pulse la tecla**→** (flecha derecha)
+* **Imagen anterior**: haga clic en el botón ← o pulse la tecla**←** (flecha izquierda)
 * **Ir a una imagen específica**: vuelva al explorador de archivos y haga clic en la miniatura deseada
 
 #### Controles de zoom
 
 Ajuste el aumento para inspeccionar los detalles de la imagen:
 
-**Acercar:**
-
-* Haga clic en el botón **+** (más).
-* Pulse la tecla **+** o **=**.
-* Desplácese con la rueda del ratón **hacia arriba**.
-
-**Alejar:**
-
-* Haga clic en el botón **−** (menos).
+**Acercar:*** Haga clic en el botón **+** (más).
+* Pulse la tecla **+**o**=**.
+* Desplácese con la rueda del ratón **hacia arriba**.**Alejar:*** Haga clic en el botón **−** (menos).
 * Pulse la tecla **−** (menos).
 * Desplácese con la rueda del ratón **hacia abajo**.
 
@@ -73,22 +65,13 @@ Cuando se amplía más allá del tamaño de la pantalla:
 3. **Arrastre** para mover la imagen.
 4. Suelte para detener el desplazamiento.
 
-**Alternativa**: utilice las teclas de flecha para desplazarse en pequeños incrementos.
-
-***
+**Alternativa**: utilice las teclas de flecha para desplazarse en pequeños incrementos.***
 
 ## Inspección del valor de los píxeles
 
 ### Visualización de los valores de píxeles en el cursor
 
-A medida que mueve el cursor del ratón sobre la imagen, los valores de píxeles se muestran en tiempo real:
-
-**Ubicación de la visualización de valores:**
-
-* **Número flotante y línea roja en la leyenda del gradiente LUT del índice del lado derecho**
-* **Al ampliar aún más, valor flotante cerca del cursor y píxel resaltado**
-* Muestra los valores del píxel **debajo del cursor o resaltado**
-* Se actualiza al mover el ratón.
+A medida que mueve el cursor del ratón sobre la imagen, los valores de píxeles se muestran en tiempo real:**Ubicación de la visualización de valores:*** **Número flotante y línea roja en la leyenda del gradiente LUT del índice del lado derecho*** **Al ampliar aún más, valor flotante cerca del cursor y píxel resaltado*** Muestra los valores de los píxeles **debajo del cursor o resaltados*** Se actualiza al mover el ratón.
 
 ***
 
@@ -149,26 +132,22 @@ Consulte [Índice/LUT Sandbox](index-lut-sandbox.md) para obtener instrucciones 
 
 ### Zoom
 
-* **+** o **=**: Acercar
+* **+**o**=**: Acercar
 * **−**: Alejar
-* **Rueda del ratón**: Acercar/alejar
-
-***
+* **Rueda del ratón**: Acercar/alejar***
 
 ### Verificación de los cálculos del índice
 
 Compruebe que los índices se han calculado correctamente:
 
-1. Abra NDVI u otra imagen del índice
+1. Abra NDVI u otra imagen del índice.
 2. Compruebe las áreas de vegetación:
-   * **NDVI**: Debe mostrar entre 0,4 y 0,9 para plantas sanas
-   * **NDRE**: Valores más altos para un crecimiento vigoroso
+   * **NDVI**: Debe mostrar entre 0,4 y 0,9 para plantas sanas.
+   * **NDRE**: Valores más altos para un crecimiento vigoroso.
    * **GNDVI**: similar a NDVI, pero sensible a la clorofila.
 3. Compruebe la ausencia de vegetación:
    * **Suelo**: cerca de 0 o ligeramente negativo.
-   * **Agua**: valores negativos (de -0,5 a 0).
-
-***
+   * **Agua**: valores negativos (de -0,5 a 0).***
 
 ## Solución de problemas de visualización
 
@@ -193,7 +172,7 @@ Compruebe que los índices se han calculado correctamente:
 
 * Rango de valores fuera de la capacidad de visualización.
 * Imagen flotante de 32 bits con valores inusuales.
-* Error de cálculo del índice.
+* Error en el cálculo del índice.
 
 **Soluciones:**
 
@@ -214,7 +193,7 @@ Compruebe que los índices se han calculado correctamente:
 
 1. Verifique que está viendo el resultado procesado (compruebe la extensión del nombre del archivo).
 2. Compruebe el estado del botón del modo porcentual.
-3. Compare con imágenes que se sabe que son correctas del mismo conjunto de datos.
+3. Compare con imágenes correctas conocidas del mismo conjunto de datos.
 
 ***
 
@@ -222,8 +201,8 @@ Compruebe que los índices se han calculado correctamente:
 
 Ahora que puede ver las imágenes a pantalla completa:
 
-* [**Capas de imagen**](image-layers.md): obtenga información sobre la visualización multibanda.
-* [**Sandbox de índices/LUT**](index-lut-sandbox.md): aplique índices personalizados y asignación de colores.
+* [**Capas de imagen**](image-layers.md): aprenda sobre la visualización multibanda.
+* [**Sandbox de índices/LUT**](index-lut-sandbox.md): aplique índices personalizados y mapeo de colores.
 * [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md): comprenda los índices disponibles.
 
 Para el flujo de trabajo de procesamiento, consulte:

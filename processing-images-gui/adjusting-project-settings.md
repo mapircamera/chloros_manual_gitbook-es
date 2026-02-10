@@ -8,7 +8,7 @@ Antes de procesar las imágenes, es importante configurar los ajustes del proyec
 2. Haga clic en el icono **Configuración del proyecto** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> en la barra lateral izquierda
 3. El panel Configuración del proyecto muestra todas las opciones de configuración
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 **La configuración se guarda automáticamente** con el proyecto. Al volver a abrir un proyecto, se restauran todos los ajustes.
 {% endhint %}
 
@@ -16,13 +16,13 @@ Antes de procesar las imágenes, es importante configurar los ajustes del proyec
 
 ## Configuración rápida para flujos de trabajo comunes
 
-### Ajustes predeterminados (recomendados para la mayoría de los usuarios)
+### Configuración predeterminada (recomendada para la mayoría de los usuarios)
 
 Para los flujos de trabajo típicos de la cámara MAPIR Survey3, la configuración predeterminada funciona bien:
 
 * ✅ **Corrección de viñeta**: habilitada
 * ✅ **Calibración de reflectancia**: habilitada (requiere imágenes de objetivos MAPIR)
-* ✅ **Método Debayer**: Alta calidad (más rápido)
+* ✅ **Método Debayer**: Estándar (rápido, calidad media)
 * ✅ **Formato de exportación**: TIFF (16 bits)
 
 Simplemente importe sus imágenes y comience a procesarlas con estos valores predeterminados.
@@ -37,33 +37,35 @@ El panel Configuración del proyecto está organizado en varias categorías. A c
 
 Controla cómo Chloros identifica los objetivos de calibración en sus imágenes.
 
-**Configuración clave:**
+**Configuración clave:*** **Área mínima de muestra de calibración**: umbral de tamaño para la detección de objetivos (predeterminado: 25 píxeles)
+* **Agrupación mínima de objetivos**: umbral de similitud para agrupar regiones objetivo (predeterminado: 60)**Cuándo ajustar:**
 
-* **Área mínima de muestra de calibración**: umbral de tamaño para la detección de objetivos (predeterminado: 25 píxeles).
-* **Agrupación mínima de objetivos**: umbral de similitud para agrupar regiones objetivo (predeterminado: 60).
-
-**Cuándo ajustar:**
-
-* Aumente el área de muestra si obtiene detecciones falsas.
-* Disminúyala si no se detectan los objetivos.
+* Aumente el área de muestra si obtiene detecciones falsas
+* Disminuya si no se detectan objetivos.
 * Ajuste la agrupación si los objetivos se dividen en múltiples detecciones.
 
 ### Procesamiento
 
-Opciones principales de procesamiento y calibración de imágenes.
+Opciones principales de procesamiento de imágenes y calibración.
 
-**Ajustes clave:**
-
-* **Corrección de viñeta**: compensa el oscurecimiento de la lente en los bordes ✅ Recomendado
-* **Calibración de reflectancia**: normaliza los valores utilizando objetivos de calibración ✅ Recomendado
+**Ajustes clave:*** **Corrección de viñeta**: compensa el oscurecimiento de la lente en los bordes. ✅ Recomendado
+* **Calibración de reflectancia**: normaliza los valores utilizando objetivos de calibración. ✅ Recomendado
 * **Método Debayer**: algoritmo para convertir RAW a multiespectral de 3 canales
-* **Intervalo mínimo de recalibración**: Tiempo entre el uso de objetivos de calibración (0 = usar todos)
-
-**Ajustes avanzados:**
-
-* **Desfase de zona horaria del sensor de luz**: Para la sincronización horaria PPK (por defecto: 0)
-* **Aplicar correcciones PPK**: Utiliza datos GPS/pin de exposición de archivos .daq
+* **Intervalo mínimo de recalibración**: tiempo entre el uso de objetivos de calibración (0 = usar todos)**Configuración avanzada:*** **Desfase de zona horaria del sensor de luz**: para la sincronización horaria PPK (predeterminado: 0)
+* **Aplicar correcciones PPK**: utiliza datos GPS/pin de exposición de archivos .daq
 * **Pin de exposición 1/2**: asigna cámaras a pines de exposición para configuraciones de doble cámara
+
+### Método Debayer
+
+Actualmente ofrecemos 2 métodos de debayering en Chloros:
+
+#### Estándar (rápido, calidad media)
+
+El debayer estándar procesa rápidamente, pero muestra ruido de color de debayer, lo que da como resultado imágenes menos precisas y con más ruido.
+
+#### Textura consciente (lento, máxima calidad) \[Chloros+ Solo]
+
+Con textura utiliza un debayer de alta calidad con reconocimiento de bordes combinado con un modelo de eliminación de ruido AI/ML que elimina casi todo el ruido del debayer. El modelo con textura requiere memoria GPU (VRAM) para funcionar. Recomendamos utilizarlo cuando se disponga de más de 4 GB de VRAM para un procesamiento más rápido.
 
 ### Índice (índices multiespectrales)
 
@@ -71,39 +73,31 @@ Configure qué índices de vegetación se deben calcular y exportar.
 
 **Cómo añadir índices:**
 
-1. Haga clic en el botón **«Añadir índice»**
+1. Haga clic en el botón**«Añadir índice»**.
 2. Seleccione un índice en el menú desplegable (NDVI, NDRE, GNDVI, etc.).
 3. Configure los ajustes de visualización (colores LUT, rangos de valores).
 4. Añada varios índices según sea necesario.
 
-**Índices populares:**
-
-* **NDVI**: Salud general de la vegetación (el más común).
+**Índices populares:*** **NDVI**: Salud general de la vegetación (el más común).
 * **NDRE**: Detección temprana de estrés con RedEdge.
-* **GNDVI**: Sensible a la concentración de clorofila.
+* **GNDVI**: Sensible a la concentración de clorofila
 * **OSAVI**: Funciona bien con suelo visible
-* **EVI**: Regiones con alto índice de área foliar (LAI)
+* **EVI**: Regiones con alto índice de área foliar (LAI)**Fórmulas personalizadas (solo Chloros+):**
 
-**Fórmulas personalizadas (solo Chloros+):**
+* Cree fórmulas de índices multiespectrales personalizadas.
+* Utilice matemáticas de banda con todos los canales de imagen.
+* Guarde fórmulas personalizadas para reutilizarlas.
 
-* Cree fórmulas de índice multiespectral personalizadas
-* Utilice matemáticas de banda con todos los canales de imagen
-* Guarde fórmulas personalizadas para reutilizarlas
-
-Para ver todos los índices y fórmulas disponibles, consulte [Fórmulas de índice multiespectral](../project-settings/multispectral-index-formulas.md).
+Para ver todos los índices y fórmulas disponibles, consulte [Fórmulas de índices multiespectrales](../project-settings/multispectral-index-formulas.md).
 
 ### Exportar
 
 Controla el formato y la calidad del archivo de salida.
 
-**Formatos disponibles:**
-
-* **TIFF (16 bits)**: recomendado para SIG y análisis científico (rango de 0 a 65 535).
-* **TIFF (32 bits, porcentaje)**: valores de reflectancia en coma flotante (rango de 0,0 a 1,0).
-* **PNG (8 bits)**: compresión sin pérdidas para visualización (rango de 0 a 255).
-* **JPG (8 bits)**: archivos más pequeños, compresión con pérdidas (rango de 0 a 255).
-
-***
+**Formatos disponibles:*** **TIFF (16 bits)**: Recomendado para SIG y análisis científico (rango de 0 a 65 535).
+* **TIFF (32 bits, porcentaje)**: Valores de reflectancia en coma flotante (rango 0,0-1,0).
+* **PNG (8 bits)**: compresión sin pérdidas para visualización (rango 0-255).
+* **JPG (8 bits)**: archivos más pequeños, compresión con pérdidas (rango 0-255).***
 
 ## Guardar y cargar ajustes
 
@@ -119,8 +113,8 @@ Cree plantillas reutilizables para flujos de trabajo coherentes:
 **Ventajas:**
 
 * Aplique la misma configuración en varios proyectos.
-* Comparta las configuraciones con los miembros del equipo.
-* Mantenga la coherencia en las encuestas repetidas.
+* Comparta configuraciones con los miembros del equipo.
+* Mantenga la coherencia en encuestas repetidas.
 
 ### Cargar plantilla en un nuevo proyecto
 
@@ -129,11 +123,11 @@ Al crear un nuevo proyecto:
 1. Seleccione **«Nuevo proyecto»** en el menú principal.
 2. Elija la opción **«Cargar desde plantilla»**.
 3. Seleccione la plantilla guardada.
-4. Se aplicarán automáticamente todos los ajustes.
+4. Todos los ajustes se aplican automáticamente.
 
 ### Directorio de trabajo
 
-La configuración **«Guardar carpeta de proyecto»** especifica dónde se crean los nuevos proyectos de forma predeterminada:
+El ajuste **«Guardar carpeta de proyecto»** especifica dónde se crean los nuevos proyectos de forma predeterminada:
 
 * **Ubicación predeterminada**: `C:\Users\[Username]\Chloros Projects`.
 * **Cambiar ubicación**: haga clic en el icono de edición y seleccione una nueva carpeta.
@@ -144,13 +138,13 @@ La configuración **«Guardar carpeta de proyecto»** especifica dónde se crean
 
 ***
 
-## Configuración de PPK (cinemática posprocesada)
+## Configuración PPK (cinemática posprocesada)
 
 Si utiliza registradores DAQ MAPIR con GPS para una geolocalización precisa:
 
 ### Requisitos previos
 
-* DAQ MAPIR con módulo GPS (GNSS)
+* MAPIR DAQ con módulo GPS (GNSS)
 * Archivo de registro .daq con entradas de pines de exposición
 * Cámara conectada a los pines de exposición DAQ durante la sesión de captura
 
@@ -158,19 +152,16 @@ Si utiliza registradores DAQ MAPIR con GPS para una geolocalización precisa:
 
 1. Coloque el archivo de registro .daq en la carpeta de su proyecto
 2. En la configuración del proyecto, active la casilla **«Aplicar correcciones PPK»**
-3. Establezca la **«Diferencia horaria del sensor de luz»** si es necesario (por defecto: 0 para UTC)
+
+3. Configure**«Desfase horario del sensor de luz»** si es necesario (por defecto: 0 para UTC).
 4. Asigne las cámaras a los pines de exposición:
-   * **Cámara única**: Asignada automáticamente al pin 1.
-   * **Dos cámaras**: Asigne manualmente cada cámara al pin correcto.
-
-**Asignación de pines de exposición:**
-
-* **Pin de exposición 1**: Seleccione el modelo de cámara en el menú desplegable.
-* **Pin de exposición 2**: Seleccione la segunda cámara o «No usar».
+   * **Cámara única**: se asigna automáticamente al pin 1.
+   * **Cámaras duales**: asigne manualmente cada cámara al pin correcto.**Asignación de pines de exposición:*** **Pin de exposición 1**: seleccione el modelo de cámara en el menú desplegable.
+* **Pin de exposición 2**: seleccione la segunda cámara o «No utilizar».
 * No se puede asignar la misma cámara a ambos pines.
 
-{% hint style=&quot;warning&quot; %}
-**Importante**: Los pines de exposición deben asignarse correctamente a sus respectivas cámaras. Una asignación incorrecta dará lugar a datos de geolocalización erróneos.
+{% hint style="warning" %}
+**Importante**: los pines de exposición deben asignarse correctamente a sus respectivas cámaras. Una asignación incorrecta dará lugar a datos de geolocalización erróneos.
 {% endhint %}
 
 ***
@@ -188,7 +179,7 @@ Al procesar imágenes de varias cámaras MAPIR en un proyecto:
 
 **Ejemplo**: Survey3W RGN + Survey3N OCN equipo de doble cámara
 
-### Estudios con lapso de tiempo o en varias fechas
+### Estudios con lapso de tiempo o múltiples fechas
 
 Para estudios repetidos de la misma zona a lo largo del tiempo:
 
@@ -223,7 +214,7 @@ Antes de comenzar el procesamiento, revise estos ajustes clave:
 
 ***
 
-## Próximos pasos
+## Siguiente paso
 
 Una vez configurados los ajustes:
 

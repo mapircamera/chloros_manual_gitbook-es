@@ -12,14 +12,14 @@ La pestaña Mapa muestra sus imágenes en un mapa 2D interactivo basado en sus c
 4. El mapa mostrará marcadores en la ubicación GPS de cada imagen.
 
 {% hint style="info" %}
-**Se requiere GPS**: Solo aparecerán en el mapa las imágenes con coordenadas GPS incrustadas en sus metadatos EXIF. Asegúrese de que su cámara tenga el GPS activado durante la captura.
+**Se requiere GPS**: Solo aparecerán en el mapa las imágenes con coordenadas GPS incrustadas en sus metadatos EXIF. Asegúrese de que su cámara tiene el GPS activado durante la captura.
 {% endhint %}
 
 ***
 
 ## Ajustar imágenes desde la pestaña Mapa
 
-La pestaña **Mapa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tiene las mismas funciones de añadir  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  y eliminar  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  que la pestaña [**Explorador de archivos**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . También muestra la misma lista de archivos de proyecto, pero con diferentes encabezados de columna:
+La pestaña **Mapa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tiene las mismas funciones de añadir  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  y eliminar  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  que la pestaña [**Explorador de archivos**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . También muestra la misma lista de archivos de proyecto, pero con diferentes encabezados de columna:
 
 ### Nombre de archivo
 
@@ -90,7 +90,7 @@ La pestaña Mapa admite dos proveedores de mosaicos para las imágenes de fondo 
 
 Puede elegir el tipo de capa del mapa (de izquierda a derecha):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### Terreno
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terreno
 
 Muestra perfiles de elevación y mosaicos de mapa con detalles (carreteras, etc.).
 
@@ -117,9 +117,7 @@ Muestra mosaicos de mapa satelital con detalles añadidos (carreteras, etc.).
 
 ### Controles de desplazamiento
 
-* **Desplazamiento**: haga clic y arrastre para desplazarse por el mapa.
-
-***
+* **Desplazamiento**: haga clic y arrastre para desplazarse por el mapa.***
 
 ## Casos de uso
 
