@@ -1,6 +1,6 @@
 # Abrir una imagen a pantalla completa
 
-El visor de imágenes Chloros proporciona una interfaz dedicada a pantalla completa para ver, analizar y manipular sus imágenes multiespectrales. Tanto si se trata de imágenes originales como de resultados procesados, el visor de imágenes ofrece potentes herramientas para la inspección y el análisis.
+El visor de imágenes Chloros ofrece una interfaz específica a pantalla completa para visualizar, analizar y manipular sus imágenes multiespectrales. Tanto si se trata de imágenes originales como de resultados procesados, el visor de imágenes ofrece potentes herramientas de inspección y análisis.
 
 ## Acceso al visor de imágenes
 
@@ -8,7 +8,7 @@ El visor de imágenes Chloros proporciona una interfaz dedicada a pantalla compl
 
 La forma más habitual de abrir una imagen en el visor de imágenes:
 
-1. Asegúrese de que se encuentra en la pestaña **Explorador de archivos**. <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+1. Asegúrese de que se encuentra en la pestaña **Explorador de archivos** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
 2. Haga clic en cualquier **miniatura de imagen** de la cuadrícula de imágenes
 3. La imagen se abre en el **área de vista previa principal** (centro de la pantalla)
 4. La imagen ya está cargada y lista para su visualización a pantalla completa
@@ -17,9 +17,9 @@ La forma más habitual de abrir una imagen en el visor de imágenes:
 
 Una vez que la imagen se ha cargado en el área de vista previa:
 
-1. Haga clic en el icono **Visor de imágenes** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> en la barra lateral izquierda.
-2. Se abrirá la pestaña Visor de imágenes, que mostrará la imagen seleccionada a pantalla completa.
-3. Las herramientas avanzadas de visualización y análisis estarán disponibles en la barra lateral izquierda.
+1. Haga clic en el icono **Visor de imágenes** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> en la barra lateral izquierda
+2. Se abre la pestaña del visor de imágenes, mostrando la imagen seleccionada a pantalla completa
+3. Las herramientas avanzadas de visualización y análisis estarán disponibles en la barra lateral izquierda
 
 ***
 
@@ -27,11 +27,11 @@ Una vez que la imagen se ha cargado en el área de vista previa:
 
 ### Área de visualización principal
 
-La mayor parte de la pantalla muestra la imagen:
+La mayor parte de la pantalla muestra tu imagen:
 
-* **Resolución completa**: las imágenes se muestran con su resolución nativa.
-* **Zoomable**: utilice los controles o la rueda del ratón para ampliar
-* **Desplazable**: haga clic y arrastre para desplazarse cuando esté ampliado
+* **Resolución completa**: Imágenes mostradas a resolución nativa
+* **Zoomable**: utiliza los controles o la rueda del ratón para hacer zoom
+* **Pannable**: haz clic y arrastra para desplazarte cuando estés haciendo zoom
 * **Relación de aspecto mantenida**: las imágenes se escalan proporcionalmente***
 
 ## Opciones de visualización
@@ -40,58 +40,60 @@ La mayor parte de la pantalla muestra la imagen:
 
 #### Navegar por las imágenes
 
-Navegue por su conjunto de imágenes utilizando atajos de teclado o botones:
+Navega por tu conjunto de imágenes utilizando atajos de teclado o botones:
 
-* **Imagen siguiente**: haga clic en el botón → o pulse la tecla**→** (flecha derecha)
-* **Imagen anterior**: haga clic en el botón ← o pulse la tecla**←** (flecha izquierda)
-* **Ir a una imagen específica**: vuelva al explorador de archivos y haga clic en la miniatura deseada
+* **Imagen siguiente**: haz clic en el botón → o pulsa la tecla**→** (flecha derecha)
+* **Imagen anterior**: haz clic en el botón ← o pulsa la tecla**←** (flecha izquierda)
+* **Ir a una imagen específica**: vuelve al explorador de archivos y haz clic en la miniatura deseada
 
 #### Controles de zoom
 
-Ajuste el aumento para inspeccionar los detalles de la imagen:
+Ajusta el aumento para examinar los detalles de la imagen:
 
-**Acercar:*** Haga clic en el botón **+** (más).
-* Pulse la tecla **+**o**=**.
-* Desplácese con la rueda del ratón **hacia arriba**.**Alejar:*** Haga clic en el botón **−** (menos).
-* Pulse la tecla **−** (menos).
-* Desplácese con la rueda del ratón **hacia abajo**.
+**Acercar:*** Haz clic en el botón **+** (más)
+* Pulsa la tecla **+**o**=*** Gira la rueda del ratón **hacia arriba**
 
-#### Desplazamiento con zoom
+**Alejar:*** Haz clic en el botón **−** (menos)
+* Pulsa la tecla **−** (menos)
+* Gira la rueda del ratón **hacia abajo**
+
+#### Desplazamiento al ampliar
 
 Cuando se amplía más allá del tamaño de la pantalla:
 
-1. Mueva el cursor del ratón sobre la imagen.
-2. Haga clic y **mantenga pulsado el botón izquierdo del ratón**.
-3. **Arrastre** para mover la imagen.
-4. Suelte para detener el desplazamiento.
+1. Mueve el cursor del ratón sobre la imagen
+2. Haz clic y **mantén pulsado el botón izquierdo del ratón**
 
-**Alternativa**: utilice las teclas de flecha para desplazarse en pequeños incrementos.***
+3.**Arrastra** para mover la imagen
+4. Suelta para detener el desplazamiento
+
+**Alternativa**: Utiliza las teclas de flecha para desplazarte en pequeños incrementos***
 
 ## Inspección del valor de los píxeles
 
 ### Visualización de los valores de píxeles en el cursor
 
-A medida que mueve el cursor del ratón sobre la imagen, los valores de píxeles se muestran en tiempo real:**Ubicación de la visualización de valores:*** **Número flotante y línea roja en la leyenda del gradiente LUT del índice del lado derecho*** **Al ampliar aún más, valor flotante cerca del cursor y píxel resaltado*** Muestra los valores de los píxeles **debajo del cursor o resaltados*** Se actualiza al mover el ratón.
+A medida que mueves el cursor del ratón sobre la imagen, los valores de los píxeles se muestran en tiempo real:**Ubicación de la visualización de valores:*** **Número flotante y línea roja en la leyenda del gradiente LUT del índice del lado derecho*** **Cuando se amplía aún más, valor flotante cerca del cursor y del píxel resaltado*** Muestra los valores del píxel **bajo el cursor o resaltado*** Se actualiza a medida que se mueve el ratón
 
 ***
 
-## Tipos de imágenes que se pueden ver
+## Tipos de imagen que se pueden visualizar
 
 ### JPG
 
 **Imágenes JPG de la cámara:**
 
-* Muestra los datos JPG tal y como se previsualizan.
-* Muestra los valores originales sin corregir.
-* Útil para comprobar la calidad de la imagen antes del procesamiento.
+* Muestra los datos JPG tal y como se previsualizan
+* Muestra los valores originales, sin corregir
+* Útil para comprobar la calidad de la imagen antes del procesamiento
 
-### RAW (original)
+### RAW (Original)
 
-### RAW (reflectancia)
+### RAW (Reflectancia)
 
-**Después del procesamiento:**
+**Tras el procesamiento:**
 
-* Viñeta corregida
+* Viñete corregida
 * Reflectancia calibrada
 * Multibanda TIFF (Red, Green, NIR, etc.)
 * Datos científicos listos para su análisis
@@ -100,24 +102,24 @@ A medida que mueve el cursor del ratón sobre la imagen, los valores de píxeles
 
 **NDVI, NDRE, GNDVI, etc. (archivos \_NDVI.tif):**
 
-* Imágenes en escala de grises de banda única
-* Los valores de píxeles representan los resultados del cálculo del índice
+* Imágenes en escala de grises de una sola banda
+* Los valores de los píxeles representan los resultados del cálculo del índice
 * Rango típico de -1 a +1 para índices normalizados
-* Se pueden aplicar LUT de color para la visualización
+* Se pueden aplicar tablas de conversión de color (LUT) para la visualización
 
 ***
 
 ## Aplicación de índices y LUT
 
-Aplique índices multiespectrales y tablas de consulta de colores:
+Aplicar índices multiespectrales y tablas de conversión de color:
 
-1. Localice **Index/LUT Sandbox** en la <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
+1. Localice **Index/LUT Sandbox**en**Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
 2. Seleccione el índice de vegetación (NDVI, NDRE, etc.)
-3. Seleccione la fórmula multiespectral o cree una personalizada (solo Chloros+)
-4. Aplique un degradado de tabla de consulta de colores (LUT) para la visualización
+3. Seleccione una fórmula multiespectral o cree una personalizada (solo Chloros+)
+4. Aplique un degradado de LUT de color para la visualización
 5. Ajuste los rangos de valores y los umbrales
 
-Consulte [Índice/LUT Sandbox](index-lut-sandbox.md) para obtener instrucciones detalladas.
+Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obtener instrucciones detalladas.
 
 ***
 
@@ -125,9 +127,9 @@ Consulte [Índice/LUT Sandbox](index-lut-sandbox.md) para obtener instrucciones 
 
 ### Navegación
 
-* **→** (flecha derecha): imagen siguiente
-* **←** (flecha izquierda): imagen anterior
-* **Inicio**: primera imagen de la lista
+* **→** (Flecha derecha): Imagen siguiente
+* **←** (Flecha izquierda): Imagen anterior
+* **Inicio**: Primera imagen de la lista
 * **Fin**: Última imagen de la lista
 
 ### Zoom
@@ -136,18 +138,18 @@ Consulte [Índice/LUT Sandbox](index-lut-sandbox.md) para obtener instrucciones 
 * **−**: Alejar
 * **Rueda del ratón**: Acercar/alejar***
 
-### Verificación de los cálculos del índice
+### Verificación de los cálculos de los índices
 
-Compruebe que los índices se han calculado correctamente:
+Comprueba que los índices se hayan calculado correctamente:
 
-1. Abra NDVI u otra imagen del índice.
+1. Abra NDVI u otra imagen de índice
 2. Compruebe las áreas de vegetación:
-   * **NDVI**: Debe mostrar entre 0,4 y 0,9 para plantas sanas.
-   * **NDRE**: Valores más altos para un crecimiento vigoroso.
-   * **GNDVI**: similar a NDVI, pero sensible a la clorofila.
-3. Compruebe la ausencia de vegetación:
-   * **Suelo**: cerca de 0 o ligeramente negativo.
-   * **Agua**: valores negativos (de -0,5 a 0).***
+   * **NDVI**: Debería mostrar un valor de 0,4-0,9 para plantas sanas
+   * **NDRE**: Valores más altos para un crecimiento vigoroso
+   * **GNDVI**: Similar a NDVI, pero sensible a la clorofila
+3. Compruebe las zonas sin vegetación:
+   * **Suelo**: Cerca de 0 o ligeramente negativo
+   * **Agua**: Valores negativos (de -0,5 a 0)***
 
 ## Solución de problemas de visualización
 
@@ -157,43 +159,43 @@ Compruebe que los índices se han calculado correctamente:
 
 * Archivo dañado durante el procesamiento
 * Formato de archivo no compatible
-* Memoria insuficiente para imágenes grandes
+* Memoria insuficiente para imágenes de gran tamaño
 
 **Soluciones:**
 
-1. Intente abrirla en un visor externo para verificar la integridad del archivo.
-2. Compruebe que el formato del archivo coincide con el tipo esperado.
-3. Cierre otras aplicaciones para liberar memoria.
-4. Pruebe con una imagen más pequeña o diferente.
+1. Intente abrirla en un visor externo para verificar la integridad del archivo
+2. Compruebe que el formato del archivo coincide con el tipo esperado
+3. Cierre otras aplicaciones para liberar memoria
+4. Pruebe con una imagen más pequeña o diferente
 
-### Imagen en blanco y negro
+### Visualización de la imagen en blanco o negro
 
 **Posibles causas:**
 
-* Rango de valores fuera de la capacidad de visualización.
-* Imagen flotante de 32 bits con valores inusuales.
-* Error en el cálculo del índice.
+* Rango de valores fuera de la capacidad de visualización
+* Imagen de 32 bits en formato flotante con valores inusuales
+* Error en el cálculo del índice
 
 **Soluciones:**
 
-1. Compruebe los valores de los píxeles: si todos son muy bajos o muy altos, ajuste el rango de visualización.
-2. Intente abrirla en QGIS o similar con ajuste automático del rango.
-3. Compruebe el registro de depuración del procesamiento en busca de errores.
+1. Comprueba los valores de los píxeles: si todos son muy bajos o muy altos, ajusta el rango de visualización
+2. Intenta abrirla en QGIS o similar con ajuste automático de rango
+3. Comprueba el registro de depuración del procesamiento en busca de errores
 
 ### Los valores de los píxeles parecen incorrectos
 
 **Posibles causas:**
 
-* Visualización de una imagen incorrecta (original frente a procesada).
-* La calibración no se aplicó correctamente.
-* Los datos del sensor de luz no se incluyeron en la entrada.
-* El modo porcentual se activó incorrectamente.
+* Se está viendo la imagen incorrecta (original frente a procesada)
+* La calibración no se ha aplicado correctamente
+* Los datos del sensor de luz no se han incluido en la entrada
+* El modo porcentual se ha activado incorrectamente
 
 **Soluciones:**
 
-1. Verifique que está viendo el resultado procesado (compruebe la extensión del nombre del archivo).
-2. Compruebe el estado del botón del modo porcentual.
-3. Compare con imágenes correctas conocidas del mismo conjunto de datos.
+1. Comprueba que estás viendo el resultado procesado (comprueba el sufijo del nombre del archivo)
+2. Comprueba el estado del botón del modo porcentual
+3. Compara con imágenes que se sabe que son correctas del mismo conjunto de datos
 
 ***
 
@@ -201,10 +203,10 @@ Compruebe que los índices se han calculado correctamente:
 
 Ahora que puede ver las imágenes a pantalla completa:
 
-* [**Capas de imagen**](image-layers.md): aprenda sobre la visualización multibanda.
-* [**Sandbox de índices/LUT**](index-lut-sandbox.md): aplique índices personalizados y mapeo de colores.
-* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md): comprenda los índices disponibles.
+* [**Capas de imagen**](image-layers.md) - Más información sobre la visualización multibanda
+* [**Área de pruebas de índices/LUT**](index-lut-sandbox.md) - Aplique índices personalizados y mapeo de colores
+* [**Fórmulas de índices multiespectrales**](../project-settings/multispectral-index-formulas.md) - Conoce los índices disponibles
 
-Para el flujo de trabajo de procesamiento, consulte:
+Para el flujo de trabajo de procesamiento, consulta:
 
-* [**Procesamiento de imágenes (GUI)**](../processing-images-gui/adding-files-to-a-project.md): guía completa de procesamiento.
+* [**Procesamiento de imágenes (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Guía completa de procesamiento
