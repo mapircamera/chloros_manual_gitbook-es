@@ -1,10 +1,10 @@
-# Idiomas disponibles
+# Idiomas compatibles
 
-Chloros ofrece una interfaz totalmente compatible con **38 idiomas de todo el mundo**, lo que lo hace accesible a usuarios de todo el planeta. Puede cambiar de idioma al instante en todas las interfaces: Escritorio, Navegador, CLI y Python SDK.
+Chloros ofrece compatibilidad total con la interfaz en **38 idiomas de todo el mundo**, lo que lo hace accesible a usuarios de todo el planeta. Puedes cambiar de idioma al instante tanto en la interfaz gráfica de usuario de escritorio como en el CLI.
 
 Chloros admite los siguientes idiomas:
 
-| # | Idioma | Nombre nativo | Código CLI |
+| # | Idioma | Nombre original | Código CLI |
 |---|----------|-------------|----------|
 | 1 | 🇺🇸 Inglés | English | `en` |
 | 2 | 🇪🇸 Español | Español | `es` |
@@ -32,8 +32,8 @@ Chloros admite los siguientes idiomas:
 | 24 | 🇬🇷 Griego | Ελληνικά | `el` |
 | 25 | 🇨🇿 Checo | Čeština | `cs` |
 | 26 | 🇭🇺 Húngaro | Magyar | `hu` |
-| 27 | 🇷🇴 Rumano | Română | `ro` |
-| 28 | 🇺🇦 Ucraniano | Українська | `uk` |
+| 27 | 🇷🇴 Rumanos | Română | `ro` |
+| 28 | 🇺🇦 Ucranianos | Українська | `uk` |
 | 29 | 🇧🇷 Portugués brasileño | Português Brasileiro | `pt-BR` |
 | 30 | 🇭🇰 Cantonés | 粵語 | `zh-HK` |
 | 31 | 🇲🇾 Malayo | Bahasa Melayu | `ms` |
@@ -47,16 +47,16 @@ Chloros admite los siguientes idiomas:
 
 ## Cómo cambiar el idioma
 
-### En Chloros Escritorio/Navegador
+### En Chloros Desktop
 
 1. Abre la configuración de la aplicación
-2. Ve al menú de selección de idioma
+2. Accede al menú de selección de idioma
 3. Elige tu idioma preferido de la lista
 4. La interfaz se actualizará al instante
 
 ### En Chloros CLI
 
-Utilice el comando `language` para ver o cambiar el idioma de la interfaz de CLI:
+Utiliza el comando `language` para ver o cambiar el idioma de la interfaz de CLI:
 
 ```bash
 # View current language
@@ -75,19 +75,15 @@ chloros-cli language pt-BR
 chloros-cli language --list
 ```
 
-Para obtener más detalles, consulte la [documentación de CLI](CLI.md).
-
-### En Chloros Python SDK
-
-Configure el parámetro de idioma al inicializar el SDK para recibir mensajes y resultados en su idioma preferido.
+Para obtener más detalles, consulta la [documentación de CLI](CLI.md).
 
 ## Cobertura
 
 Los 38 idiomas son totalmente compatibles en:
 
 * **Chloros Desktop**: traducción completa de la interfaz gráfica de usuario
-* **Chloros Browser**: interfaz web en todos los idiomas
 * **Chloros CLI**: interfaz de línea de comandos y mensajes de salida
-* **Chloros Python SDK** - Mensajes y documentación de API
 
-La compatibilidad con varios idiomas garantiza que los usuarios de todo el mundo puedan trabajar de forma eficiente en su idioma nativo sin barreras.
+Python, SDK, API y su [documentación de referencia](reference/sdk-reference.md) se proporcionan en inglés.
+
+La compatibilidad con distintos idiomas garantiza que los usuarios de todo el mundo puedan trabajar de forma eficiente en su idioma nativo sin barreras.
