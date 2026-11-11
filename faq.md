@@ -27,15 +27,9 @@ Sí. Chloros 1.3.0 es compatible con los módulos de cámara LATTICE M3C y M3M d
 
 <summary>¿Puedo calibrar mis imágenes para la reflectancia sin un objetivo de calibración?</summary>
 
-**Survey3
+**Survey3:** No. Sin una imagen del objetivo de calibración capturada al mismo tiempo que las imágenes que no son del objetivo, no podrás relacionar los valores de píxel de la imagen con un porcentaje de reflectancia conocido. Si además no incluyes el registro de un sensor de luz MAPIR, no se medirá el espectro de la luz ambiental y los resultados de reflectancia no serán precisos.
 
-:** No. Sin una imagen del objetivo de calibración capturada al mismo tiempo que las imágenes que no son del objetivo, no podrás relacionar los valores de píxel de la imagen con un porcentaje de reflectancia conocido. Si además no incluyes el registro de un sensor de luz MAPIR
-
-, no se medirá el espectro de la luz ambiental y los resultados de reflectancia no serán precisos.
-
-**LATTICE:** Sí. La reflectancia puede referenciarse a la irradiancia descendente medida por un sensor de luz DAQ en lugar de por un panel (ρ = π·L/E). Cuando *sí* hay un objetivo dentro del encuadre que ha superado el control de calidad, este se convierte en la referencia absoluta por defecto (`--reflectance-source auto`), a menos que se apruebe con un indicador, en cuyo caso el objetivo y las cadenas del DAQ compiten por la puntuación medida. Una excepción: «La reflectancia F988 se calibra utilizando un panel de reflectancia en la escena: la banda se encuentra fuera del rango calibrado del sensor de luz del DAQ, por lo que Chloros
-
-aplica tu captura de panel más reciente y la mantiene entre observaciones del panel». Véase [Objetivos de calibración](calibration-targets.md).
+**LATTICE:** Sí. La reflectancia puede referenciarse a la irradiancia descendente medida por un sensor de luz DAQ en lugar de por un panel (ρ = π·L/E). Cuando *sí* hay un objetivo dentro del encuadre que ha superado el control de calidad, este se convierte en la referencia absoluta por defecto (`--reflectance-source auto`), a menos que se apruebe con un indicador, en cuyo caso el objetivo y las cadenas del DAQ compiten por la puntuación medida. Una excepción: «La reflectancia F988 se calibra utilizando un panel de reflectancia en la escena: la banda se encuentra fuera del rango calibrado del sensor de luz del DAQ, por lo que Chloros aplica tu captura de panel más reciente y la mantiene entre observaciones del panel». Véase [Objetivos de calibración](calibration-targets.md).
 
 </details>
 
@@ -43,9 +37,7 @@ aplica tu captura de panel más reciente y la mantiene entre observaciones del p
 
 <summary>¿Necesito un sensor de luz DAQ?</summary>
 
-No para la radiancia: las exportaciones de radiancia de LATTICE proceden de la calibración radiométrica de fábrica de cada cámara y no necesitan ni un sensor DAQ ni un objetivo. Para la **reflectancia**, necesitas una referencia de la luz ambiental, ya sea una medición descendente de un sensor de luz DAQ o un objetivo de calibración dentro del encuadre. Un sensor DAQ te permite obtener valores de reflectancia calibrados**sin necesidad de colocar ningún panel en la escena**. Los archivos `.daq` grabados se asocian automáticamente a tus imágenes mediante la marca de tiempo. Consulta [Objetivos de calibración](calibration-targets.md) y la [Referencia de CLI
-
-](reference/cli-reference.md).
+No para la radiancia: las exportaciones de radiancia de LATTICE proceden de la calibración radiométrica de fábrica de cada cámara y no necesitan ni un sensor DAQ ni un objetivo. Para la **reflectancia**, necesitas una referencia de la luz ambiental, ya sea una medición descendente de un sensor de luz DAQ o un objetivo de calibración dentro del encuadre. Un sensor DAQ te permite obtener valores de reflectancia calibrados**sin necesidad de colocar ningún panel en la escena**. Los archivos `.daq` grabados se asocian automáticamente a tus imágenes mediante la marca de tiempo. Consulta [Objetivos de calibración](calibration-targets.md) y la [Referencia de CLI](reference/cli-reference.md).
 
 </details>
 
@@ -143,9 +135,7 @@ En la tabla del explorador de archivos, al preseleccionar las imágenes objetivo
 
 <summary>Si voy a subir mis imágenes a <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud,</a> ¿debo procesarlas en Chloros antes de subirlas?</summary>
 
-Si tiene previsto subirlas a nuestra plataforma de procesamiento en línea [MAPIR
-
-Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), no edite las imágenes antes de subirlas. Cloud realizará todo el mismo procesamiento y mucho más.
+Si tiene previsto subirlas a nuestra plataforma de procesamiento en línea [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), no edite las imágenes antes de subirlas. Cloud realizará todo el mismo procesamiento y mucho más.
 
 </details>
 
@@ -185,9 +175,7 @@ Siempre nos interesa recibir comentarios sobre nuestros productos. Si detectas a
 
 <summary>¿En qué consiste el proceso de procesamiento de 4 subprocesos?</summary>
 
-Chloros
-utiliza una arquitectura en pipeline de 4 subprocesos para los usuarios de Chloros
-+: El hilo 1 (Detección) carga imágenes y detecta los objetivos de calibración; el hilo 2 (Calibración) calcula la calibración de reflectancia; el hilo 3 (Procesamiento) realiza el «debayering» acelerado por GPU y el cálculo de índices; y el hilo 4 (Exportación) escribe los archivos de salida. Se pueden procesar varias imágenes en diferentes subprocesos simultáneamente para obtener el máximo rendimiento. Consulta [Cadena de procesamiento](processing-architecture/processing-pipeline.md) para obtener más detalles.
+Chloros utiliza una arquitectura en pipeline de 4 subprocesos para los usuarios de Chloros+: El hilo 1 (Detección) carga imágenes y detecta los objetivos de calibración; el hilo 2 (Calibración) calcula la calibración de reflectancia; el hilo 3 (Procesamiento) realiza el «debayering» acelerado por GPU y el cálculo de índices; y el hilo 4 (Exportación) escribe los archivos de salida. Se pueden procesar varias imágenes en diferentes subprocesos simultáneamente para obtener el máximo rendimiento. Consulta [Cadena de procesamiento](processing-architecture/processing-pipeline.md) para obtener más detalles.
 
 </details>
 

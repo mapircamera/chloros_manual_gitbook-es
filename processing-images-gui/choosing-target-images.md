@@ -159,7 +159,7 @@ Si Chloros no detecta correctamente tus objetivos, ajusta estos parámetros en [
 **Posibles causas:**
 
 * Las imágenes de los objetivos no están marcadas en el explorador de archivos
-* El objetivo es demasiado pequeño en el encuadre (&lt; 30 % de la imagen)
+* El objetivo es demasiado pequeño en el encuadre (< 30 % de la imagen)
 * Iluminación deficiente (sombras, reflejos)
 * Ajustes de detección de objetivos demasiado estrictos
 

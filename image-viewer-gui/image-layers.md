@@ -4,11 +4,7 @@ El **menú desplegable de capas** situado en la esquina superior derecha del vis
 
 ## ¿Qué son las capas de imagen?
 
-Una «capa» en Chloros
-
-es un **archivo de producto**registrado en relación con una imagen original. La importación te proporciona los archivos originales; el procesamiento añade una capa por cada producto generado en la ejecución. Los archivos exportados conservan el nombre del archivo original: es la**carpeta** la que identifica el producto, y el nombre de la capa es la etiqueta que Chloros
-
-asigna a esa carpeta.
+Una «capa» en Chloros es un **archivo de producto**registrado en relación con una imagen original. La importación te proporciona los archivos originales; el procesamiento añade una capa por cada producto generado en la ejecución. Los archivos exportados conservan el nombre del archivo original: es la**carpeta** la que identifica el producto, y el nombre de la capa es la etiqueta que Chloros asigna a esa carpeta.
 
 <!-- SCREENSHOT-NEEDED: Image Viewer full screen with the layer dropdown open on a processed LATTICE multispectral image, showing the full list: TIFF base, RAW (Original), RAW (Debayered), RAW (Preview), RAW (Radiance), RAW (Reflectance), and one RAW (NDVI Index) entry. -->
 
@@ -20,17 +16,7 @@ asigna a esa carpeta.
 
 | Capa | Qué es |
 | --- | --- |
-| **JPG**(o**PNG
-
-**/**TIFF
-
-**) | El archivo base que se importó con la captura. Survey3
-
-importa un `.JPG` junto a cada `.RAW`; las capturas de LATTICE traen una vista previa de visualización en formato PNG
-
-o TIFF
-
-. Etiquetada según lo que se importó realmente |
+| **JPG**(o**PNG**/**TIFF**) | El archivo base que se importó con la captura. Survey3 importa un `.JPG` junto a cada `.RAW`; las capturas de LATTICE traen una vista previa de visualización en formato PNG o TIFF. Etiquetada según lo que se importó realmente |
 | **RAW (Original)** | El fotograma sin procesar original, sometido a «debayering» para su visualización sin que se le hayan aplicado correcciones. Disponible desde el momento de la importación; no requiere procesamiento |
 
 Una captura de LATTICE cuyo archivo base **sea** su fotograma sin procesar no tiene una entrada base separada: `RAW (Original)` ya la cubre.
@@ -57,31 +43,19 @@ LATTICE captura el desdoblamiento en estos niveles en una sola pasada de procesa
 
 | Capa | Se escribe en | Se aplica a |
 | --- | --- | --- |
-| **RAW (sin bayering)** | `Debayered_Images/` | RGB
-
-y multiespectral |
+| **RAW (sin bayering)** | `Debayered_Images/` | RGB y multiespectral |
 | **RAW (vista previa)** | `Preview_Images/` | Multiespectral (expansión de colores falsos) |
-| **Con balance de blancos** | `Preview_Images/` | Cámaras maestras RGB
-
-: la vista previa RGB
-
-se registra con este nombre para que coincida con la capa de Survey3
-
-del mismo nombre |
+| **Con balance de blancos** | `Preview_Images/` | Cámaras maestras RGB: la vista previa RGB se registra con este nombre para que coincida con la capa de Survey3 del mismo nombre |
 | **RAW (radiancia)** | `Radiance_Images/` | Solo multiespectral |
 | **RAW (reflectancia)** | `Reflectance_Calibrated_Images/` | Solo multiespectral, y únicamente cuando un registro descendente `.daq` coincidente o un objetivo dentro del fotograma que haya superado el control de calidad cubra el fotograma |
 
-Las cámaras maestras RGB
-
-no disponen de radiometría por banda, por lo que la radiancia y la reflectancia se omiten en su caso como **no aplicables**; el registro lo indica en lugar de generar un error silencioso.
+Las cámaras maestras RGB no disponen de radiometría por banda, por lo que la radiancia y la reflectancia se omiten en su caso como **no aplicables**; el registro lo indica en lugar de generar un error silencioso.
 
 {% hint style="info" %}
 **Las capas sin procesar y sin bayering se alinean con los productos (novedad en la versión 1.3.0).**Los archivos sin procesar y sin bayering de LATTICE se guardan en la orientación nativa del sensor y registran en XMP la orientación que les corresponde; los demás productos se guardan con esa orientación ya aplicada. El visor y la cuadrícula de imágenes muestran**RAW (Original)**y**RAW (Sin bayering)** según ese registro para su visualización, por lo que el fotograma ya no se invierte al cambiar entre una capa de producto y una capa RAW. Esto es solo a efectos de visualización: los archivos nunca se reescriben. Los archivos sin registro de orientación (capturados antes de la versión 1.3.0 o generados por otro software) se muestran tal y como están almacenados. Véase [Formatos de imagen de salida](../output-image-formats.md#orientation).
 {% endhint %}
 
-Las máscaras de recorte (`*_clampmask.tif` en una carpeta `clamp_masks/`) no son capas: Chloros
-
-las omite al importarlas. Véase [Formatos de imagen de salida](../output-image-formats.md#clamp-masks).
+Las máscaras de recorte (`*_clampmask.tif` en una carpeta `clamp_masks/`) no son capas: Chloros las omite al importarlas. Véase [Formatos de imagen de salida](../output-image-formats.md#clamp-masks).
 
 ### Capas de índice, LUT y área de pruebas
 
@@ -124,27 +98,13 @@ El [panel «Valores del cursor»](opening-an-image-full-screen.md#cursor-values)
 
 | Capa | Unidad mostrada | Notas |
 | --- | --- | --- |
-| Base (vista previa JPG / PNG
-
-/ TIFF
-
-) | DN, 0–255 | Valores de visualización, con corrección gamma en RGB
-
-. Solo para inspección visual |
+| Base (vista previa JPG / PNG / TIFF) | DN, 0–255 | Valores de visualización, con corrección gamma en RGB. Solo para inspección visual |
 | RAW (Original) | DN | Números digitales sin procesar del sensor. El eje del histograma indica la profundidad: 255 (8 bits), 4095 (12 bits) o 65535 (16 bits) |
 | RAW (sin debayering) | DN | Lineal, sin estiramiento de la visualización |
 | RAW (vista previa) / con balance de blancos | DN | Producto de visualización: estirado o con corrección gamma. No apto para mediciones |
 | RAW (Radiancia) | **W/m²/sr/nm** | Radiancia física en Float32. Sin columna DN |
 | RAW (Reflectancia) | DN **y %** | Porcentaje calculado con la escala propia del archivo — véase más abajo |
-| Exportaciones de índice / LUT / sandbox | Valor de índice, o componentes RGB
-
-| Un archivo de índice de un solo canal indica el valor de índice; un archivo LUT con mapa de colores indica los componentes Red
-
-/Green
-
-/Blue
-
-|
+| Exportaciones de índice / LUT / sandbox | Valor de índice, o componentes RGB | Un archivo de índice de un solo canal indica el valor de índice; un archivo LUT con mapa de colores indica los componentes Red /Green /Blue |
 
 ### Reflectancia: la escala es específica de cada archivo
 
@@ -155,11 +115,7 @@ El [panel «Valores del cursor»](opening-an-image-full-screen.md#cursor-values)
 | Fuente | DN que equivale a una reflectancia de 1,0 | Identificado por |
 | --- | --- | --- |
 | **LATTICE**(M3C / M3M) |**32768** | La etiqueta XMP `Chloros:PixelScale=32768` incluida en cada exportación de reflectancia de LATTICE. El margen de 2× permite representar valores de ρ superiores a 1,0 en lugar de recortarlos |
-| **Survey3**| **65535** | No hay etiqueta de escala XMP de Chloros
-
-: la calibración de Survey3
-
-escribe ρ × dtype-max y recorta en 1,0 |
+| **Survey3**| **65535** | No hay etiqueta de escala XMP de Chloros: la calibración de Survey3 escribe ρ × dtype-max y recorta en 1,0 |
 
 Para SIG y scripts: lee `Chloros:PixelScale` del archivo y divide por ese valor. Si la etiqueta no está presente, el archivo tiene escala de eSurvey3
 
@@ -175,30 +131,10 @@ Almacenamiento específico del formato además de esa escala:
 
 | Familia de índices | Rango típico | Lectura |
 | --- | --- | --- |
-| Diferencia normalizada (NDVI
-
-, GNDVI
-
-, NDRE
-
-, ENDVI…) | de −1 a +1 | La vegetación sana suele estar entre 0,4 y 0,9; el suelo desnudo cerca de 0; el agua da valores negativos |
-| Ajustados al suelo (SAVI
-
-, OSAVI
-
-, MSAVI2…) | aproximadamente de −1 a +1,5 | Lectura similar a la del NDVI
-
-, pero con el fondo del suelo suprimido |
-| Ratios (GRVI
-
-, GCI
-
-, MSR, CIRE…) | sin límite superior | Los ratios crecen sin límite a medida que la banda del denominador tiende a cero |
-| EVI
-
-/ LAI
-
-| de 0 a ~1, de 0 a ~3,5 | Las nubes y otros píxeles saturados hacen que ambos valores se salgan del rango; hay que enmascararlos primero |
+| Diferencia normalizada (NDVI, GNDVI, NDRE, ENDVI…) | de −1 a +1 | La vegetación sana suele estar entre 0,4 y 0,9; el suelo desnudo cerca de 0; el agua da valores negativos |
+| Ajustados al suelo (SAVI, OSAVI, MSAVI2…) | aproximadamente de −1 a +1,5 | Lectura similar a la del NDVI, pero con el fondo del suelo suprimido |
+| Ratios (GRVI, GCI, MSR, CIRE…) | sin límite superior | Los ratios crecen sin límite a medida que la banda del denominador tiende a cero |
+| EVI / LAI | de 0 a ~1, de 0 a ~3,5 | Las nubes y otros píxeles saturados hacen que ambos valores se salgan del rango; hay que enmascararlos primero |
 
 Consulta [Fórmulas de índices multiespectrales](../project-settings/multispectral-index-formulas.md) para conocer la fórmula exacta que hay detrás de cada preajuste.
 
@@ -230,9 +166,7 @@ Consulta [Fórmulas de índices multiespectrales](../project-settings/multispect
 1. Selecciona **RAW (Reflectancia)**
 
 2. Lee la columna**%** en el panel «Valores del cursor»: ya está escalada correctamente para ese archivo
-3. Comprueba la validez comparando con materiales conocidos en el fotograma: la vegetación sana presenta valores altos en el NIR
-
-y bajos en el rojo; un objetivo de calibración debería dar una lectura cercana a su reflectancia publicada
+3. Comprueba la validez comparando con materiales conocidos en el fotograma: la vegetación sana presenta valores altos en el NIR y bajos en el rojo; un objetivo de calibración debería dar una lectura cercana a su reflectancia publicada
 
 ***
 
@@ -244,25 +178,19 @@ y bajos en el rojo; un objetivo de calibración debería dar una lectura cercana
 
 * La imagen nunca se procesó: solo existen la base y `RAW (Original)`
 * La opción de exportación del producto está desmarcada en la configuración del proyecto
-* El producto no es aplicable a esa cámara (radiancia y reflectancia en una cámara maestra RGB
-
-; cualquier índice en una cámara monocromática M3M de banda única)
+* El producto no es aplicable a esa cámara (radiancia y reflectancia en una cámara maestra RGB; cualquier índice en una cámara monocromática M3M de banda única)
 * La calibración de reflectancia no tenía datos con los que trabajar —no había cobertura descendente de `.daq` ni ningún objetivo dentro del fotograma que hubiera superado el control de calidad—, por lo que el fotograma recurrió a «Vignette Corrected» o «Sensor Response»
 
 **Qué hacer**
 
-1. Comprueba el registro de la ejecución: Chloros
-
-indica cuándo no fue posible generar un producto de exportación solicitado y por qué
+1. Comprueba el registro de la ejecución: Chloros indica cuándo no fue posible generar un producto de exportación solicitado y por qué
 2. Comprueba las casillas de exportación de cada producto en [Configuración del proyecto](../project-settings/project-settings.md)
 3. Confirma que la carpeta del producto existe en el árbol de salida del proyecto
 4. Vuelve a procesar con el producto habilitado
 
 ### La lista de capas parece desactualizada
 
-Chloros
-
-vuelve a escanear las carpetas de productos del proyecto mientras se está ejecutando una sesión y corrige los registros de capas que faltan a partir de lo que realmente hay en el disco; por lo tanto, una capa cuya exportación haya finalizado normalmente aparece por sí sola en una consulta. Salir de la imagen y volver a ella fuerza una nueva resolución.
+Chloros vuelve a escanear las carpetas de productos del proyecto mientras se está ejecutando una sesión y corrige los registros de capas que faltan a partir de lo que realmente hay en el disco; por lo tanto, una capa cuya exportación haya finalizado normalmente aparece por sí sola en una consulta. Salir de la imagen y volver a ella fuerza una nueva resolución.
 
 ### Los valores de reflectancia parecen la mitad de lo que deberían ser
 

@@ -1,10 +1,6 @@
 # Seguimiento del procesamiento
 
-Una vez iniciado el procesamiento, Chloros
-
-ofrece varias formas de supervisar el progreso, detectar posibles problemas y comprender qué está ocurriendo con tu conjunto de datos. En esta página se explica cómo realizar un seguimiento del procesamiento e interpretar la información que proporciona Chloros
-
-.
+Una vez iniciado el procesamiento, Chloros ofrece varias formas de supervisar el progreso, detectar posibles problemas y comprender qué está ocurriendo con tu conjunto de datos. En esta página se explica cómo realizar un seguimiento del procesamiento e interpretar la información que proporciona Chloros.
 
 ## Descripción general de la barra de progreso
 
@@ -12,9 +8,7 @@ La barra de progreso situada en la parte superior de la página muestra el estad
 
 ### Barra de progreso del modo gratuito
 
-Para usuarios sin licencia de Chloros
-
-+:
+Para usuarios sin licencia de Chloros+:
 
 **Visualización del progreso en dos etapas:**
 
@@ -25,13 +19,9 @@ Para usuarios sin licencia de Chloros
 * Nombre de la etapa actual
 * Visualización sencilla mediante una barra horizontal
 
-### Barra de progreso de Chloros
+### Barra de progreso de Chloros+
 
-+
-
-Para usuarios con licencia de Chloros
-
-+:
+Para usuarios con licencia de Chloros+:
 
 **Visualización del progreso en 4 etapas:**
 
@@ -44,9 +34,7 @@ Para usuarios con licencia de Chloros
 * Cada etapa muestra su progreso individual (0-100 %)
 
 {% hint style="info" %}
-**Paridad con la CLI**: durante una ejecución de `chloros-cli process`, los mismos cuatro subprocesos muestran los estados «Detectando», «Analizando», «Procesando» y «Exportando», y `chloros-cli export-status` muestra en tiempo real el progreso de la exportación del subproceso 4 desde otro terminal. Consulte la [Referencia de la CLI
-
-](../reference/cli-reference.md).
+**Paridad con la CLI**: durante una ejecución de `chloros-cli process`, los mismos cuatro subprocesos muestran los estados «Detectando», «Analizando», «Procesando» y «Exportando», y `chloros-cli export-status` muestra en tiempo real el progreso de la exportación del subproceso 4 desde otro terminal. Consulte la [Referencia de la CLI](../reference/cli-reference.md).
 {% endhint %}
 
 ***
@@ -61,9 +49,7 @@ Para usuarios con licencia de Chloros
 
 **Qué ocurre:**
 
-* Chloros
-
-escanea las imágenes que has marcado con la casilla «Objetivo» (todas las imágenes si no se ha marcado ninguna)
+* Chloros escanea las imágenes que has marcado con la casilla «Objetivo» (todas las imágenes si no se ha marcado ninguna)
 * Los algoritmos de visión artificial identifican los paneles de calibración
 * Se extraen los valores de reflectancia de cada panel
 * Se registran las marcas de tiempo de los objetivos para programar correctamente la calibración
@@ -92,9 +78,7 @@ escanea las imágenes que has marcado con la casilla «Objetivo» (todas las im�
 * Lectura de los metadatos EXIF de las imágenes (marcas de tiempo, ajustes de exposición)
 * Determinación de la estrategia de calibración basada en las marcas de tiempo de los objetivos y los datos de radiación descendente de DAQ disponibles
 * Organización de la cola de procesamiento de imágenes
-* Preparación de los procesos de procesamiento en paralelo (solo Chloros
-
-+)
+* Preparación de los procesos de procesamiento en paralelo (solo Chloros+)
 
 **Duración:** 5-30 segundos**Indicador de progreso:**
 
@@ -121,9 +105,7 @@ escanea las imágenes que has marcado con la casilla «Objetivo» (todas las im�
 * Imágenes completadas / Total de imágenes
 
 **Comportamiento del procesamiento:*** **Modo libre**: procesa una imagen cada vez de forma secuencial
-* **Modo Chloros
-
-+**: ejecuta un grupo de trabajadores adaptado al hardware: de 1 a 4 trabajadores simultáneos en sistemas con GPU (según la VRAM); un trabajador por núcleo físico (menos uno) en sistemas solo con CPU. Véase [Adaptación dinámica de cálculo](../processing-architecture/dynamic-compute-adaptation.md)
+* **Modo Chloros+**: ejecuta un grupo de trabajadores adaptado al hardware: de 1 a 4 trabajadores simultáneos en sistemas con GPU (según la VRAM); un trabajador por núcleo físico (menos uno) en sistemas solo con CPU. Véase [Adaptación dinámica de cálculo](../processing-architecture/dynamic-compute-adaptation.md)
 * **Aceleración por GPU**: Acelera significativamente esta etapa**A tener en cuenta:**
 
 * Progreso constante en el recuento de imágenes
@@ -169,17 +151,13 @@ de la barra lateral izquierda
 
 ### Cómo interpretar los mensajes del registro Las líneas del registro de
 
-Chloros
-
-van precedidas de etiquetas entre corchetes que indican el nombre del subsistema; por ejemplo, `[PROCESSING]`, `[RUN-SUMMARY]`, `[LATTICE-EXPORT]`, `[EXPORT-CHECK]`, `[IMPORT-LEVEL]`. Lo más importante que hay que saber es el **resumen de la ejecución**, que aparece al final de cada ejecución (incluidas las que se han detenido):
+Chloros van precedidas de etiquetas entre corchetes que indican el nombre del subsistema; por ejemplo, `[PROCESSING]`, `[RUN-SUMMARY]`, `[LATTICE-EXPORT]`, `[EXPORT-CHECK]`, `[IMPORT-LEVEL]`. Lo más importante que hay que saber es el **resumen de la ejecución**, que aparece al final de cada ejecución (incluidas las que se han detenido):
 
 ```
 [RUN-SUMMARY] 49 image(s) in 2 camera group(s); 4 target(s) detected; 45 image(s) calibrated; 180 file(s) written.
 ```
 
-Siempre que haya algo que requiera una explicación, aparecen líneas adicionales de ayuda `[RUN-SUMMARY]`; por ejemplo, una ejecución que no haya generado ningún resultado, o una cámara cuyo producto solicitado se omitió por no ser aplicable. Las líneas `[EXPORT-CHECK]` explican las omisiones por cámara (por ejemplo, por qué una cámara RGB
-
-no obtuvo ningún producto de radiancia).
+Siempre que haya algo que requiera una explicación, aparecen líneas adicionales de ayuda `[RUN-SUMMARY]`; por ejemplo, una ejecución que no haya generado ningún resultado, o una cámara cuyo producto solicitado se omitió por no ser aplicable. Las líneas `[EXPORT-CHECK]` explican las omisiones por cámara (por ejemplo, por qué una cámara RGB no obtuvo ningún producto de radiancia).
 
 Los niveles de gravedad generales de los mensajes (los ejemplos que figuran a continuación son ilustrativos, no literales):
 
@@ -210,17 +188,9 @@ Problemas críticos que pueden provocar que el procesamiento falle —por ejempl
 | No se han encontrado objetivos                      | No se han detectado objetivos de calibración               | Marcar las imágenes de los objetivos o desactivar la calibración de reflectancia |
 | Espacio en disco insuficiente               | No hay suficiente almacenamiento para la salida                 | Liberar espacio en disco                                    |
 | Se omite el archivo dañado               | El archivo de imagen está dañado                         | Vuelve a copiar el archivo desde la tarjeta SD                             |
-| `[IMPORT-LEVEL] Skipping ... no raw source` | No se puede procesar una captura sin un fotograma sin procesar | Vuelve a capturar con el fotograma sin procesar, o utilizar la CLI
-
-`--input-level`  |
+| `[IMPORT-LEVEL] Skipping ... no raw source` | No se puede procesar una captura sin un fotograma sin procesar | Vuelve a capturar con el fotograma sin procesar, o utilizar la CLI `--input-level`  |
 | `[RUN-SUMMARY] ... 0 file(s) written` | La ejecución no ha generado productos de imagen — se ha notificado como un fallo con indicaciones | Lee las líneas de indicación; comprueba qué se ha omitido y por qué |
-| `[PROCESS] refused: The project folder is too deep for this computer…` | Las rutas largas de Windows
-
-están desactivadas y la carpeta del proyecto tiene demasiados niveles de subcarpetas para el límite de 260 caracteres de la ruta; no se ha procesado nada | Utiliza una carpeta de proyecto más corta (el mensaje indica la ruta más larga que cabe), o activa las rutas largas de Windows
-
-y reinicia Chloros
-
-; consulta [Inicio del procesamiento](starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer) |
+| `[PROCESS] refused: The project folder is too deep for this computer…` | Las rutas largas de Windows están desactivadas y la carpeta del proyecto tiene demasiados niveles de subcarpetas para el límite de 260 caracteres de la ruta; no se ha procesado nada | Utiliza una carpeta de proyecto más corta (el mensaje indica la ruta más larga que cabe), o activa las rutas largas de Windows y reinicia Chloros; consulta [Inicio del procesamiento](starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer) |
 | `[unmix-clamp-mask] …` | No se ha podido escribir la máscara de sujeción de un producto LATTICE; el producto en sí está bien y muestra el mensaje `Chloros:UnmixClampMask=unavailable` | Comprueba el espacio en disco y los permisos de la carpeta; a continuación, vuelve a procesar si necesitas la máscara |
 
 ### Copiar datos del registro
@@ -230,32 +200,18 @@ Para copiar el registro con fines de resolución de problemas o asistencia técn
 1. Abre el panel «Registro de depuración»
 2. Haz clic en el botón **Copiar**(copia el registro al portapapeles) o en**Descargar** para guardarlo como un archivo de texto
 3. Pégalo en un archivo de texto o en un correo electrónico
-4. Envíalo al servicio de asistencia de MAPIR
-
-si es necesario
+4. Envíalo al servicio de asistencia de MAPIR si es necesario
 
 ### Notificar un error desde la pestaña «Registro de depuración»
 
-Novedad en la versión 1.3.0: el icono de error (**Notificar un error**) situado en la parte superior de la pestaña «Registro de depuración» envía un informe directamente a MAPIR
-
-.
+Novedad en la versión 1.3.0: el icono de error (**Notificar un error**) situado en la parte superior de la pestaña «Registro de depuración» envía un informe directamente a MAPIR.
 
 1. Haz clic en el icono de error situado en la parte superior de la pestaña «Registro de depuración»
 2. Describe el problema: qué estabas haciendo, qué esperabas y qué ocurrió en realidad (obligatorio).
 3. Si lo deseas, marca **Añadir algunas imágenes (hasta 10)**y selecciona imágenes del proyecto abierto, o utiliza**Examinar...** para cualquier otro archivo de imagen.
 4. Haz clic en **Enviar**
 
-El informe incluye tu descripción, las imágenes que adjuntes, los registros de Chloros
-
-y los detalles del sistema (versión de Chloros
-
-, sistema operativo, GPU y configuración del proyecto). Debes haber iniciado sesión en Chloros
-
-(pestaña «Usuario») para enviarlo. Puedes cerrar la ventana mientras se envía; cuando termine, se registrará en el registro una referencia como `Bug report sent. Reference: BR-…`; indícala cuando te pongas en contacto con MAPIR
-
-. Si no se puede cargar el informe (por ejemplo, por falta de conexión a Internet), Chloros
-
-lo guarda en tu ordenador y te muestra la ruta para que puedas enviarlo por correo electrónico a support@mapir.camera.
+El informe incluye tu descripción, las imágenes que adjuntes, los registros de Chloros y los detalles del sistema (versión de Chloros, sistema operativo, GPU y configuración del proyecto). Debes haber iniciado sesión en Chloros (pestaña «Usuario») para enviarlo. Puedes cerrar la ventana mientras se envía; cuando termine, se registrará en el registro una referencia como `Bug report sent. Reference: BR-…`; indícala cuando te pongas en contacto con MAPIR. Si no se puede cargar el informe (por ejemplo, por falta de conexión a Internet), Chloros lo guarda en tu ordenador y te muestra la ruta para que puedas enviarlo por correo electrónico a support@mapir.camera.
 
 ***
 
@@ -269,33 +225,25 @@ lo guarda en tu ordenador y te muestra la ruta para que puedas enviarlo por corr
 * Los demás núcleos están inactivos o disponibles
 * El sistema sigue respondiendo
 
-**Modo paralelo de Chloros
-
-+:**
+**Modo paralelo de Chloros+:**
 
 * Varios núcleos con una alta utilización; el número depende de la estrategia elegida por [Adaptación dinámica de cálculo](../processing-architecture/dynamic-compute-adaptation.md)
 * El sistema puede parecer menos receptivo
 
 **Para supervisarlo:**
 
-* Administrador de tareas de Windows
-
-(Ctrl+Mayús+Esc)
+* Administrador de tareas de Windows (Ctrl+Mayús+Esc)
 * Pestaña «Rendimiento» → sección «CPU»
-* Busca los procesos «Chloros
-
-» o «chloros-backend»
+* Busca los procesos «Chloros» o «chloros-backend»
 
 ### Uso de la memoria (RAM)
 
 **Uso habitual:**
 
-* Proyectos pequeños (&lt; 100 imágenes): 2-4 GB
+* Proyectos pequeños (< 100 imágenes): 2-4 GB
 * Proyectos medianos (100-500 imágenes): 4-8 GB
 * Proyectos grandes (más de 500 imágenes): 8-16 GB
-* El modo paralelo de Chloros
-
-+ consume más RAM
+* El modo paralelo de Chloros+ consume más RAM
 
 **Si la memoria es escasa:**
 
@@ -303,9 +251,7 @@ lo guarda en tu ordenador y te muestra la ruta para que puedas enviarlo por corr
 * Cierra otras aplicaciones
 * Amplía la RAM si procesas habitualmente conjuntos de datos grandes
 
-### Uso de la GPU (Chloros
-
-+ con CUDA)
+### Uso de la GPU (Chloros+ con CUDA)
 
 Cuando la aceleración por GPU está activada:
 
@@ -343,9 +289,7 @@ Cuando la aceleración por GPU está activada:
 
 * Comprueba el registro de depuración en busca de errores
 * Verifica el espacio disponible en disco
-* Comprueba el Administrador de tareas para asegurarte de que Chloros
-
-se está ejecutando
+* Comprueba el Administrador de tareas para asegurarte de que Chloros se está ejecutando
 
 **Aparecen mensajes de error con frecuencia:**
 
@@ -355,9 +299,7 @@ se está ejecutando
 
 **El sistema deja de responder:**
 
-* El modo paralelo de Chloros
-
-consume demasiados recursos
+* El modo paralelo de Chloros consume demasiados recursos
 * Considera la posibilidad de reducir el número de tareas simultáneas o actualizar el hardware
 * El modo libre consume menos recursos
 
@@ -396,9 +338,7 @@ Detén el procesamiento si observas:
 
 1. Si acaba de iniciarse y se encuentra en la fase de detección: deténgalo, marque los objetivos y reinicie
 2. Para el futuro: utilice un SSD, reduzca el número de índices y actualice el hardware
-3. Considere el uso de la CLI
-
-para el procesamiento por lotes de grandes conjuntos de datos
+3. Considere el uso de la CLI para el procesamiento por lotes de grandes conjuntos de datos
 
 ### Advertencias de «espacio en disco»
 
@@ -408,9 +348,7 @@ para el procesamiento por lotes de grandes conjuntos de datos
 2. Mueve el proyecto a una unidad con más espacio
 3. Reduce el número de índices que se van a exportar
 4. Desactiva los productos de exportación de LATTICE que no necesites (Configuración del proyecto → Procesamiento)
-5. Utiliza el formato JPG en lugar de TIFF
-
-(archivos más pequeños)
+5. Utiliza el formato JPG en lugar de TIFF (archivos más pequeños)
 
 ### Mensajes frecuentes de «archivo dañado»
 
@@ -427,9 +365,7 @@ para el procesamiento por lotes de grandes conjuntos de datos
 
 1. Asegúrate de que haya una ventilación adecuada
 2. Limpia el polvo de las rejillas de ventilación del ordenador
-3. Reduce la carga de procesamiento (utiliza el modo «Free» en lugar de «Chloros
-
-+»)
+3. Reduce la carga de procesamiento (utiliza el modo «Free» en lugar de «Chloros+»)
 4. Realiza el procesamiento durante las horas más frescas del día
 
 ***

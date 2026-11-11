@@ -22,19 +22,7 @@ De izquierda a derecha, el encabezado superior contiene:
 * **Conectar a sensor de luz**: pasa a la [pestaña «Sensores de luz»](daq/) para conectar un sensor de luz DAQ. Funciona sin necesidad de tener un proyecto abierto.
 
 {% hint style="info" %}
-**Solo Windows**: La interfaz gráfica de usuario de Chloros
-
-Desktop está disponible en Windows
-
-. Los usuarios de Linux
-
-deben consultar la documentación de la [CLI
-
-](CLI.md) y del [Python
-
-SDK
-
-](api-python-sdk.md) para el procesamiento sin interfaz gráfica.
+**Solo Windows**: La interfaz gráfica de usuario de Chloros Desktop está disponible en Windows. Los usuarios de Linux deben consultar la documentación de la [CLI](CLI.md) y del [Python SDK](api-python-sdk.md) para el procesamiento sin interfaz gráfica.
 {% endhint %}
 
 ### <img src=".gitbook/assets/image (2) (1) (1).png" alt="" data-size="line">
@@ -49,15 +37,9 @@ Barra de progreso <img src=".gitbook/assets/image (5).png" alt="" data-size="lin
 
 
 
-En el modo gratuito de Chloros
+En el modo gratuito de Chloros, que procesa todos los archivos de forma secuencial, la barra de progreso mostrará dos fases: «Detección de objetivos» y «Procesamiento».
 
-, que procesa todos los archivos de forma secuencial, la barra de progreso mostrará dos fases: «Detección de objetivos» y «Procesamiento».
-
-En el modo de pago con licencia Chloros
-
-+, que procesa todos los archivos simultáneamente, la barra de progreso muestra cuatro fases: «Detección», «Análisis», «Calibración» y «Exportación». Si pasas el cursor del ratón por encima de la barra de progreso de Chloros
-
-+, se desplegará el panel ampliado con las cuatro etapas de la barra de progreso para que puedas seguir el proceso. Al hacer clic en la parte superior de la barra de progreso, se congelará el panel desplegable; al volver a hacer clic, se descongelará.
+En el modo de pago con licencia Chloros+, que procesa todos los archivos simultáneamente, la barra de progreso muestra cuatro fases: «Detección», «Análisis», «Calibración» y «Exportación». Si pasas el cursor del ratón por encima de la barra de progreso de Chloros+, se desplegará el panel ampliado con las cuatro etapas de la barra de progreso para que puedas seguir el proceso. Al hacer clic en la parte superior de la barra de progreso, se congelará el panel desplegable; al volver a hacer clic, se descongelará.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 

@@ -16,49 +16,21 @@ Una vez iniciada la sesión, se mostrarán los detalles de tu cuenta:
 | Plan | `plan_id` | Tipo |
 | --- | --- | --- |
 | Iron | `0` | Gratuito |
-| Cobre | `1` | De pago (Chloros
-
-+) |
-| Bronce | `2` | De pago (Chloros
-
-+) |
-| Plata | `3` | De pago (Chloros
-
-+) |
-| Oro | `4` | De pago (Chloros
-
-+) |
+| Cobre | `1` | De pago (Chloros+) |
+| Bronce | `2` | De pago (Chloros+) |
+| Plata | `3` | De pago (Chloros+) |
+| Oro | `4` | De pago (Chloros+) |
 
 Consulta [los planes y precios](https://cloud.mapir.camera/pricing) para saber qué incluye cada nivel de pago.
 
-### El acceso a la CLI
+### El acceso a la CLI y al SDK requiere un nivel de pago
 
-y al SDK
+El acceso a la CLI y al Python SDK requiere **cualquier nivel de pago de Chloros+ (Cobre o superior)**. Esto se aplica**del lado del servidor**: cada solicitud de CLI/SDK debe incluir tanto una sesión activa como un plan de pago:
 
-requiere un nivel de pago
-
-El acceso a la CLI
-
-y al Python
-
-SDK
-
-requiere **cualquier nivel de pago de Chloros
-
-+ (Cobre o superior)**. Esto se aplica**del lado del servidor**: cada solicitud de CLI
-
-/SDK
-
-debe incluir tanto una sesión activa como un plan de pago:
-
-| Estado HTTP
-
-| `error_code` | Significado | Solución |
+| Estado HTTP | `error_code` | Significado | Solución |
 | --- | --- | --- | --- |
 | `401` | `AUTH_REQUIRED` | No has iniciado sesión en este equipo | `chloros-cli login <email> <password>` |
-| `403` | `PLAN_UPGRADE_REQUIRED` | Ha iniciado sesión, pero el nivel del plan es demasiado bajo (nivel gratuito «Iron») | Actualizar a cualquier plan de pago de Chloros
-
-+ |
+| `403` | `PLAN_UPGRADE_REQUIRED` | Ha iniciado sesión, pero el nivel del plan es demasiado bajo (nivel gratuito «Iron») | Actualizar a cualquier plan de pago de Chloros+ |
 
 `chloros-cli status` sigue estando disponible en el nivel gratuito, por lo que siempre podrás ver tu plan actual y el motivo por el que se te deniega el acceso.
 
@@ -77,13 +49,7 @@ Cada plan establece un límite en el número de cámaras LATTICE y sensores de l
 
 
 
-Inicia sesión con tus credenciales de Chloros
-
-+ para habilitar el procesamiento de la CLI
-
-. En Linux
-
-(sin interfaz gráfica), esta es la única forma de activar tu licencia.
+Inicia sesión con tus credenciales de Chloros+ para habilitar el procesamiento de la CLI. En Linux (sin interfaz gráfica), esta es la única forma de activar tu licencia.
 
 **Sintaxis:**
 
@@ -92,13 +58,7 @@ chloros-cli login <email> <password>
 ```
 
 {% hint style="info" %}
-**Usuarios del SDK**: El Python
-
-SDK
-
-también proporciona un método programático `logout()` para borrar las credenciales almacenadas en caché. Consulte la [Referencia del SDK
-
-](reference/sdk-reference.md) para obtener más detalles.
+**Usuarios del SDK**: El Python SDK también proporciona un método programático `logout()` para borrar las credenciales almacenadas en caché. Consulte la [Referencia del SDK](reference/sdk-reference.md) para obtener más detalles.
 {% endhint %}
 
 **Ejemplo:**
@@ -125,23 +85,13 @@ Las credenciales y la configuración almacenadas en caché se guardan en la carp
 | **Windows** | `%USERPROFILE%\.chloros\` |
 | **Linux** | `~/.chloros/` |
 
-Si instalas una versión más reciente sobre una ya existente, se conservan tus datos de inicio de sesión, tanto en Windows
-
-(el instalador) como en Linux
-
-(la carpeta `.deb`, incluida `chloros-cli update`). Desinstalar Chloros
-
-—o eliminar el paquete de Linux
-
-— borra el inicio de sesión almacenado en la caché, por lo que tendrás que volver a iniciar sesión tras una nueva instalación.
+Si instalas una versión más reciente sobre una ya existente, se conservan tus datos de inicio de sesión, tanto en Windows (el instalador) como en Linux (la carpeta `.deb`, incluida `chloros-cli update`). Desinstalar Chloros —o eliminar el paquete de Linux — borra el inicio de sesión almacenado en la caché, por lo que tendrás que volver a iniciar sesión tras una nueva instalación.
 
 ### Caducidad del plan y periodo de gracia sin conexión
 
 La fecha de caducidad del plan que aparece en la interfaz gráfica de usuario indica cuándo dejará de ser válida tu licencia. En el caso de las suscripciones mensuales recurrentes, la caducidad se produce a final de mes; en el de las suscripciones anuales, un año después de haber iniciado la suscripción.
 
-El Chloros
-
-valida tu licencia en línea, pero permite trabajar sin conexión durante un periodo de gracia:
+El Chloros valida tu licencia en línea, pero permite trabajar sin conexión durante un periodo de gracia:
 
 * Las validaciones correctas del servidor se almacenan en caché durante **5 minutos**, por lo que el uso normal genera muy pocas solicitudes de licencia.
 * Una caché de licencias firmadas y vinculadas al equipo cubre periodos sin conexión más largos: **30 días para los planes mensuales**y**hasta la fecha de vencimiento de tu suscripción (como máximo 365 días) para los planes anuales**.
@@ -149,13 +99,7 @@ valida tu licencia en línea, pero permite trabajar sin conexión durante un per
 
 ### Límite de dispositivos
 
-Cada plan de Chloros
-
-+ ofrece un número diferente de dispositivos registrados. Cada dispositivo en el que inicies sesión con una cuenta de Chloros
-
-+ cuenta para tu número de dispositivos registrados. Puedes cambiar el nombre y eliminar un dispositivo en la página de tu cuenta de MAPIR
-
-Cloud.
+Cada plan de Chloros+ ofrece un número diferente de dispositivos registrados. Cada dispositivo en el que inicies sesión con una cuenta de Chloros+ cuenta para tu número de dispositivos registrados. Puedes cambiar el nombre y eliminar un dispositivo en la página de tu cuenta de MAPIR Cloud.
 
 <table><thead><tr><th width="168.5999755859375" align="right">Plan Chloros</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">ORO</th></tr></thead><tbody><tr><td align="right">Dispositivos compatibles</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
 

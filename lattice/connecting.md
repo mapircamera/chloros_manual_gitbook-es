@@ -2,25 +2,19 @@
 
 <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption><p>La pestaña «Cámaras» antes de conectar nada</p></figcaption></figure>
 
-Chloros
-detecta automáticamente las cámaras LATTICE en el enlace, ya sea desde la pestaña «Cámaras» de la interfaz gráfica de usuario, desde `chloros-cli lattice` o desde el SDK
-de Python
-. La cadena del modelo de la cámara determina todo lo que viene a continuación: Chloros
-determina el perfil del sensor, la disposición de las bandas y la calibración de fábrica a partir de los archivos `DeviceUserID` y `DeviceSerialNumber` de la cámara, por lo que **no hay que configurar nada por cámara**.
+Chloros detecta automáticamente las cámaras LATTICE en el enlace, ya sea desde la pestaña «Cámaras» de la interfaz gráfica de usuario, desde `chloros-cli lattice` o desde el SDK de Python. La cadena del modelo de la cámara determina todo lo que viene a continuación: Chloros determina el perfil del sensor, la disposición de las bandas y la calibración de fábrica a partir de los archivos `DeviceUserID` y `DeviceSerialNumber` de la cámara, por lo que **no hay que configurar nada por cámara**.
 
 Antes de conectarte, asegúrate de que la red del host esté configurada: direccionamiento local de enlace, tramas jumbo y, en el caso de las matrices, los ajustes del búfer de recepción de la tarjeta de red. Esa es la configuración del lado del hardware y se encuentra en el manual de LATTICE: [**Configuración de red**](https://mapir.gitbook.io/lattice-camera/setup/network-setup).
 
 ## Conexión desde la interfaz gráfica de usuario
 
-Abre la pestaña **Cámaras** en la barra lateral de Chloros
-(las pestañas de hardware aparecen una vez que el backend ha terminado de iniciarse), o utiliza el menú principal → **Conectar a la cámara**. Ambas opciones abren el cuadro de diálogo**Conectar cámara(s)**.
+Abre la pestaña **Cámaras** en la barra lateral de Chloros (las pestañas de hardware aparecen una vez que el backend ha terminado de iniciarse), o utiliza el menú principal → **Conectar a la cámara**. Ambas opciones abren el cuadro de diálogo**Conectar cámara(s)**.
 
 ### El cuadro de diálogo «Conectar cámara(s)»
 
 El cuadro de diálogo escanea la red en cuanto se abre («Escaneando la red...») y muestra una lista de todas las cámaras que encuentra. Cada fila muestra el **modelo**de la cámara (p. ej., `LATT-M3M-L41-F550`), el**número de serie**y la**dirección IP**.
 
-* **Haz clic en una fila para seleccionarla**(se resaltará en verde). Puede seleccionar**varias cámaras** y conectarlas de una sola vez; Chloros
-las conecta de forma secuencial.
+* **Haz clic en una fila para seleccionarla**(se resaltará en verde). Puede seleccionar**varias cámaras** y conectarlas de una sola vez; Chloros las conecta de forma secuencial.
 * Las filas con la indicación **«Conectada»** ya están conectadas y no se pueden volver a seleccionar.
 * Las filas con la indicación **«En matriz»** pertenecen a una matriz de cámaras conectada actualmente. Desconecta primero la matriz para utilizar esa cámara de forma independiente.
 * **Conectar**: conecta la(s) cámara(s) seleccionada(s); el botón muestra un recuento, p. ej., «Conectar (3)», cuando se selecciona más de una.
@@ -32,8 +26,7 @@ las conecta de forma secuencial.
 
 ### Primera conexión: descarga del paquete de calibración
 
-La **primera vez** que se conecta una cámara determinada a un equipo, Chloros
-extrae el paquete de calibración de fábrica de la cámara (\~3,8 MB) directamente de la propia cámara a través de GigE. Mientras se lleva a cabo este proceso, el cuadro de diálogo muestra un panel verde con el mensaje **«Descargando datos de calibración de la cámara»**y una barra de progreso por número de serie; el proceso tarda aproximadamente**70 segundos** por cámara. Si hay más de seis cámaras, las filas de progreso se desplazan dentro del panel. El paquete se almacena en la caché del host, por lo que las conexiones posteriores de la misma cámara se saltan la descarga por completo (y nunca muestran el panel).
+La **primera vez** que se conecta una cámara determinada a un equipo, Chloros extrae el paquete de calibración de fábrica de la cámara (\~3,8 MB) directamente de la propia cámara a través de GigE. Mientras se lleva a cabo este proceso, el cuadro de diálogo muestra un panel verde con el mensaje **«Descargando datos de calibración de la cámara»**y una barra de progreso por número de serie; el proceso tarda aproximadamente**70 segundos** por cámara. Si hay más de seis cámaras, las filas de progreso se desplazan dentro del panel. El paquete se almacena en la caché del host, por lo que las conexiones posteriores de la misma cámara se saltan la descarga por completo (y nunca muestran el panel).
 
 ### Analizar sistema
 
@@ -49,19 +42,12 @@ Ejecútalo siempre que la detección o la transmisión se comporten de forma ine
 
 ### Conexión de una matriz
 
-Para conectar dos o más cámaras como una **matriz sincronizada**, utiliza en su lugar el asistente de conexión de matrices (**Conectar matriz de cámaras**): te guía a través de la selección de maestro/esclavo (preconfigurada mediante una prueba con cable de sincronización —cualquier cámara conectada por cable puede ser maestra, y la cámara RGB
-`-FRGB` aparece preseleccionada cuando está conectada por cable), la elección del modo de visualización (mosaicos separados frente a combinados) y una pantalla de configuración del conjunto con una proyección en tiempo real de los fps alcanzables y el ancho de banda del cable antes de confirmar la configuración. El asistente y los flujos de trabajo de la matriz se tratan en la sección de matrices multicámara de este manual; el equivalente en la CLI
-es el «Flujo de trabajo de primera conexión de la cámara LATTICE» en la [Referencia de la CLI
-](../reference/cli-reference.md).
+Para conectar dos o más cámaras como una **matriz sincronizada**, utiliza en su lugar el asistente de conexión de matrices (**Conectar matriz de cámaras**): te guía a través de la selección de maestro/esclavo (preconfigurada mediante una prueba con cable de sincronización —cualquier cámara conectada por cable puede ser maestra, y la cámara RGB `-FRGB` aparece preseleccionada cuando está conectada por cable), la elección del modo de visualización (mosaicos separados frente a combinados) y una pantalla de configuración del conjunto con una proyección en tiempo real de los fps alcanzables y el ancho de banda del cable antes de confirmar la configuración. El asistente y los flujos de trabajo de la matriz se tratan en la sección de matrices multicámara de este manual; el equivalente en la CLI es el «Flujo de trabajo de primera conexión de la cámara LATTICE» en la [Referencia de la CLI](../reference/cli-reference.md).
 
-## Conexión desde la CLI
-y el SDK
+## Conexión desde la CLI y el SDK
 El acceso a la
 
-CLI
-y al SDK
-requiere un plan de pago de Chloros
-+ y haber iniciado sesión; esto se aplica del lado del servidor (`401 AUTH_REQUIRED` si no se ha iniciado sesión, `403 PLAN_UPGRADE_REQUIRED` en el plan gratuito).
+CLI y al SDK requiere un plan de pago de Chloros+ y haber iniciado sesión; esto se aplica del lado del servidor (`401 AUTH_REQUIRED` si no se ha iniciado sesión, `403 PLAN_UPGRADE_REQUIRED` en el plan gratuito).
 
 ```bash
 # List cameras on the network (vendor, model, serial, IP, MAC)
@@ -86,21 +72,15 @@ with chloros_sdk.connect_array(["213800234", "214000533"]) as array:
     ...
 ```
 
-Firmas completas, opciones y flujos de trabajo de captura: [Referencia de la CLI
-](../reference/cli-reference.md) § `chloros-cli lattice`, [Referencia del SDK
-](../reference/sdk-reference.md) § `connect_camera()` / `connect_array()`.
+Firmas completas, opciones y flujos de trabajo de captura: [Referencia de la CLI](../reference/cli-reference.md) § `chloros-cli lattice`, [Referencia del SDK](../reference/sdk-reference.md) § `connect_camera()` / `connect_array()`.
 
 ## Cómo se resuelve la calibración al conectarse
 
-Cada cámara LATTICE lleva su paquete de calibración de fábrica **integrado en la propia cámara**, y Chloros
-también comprueba la nube de MAPIR
-cuando la cámara se conecta:
+Cada cámara LATTICE lleva su paquete de calibración de fábrica **integrado en la propia cámara**, y Chloros también comprueba la nube de MAPIR cuando la cámara se conecta:
 
-| Situación   | Lo que utiliza Chloros
-                                                                                                                                                                                                          |
+| Situación   | Lo que utiliza Chloros                                                                                                                                                                                                           |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **En línea**| La**calibración más reciente publicada para ese número de serie**: la copia de la nube prevalece sobre la copia de la propia cámara. Por lo tanto, una cámara que haya sido recalibrada o actualizada por MAPIR
-se actualiza automáticamente; no es necesaria ninguna acción por parte del usuario. |
+| **En línea**| La**calibración más reciente publicada para ese número de serie**: la copia de la nube prevalece sobre la copia de la propia cámara. Por lo tanto, una cámara que haya sido recalibrada o actualizada por MAPIR se actualiza automáticamente; no es necesaria ninguna acción por parte del usuario. |
 | **Sin conexión**| El**paquete de la cámara**, tal cual. Los flujos de trabajo totalmente sin conexión siguen funcionando; simplemente no incorporan las calibraciones más recientes hasta que la cámara se conecta una vez (o se le vuelve a flashear el firmware de fábrica).                                                  |
 
 En el momento de la captura, los coeficientes realmente aplicados quedan **fijados en los metadatos XMP de cada imagen**. Una actualización posterior de la calibración nunca modifica de forma silenciosa las imágenes que ya hayas capturado: al volver a procesar una captura antigua se utilizan los coeficientes grabados en su XMP, no los más recientes en ese momento.

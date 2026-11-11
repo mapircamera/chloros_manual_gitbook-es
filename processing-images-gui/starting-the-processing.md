@@ -62,7 +62,7 @@ Chloros funciona en dos modos de procesamiento diferentes en función de tu lice
 2. **Procesamiento**: aplicación de la calibración y exportación de imágenes**Tiempo de procesamiento:**
 
 * Mucho más lento que el modo paralelo de Chloros+
-* Adecuado para conjuntos de datos pequeños y medianos (&lt; 200 imágenes)
+* Adecuado para conjuntos de datos pequeños y medianos (< 200 imágenes)
 
 ### Modo Chloros+ (procesamiento paralelo)
 
@@ -305,7 +305,7 @@ Consulte [la Referencia de la CLI](../reference/cli-reference.md#a-run-that-writ
 **Soluciones:**
 
 1. Mantén los proyectos en una carpeta más corta: cambia el**directorio de trabajo** en [Configuración del proyecto](../project-settings/project-settings.md) y vuelve a crear el proyecto, o
-2. Activa las rutas largas de Windows y reinicia Chloros: vuelve a ejecutar el instalador de Chloros con la opción **Habilitar rutas largas de Windows** marcada (está marcada por defecto), o utiliza la Política de grupo: *Configuración del equipo &gt; Plantillas administrativas &gt; Sistema &gt; Sistema de archivos &gt; Habilitar rutas largas de Win32*.
+2. Activa las rutas largas de Windows y reinicia Chloros: vuelve a ejecutar el instalador de Chloros con la opción **Habilitar rutas largas de Windows** marcada (está marcada por defecto), o utiliza la Política de grupo: *Configuración del equipo > Plantillas administrativas > Sistema > Sistema de archivos > Habilitar rutas largas de Win32*.
 
 ### Advertencia «No se han detectado objetivos»
 

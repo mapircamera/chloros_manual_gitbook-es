@@ -163,7 +163,7 @@ $$
 
 En la interfaz gráfica de usuario (GUI) y en la lista de preajustes de la interfaz de línea de comandos (CLI) y el kit de desarrollo de software (SDK), la fórmula del símbolo es `(z/y)*(x/y)`, donde x = Red, y = Green y z = NIR (las bandas de una cámara RGN); el ajuste preestablecido del motor de índices LATTICE es `nir * red / green**2`. Todas las superficies calculan el mismo índice.
 
-_Referencia: Vincini, M., E. Frazzi y P. D&#x27;Alessio. «A Broad-Band Leaf Chlorophyll Vegetation Index at the Canopy Scale». Precision Agriculture 9 (2008): 303-319._
+_Referencia: Vincini, M., E. Frazzi y P. D'Alessio. «A Broad-Band Leaf Chlorophyll Vegetation Index at the Canopy Scale». Precision Agriculture 9 (2008): 303-319._
 
 ***
 
@@ -205,7 +205,7 @@ $$
 
 Las zonas boscosas presentarán valores de FCI1 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro del dosel.
 
-_Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -221,7 +221,7 @@ $$
 
 Las zonas boscosas presentarán valores de FCI2 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro del dosel.
 
-_Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -487,7 +487,7 @@ $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Referencia: Bannari, A., H. Asalhi y P. Teillet. «Índice de vegetación de diferencia transformada (TDVI) para la cartografía de la cobertura vegetal». En Actas del Simposio de Geociencias y Teledetección, IGARSS &#x27;02, IEEE International, volumen 5 (2002)._
+_Referencia: Bannari, A., H. Asalhi y P. Teillet. «Índice de vegetación de diferencia transformada (TDVI) para la cartografía de la cobertura vegetal». En Actas del Simposio de Geociencias y Teledetección, IGARSS '02, IEEE International, volumen 5 (2002)._
 
 ***
 
