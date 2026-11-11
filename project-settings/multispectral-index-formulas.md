@@ -8,16 +8,18 @@ metaLinks:
 
 # Fórmulas de índices multiespectrales
 
-Las siguientes fórmulas de índices utilizan una combinación de los rangos de transmisión media del filtro Survey3:
+Las siguientes fórmulas de índices utilizan una combinación de los rangos de transmisión media de los filtros de Survey3:
 
-<table><thead><tr><th align="center">Color del filtro Survey3</th><th width="196.199951171875" align="center">Survey3 Nombre del filtro</th><th width="159.800048828125" align="center">Rango de transmisión (FWHM)</th><th align="center">Transmisión media</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483 nm</td><td align="center">475 nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN - Cyan</td><td align="center">476-512 nm</td><td align="center">494 nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558 nm</td><td align="center">547 nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640 nm</td><td align="center">619 nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668 nm</td><td align="center">661 nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re - RedEdge</td><td align="center">712-735 nm</td><td align="center">724 nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848 nm</td><td align="center">823 nm</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865 nm</td><td align="center">850 nm</td></tr></tbody></table>Cuando se utilizan estas fórmulas, el nombre puede terminar en «\_1» o «\_2», lo que indica qué filtro NIR se ha utilizado: o bien el NIR1 o bien el NIR2.
+<table><thead><tr><th align="center">Color del filtro Survey3</th><th width="196.199951171875" align="center">Nombre del filtro Survey3</th><th width="159.800048828125" align="center">Rango de transmisión (FWHM)</th><th align="center">Transmisión media</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483 nm</td><td align="center">475 nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512 nm</td><td align="center">494 nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558 nm</td><td align="center">547 nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640 nm</td><td align="center">619 nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668 nm</td><td align="center">661 nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re-RedEdge</td><td align="center">712-735 nm</td><td align="center">724 nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848 nm</td><td align="center">823 nm</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865 nm</td><td align="center">850 nm</td></tr></tbody></table>
 
-Para las cámaras LATTICE M3C (pasabanda triple de Bayer), el mismo motor de indexación utiliza las bandas del filtro M3C:
+Cuando se utilizan estas fórmulas, el nombre puede terminar en «\_1» o «\_2», lo que indica qué filtro NIR se ha utilizado, ya sea NIR1 o NIR2.
+
+En el caso de las cámaras LATTICE M3C (paso de banda triple de Bayer), el mismo motor de índices utiliza las bandas de filtro M3C:
 
 | Filtro M3C | Banda 1 (centro/FWHM) | Banda 2 (centro/FWHM) | Banda 3 (centro/FWHM) |
 | --- | --- | --- | --- |
 | FRGB | Blue 475 nm / 30 nm | Green 550 nm / 30 nm | Red 625 nm / 30 nm |
-| FRGN | Red 660 nm / 21 nm | Green 550 nm / 30 nm | NIR 850 nm / 30 nm |
+| FRGN | Rede 660 nm / 21 nm | Greene 550 nm / 30 nm | NIR 850 nm / 30 nm |
 | FOCN | Orange 615 nm / 21 nm | Cyan 490 nm / 38 nm | NIR 808 nm / 14 nm |
 | FNGB | Blue 475 nm / 30 nm | Green 550 nm / 30 nm | NIR 850 nm / 30 nm |
 
@@ -27,7 +29,7 @@ Las cámaras LATTICE M3M son monobanda (un filtro de banda estrecha por cámara)
 
 ## Dónde funciona cada nombre de índice
 
-Chloros tiene **tres** superficies de índice, y sus listas predefinidas no son idénticas. Utiliza esta sección para comprobar si un nombre funcionará donde tienes previsto utilizarlo.
+El Chloros tiene **tres** superficies de índices, y sus listas predefinidas no son idénticas. Utiliza esta sección para comprobar si un nombre funcionará donde tienes previsto utilizarlo.
 
 | Dónde te encuentras | Qué lista se aplica | Recuento |
 | --- | --- | --- |
@@ -36,19 +38,19 @@ Chloros tiene **tres** superficies de índice, y sus listas predefinidas no son 
 | `chloros-cli process --indices NDVI,NDRE` | Superficie 2 | 22 |
 | SDK `process_folder(indices=[...])` | Superficie 2 | 22 |
 | `chloros-cli lattice index --preset` | Superficie 3 | 22 (un 22 diferente) |
-| Calculadora de índices en tiempo real de la pestaña «Cámaras» | Superficie 3 | 22 (un 22 diferente) |
+| Calculadora de índice en tiempo real de la pestaña «Cámaras» | Superficie 3 | 22 (un 22 diferente) |
 
-Las superficies 1 y 2 trabajan con **una imagen cada vez de una sola cámara**, utilizando las ranuras de símbolos `x`/`y`/`z`(/`a`) vinculados a los canales de filtro de esa cámara. Surface 3 trabaja con una**pila multibanda alineada** —varias cámaras LATTICE co-registradas en un único cubo— y hace referencia a los canales mediante nombres en minúsculas.
+Surface 1 y 2 funcionan con **una imagen cada vez de una sola cámara**, utilizando las ranuras de símbolos `x`/`y`/`z`(/`a`) vinculadas a los canales de filtro de esa cámara. La superficie 3 funciona con una**pila multibanda alineada** —varias cámaras LATTICE co-registradas en un único cubo— y hace referencia a los canales mediante su nombre en minúsculas.
 
-### 1. Ajustes del proyecto en la interfaz gráfica de usuario / Menú desplegable «Sandbox» del visor de imágenes — 27 fórmulas
+### 1. Configuración del proyecto en la interfaz gráfica de usuario / Menú desplegable «Sandbox» del visor de imágenes — 27 fórmulas
 
 El menú desplegable las muestra en este orden (se trata del orden de inserción, no alfabético):
 
 `NDVI, GNDVI, CVI, ENDVI, EVI, MSR, OSAVI, TDVI, LAI, FCI1, FCI2, GARI, GCI, GEMI, GLI, GOSAVI, GRVI, GSAVI, LCI, MNLI, MSAVI2, NDRE, NLI, RDVI, SAVI, VARI, WDRVI`
 
-En la interfaz gráfica de usuario, se arrastran los canales de filtro de la cámara a las ranuras de banda de la fórmula, por lo que cualquier fórmula se puede utilizar con cualquier asignación de bandas que admita la cámara. Las fórmulas personalizadas que hayas guardado se añaden al final de esta lista.
+En la interfaz gráfica de usuario, se arrastran los canales de filtro de la cámara a las ranuras de banda de la fórmula, por lo que cualquier fórmula puede utilizarse con cualquier asignación de bandas que admita la cámara. Las fórmulas personalizadas que hayas guardado se añaden al final de esta lista.
 
-Las **cinco fórmulas exclusivas de la interfaz gráfica** —aquellas que la lista CLI/SDK `--indices` no acepta— se implementan de la siguiente manera:
+Las **cinco fórmulas exclusivas de la interfaz gráfica** —aquellas que la lista de la CLI/SDK `--indices` no acepta— se implementan de la siguiente manera:
 
 | Preajuste exclusivo de la interfaz gráfica | Fórmula (tal y como está implementada) | Ranuras |
 | --- | --- | --- |
@@ -58,22 +60,22 @@ Las **cinco fórmulas exclusivas de la interfaz gráfica** —aquellas que la li
 | GEMI | `((2*(y*y-x*x)+1.5*y+0.5*x)/(y+x+0.5))*(1-0.25*((2*(y*y-x*x)+1.5*y+0.5*x)/(y+x+0.5)))-((x-0.125)/(1-x))` | x, y |
 | LCI | `(y-x)/(y+z)` | x, y, z |
 
-La correspondencia prevista para cada uno de ellos se indica en su propia sección más adelante en esta página (por ejemplo, GARI espera x=Green, y = NIR, z = Blue, a = Red). GARI es la única fórmula de Chloros que utiliza una cuarta posición.
+La asignación prevista para cada una de ellas se indica en su propia sección más adelante en esta página (por ejemplo, GARI espera x=Green, y=NIR, z=Blue, a=Red). GARI es la única fórmula de Chloros que utiliza una cuarta ranura.
 
-### 2. Expansión de nombres CLI / SDK `--indices` — 22 preajustes
+### 2. CLI / SDK `--indices`: expansión de nombres — 22 preajustes
 
 La opción `chloros-cli process --indices` (y el parámetro SDK `indices`) admite estos nombres de preajustes:
 
 `NDVI, GNDVI, NDRE, OSAVI, SAVI, MSAVI2, EVI, MSR, TDVI, LAI, GCI, GRVI, GSAVI, GOSAVI, NLI, MNLI, RDVI, WDRVI, CVI, ENDVI, GLI, VARI`
 
 {% hint style="warning" %}
-**Los nombres de índices desconocidos se omiten sin aviso.** Un nombre que no figure en esta lista (incluidas las cinco fórmulas exclusivas de la interfaz gráfica de usuario `FCI1`, `FCI2`, `GARI`, `GEMI`, `LCI` y cualquier fórmula personalizada que hayas guardado en la interfaz gráfica de usuario) se omite con solo un aviso en el registro; la ejecución continúa sin ese índice y, aun así, se considera un éxito. El aviso se muestra de la siguiente forma:
+**Los nombres de índices desconocidos se omiten sin aviso.** Cualquier nombre que no figure en esta lista (incluidas las cinco fórmulas exclusivas de la interfaz gráfica de usuario `FCI1`, `FCI2`, `GARI`, `GEMI`, `LCI`, así como cualquier fórmula personalizada que hayas guardado en la interfaz gráfica de usuario) se omite con solo un aviso en el registro; la ejecución continúa sin ese índice y, aun así, se considera un éxito. El aviso se muestra de la siguiente manera:
 
 ```
 [INDEX_EXPAND] skipping unknown preset 'LCI'; known: ['CVI', 'ENDVI', 'EVI', ...]
 ```
 
-La coincidencia de nombres se realizatras eliminar los espacios en blanco, por lo que `ndvi`, `NDVI` y ` NDVI ` corresponden al mismo preajuste. Un preajuste también se omite si requiere una banda que el filtro de tu cámarano ofrece.
+Los nombres se comparan sin distinguir entre mayúsculas y minúsculas tras eliminar los espacios en blanco, por lo que `ndvi`, `NDVI` y ` NDVI ` son el mismo preajuste. Un preajuste también se omite si requiere una banda que el filtro de tu cámara no proporciona.
 {% endhint %}
 
 Las fórmulas exactas tal y como se han implementado (los símbolos `x`/`y`/`z` son ranuras de banda; se muestra la asignación predeterminada por preajuste):
@@ -98,14 +100,12 @@ Las fórmulas exactas tal y como se han implementado (los símbolos `x`/`y`/`z` 
 | MNLI | `((y*y-x)*(1+0.5))/((y*y)+x+0.5)` | RGN | Red, NIR |
 | RDVI | `(y-x)/sqrt(y+x)` | RGN | Red, NIR |
 | WDRVI | `(0.2*y-x)/(0.2*y+x)` | RGN | Red, NIR |
-| CVI | `(z/y)/(x/y)` | RGB | Red, Green, Blue |
-| ENDVI | `((x+y)-(2*z))/((x+y)+(2*z))` | RGB | Red, Green, Blue |
+| CVI | `(z/y)*(x/y)` | RGN | Red, Green, NIR |
+| ENDVI | `((x+y)-(2*z))/((x+y)+(2*z))` | NGB | NIR, Green, Blue |
 | GLI | `((y-x)+(y-z))/((2*y)+x+z)` | RGB | Red, Green, Blue |
-| VARI | `(y-x)/(y+x-z)` | RGB | Red, Green, Blue |
+| VARI | `(y-x)/(y+x-z)` | RGB | 
 
-#### Cómo se convierten los nombres de los preajustes en posiciones de banda
-
-Cuando se pasa un nombre sin más, como `NDVI`, Chloros tiene que decidir qué canal de qué archivo lee cada símbolo. Para ello, utiliza esta tabla, que asigna un código de filtro a la posición en la matriz de cada canal:
+Cuando se introduce un nombre sin más, como `NDVI`, Chloros tiene que decidir qué canal de qué archivo lee cada símbolo. Para ello, utiliza esta tabla, que asigna un código de filtro a la posición en la matriz de cada canal:
 
 | Código de filtro | Canal → índice de la matriz |
 | --- | --- |
@@ -116,9 +116,9 @@ Cuando se pasa un nombre sin más, como `NDVI`, Chloros tiene que decidir qué c
 | RE | RE 0 |
 | NIR | NIR 0 |
 
-El **filtro predeterminado** del preajuste (la columna «Filtro predeterminado» anterior) se utiliza cuando el proyecto contiene imágenes con ese filtro. Si no es así, Chloros analiza los filtros realmente presentes en el proyecto en el orden `RGN, OCN, NGB, RGB, RE, NIR` y selecciona el primero que pueda proporcionar todos los canales que necesita el preajuste. Si ninguno puede hacerlo, el preajuste se descarta para esa ejecución. Por eso, `NDVI`, solicitado en un conjunto de datos que solo contiene OCN, sigue produciendo un resultado aceptable : se vincula a las posiciones Orange y NIR de OCN.
+El **filtro predeterminado** del preajuste (la columna «Filtro predeterminado» anterior) se utiliza cuando el proyecto contiene imágenes con ese filtro. Si no es así, Chloros examina los filtros realmente presentes en el proyecto en el orden `RGN, OCN, NGB, RGB, RE, NIR` y selecciona el primero que pueda proporcionar todos los canales que necesita el preajuste. Si ninguno puede hacerlo, el preajuste se descarta para esa ejecución. Por eso, el `NDVI` solicitado en un conjunto de datos compuesto únicamente por OCN sigue produciendo un resultado válido: se vincula a las posiciones Orange y NIR de OCN.
 
-Las cadenas del modelo LATTICE M3C llevan el filtro con el prefijo `F` (`LATT-M3C-L41-FRGN`), pero el prefijo se omite cuando se lee el código del filtro de la imagen, por lo que una cámara FRGN lo resuelve a través de la fila `RGN` situada encima y no requiere ningún tratamiento especial.
+Las cadenas del modelo LATTICE M3C incluyen el filtro con el prefijo `F` (`LATT-M3C-L41-FRGN`), pero el prefijo se omite cuando se lee el código del filtro de la imagen, por lo que una cámara FRGN se resuelve a través de la fila `RGN` situada más arriba y no requiere ningún tratamiento especial.
 
 ### 3. Motor de índice LATTICE (`lattice index --preset`, calculadora de índices en tiempo real) — 22 preajustes
 
@@ -126,108 +126,110 @@ El motor LATTICE funciona con pilas multibanda alineadas (matrices en tiempo rea
 
 | Preajuste | Fórmula | Canales |
 | --- | --- | --- |
-| NDVI | `(nir - red) / (nir + red)` | rojo, nir |
-| GNDVI | `(nir - green) / (nir + green)` | verde, NIR |
-| BNDVI | `(nir - blue) / (nir + blue)` | azul, NIR |
-| NDRE | `(nir - red_edge) / (nir + red_edge)` | rojo\_borde, nir |
-| ENDVI | `((nir + green) - 2*blue) / ((nir + green) + 2*blue)` | azul, verde, infrarrojo |
-| SAVI | `1.5 * (nir - red) / (nir + red + 0.5)` | rojo, infrarrojo |
-| OSAVI | `1.5 * (nir - red) / (nir + red + 0.16)` | rojo, infrarrojo |
-| MSAVI | `(2*nir + 1 - sqrt((2*nir + 1)**2 - 8*(nir - red))) / 2` | rojo, nir |
-| EVI | `2.5 * (nir - red) / (nir + 6*red - 7.5*blue + 1)` | azul, rojo, nir |
-| EVI2 | `2.5 * (nir - red) / (nir + 2.4*red + 1)` | rojo, infrarrojo |
-| CVI | `(nir / green) - (red / green)` | rojo, verde, NIR |
-| MSR | `((nir/red) - 1) / (sqrt(nir/red) + 1)` | rojo, NIR |
-| TDVI | `sqrt((nir - red) / (nir + red) + 0.5)` | rojo, NIR |
-| LAI | `3.618 * ((nir - red) / (nir + 6*red - 7.5*green + 1)) - 0.118` | rojo, verde, NIR |
+| NDVI | `(nir - red) / (nir + red)` | rojo, infrarrojo cercano |
+| GNDVI | `(nir - green) / (nir + green)` | verde, infrarrojo cercano |
+| BNDVI | `(nir - blue) / (nir + blue)` | azul, infrarrojo cercano |
+| NDRE | `(nir - red_edge) / (nir + red_edge)` | rojo\_borde, infrarrojo cercano |
+| ENDVI | `((nir + green) - 2*blue) / ((nir + green) + 2*blue)` | azul, verde, infrarrojo cercano |
+| SAVI | `1.5 * (nir - red) / (nir + red + 0.5)` | rojo, infrarrojo cercano |
+| OSAVI | `(nir - red) / (nir + red + 0.16)` | rojo, NIR |
+| MSAVI | `(2*nir + 1 - sqrt((2*nir + 1)**2 - 8*(nir - red))) / 2` | rojo, NIR |
+| EVI | `2.5 * (nir - red) / (nir + 6*red - 7.5*blue + 1)` | azul, rojo, NIR |
+| EVI2 | `2.5 * (nir - red) / (nir + 2.4*red + 1)` | rojo, infrarrojo cercano |
+| CVI | `nir * red / green**2` | rojo, verde, infrarrojo cercano |
+| MSR | `((nir/red) - 1) / (sqrt(nir/red) + 1)` | rojo, infrarrojo cercano |
+| TDVI | `1.5 * (nir - red) / sqrt(nir**2 + red + 0.5)` | rojo, infrarrojo cercano |
+| LAI | `3.618 * (2.5 * (nir - red) / (nir + 6*red - 7.5*blue + 1)) - 0.118` | azul, rojo, infrarrojo |
 | GLI | `(2*green - red - blue) / (2*green + red + blue)` | rojo, verde, azul |
 | NGRDI | `(green - red) / (green + red)` | rojo, verde |
 | VARI | `(green - red) / (green + red - blue)` | rojo, verde, azul |
 | TGI | `green - 0.39*red - 0.61*blue` | rojo, verde, azul |
 | EXG | `2*green - red - blue` | rojo, verde, azul |
 | CIRE | `(nir / red_edge) - 1` | rojo\_borde, infrarrojo |
-| CIGREEN | `(nir / green) - 1` | verde, nir |
+| CIGREEN | `(nir / green) - 1` | verde, infrarrojo |
 | NDWI | `(green - nir) / (green + nir)` | verde, nir |
 
-Ejecuta `chloros-cli lattice index --list-presets` para imprimir esta tabla desde tu versión instalada, y `--list-gradients` para ver los degradados de color disponibles. Los símbolos de los canales distinguen entre mayúsculas y minúsculas y deben coincidir con los nombres en minúsculas del preajuste (p. ej., `--channel red=Red_660 --channel nir=NIR_850`).
+Ejecuta `chloros-cli lattice index --list-presets` para imprimir esta tabla desde tu versión instalada, y `--list-gradients` para los degradados de color disponibles. Los símbolos de los canales distinguen entre mayúsculas y minúsculas y deben coincidir con los nombres en minúsculas del preajuste (p. ej., `--channel red=Red_660 --channel nir=NIR_850`).
 
 ***
 
-## CVI
+## CVI: Índice de Vegetación de Clorofila
 
-Tal y como se ha implementado en la interfaz gráfica de usuario y en la lista de preajustes CLI/SDK, CVI es la fórmula de la «razón de razones»:
+Este índice es sensible al contenido de clorofila de las hojas en un amplio rango de densidades de dosel. Utiliza las bandas NIR, roja y verde.
 
 $$
-CVI = {(z / y) \over (x / y)}
+CVI = NIR * {Red \over Green^{2}}
 $$
 
-con la asignación de canales predeterminada de RGB: x=Red, y=Green, z=Blue. En la interfaz gráfica de usuario puedes arrastrar cualquiera de los canales de tu cámara a las ranuras x/y/z. Ten en cuenta que el preajuste `CVI` del motor de índices LATTICE utiliza una fórmula diferente, `(NIR / Green) - (Red / Green)`; consulta las tablas anteriores para la superficie que estés utilizando.
+En la interfaz gráfica de usuario (GUI) y en la lista de preajustes de la interfaz de línea de comandos (CLI) y el kit de desarrollo de software (SDK), la fórmula del símbolo es `(z/y)*(x/y)`, donde x = Red, y = Green y z = NIR (las bandas de una cámara RGN); el ajuste preestablecido del motor de índices LATTICE es `nir * red / green**2`. Todas las superficies calculan el mismo índice.
+
+_Referencia: Vincini, M., E. Frazzi y P. D&#x27;Alessio. «A Broad-Band Leaf Chlorophyll Vegetation Index at the Canopy Scale». Precision Agriculture 9 (2008): 303-319._
 
 ***
 
-## ENDVI - Índice de vegetación por diferencia normalizada mejorado
+## ENDVI - Índice de vegetación de diferencia normalizada mejorado
 
-Este índice utiliza el canal azul además de NIR y el verde, y es muy utilizado con cámaras filtradas con NGB, en las que la banda azul sustituye a la roja.
+Este índice utiliza el canal azul además del NIR y el verde, y es muy utilizado con cámaras con filtro NGB, en las que la banda azul sustituye a la roja.
 
 $$
 ENDVI = {(NIR + Green) - (2 * Blue) \over (NIR + Green) + (2 * Blue)}
 $$
 
-La implementación es la fórmula de símbolos `((x+y)-(2*z))/((x+y)+(2*z))` : asigna los canales NIR y Green de tu cámara a las ranuras x/y y Blue a z (para una cámara NGB: x=NIR, y=Green, z=Blue).
+La implementación se realiza mediante la fórmula de símbolos `((x+y)-(2*z))/((x+y)+(2*z))`: asigna los canales NIR y Green de tu cámara a las ranuras x/y y el Blue a z (para una cámara NGB: x=NIR, y=Green, z=Blue).
 
 ***
 
-## EVI - Índice de vegetación mejorado
+## EVI: Índice de Vegetación Mejorado
 
-Este índice se desarrolló originalmente para su uso con datos MODIS como una mejora respecto al NDVI, optimizando la señal de vegetación en zonas con un alto índice de área foliar (LAI). Resulta especialmente útil en regiones con valores elevados de LAI, donde el NDVI puede saturarse. Utiliza la región de reflectancia azul para corregir las señales de fondo del suelo y reducir las influencias atmosféricas, incluida la dispersión de aerosoles.
+Este índice se desarrolló originalmente para su uso con datos MODIS como una mejora respecto al NDVI, optimizando la señal de vegetación en zonas con un alto índice de área foliar (LAI). Resulta especialmente útil en regiones con un LAI elevado, donde el NDVI puede saturarse. Utiliza la región de reflectancia azul para corregir las señales de fondo del suelo y reducir las influencias atmosféricas, incluida la dispersión de aerosoles.
 
 $$
 EVI = 2.5 *  {(NIR - Red) \over (NIR + 6 * Red - 7.5 * Blue + 1)}
 $$
 
-Los valores de EVI deben oscilar entre 0 y 1 para los píxeles de vegetación. Los elementos brillantes, como las nubes y los edificios blancos, junto con los elementos oscuros, como el agua, pueden dar lugar a valores de píxel anómalos en una imagen EVI. Antes de crear una imagen EVI, debes enmascarar las nubes y los elementos brillantes de la imagen de reflectancia, y, opcionalmente, aplicar un umbral a los valores de los píxeles de 0 a 1.
+Los valores de EVI deben oscilar entre 0 y 1 para los píxeles de vegetación. Los elementos brillantes, como las nubes y los edificios blancos, junto con los elementos oscuros, como el agua, pueden dar lugar a valores de píxel anómalos en una imagen EVI. Antes de crear una imagen EVI, debes enmascarar las nubes y los elementos brillantes de la imagen de reflectancia y, opcionalmente, establecer un umbral para los valores de los píxeles entre 0 y 1.
 
 _Referencia: Huete, A., et al. «Overview of the Radiometric and Biophysical Performance of the MODIS Vegetation Indices». Remote Sensing of Environment 83 (2002): 195-213._
 
 ***
 
-## FCI1 - Índice de cobertura forestal 1
+## FCI1: Índice de cobertura forestal 1
 
-_Solo en la interfaz gráfica de usuario (GUI); no está disponible como preajuste CLI/SDK `--indices`._
+_Solo en la interfaz gráfica de usuario (GUI); no está disponible como preajuste `--indices` en la interfaz de línea de comandos (CLI) ni en el SDK._
 
-Este índice distingue las copas de los árboles de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que incluyen una banda de «borde rojo».
+Este índice distingue el dosel forestal de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que incluyen una banda de «borde rojo».
 
 $$
 FCI1 = Red * RedEdge
 $$
 
-Las zonas boscosas presentarán valores más bajos de FCI1 debido a la menor reflectancia de los árboles y a la presencia de sombras dentro del dosel.
+Las zonas boscosas presentarán valores de FCI1 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro del dosel.
 
 _Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
-## FCI2 - Índice de cobertura forestal 2
+## FCI2: Índice de cobertura forestal 2
 
-_Solo en la interfaz gráfica de usuario (GUI); no está disponible como preajuste CLI/SDK `--indices`._
+_Solo en la interfaz gráfica de usuario (GUI); no está disponible como preajuste CLI o SDK: `--indices`._
 
-Este índice distingue las copas de los árboles de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que no incluyen una banda de «borde rojo».
+Este índice distingue el dosel forestal de otros tipos de vegetación utilizando imágenes de reflectancia multiespectral que no incluyen una banda de borde rojo.
 
 $$
 FCI2 = Red * NIR
 $$
 
-Las zonas boscosas presentarán valores más bajos de FCI2 debido a la menor reflectancia de los árboles y a la presencia de sombras dentro del dosel.
+Las zonas boscosas presentarán valores de FCI2 más bajos debido a la menor reflectancia de los árboles y a la presencia de sombras dentro del dosel.
 
 _Referencia: Becker, Sarah J., Craig S.T. Daughtry y Andrew L. Russ. «Índices robustos de cobertura forestal para imágenes multiespectrales». Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
-## GEMI - Índice de monitorización medioambiental global
+## GEMI: Índice de Vigilancia Medioambiental Global
 
-_Solo GUI — no disponible como CLI/SDK ni `--indices`._
+_Solo GUI — no disponible como CLI ni SDK. Preajuste `--indices`._
 
-Este índice de vegetación no lineal se utiliza para la monitorización medioambiental global a partir de imágenes de satélite e intenta corregir los efectos atmosféricos. Es similar al NDVI, pero es menos sensible a los efectos atmosféricos. Se ve afectado por el suelo desnudo; por lo tanto, no se recomienda su uso en zonas con vegetación escasa o moderadamente densa.
+Este índice de vegetación no lineal se utiliza para la vigilancia medioambiental global a partir de imágenes de satélite e intenta corregir los efectos atmosféricos. Es similar al NDVI, pero es menos sensible a los efectos atmosféricos. Se ve afectado por el suelo desnudo; por lo tanto, no se recomienda su uso en zonas con vegetación escasa o moderadamente densa.
 
 $$
 GEMI = eta (1 - 0.25 * eta) - {Red - 0.125 \over 1 - Red}
@@ -239,13 +241,13 @@ $$
 eta = {2(NIR^{2}-Red^{2}) + 1.5 * NIR + 0.5 *  Red \over NIR + Red + 0.5}
 $$
 
-_Referencia: Pinty, B. y M. Verstraete. GEMI: un índice no lineal para el seguimiento de la vegetación global a partir de satélites. Vegetation 101 (1992): 15-20._
+_Referencia: Pinty, B. y M. Verstraete. «GEMI: un índice no lineal para monitorizar la vegetación global a partir de satélites». Vegetation 101 (1992): 15-20._
 
 ***
 
-## GARI - Green: índice resistente a la atmósfera
+## GARI: Índice Green Resistente a la Atmósfera
 
-_Solo en la interfaz gráfica de usuario (GUI); no está disponible como preajuste CLI/SDK `--indices`._
+_Solo GUI — no disponible como preajuste CLI/SDK `--indices`._
 
 Este índice es más sensible a un amplio rango de concentraciones de clorofila y menos sensible a los efectos atmosféricos que el NDVI.
 
@@ -255,11 +257,11 @@ $$
 
 La constante gamma es una función de ponderación que depende de las condiciones de los aerosoles en la atmósfera. ENVI utiliza un valor de 1,7, que es el valor recomendado por Gitelson, Kaufman y Merzylak (1996, página 296).
 
-_Referencia: Gitelson, A., Y. Kaufman y M. Merzylak. «Uso de un canal Green en la teledetección de la vegetación global a partir de EOS-MODIS.» Remote Sensing of Environment 58 (1996): 289-298._
+_Referencia: Gitelson, A., Y. Kaufman y M. Merzylak. «Use of a Green Channel in Remote Sensing of Global Vegetation from EOS-MODIS». Remote Sensing of Environment 58 (1996): 289-298._
 
 ***
 
-## GCI - Green Índice de clorofila
+## GCI: índice de clorofila Green
 
 Este índice se utiliza para estimar el contenido de clorofila en las hojas de una amplia gama de especies vegetales.
 
@@ -267,27 +269,27 @@ $$
 GCI = {NIR \over Green} - 1
 $$
 
-Contar con un amplio rango de longitudes de onda NIR y verdes permite predecir mejor el contenido de clorofila, al tiempo que ofrece mayor sensibilidad y una relación señal-ruido más elevada.
+Contar con un amplio rango de longitudes de onda en el NIR y en el verde permite predecir mejor el contenido de clorofila, al tiempo que ofrece mayor sensibilidad y una mejor relación señal-ruido.
 
-_Referencia: Gitelson, A., Y. Gritz y M. Merzlyak. «Relaciones entre el contenido de clorofila en las hojas y la reflectancia espectral, y algoritmos para la evaluación no destructiva de la clorofila en las hojas de plantas superiores». Journal of Plant Physiology 160 (2003): 271-282._
+_Referencia: Gitelson, A., Y. Gritz y M. Merzlyak. «Relaciones entre el contenido de clorofila foliar y la reflectancia espectral, y algoritmos para la evaluación no destructiva de la clorofila en hojas de plantas superiores». Journal of Plant Physiology 160 (2003): 271-282._
 
 ***
 
-## Índice foliar GLI - Green
+## GLI: Índice de Hoja Green
 
-Este índice se diseñó originalmente para su uso con una cámara digital RGB con el fin de medir la cobertura de trigo, en la que los valores digitales (DN) de rojo, verde y azul oscilan entre 0 y 255.
+Este índice se diseñó originalmente para su uso con una cámara digital RGB con el fin de medir la cobertura de trigo, donde los valores digitales (DN) de rojo, verde y azul oscilan entre 0 y 255.
 
 $$
 GLI = {(Green - Red) + (Green - Blue)  \over (2 * Green) + Red + Blue }
 $$
 
-Los valores de GLI oscilan entre -1 y +1. Los valores negativos representan el suelo y los elementos inertes, mientras que los valores positivos representan las hojas y los tallos verdes.
+Los valores del GLI os oscilan entre -1 y +1. Los valores negativos representan el suelo y elementos no vivos, mientras que los valores positivos representan hojas y tallos verdes.
 
 _Referencia: Louhaichi, M., M. Borman y D. Johnson. «Plataforma de localización espacial y fotografía aérea para la documentación de los impactos del pastoreo en el trigo». Geocarto International 16, n.º 1 (2001): 65-70._
 
 ***
 
-## GNDVI - Green Índice de vegetación por diferencia normalizada
+## GNDVI: Índice de Vegetación de Diferencia Normalizada Green
 
 Este índice es similar al NDVI, salvo que mide el espectro verde de 540 a 570 nm en lugar del espectro rojo. Este índice es más sensible a la concentración de clorofila que el NDVI.
 
@@ -295,23 +297,23 @@ $$
 GNDVI = {(NIR - Green) \over (NIR + Green)  }
 $$
 
-_Referencia: Gitelson, A. y M. Merzlyak. «Teledetección de la concentración de clorofila en las hojas de las plantas superiores». Advances in Space Research 22 (1998): 689-692._
+_Referencia: Gitelson, A. y M. Merzlyak. «Remote Sensing of Chlorophyll Concentration in Higher Plant Leaves». *Advances in Space Research* 22 (1998): 689-692._
 
 ***
 
-## GOSAVI - Green Índice de vegetación optimizado y ajustado al suelo
+## GOSAVI - Índice de Vegetación Ajustado al Suelo y Optimizado para el Verde (Green)
 
-Este índice se diseñó originalmente con fotografía en color e infrarrojo para predecir las necesidades de nitrógeno del maíz. Es similar al OSAVI, pero sustituye la banda verde por la roja.
+Este índice se diseñó originalmente con fotografía en infrarrojo color para predecir las necesidades de nitrógeno del maíz. Es similar al OSAVI, pero sustituye la banda roja por la verde.
 
 $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno del maíz durante la temporada mediante fotografía aérea en infrarrojo y color». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
+_Referencia: Sripada, R., et al. «Determinación de las necesidades de nitrógeno del maíz durante la temporada mediante fotografía aérea en color e infrarrojo». Tesis doctoral, Universidad Estatal de Carolina del Norte, 2005._
 
 ***
 
-## Índice de vegetación basado en la relación GRVI - Green
+## GRVI: Índice de vegetación de relación verde (Green Ratio Vegetation Index)
 
 Este índice es sensible a las tasas de fotosíntesis en las copas de los bosques, ya que las reflectancias del verde y del rojo se ven fuertemente influenciadas por los cambios en los pigmentos foliares.
 
@@ -319,13 +321,13 @@ $$
 GRVI = {NIR \over Green }
 $$
 
-_Referencia: Sripada, R., et al. «Fotografía aérea en color e infrarrojo para determinar las necesidades de nitrógeno en las primeras etapas de la temporada del maíz». Agronomy Journal 98 (2006): 968-977._
+_Referencia: Sripada, R., et al. «Fotografía aérea en color e infrarrojo para determinar las necesidades de nitrógeno al inicio de la temporada en el maíz». Agronomy Journal 98 (2006): 968-977._
 
 ***
 
-## GSAVI - Green Índice de vegetación ajustado al suelo
+## GSAVI - Índice de vegetación ajustado al suelo Green
 
-Este índice se diseñó originalmente con fotografía en color e infrarrojo para predecir las necesidades de nitrógeno del maíz. Es similar al SAVI, pero sustituye la banda verde por la roja.
+Este índice se diseñó originalmente con fotografía en color e infrarrojo para predecir las necesidades de nitrógeno del maíz. Es similar al SAVI, pero sustituye la banda roja por la verde.
 
 $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
@@ -335,31 +337,31 @@ _Referencia: Sripada, R., et al. «Determinación de las necesidades de nitróge
 
 ***
 
-## LAI - Índice de área foliar
+## LAI: índice de área foliar
 
-Este índice se utiliza para estimar la cobertura foliar y para pronosticar el crecimiento y el rendimiento de los cultivos. ENVI calcula el LAI verde utilizando la siguiente fórmula empírica de Boegh et al (2002):
+Este índice se utiliza para estimar la cobertura foliar y para pronosticar el crecimiento y el rendimiento de los cultivos. ENVI calcula el LAI verde utilizando la siguiente fórmula empírica de Boegh et al. (2002):
 
 $$
 LAI = 3.618 * EVI - 0.118
 $$
 
-Donde EVI es:
+Donde el EVI es:
 
 $$
 EVI = 2.5 *  {(NIR - Red) \over (NIR + 6 * Red - 7.5 * Blue + 1)}
 $$
 
-Los valores altos de LAI suelen oscilar entre aproximadamente 0 y 3,5. Sin embargo, cuando la escena contiene nubes y otros elementos brillantes que producen píxeles saturados, los valores de LAI pueden superar el 3,5. Lo ideal es enmascarar las nubes y los elementos brillantes de la escena antes de crear una imagen LAI.
+Los valores altos de LAI suelen oscilar entre aproximadamente 0 y 3,5. Sin embargo, cuando la escena contiene nubes y otros elementos brillantes que producen píxeles saturados, los valores de LAI pueden superar el 3,5. Lo ideal es enmascarar las nubes y los elementos brillantes de la escena antes de crear una imagen de LAI.
 
 _Referencia: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde y A. Thomsen. «Datos multiespectrales aéreos para cuantificar el índice de área foliar, la concentración de nitrógeno y la eficiencia fotosintética en la agricultura». Remote Sensing of Environment 81, n.º 2-3 (2002): 179-193._
 
 ***
 
-## LCI - Índice de clorofila foliar
+## LCI: índice de clorofila foliar
 
-_Solo en la interfaz gráfica de usuario (GUI); no está disponible como CLI/SDK ni en el preajuste `--indices`._
+_Solo GUI — no disponible como preajuste CLI/SDK `--indices`._
 
-Este índice se utiliza para estimar el contenido de clorofila en plantas superiores y es sensible a la variación de la reflectancia causada por la absorción de la clorofila.
+Este índice se utiliza para estimar el contenido de clorofila en plantas superiores, ya que es sensible a las variaciones en la reflectancia causadas por la absorción de la clorofila.
 
 $$
 LCI = {NIR2 - RedEdge \over NIR2 + Red}
@@ -381,9 +383,9 @@ _Referencia: Yang, Z., P. Willis y R. Mueller. «Impact of Band-Ratio Enhanced A
 
 ***
 
-## MSAVI2 - Índice de vegetación ajustado al suelo modificado 2
+## MSAVI2 - Índice de Vegetación Ajustado al Suelo Modificado 2
 
-Este índice es una versión más sencilla del índice MSAVI propuesto por Qi et al. (1994), que mejora el Índice de Vegetación Ajustado al Suelo (SAVI). Reduce el ruido del suelo y aumenta el rango dinámico de la señal de la vegetación. El MSAVI2 se basa en un método inductivo que no utiliza un valor constante de _L_ (como en el caso del SAVI) para resaltar la vegetación sana.
+Este índice es una versión más sencilla del índice MSAVI propuesto por Qi et al. (1994), que supone una mejora con respecto al Índice de Vegetación Ajustado al Suelo (SAVI). Reduce el ruido del suelo y aumenta el rango dinámico de la señal de la vegetación. El MSAVI2 se basa en un método inductivo que no utiliza un valor _L_ constante (como en el caso del SAVI) para resaltar la vegetación sana.
 
 $$
 MSAVI2 = {2 * NIR + 1 - \sqrt{(2 * NIR + 1)^{2} - 8(NIR - Red)} \over 2}
@@ -395,7 +397,7 @@ _Referencia: Qi, J., A. Chehbouni, A. Huete, Y. Kerr y S. Sorooshian. «A Modifi
 
 ## MSR - Razón simple modificada
 
-Este índice es una modificación de la relación simple NIR/Red, diseñada para linealizar su relación con los parámetros biofísicos, y es más sensible que el NDVI a densidades de vegetación más elevadas.
+Este índice es una modificación de la razón simple NIR/Red diseñada para linealizar su relación con los parámetros biofísicos, y es más sensible que el NDVI a densidades de vegetación más altas.
 
 $$
 MSR = {(NIR / Red) - 1 \over \sqrt{NIR / Red} + 1}
@@ -405,9 +407,9 @@ _Referencia: Chen, J. «Evaluación de índices de vegetación y de una relació
 
 ***
 
-## NDRE: diferencia normalizada de RedEdge
+## NDRE - Diferencia Normalizada RedEdge
 
-Este índice es similar al NDVI, pero compara el contraste entre el NIR y el RedEdge en lugar del Red, que a menudo detecta la vegetación .
+Este índice es similar al NDVI, pero compara el contraste entre el NIR y el RedEdge en lugar del Red, lo que a menudo permite detectar antes el estrés de la vegetación.
 
 $$
 NDRE = {NIR - RedEdge \over NIR + RedEdge  }
@@ -415,9 +417,9 @@ $$
 
 ***
 
-## NDVI - Índice de vegetación de diferencia normalizada
+## NDVI - Índice de Vegetación de Diferencia Normalizada
 
-Este índice es una medida de la vegetación verde y sana. La combinación de su formulación de diferencia normalizada y el uso de las regiones de mayor absorción y reflectancia de la clorofila lo hacen robusto en una amplia gama de condiciones. Sin embargo, puede saturarse en condiciones de vegetación densa cuando el valor de LAI es elevado.
+Este índice es una medida de la vegetación verde y sana. La combinación de su formulación de diferencia normalizada y el uso de las regiones de mayor absorción y reflectancia de la clorofila lo hacen robusto en una amplia gama de condiciones. Sin embargo, puede saturarse en condiciones de vegetación densa cuando el LAI es elevado.
 
 $$
 NDVI = {NIR - Red \over NIR + Red  }
@@ -437,13 +439,13 @@ $$
 NLI = {NIR^{2} - Red \over NIR^{2} + Red  }
 $$
 
-_Referencia: Goel, N. y W. Qin. «Influencias de la arquitectura del dosel en las relaciones entre diversos índices de vegetación y LAI y Fpar: una simulación por ordenador». Remote Sensing Reviews 10 (1994): 309-347._
+_Referencia: Goel, N. y W. Qin. «Influencias de la arquitectura del dosel en las relaciones entre diversos índices de vegetación y el LAI y el Fpar: una simulación por ordenador». Remote Sensing Reviews 10 (1994): 309-347._
 
 ***
 
-## OSAVI - Índice de vegetación ajustado al suelo optimizado
+## OSAVI: Índice de Vegetación Ajustado al Suelo Optimizado
 
-Este índice se basa en el Índice de vegetación ajustado al suelo (SAVI). Utiliza un valor estándar de 0,16 para el factor de ajuste del fondo del dosel. Rondeaux (1996) determinó que este valor proporciona una mayor variación del suelo que el SAVI en casos de baja cobertura vegetal, al tiempo que muestra una mayor sensibilidad ante una cobertura vegetal superior al 50 %. Este índice resulta más adecuado en zonas con vegetación relativamente escasa, donde el suelo es visible a través del dosel.
+Este índice se basa en el Índice de Vegetación Ajustado al Suelo (SAVI). Utiliza un valor estándar de 0,16 para el factor de ajuste del fondo del dosel. Rondeaux (1996) determinó que este valor ofrece una mayor variación del suelo que el SAVI en casos de baja cobertura vegetal, al tiempo que muestra una mayor sensibilidad ante una cobertura vegetal superior al 50 %. Este índice resulta más adecuado en zonas con vegetación relativamente escasa, donde el suelo es visible a través del dosel.
 
 $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
@@ -453,7 +455,7 @@ _Referencia: Rondeaux, G., M. Steven y F. Baret. «Optimization of Soil-Adjusted
 
 ***
 
-## RDVI - Índice de vegetación por diferencia renormalizada
+## RDVI - Índice de vegetación de diferencia renormalizado
 
 Este índice utiliza la diferencia entre las longitudes de onda del infrarrojo cercano y del rojo, junto con el NDVI, para resaltar la vegetación sana. Es insensible a los efectos del suelo y a la geometría de observación solar.
 
@@ -465,9 +467,9 @@ _Referencia: Roujean, J. y F. Breon. «Estimación de la PAR absorbida por la ve
 
 ***
 
-## SAVI - Índice de vegetación ajustado al suelo
+## SAVI: Índice de Vegetación Ajustado al Suelo
 
-Este índice es similar al NDVI, pero suprime los efectos de los píxeles de suelo. Utiliza un factor de ajuste del fondo del dosel, _L_, que es una función de la densidad de la vegetación y que a menudo requiere un conocimiento previo de la cantidad de vegetación. Huete (1988) sugiere un valor óptimo de _L_ = 0,5 para tener en cuenta las variaciones de primer orden del fondo del suelo. Este índice se utiliza mejor en zonas con vegetación relativamente escasa, donde el suelo es visible a través del dosel.
+Este índice es similar al NDVI, pero suprime los efectos de los píxeles de suelo. Utiliza un factor de ajuste del fondo del dosel, _L_, que es una función de la densidad de la vegetación y que a menudo requiere un conocimiento previo de la cantidad de vegetación. Huete (1988) sugiere un valor óptimo de _L_ = 0,5 para tener en cuenta las variaciones de fondo del suelo de primer orden. Este índice se utiliza mejor en zonas con vegetación relativamente escasa, donde el suelo es visible a través del dosel.
 
 $$
 SAVI = {1.5 * (NIR- Red) \over (NIR + Red + 0.5)  }
@@ -479,17 +481,17 @@ _Referencia: Huete, A. «A Soil-Adjusted Vegetation Index (SAVI)». Remote Sensi
 
 ## TDVI - Índice de vegetación de diferencia transformada
 
-Este índice resulta útil para el seguimiento de la cobertura vegetal en entornos urbanos. No se satura como el NDVI ni el SAVI.
+Este índice resulta útil para el seguimiento de la cobertura vegetal en entornos urbanos. No se satura como el NDVI y el SAVI.
 
 $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Referencia: Bannari, A., H. Asalhi y P. Teillet. «Índice de diferencia de vegetación transformado (TDVI) para la cartografía de la cobertura vegetal». En Actas del Simposio de Geociencias y Teledetección, IGARSS &#x27;02, IEEE International, volumen 5 (2002)._
+_Referencia: Bannari, A., H. Asalhi y P. Teillet. «Índice de vegetación de diferencia transformada (TDVI) para la cartografía de la cobertura vegetal». En Actas del Simposio de Geociencias y Teledetección, IGARSS &#x27;02, IEEE International, volumen 5 (2002)._
 
 ***
 
-## VARI - Índice visible resistente a los efectos atmosféricos
+## VARI: Índice visible resistente a los efectos atmosféricos
 
 Este índice se basa en el ARVI y se utiliza para estimar la fracción de vegetación en una escena con baja sensibilidad a los efectos atmosféricos.
 
@@ -501,9 +503,9 @@ _Referencia: Gitelson, A., et al. «Líneas de vegetación y suelo en el espacio
 
 ***
 
-## WDRVI - Índice de vegetación de amplio rango dinámico
+## WDRVI: índice de vegetación de amplio rango dinámico
 
-Este índice es similar al NDVI, pero utiliza un coeficiente de ponderación (_a_) para reducir la disparidad entre las contribuciones de las señales del infrarrojo cercano y del rojo al NDVI. El WDRVI resulta especialmente eficaz en escenas con una densidad de vegetación de moderada a alta cuando el NDVI supera el valor de 0,6. El NDVI tiende a estabilizarse a medida que aumentan la fracción de vegetación y el índice de área foliar (LAI) aumentan, mientras que el WDRVI es más sensible a un rango más amplio de fracciones de vegetación y a los cambios en el LAI.
+Este índice es similar al NDVI, pero utiliza un coeficiente de ponderación (_a_) para reducir la disparidad entre las contribuciones de las señales del infrarrojo cercano y del rojo al NDVI. El WDRVI resulta especialmente eficaz en escenas con una densidad de vegetación de moderada a alta cuando el NDVI supera el 0,6. El NDVI tiende a estabilizarse cuando aumentan la fracción de vegetación y el índice de área foliar (LAI), mientras que el WDRVI es más sensible a un rango más amplio de fracciones de vegetación y a los cambios en el LAI.
 
 $$
 WDRVI = {(\alpha * NIR- Red) \over (\alpha * NIR + Red)}
