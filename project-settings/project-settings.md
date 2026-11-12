@@ -99,7 +99,7 @@ En los proyectos que contienen capturas de LATTICE, cada fotograma de LATTICE im
 | --- | --- | --- |
 | **Exportar sin bayering** | `Debayered_Images/` | La imagen lineal sin bayering: se elimina el desplazamiento oscuro del paquete de calibración y, a continuación, se aplica un demosaico sensible a los bordes, sin corrección de linealidad, campo plano ni desmezcla; es el mismo archivo que guarda una captura en su nivel sin bayering. Se mantiene la orientación nativa del sensor (registrada en XMP). Se aplica a cámaras RGB y multiespectrales. |
 | **Exportar vista previa** | `Preview_Images/` | La vista previa en pantalla. RGB = balance de blancos (iluminante DAQ cuando esté disponible; en su defecto, «gray-world») + gamma; multiespectral = estiramiento de colores falsos. |
-| ****Exportación de radiancia** | `Radiance_Images/` | Radiancia espectral en Float32, en W/m²/sr/nm. Solo multiespectral (M3C/M3M); no aplicable a los originales en RGB. Siempre se guarda como TIFF de 32 bits, independientemente de la configuración de *Formato de imagen calibrada*. |
+| **Exportación de radiancia** | `Radiance_Images/` | Radiancia espectral en Float32, en W/m²/sr/nm. Solo multiespectral (M3C/M3M); no aplicable a los originales en RGB. Siempre se guarda como TIFF de 32 bits, independientemente de la configuración de *Formato de imagen calibrada*. |
 | **Exportar reflectancia**| `Reflectance_Calibrated_Images/` | Reflectancia Uint16, escalada de modo que**32768 = reflectancia 1,0** (marcada como XMP `Chloros:PixelScale`). Solo multiespectral; se graba cuando un registro descendente `.daq` coincidente (o un objetivo dentro del fotograma que haya superado el control de calidad) cubre el fotograma. |
 
 * Las cámaras maestras RGB emiten datos sin bayering + vista previa; la radiancia y la reflectancia se omiten en su caso, ya que no son aplicables.
@@ -107,7 +107,7 @@ En los proyectos que contienen capturas de LATTICE, cada fotograma de LATTICE im
 * El procesamiento de *Survey3
 
 * no se ve afectado por estos cuatro conmutadores.
-* Los productos de radiancia y reflectancia de las cámaras multiespectrales M3C también pueden escribir una ****máscara de recorte** por píxel en una carpeta `clamp_masks/` junto a las carpetas de productos, registrando dónde la desmezcla de bandas ha recortado un valor negativo a cero. Véase [Formatos de imagen de salida](../output-image-formats.md#clamp-masks).
+* Los productos de radiancia y reflectancia de las cámaras multiespectrales M3C también pueden escribir una **máscara de recorte** por píxel en una carpeta `clamp_masks/` junto a las carpetas de productos, registrando dónde la desmezcla de bandas ha recortado un valor negativo a cero. Véase [Formatos de imagen de salida](../output-image-formats.md#clamp-masks).
 
 Estos mismos cuatro modificadores existen en modo sin interfaz gráfica como `chloros-cli process --debayered / --preview / --radiance / --reflectance`. Sustituyeron al antiguo indicador de la CLI, `--radiometric-output`, que ya no existe.
 
