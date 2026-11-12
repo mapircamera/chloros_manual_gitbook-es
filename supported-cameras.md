@@ -21,7 +21,7 @@ La línea LATTICE es un sistema modular de cámaras multiespectrales basado en e
 
 ```
 <sensor>-<lens>-F<filter>        e.g.  M3C-L41-FRGN,  M3M-L87-F550
-```.
+```
 
 Chloros lo muestra con el prefijo `LATT-` (por ejemplo, `LATT-M3M-L41-F550`), y esta cadena de modelo controla todo lo posterior: el perfil del sensor, la disposición de las bandas y la calibración se resuelven automáticamente; no hay que configurar nada por cámara. El número de objetivo corresponde al **campo de visión horizontal en grados**: `L41` = estrecho, 41°; `L87` = amplio, 87°.
 

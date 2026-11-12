@@ -44,7 +44,9 @@ El panel de configuración del proyecto está organizado en las secciones que se
 
 Controla cómo Chloros identifica los objetivos de calibración en tus imágenes.
 
-**Ajustes clave:*** **Área mínima de muestra de calibración (px)**: Umbral de tamaño para la detección de objetivos (por defecto:**25**, rango 0–10 000)
+**Ajustes clave:**
+
+* **Área mínima de muestra de calibración (px)**: Umbral de tamaño para la detección de objetivos (por defecto:**25**, rango 0–10 000)
 * **Agrupación mínima de objetivos (0-100)**: umbral de similitud para agrupar regiones objetivo (por defecto:**60**)**Cuándo ajustar:**
 
 * Aumenta el área de muestra si se producen detecciones erróneas
@@ -59,19 +61,26 @@ Estos ajustes aparecen desactivados cuando la **calibración de reflectancia / b
 
 Opciones principales de procesamiento de imágenes y calibración.
 
-**Ajustes clave:*** **Corrección de viñeteado**: compensa el oscurecimiento de los bordes causado por el objetivo ✅ Recomendado
+**Ajustes clave:**
+
+* **Corrección de viñeteado**: compensa el oscurecimiento de los bordes causado por el objetivo ✅ Recomendado
 * **Calibración de reflectancia / balance de blancos**: calibra las imágenes utilizando los objetivos detectados (Survey3) y/o los datos del sensor de luz DAQ (LATTICE) ✅ Recomendado
 * **Método de despixelado**: algoritmo para convertir RAW a multiespectral de 3 canales
 * **Intervalo mínimo de recalibración**: tiempo mínimo en segundos entre el uso de objetivos de calibración (por defecto:**0** = usar todos, rango 0–3600)**Productos alternativos sin calibrar:**Cuando no es posible calibrar la reflectancia de un fotograma (no hay objetivo disponible o la calibración está desactivada), se exporta como uno de los dos productos alternativos —**existe exactamente uno de los dos por ejecución**—, elegido mediante el selector de corrección de viñeteado:
 
-* **Exportar respuesta del sensor**: escribe `Sensor_Response_Images`; se utiliza cuando la corrección de viñeteado está**desactivada*** **Exportar con corrección de viñeteado**: guarda `Vignette_Corrected_Images`; se utiliza cuando la corrección de viñeteado está**activada**La casilla que no está en uso aparece atenuada. Al desmarcar la casilla activa, se impide por completo que se guarde ese archivo.**Productos de exportación de LATTICE** (se muestran para cada proyecto; se aplican a las capturas de LATTICE):
+* **Exportar respuesta del sensor**: escribe `Sensor_Response_Images`; se utiliza cuando la corrección de viñeteado está**desactivada**
+* **Exportar con corrección de viñeteado**: guarda `Vignette_Corrected_Images`; se utiliza cuando la corrección de viñeteado está**activada**La casilla que no está en uso aparece atenuada. Al desmarcar la casilla activa, se impide por completo que se guarde ese archivo.**Productos de exportación de LATTICE** (se muestran para cada proyecto; se aplican a las capturas de LATTICE):
 
 * **Exportar sin demosaico**: la imagen lineal sin bayering (`Debayered_Images`): se elimina el desplazamiento oscuro del paquete de calibración y, a continuación, se aplica el demosaico, sin campo plano ni desmezclado —el mismo archivo que guarda una captura en su nivel sin bayering— en la orientación nativa del sensor. Se aplica a los módulos RGB y multiespectrales.
 * **Exportar vista previa**: la vista previa en pantalla (`Preview_Images`). RGB = balance de blancos (iluminante DAQ cuando esté disponible; en su defecto, «gray-world») + gamma; multiespectral = estiramiento a falso color.
 * **Exportación de radiancia**: radiancia espectral de tipo float32 (`Radiance_Images`, W/m²/sr/nm). Solo módulos multiespectrales; no aplicable a los masters de eRGB.
-* ****Exportar reflectancia**: reflectancia de tipo uint16 (`Reflectance_Calibrated_Images`, DN 32768 = ρ 1,0) cuando una lectura descendente de `.daq` o un objetivo dentro del fotograma cubre dicho fotograma. Solo módulos multiespectrales.
+* **Exportar reflectancia**: reflectancia de tipo uint16 (`Reflectance_Calibrated_Images`, DN 32768 = ρ 1,0) cuando una lectura descendente de `.daq` o un objetivo dentro del fotograma cubre dicho fotograma. Solo módulos multiespectrales.
 
-Las cuatro opciones están **activadas por defecto**: un fotograma sin procesar de LATTICE importado se distribuye a todos los productos habilitados y aplicables en una única pasada de procesamiento. La casilla de verificación**Exportar reflectancia** aparece desactivada cuando la calibración de reflectancia está desactivada. Los ajustes cuya opción principal los deshabilita siempre aparecen desactivados con una información sobre herramientas que indica la opción que hay que cambiar.**Ajustes avanzados:*** **Desfase horario del sensor de luz**: Horas respecto al UTC para la sincronización horaria del sensor de luz (por defecto: 0, rango de −12 a +12)
+Las cuatro opciones están **activadas por defecto**: un fotograma sin procesar de LATTICE importado se distribuye a todos los productos habilitados y aplicables en una única pasada de procesamiento. La casilla de verificación**Exportar reflectancia** aparece desactivada cuando la calibración de reflectancia está desactivada. Los ajustes cuya opción principal los deshabilita siempre aparecen desactivados con una información sobre herramientas que indica la opción que hay que cambiar.
+
+**Ajustes avanzados:**
+
+* **Desfase horario del sensor de luz**: Horas respecto al UTC para la sincronización horaria del sensor de luz (por defecto: 0, rango de −12 a +12)
 * **Aplicar correcciones PPK**: utiliza datos de GPS/pines de exposición de los archivos `.daq` (por defecto: desactivado)
 * **Pines de exposición 1/2**: asigna cámaras a los pines de exposición para configuraciones de doble cámara
 
@@ -105,7 +114,9 @@ Configura qué índices de vegetación se van a calcular y exportar. El menú de
 3. Configure los ajustes de visualización (colores de la tabla de conversión [LUT], rangos de valores)
 4. Añada varios índices según sea necesario
 
-**Índices populares:*** **NDVI**: Estado general de la vegetación (el más común)
+**Índices populares:**
+
+* **NDVI**: Estado general de la vegetación (el más común)
 * **NDRE**: Detección temprana de estrés con RedEdge
 * **GNDVI**: Sensible a la concentración de clorofila
 * **OSAVI**: Funciona bien con suelo visible
@@ -215,7 +226,11 @@ Si se utilizan registradores DAQ de MAPIR con GPS para una geolocalización prec
 3. Configura**«Desfase horario del sensor de luz»** si es necesario (por defecto: 0 para UTC)
 4. Asigna las cámaras a los pines de exposición:
    * **Cámara única**: se asigna automáticamente al pin 1
-   * **Dos cámaras**: asigna manualmente cada cámara al pin correspondiente**Asignación de pines de exposición:*** **Pin de exposición 1**: Selecciona el modelo de cámara en el menú desplegable
+   * **Dos cámaras**: asigna manualmente cada cámara al pin correspondiente
+
+**Asignación de pines de exposición:**
+
+* **Pin de exposición 1**: Selecciona el modelo de cámara en el menú desplegable
 * **Pin de exposición 2**: Selecciona la segunda cámara o «No utilizar»
 * No se puede asignar la misma cámara a ambos pines
 

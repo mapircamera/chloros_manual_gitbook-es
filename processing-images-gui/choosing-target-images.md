@@ -32,7 +32,9 @@ Si **no** hay ninguna imagen marcada, Chloros recurre a escanear todas las imág
 
 Revisa las imágenes importadas en el explorador de archivos e identifica cuáles contienen objetivos de calibración.
 
-**Situaciones habituales:*** **Objetivo previo a la captura**: capturado antes de iniciar la sesión
+**Situaciones habituales:**
+
+* **Objetivo previo a la captura**: capturado antes de iniciar la sesión
 * **Objetivo posterior a la captura**: capturado tras completar la sesión
 * **Objetivos en el terreno**: objetivos colocados dentro del área de captura
 * **Múltiples objetivos**: 2-3 imágenes de objetivos por sesión (recomendado)
@@ -140,9 +142,17 @@ Utiliza esta columna para comprobar que has marcado los objetivos para cada tipo
 
 ### Ajuste de la sensibilidad de detección
 
-Si Chloros no detecta correctamente tus objetivos, ajusta estos parámetros en [Configuración del proyecto](adjusting-project-settings.md):**Área mínima de muestra de calibración (px):*** **Por defecto**: 25 píxeles
+Si Chloros no detecta correctamente tus objetivos, ajusta estos parámetros en [Configuración del proyecto](adjusting-project-settings.md):
+
+**Área mínima de muestra de calibración (px):**
+
+* **Por defecto**: 25 píxeles
 * **Aumenta** este valor si se producen detecciones erróneas en artefactos pequeños
-* **Disminuye** este valor si no se detectan los objetivos**Agrupación mínima de objetivos (0-100):*** **Por defecto**: 60
+* **Disminuye** este valor si no se detectan los objetivos
+
+**Agrupación mínima de objetivos (0-100):**
+
+* **Por defecto**: 60
 * **Aumenta** si los objetivos se dividen en varias detecciones
 * **Disminuye** si los objetivos con variaciones de color no se detectan por completo
 

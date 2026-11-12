@@ -135,8 +135,8 @@ Este es el mismo esquema que `chloros-cli lattice capture` / `array-capture` esc
 
 Los fotogramas sin procesar capturados, junto con el archivo `.daq` guardado, son todo lo que necesita el proceso de procesamiento; por eso «Fastest Capture» es una opción segura para el trabajo real.
 
-* ****GUI**: añade la carpeta de capturas a un proyecto ([Añadir archivos a un proyecto](../processing-images-gui/adding-files-to-a-project.md)) y procesa como de costumbre.
-* ****CLI**: indica a `process` la **raíz de las capturas**:
+* **GUI**: añade la carpeta de capturas a un proyecto ([Añadir archivos a un proyecto](../processing-images-gui/adding-files-to-a-project.md)) y procesa como de costumbre.
+* **CLI**: indica a `process` la **raíz de las capturas**:
 
 ```bash
 chloros-cli process "C:/ChlorosProjects/MyField/captures"

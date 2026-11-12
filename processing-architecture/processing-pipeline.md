@@ -45,7 +45,11 @@ Un hilo de cálculo limitado por la CPU. En una ejecución de Survey3 o mixta, e
 
 ### Hilo 3: Procesamiento (GPU)
 
-**Objetivo**: Aplicar correcciones y calcular índices de vegetación.**Este es el hilo que requiere mayor potencia de cálculo.*** **Debayering**: convierte los datos RAW de Bayer en imágenes multicanal
+**Objetivo**: Aplicar correcciones y calcular índices de vegetación.
+
+**Este es el hilo que requiere mayor potencia de cálculo.**
+
+* **Debayering**: convierte los datos RAW de Bayer en imágenes multicanal
   * Estándar (rápido, calidad media): predeterminado, `--debayer standard`
   * Sensible a la textura (lento, máxima calidad): solo para «Chloros+», `--debayer texture-aware`; utiliza un modelo de eliminación de ruido basado en IA/ML
   * Las capturas LATTICE mono (M3M) son de una sola banda: en ellas se omiten los pasos de demosaico y balance de blancos (con un mensaje de registro de una línea), mientras que cualquier imagen M3C/Bayer de la misma ejecución sigue procesándolos

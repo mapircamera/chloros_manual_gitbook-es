@@ -57,7 +57,11 @@ output/
 └── *.daq          the downwelling reading matched to the capture
 ```
 
-**Selecciona «Añadir carpeta» en la raíz de las capturas** (`output/` arriba). Cuando la carpeta seleccionada no contiene imágenes en sí misma, pero tiene subcarpetas, Chloros las recorre automáticamente: tanto las subcarpetas de ese nivel como la carpeta raíz `.daq` se recogen de una sola vez.**Cómo se importan las capturas:*** Cada captura se importa como una **única imagen**, agrupada por captura (no una entrada por nivel). Los demás niveles de la misma captura aparecen como modos de visualización de esa única imagen.
+**Selecciona «Añadir carpeta» en la raíz de las capturas** (`output/` arriba). Cuando la carpeta seleccionada no contiene imágenes en sí misma, pero tiene subcarpetas, Chloros las recorre automáticamente: tanto las subcarpetas de ese nivel como la carpeta raíz `.daq` se recogen de una sola vez.
+
+**Cómo se importan las capturas:**
+
+* Cada captura se importa como una **única imagen**, agrupada por captura (no una entrada por nivel). Los demás niveles de la misma captura aparecen como modos de visualización de esa única imagen.
 * **El procesamiento siempre comienza a partir del fotograma sin procesar.** Los demás niveles se pueden visualizar, pero solo `raw` pasa por el proceso de procesamiento; volver a procesar un producto ya procesado aplicaría las correcciones por duplicado, por lo que Chloros lo rechaza. Una exportación reimportada nunca puede ocupar la ranura de datos sin procesar de una captura.
 * Una carpeta de capturas guardada **sin** datos sin procesar se importa y se muestra con normalidad, pero el procesamiento la omite y lo indica en el registro. (El indicador de la CLI `--input-level` puede forzar un punto de entrada para este caso; véase [la Referencia de la CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * A partir de la versión 1.3.0, una carpeta de capturas también puede contener una carpeta `clamp_masks/` (máscaras por píxel para los niveles de radiancia y reflectancia; véanse [Formatos de imagen de salida](../output-image-formats.md#clamp-masks)). Las máscaras no son imágenes de la escena, y Chloros las omite al importarlas, independientemente de dónde se encuentren.

@@ -82,7 +82,9 @@ No los cuentes según una fórmula: el número de resultados depende de qué pro
 
 ### Vista previa en visores de imágenes externos
 
-**Visores recomendados:*** **QGIS**: software SIG gratuito (ideal para el análisis multiespectral georreferenciado)
+**Visores recomendados:**
+
+* **QGIS**: software SIG gratuito (ideal para el análisis multiespectral georreferenciado)
 * **IrfanView**: visor de imágenes rápido y ligero (compatible con TIFF)
 * **Adobe Photoshop**: edición profesional (compatible con TIFF)
 * **GIMP**: alternativa gratuita a Photoshop
@@ -224,7 +226,9 @@ Para enviar un problema directamente a MAPIR, utiliza el icono de error (**Infor
 
 ### Problema: Los valores de NDVI parecen incorrectos
 
-**Rangos esperados de NDVI:*** **Agua, rocas, suelo**: de -0,1 a 0,2
+**Rangos esperados de NDVI:**
+
+* **Agua, rocas, suelo**: de -0,1 a 0,2
 * **Vegetación escasa o en mal estado**: de 0,2 a 0,4
 * **Vegetación moderada**: de 0,4 a 0,6
 * **Vegetación sana y densa**: de 0,6 a 0,9**Si los valores se encuentran fuera de estos rangos:**
@@ -278,12 +282,18 @@ Para enviar un problema directamente a MAPIR, utiliza el icono de error (**Infor
 
 ### Estrategia de copias de seguridad recomendada
 
-**Qué guardar:*** ✅ **Imágenes RAW/JPG originales o capturas RAW de LATTICE**: archivar en una unidad independiente o en la nube; los archivos RAW son la fuente del proceso y todo lo demás se puede regenerar a partir de ellos
+**Qué guardar:**
+
+* ✅ **Imágenes RAW/JPG originales o capturas RAW de LATTICE**: archivar en una unidad independiente o en la nube; los archivos RAW son la fuente del proceso y todo lo demás se puede regenerar a partir de ellos
 * ✅ **Archivos del sensor de luz `.daq` / `.csv`**: necesarios para volver a calcular la reflectancia más adelante
 * ✅ **Resultados procesados**: conservar las imágenes calibradas y los índices
 * ✅ **Carpeta del proyecto** (`project.json` y archivos relacionados): contiene todos los ajustes para volver a procesar los datos si fuera necesario
 * ✅ **Registro de depuración**: documenta los detalles del procesamiento
-* ✅ **Imágenes de referencia de calibración**: para verificación y reprocesamiento**Recomendaciones de almacenamiento:*** **Copia de seguridad inmediata**: disco duro externo
+* ✅ **Imágenes de referencia de calibración**: para verificación y reprocesamiento
+
+**Recomendaciones de almacenamiento:**
+
+* **Copia de seguridad inmediata**: disco duro externo
 * **Archivo a largo plazo**: almacenamiento en la nube (Google Drive, Dropbox, etc.)
 * **Datos críticos**: conservar 2-3 copias en ubicaciones diferentes***
 

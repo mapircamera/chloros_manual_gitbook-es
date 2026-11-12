@@ -258,10 +258,15 @@ Chloros comprueba si hay actualizaciones, avisa cuando hay una nueva versión di
 
 **Fecha de lanzamiento: 10 de febrero de 2026**
 
-**Nuevas funciones*** **Método de despixelación sensible a texturas [solo Chloros+] —** «Texture Aware» utiliza un método de despixelación de alta calidad sensible a los bordes, combinado con un modelo de eliminación de ruido basado en IA/ML que elimina casi todo el ruido de la despixelación.
-* **Compatibilidad con los objetivos de calibración T4P*** **Procesamiento más rápido de Chloros+ en la GPU y mejor gestión de la memoria**
+**Nuevas funciones**
 
-**Correcciones de errores*** Interfaz de usuario (GUI) completamente nueva; ahora debería funcionar en todos los ordenadores con Windows.
+* **Método de despixelación sensible a texturas [solo Chloros+] —** «Texture Aware» utiliza un método de despixelación de alta calidad sensible a los bordes, combinado con un modelo de eliminación de ruido basado en IA/ML que elimina casi todo el ruido de la despixelación.
+* **Compatibilidad con los objetivos de calibración T4P**
+* **Procesamiento más rápido de Chloros+ en la GPU y mejor gestión de la memoria**
+
+**Correcciones de errores**
+
+* Interfaz de usuario (GUI) completamente nueva; ahora debería funcionar en todos los ordenadores con Windows.
 
 </details>
 
@@ -271,14 +276,18 @@ Chloros comprueba si hay actualizaciones, avisa cuando hay una nueva versión di
 
 **Fecha de lanzamiento: 5 de enero de 2026**
 
-**Nuevas funciones*** **Alternancia entre imagen y metadatos**: se ha añadido un botón en el explorador de archivos para ver los metadatos de la imagen seleccionada en una tabla en lugar de en la cuadrícula de imágenes
+**Nuevas funciones**
+
+* **Alternancia entre imagen y metadatos**: se ha añadido un botón en el explorador de archivos para ver los metadatos de la imagen seleccionada en una tabla en lugar de en la cuadrícula de imágenes
 * **Control deslizante de zoom de la cuadrícula de imágenes**: nuevo control deslizante en la interfaz de usuario para ajustar el tamaño de las miniaturas (también es compatible con CTRL + rueda del ratón)
 * **Botones de exportación de la cuadrícula de imágenes**: Botones en la fila superior para cambiar las miniaturas de JPG a exportaciones procesadas (Objetivos, Reflectancia, Índice, LUT)
 * **Pestaña «Mapa»**: Nuevo mapa 2D interactivo que muestra marcadores de ubicación GPS de las imágenes
   * Compatible con Google Maps y mosaicos de mapas ESRI (selecciona automáticamente el mejor servicio de mosaicos en función de la disponibilidad del nivel de zoom)
   * Vista previa de las miniaturas al pasar el ratón por encima de los marcadores del mapa
 
-**Corrección de errores*** Se ha mejorado la compatibilidad para instalar Chloros en ordenadores que no estén en inglés
+**Corrección de errores**
+
+* Se ha mejorado la compatibilidad para instalar Chloros en ordenadores que no estén en inglés
 
 </details>
 
@@ -288,13 +297,21 @@ Chloros comprueba si hay actualizaciones, avisa cuando hay una nueva versión di
 
 **Fecha de lanzamiento: 20 de diciembre de 2025**
 
-**Nuevas funciones*** Lanzamiento inicial
+**Nuevas funciones**
 
-**Mejoras*** Lanzamiento inicial
+* Lanzamiento inicial
 
-**Corrección de errores*** Lanzamiento inicial
+**Mejoras**
 
-**Problemas conocidos*** Lanzamiento inicial
+* Lanzamiento inicial
+
+**Corrección de errores**
+
+* Lanzamiento inicial
+
+**Problemas conocidos**
+
+* Lanzamiento inicial
 
 </details>
 

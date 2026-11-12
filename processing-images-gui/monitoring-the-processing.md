@@ -28,7 +28,11 @@ Para usuarios con licencia de Chloros+:
 1.**Detección**: búsqueda de objetivos de calibración
 2. **Análisis**: examen de las imágenes y preparación del proceso
 3. **Calibración**: aplicación de correcciones de viñeteado y reflectancia
-4. **Exportación**: guardado de los archivos procesados**Funciones interactivas:*** **Pasa el cursor por encima** de la barra de progreso para ver el panel ampliado de 4 etapas
+4. **Exportación**: guardado de los archivos procesados
+
+**Funciones interactivas:**
+
+* **Pasa el cursor por encima** de la barra de progreso para ver el panel ampliado de 4 etapas
 * **Haz clic** en la barra de progreso para congelar o fijar el panel ampliado
 * **Haz clic de nuevo** para desbloquearlo; se ocultará automáticamente al alejar el ratón
 * Cada etapa muestra su progreso individual (0-100 %)
@@ -92,7 +96,9 @@ Para usuarios con licencia de Chloros+:
 
 ### Etapa 3: Calibración
 
-**Qué ocurre:*** **Debayering**: Conversión del patrón RAW de Bayer a 3 canales (se omite en los módulos monocromáticos LATTICE, con una nota)
+**Qué ocurre:**
+
+* **Debayering**: Conversión del patrón RAW de Bayer a 3 canales (se omite en los módulos monocromáticos LATTICE, con una nota)
 * **Corrección de viñeteado**: eliminación del oscurecimiento en los bordes del objetivo
 * **Calibración de reflectancia**: normalización con valores objetivo y/o downwelling de DAQ
 * **Cálculo de índices**: cálculo de índices multiespectrales
@@ -104,7 +110,9 @@ Para usuarios con licencia de Chloros+:
 * Imagen actual en proceso
 * Imágenes completadas / Total de imágenes
 
-**Comportamiento del procesamiento:*** **Modo libre**: procesa una imagen cada vez de forma secuencial
+**Comportamiento del procesamiento:**
+
+* **Modo libre**: procesa una imagen cada vez de forma secuencial
 * **Modo Chloros+**: ejecuta un grupo de trabajadores adaptado al hardware: de 1 a 4 trabajadores simultáneos en sistemas con GPU (según la VRAM); un trabajador por núcleo físico (menos uno) en sistemas solo con CPU. Véase [Adaptación dinámica de cálculo](../processing-architecture/dynamic-compute-adaptation.md)
 * **Aceleración por GPU**: Acelera significativamente esta etapa**A tener en cuenta:**
 
