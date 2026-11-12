@@ -57,7 +57,9 @@ El aumento «efectivo» tiene en cuenta el tamaño del bloque GSD: con un tamañ
 | **←**                           | Pantalla completa | Imagen anterior                      |
 | **Ctrl + R**                    | Pantalla completa | Restablecer el índice/el entorno de pruebas de LUT         |
 | **Ctrl + `+`**/**Ctrl + `=`** | Cuadrícula        | Miniaturas más grandes (4 px por pulsación)  |
-| **Ctrl + `−`**                  | Cuadrícula        | Miniaturas más pequeñas (4 px por pulsación) |***
+| **Ctrl + `−`**                  | Cuadrícula        | Miniaturas más pequeñas (4 px por pulsación) |
+
+***
 
 ## Valores del cursor
 
@@ -100,7 +102,9 @@ El visor, el entorno de pruebas de índice/LUT y la exportación de índices res
 Dos consecuencias que conviene conocer:
 
 * Un **porcentaje de 32 bits**TIFF almacena DN/65535 como un número flotante, y un**8 bits** PNG/JPG almacena DN × 255/65535; el visor convierte ambos valores de nuevo antes de mostrar el porcentaje.
-* Hay un caso que no se puede recuperar: una **exportación TIFF de 8 bits de una captura con origen de 8 bits** se recorta al rango 0–255 en lugar de reescalarse, y deliberadamente no lleva ninguna etiqueta de escala. Para esos archivos, el panel muestra únicamente el DN, sin columna de porcentajes. Esta es la respuesta sincera, no se trata de un error.***
+* Hay un caso que no se puede recuperar: una **exportación TIFF de 8 bits de una captura con origen de 8 bits** se recorta al rango 0–255 en lugar de reescalarse, y deliberadamente no lleva ninguna etiqueta de escala. Para esos archivos, el panel muestra únicamente el DN, sin columna de porcentajes. Esta es la respuesta sincera, no se trata de un error.
+
+***
 
 ## El histograma de la capa
 
@@ -126,7 +130,9 @@ Hay tres botones situados encima del histograma:
 | **ÍNDICE**| Activado      | Solo aparece mientras hay un índice activo. Cambia el histograma de las bandas de origen a la**distribución de valores del índice**, con los dos umbrales de recorte representados como líneas discontinuas naranjas y el valor del índice del cursor como una línea blanca                                                          |
 | **RGB**| Desactivado     | Cambia de la curva combinada a las curvas por canal. En un sensor monocromo, este botón muestra**MONO** y está desactivado, ya que solo hay un canal que mostrar                                                                                                                                  |
 
-El histograma se calcula a partir de los **bloques que se ven**, no en los píxeles originales que hay detrás de ellos: al cambiar el tamaño de bloque GSD, la distribución se vuelve a calcular, de modo que el histograma, el marcador del cursor y la imagen mostrada siempre coinciden.***
+El histograma se calcula a partir de los **bloques que se ven**, no en los píxeles originales que hay detrás de ellos: al cambiar el tamaño de bloque GSD, la distribución se vuelve a calcular, de modo que el histograma, el marcador del cursor y la imagen mostrada siempre coinciden.
+
+***
 
 ## Tamaño de bloque GSD
 
@@ -185,7 +191,9 @@ Aplica índices multiespectrales y tablas de consulta (LUT) de color desde la ba
 
 3. Elige el filtro de tu cámara y una fórmula de índice; a continuación, arrastra los círculos de los canales a las ranuras de la fórmula
 4. Añade una LUT y selecciona un degradado, umbrales y un modo de recorte
-5. Lee los valores en la posición del cursor y guarda el resultado con **Exportar/Guardar imagen(es)**Consulta [Entorno de pruebas de índices/LUT](index-lut-sandbox.md) para ver el tutorial completo.***
+5. Lee los valores en la posición del cursor y guarda el resultado con **Exportar/Guardar imagen(es)**Consulta [Entorno de pruebas de índices/LUT](index-lut-sandbox.md) para ver el tutorial completo.
+
+***
 
 ## Solución de problemas
 

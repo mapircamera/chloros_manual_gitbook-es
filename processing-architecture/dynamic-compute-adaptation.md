@@ -136,7 +136,9 @@ Hay dos reglas que rigen estas cifras:
 * A un hilo que sea el **único** activo se le concede la asignación máxima de su perfil.
 * Cuando hay más de una tarea *pesada* de la GPU activa, la asignación base de cada tarea pesada se divide entre ellas (sin bajar nunca del mínimo configurado).
 
-El valor que se utiliza realmente en tiempo de ejecución es el **más bajo** entre la asignación del perfil de la plataforma y la recomendación en tiempo real del monitor de memoria de la GPU, por lo que una tarjeta ocupada siempre prevalece sobre un perfil optimista.***
+El valor que se utiliza realmente en tiempo de ejecución es el **más bajo** entre la asignación del perfil de la plataforma y la recomendación en tiempo real del monitor de memoria de la GPU, por lo que una tarjeta ocupada siempre prevalece sobre un perfil optimista.
+
+***
 
 ## Procesamiento sensible a las texturas
 

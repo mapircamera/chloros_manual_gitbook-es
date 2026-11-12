@@ -10,7 +10,9 @@ Utiliza el control deslizante de zoom situado en la esquina superior derecha par
 * **Ctrl + `+`**/**Ctrl + `=`**y**Ctrl + `−`** aumentan el tamaño en 4 píxeles por pulsación. El rango de ajuste del teclado se detiene en 64 píxeles en el extremo más pequeño y, en el extremo más grande, en el tamaño que permita encajar exactamente dos miniaturas por fila en la ventana actual.
 * El tamaño que elijas se guarda con el proyecto (`UI → Grid thumbnail size` en `project.json`, por defecto `160`), por lo que al volver a abrir el proyecto se restablecerá.
 
-<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>La *resolución* de las miniaturas es un ajuste independiente del *tamaño* de las mismas: consulta **Visualización → Resolución de miniaturas de imagen** en [Configuración del proyecto](../project-settings/project-settings.md) (por defecto, 512 px en el lado más largo). El tamaño es la dimensión con la que se dibuja el mosaico; la resolución es la cantidad de detalle que se obtiene para rellenarlo.***
+<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>La *resolución* de las miniaturas es un ajuste independiente del *tamaño* de las mismas: consulta **Visualización → Resolución de miniaturas de imagen** en [Configuración del proyecto](../project-settings/project-settings.md) (por defecto, 512 px en el lado más largo). El tamaño es la dimensión con la que se dibuja el mosaico; la resolución es la cantidad de detalle que se obtiene para rellenarlo.
+
+***
 
 ## La barra de herramientas de la cuadrícula
 

@@ -153,7 +153,9 @@ Esta sección aparece **solo** cuando al menos una imagen del proyecto contiene 
 
 * **Aplicar alineación de matriz** (por defecto: activada): deforma cada producto procesado (desbayering / vista previa / radiancia / reflectancia / índice) para adaptarlo a la geometría de referencia compartida de la matriz. Desactivada = exportación en la geometría nativa del sensor.
 * **Recortar a la superposición común** (por defecto: activado): recorta las exportaciones alineadas a la región que comparten todos los módulos, de modo que cada banda tenga la misma huella. Si se desactiva, se mantiene el lienzo completo del sensor (relleno negro fuera de la fuente).
-* **Remuestreo**:**Bilineal (suave, predeterminado)**,**Más cercano (conserva los valores exactos)**—sin mezcla entre píxeles, para un análisis radiométrico estricto— o**Cúbico (más nítido)**.***
+* **Remuestreo**:**Bilineal (suave, predeterminado)**,**Más cercano (conserva los valores exactos)**—sin mezcla entre píxeles, para un análisis radiométrico estricto— o**Cúbico (más nítido)**.
+
+***
 
 ## Guardar y cargar ajustes
 

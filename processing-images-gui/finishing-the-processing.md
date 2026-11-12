@@ -112,7 +112,9 @@ La reflectancia se almacena como un valor DN entero, y **el valor DN que corresp
 | LATTICE (M3C/M3M) | **32768** (margen de hasta ρ 2,0) | La etiqueta XMP `Chloros:PixelScale=32768` aparece en el archivo |
 | Survey3          | **65535** (recortado en ρ 1,0)     | No hay etiqueta `Chloros:PixelScale` — esa ausencia es la señal (los productos de Survey3 sí llevan otras etiquetas de procesamiento `Chloros:*`) |
 
-**Lee la etiqueta `Chloros:PixelScale` y divide por ese valor** en lugar de asumir un valor genérico de 65535; dividir la reflectancia de LATTICE por 65535 reduce a la mitad todos los valores sin avisar. Un archivo de reflectancia anterior a la versión 1.3.0 escrito en 8 bits se recortó, no se reescaló, y no tiene etiqueta de escala: vuelve a exportarlo en 16 bits o 32 bits en lugar de dividirlo. Consulta [Formatos de imagen de salida](../output-image-formats.md) para obtener más información.***
+**Lee la etiqueta `Chloros:PixelScale` y divide por ese valor** en lugar de asumir un valor genérico de 65535; dividir la reflectancia de LATTICE por 65535 reduce a la mitad todos los valores sin avisar. Un archivo de reflectancia anterior a la versión 1.3.0 escrito en 8 bits se recortó, no se reescaló, y no tiene etiqueta de escala: vuelve a exportarlo en 16 bits o 32 bits en lugar de dividirlo. Consulta [Formatos de imagen de salida](../output-image-formats.md) para obtener más información.
+
+***
 
 ## Metadatos que se incluyen en las exportaciones
 
@@ -167,7 +169,9 @@ Para mantener un registro del procesamiento o para enviarlo al servicio de asist
 3. Inclúyelo en la documentación del proyecto
 4. Envíalo al servicio de asistencia de MAPIR si surgen problemas.
 
-Para enviar un problema directamente a MAPIR, utiliza el icono de error (**Informar de un error**) situado en la parte superior de la pestaña «Registro de depuración»; consulta [Cómo informar de un error desde la pestaña «Registro de depuración»](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).***
+Para enviar un problema directamente a MAPIR, utiliza el icono de error (**Informar de un error**) situado en la parte superior de la pestaña «Registro de depuración»; consulta [Cómo informar de un error desde la pestaña «Registro de depuración»](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).
+
+***
 
 ## Problemas comunes en los resultados y sus soluciones
 

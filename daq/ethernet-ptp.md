@@ -102,4 +102,4 @@ Detalles para usuarios que requieren una alineación estricta:
 | Dominio de difusión | El host y el sensor se encuentran en el mismo segmento L2; mDNS no se enruta |
 | Cortafuegos | Windows: la regla **Chloros Backend (UDP-In)** del instalador permite el paso del flujo de DAQ-E (UDP 5002), mDNS (5353) y PTP (319/320); un cortafuegos de terceros debe tener la misma configuración. Linux: el `.deb` abre estos puertos en `ufw` / `firewalld` solo si el cortafuegos estaba activo en el momento de la instalación; permítelos tú mismo si lo activas más tarde |
 | Host con varias tarjetas de red | El descubrimiento explora mDNS con un recurso de ARP; `--eth-host <ip-or-hostname>` omite el descubrimiento y se conecta directamente |
-| Nueva búsqueda desde la interfaz gráfica | El descubrimiento solo se ejecuta mientras el cuadro de diálogo de conexión está abierto; utiliza «Actualizar» |</version>
+| Nueva búsqueda desde la interfaz gráfica | El descubrimiento solo se ejecuta mientras el cuadro de diálogo de conexión está abierto; utiliza «Actualizar» |

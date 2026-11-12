@@ -71,7 +71,9 @@ Para consultar la referencia completa de fórmulas —las tres listas de preajus
 
 ### Con la opción «Índice» marcada pero sin LUT
 
-La imagen se representa en **escala de grises**, estirada entre los dos valores umbral. Esto es intencionado: la imagen de índice es data escalar, y la escala de grises es su representación fiel. Añade una LUT cuando desees color.***
+La imagen se representa en **escala de grises**, estirada entre los dos valores umbral. Esto es intencionado: la imagen de índice es data escalar, y la escala de grises es su representación fiel. Añade una LUT cuando desees color.
+
+***
 
 ## Trabajar con LUT (tablas de consulta)
 
@@ -135,7 +137,9 @@ Ejemplo de ventanas de NDVI:
 | Solo vegetación sana                    | 0,5  | 0,9 |
 | Resaltar el estrés                        | 0,2  | 0,5 |
 
-Al reducir la ventana se aumenta el contraste dentro de la zona de interés y se deja todo lo demás fuera del rango, donde el **modo de recorte** decide qué ocurre con ello.***
+Al reducir la ventana se aumenta el contraste dentro de la zona de interés y se deja todo lo demás fuera del rango, donde el **modo de recorte** decide qué ocurre con ello.
+
+***
 
 ## Modos de recorte
 

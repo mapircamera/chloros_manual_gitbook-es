@@ -15,7 +15,9 @@ Images In → [Thread 1: Detection] → [Thread 2: Calibration] → [Thread 3: P
 
 Cada imagen recorre los cuatro subprocesos en orden. Con el procesamiento multihilo de Chloros+, varias imágenes ocupan diferentes subprocesos simultáneamente: mientras el subproceso 3 procesa una imagen, el subproceso 1 puede estar detectando la siguiente, el subproceso 2 calibrando otra y el subproceso 4 guardando una ya terminada en el disco.
 
-El progreso se notifica por hilo y se transmite a través de Server-Sent Events (el backend los publica en `/api/events`). En la visualización de progreso en tiempo real de la CLI, las cuatro etapas se etiquetan como **Detección, Análisis, Procesamiento, Exportación**.***
+El progreso se notifica por hilo y se transmite a través de Server-Sent Events (el backend los publica en `/api/events`). En la visualización de progreso en tiempo real de la CLI, las cuatro etapas se etiquetan como **Detección, Análisis, Procesamiento, Exportación**.
+
+***
 
 ## Detalles de los subprocesos
 

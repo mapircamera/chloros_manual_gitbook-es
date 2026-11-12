@@ -17,7 +17,9 @@ MAPIR miden la luz ambiental en forma de espectros calibrados radiométricamente
 | --- | --- | --- |
 | **DAQ-U** | USB (serie) | escaneo de puerto serie |
 | **DAQ-M** | Bluetooth de baja energía | escaneo BLE por nombre |
-| **DAQ-E** | Ethernet (IPv4, alimentación PoE) | mDNS `_daq-e._tcp` (nombre de host `daq-e-<id>.local`) |**DAQ-E-S (novedad en la versión 1.3.0).** Un DAQ-E con un difusor permanente y un sensor de inclinación. Chloros lo incluye como `DAQ-E-S` y funciona exactamente igual que un DAQ-E, salvo que no admite corrección de tapa y cada lectura incluye la inclinación, el balanceo y el cabeceo de la unidad. Véase [DAQ-E-S: difusor fijo e inclinación](caps-and-range.md#daq-e-s-fixed-diffuser-and-tilt).
+| **DAQ-E** | Ethernet (IPv4, alimentación PoE) | mDNS `_daq-e._tcp` (nombre de host `daq-e-<id>.local`) |
+
+**DAQ-E-S (novedad en la versión 1.3.0).** Un DAQ-E con un difusor permanente y un sensor de inclinación. Chloros lo incluye como `DAQ-E-S` y funciona exactamente igual que un DAQ-E, salvo que no admite corrección de tapa y cada lectura incluye la inclinación, el balanceo y el cabeceo de la unidad. Véase [DAQ-E-S: difusor fijo e inclinación](caps-and-range.md#daq-e-s-fixed-diffuser-and-tilt).
 
 Los tres utilizan el mismo protocolo de comunicación y proporcionan datos idénticos:
 

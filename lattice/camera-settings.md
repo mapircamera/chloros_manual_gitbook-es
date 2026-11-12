@@ -198,7 +198,9 @@ Todo lo que aparece en esta sección **solo afecta a la visualización**—cambi
 | **Saturación** | 0–200 (100 = neutro) | 100 | Solo RGB | Saturación HSV en la vista previa en directo. |
 | **Contraste** | 0–200 (100 = neutro) | 100 | Solo RGB | Contraste lineal en torno al gris medio en la vista previa en directo. |
 | **Voltear H / Voltear V** | Casillas de selección | Desactivado | Todo | Voltear la vista previa horizontal o verticalmente. |
-| **Rotación**| 0° / 90° / 180° / 270° | 0° | Todo | Girar la vista previa. La orientación se aplica al final de la cadena de vista previa del backend.**Capturas guardadas (1.3.0):**los productos de vista previa, radiancia, reflectancia e índice de una cámara independiente se voltean mediante Espejo/Rotación, mientras que**los archivos «Raw» y «Debayered» conservan la orientación nativa de la cámara**; cada archivo de captura registra el ajuste en su XMP, por lo que al procesar un archivo «Raw» posteriormente se aplica de la misma forma.**Los archivos miembros de una matriz conservan su orientación nativa** (el ajuste se registra, pero no se aplica), y las vistas compuestas de la matriz lo ignoran. |**Semántica de los perfiles de color** (cámaras RGB):
+| **Rotación**| 0° / 90° / 180° / 270° | 0° | Todo | Girar la vista previa. La orientación se aplica al final de la cadena de vista previa del backend.**Capturas guardadas (1.3.0):**los productos de vista previa, radiancia, reflectancia e índice de una cámara independiente se voltean mediante Espejo/Rotación, mientras que**los archivos «Raw» y «Debayered» conservan la orientación nativa de la cámara**; cada archivo de captura registra el ajuste en su XMP, por lo que al procesar un archivo «Raw» posteriormente se aplica de la misma forma.**Los archivos miembros de una matriz conservan su orientación nativa** (el ajuste se registra, pero no se aplica), y las vistas compuestas de la matriz lo ignoran. |
+
+**Semántica de los perfiles de color** (cámaras RGB):
 
 * **Raw**: omite por completo la cadena de procesamiento.
 * **Lineal**: señal oscura + campo plano + balance de blancos; sin matriz de color ni gamma.

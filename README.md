@@ -64,7 +64,9 @@ Guía completa: [Cómo utilizar Chloros con asistentes de IA](ai-assistants.md).
 * **Semántica de fallo transparente.** Una ejecución de `chloros-cli process` que solicitara productos pero no generara ninguno ahora falla de forma evidente y termina con un código de salida distinto de cero; las ejecuciones correctas informan del número de productos de imagen generados.
 * **Nuevo diseño de salida.** Los productos se guardan en carpetas `<project>/<camera>/<format>/<Product>_Images/` y conservan el nombre del archivo de origen; es la carpeta, y no un sufijo del nombre de archivo, la que identifica el producto. Véase [Formatos de imagen de salida](output-image-formats.md).
 * **Más entradas, planes e idiomas.** Compatibilidad con entradas `.dng`; los 38 idiomas de la interfaz están completamente disponibles; límites de hardware por plan con uso gratuito (sin necesidad de iniciar sesión) de hasta 4 cámaras y 2 sensores de luz.
-* **Fiabilidad.** La opción «Detener procesamiento» finaliza correctamente con un resumen preciso de la ejecución; los proyectos con varias cámaras exportan todas las cámaras; y las actualizaciones del instalador ya no te desconectan de la sesión.***
+* **Fiabilidad.** La opción «Detener procesamiento» finaliza correctamente con un resumen preciso de la ejecución; los proyectos con varias cámaras exportan todas las cámaras; y las actualizaciones del instalador ya no te desconectan de la sesión.
+
+***
 
 Chloros está disponible en tres entornos de aplicación:
 

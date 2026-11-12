@@ -78,7 +78,9 @@ Cada imagen con datos GPS recibe un marcador en sus coordenadas.
 | Proveedor        | Notas                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Google Maps** | Amplia cobertura mundial; admite los cuatro tipos de mosaicos                                                                                                            |
-| **Esri ArcGIS**| Imágenes aéreas a menudo de mayor resolución en determinadas regiones. El tipo de mosaico**Terrain** no está disponible para Esri y su botón aparece desactivado mientras Esri está seleccionado |***
+| **Esri ArcGIS**| Imágenes aéreas a menudo de mayor resolución en determinadas regiones. El tipo de mosaico**Terrain** no está disponible para Esri y su botón aparece desactivado mientras Esri está seleccionado |
+
+***
 
 ## Tipos de mosaicos de mapa
 
@@ -93,7 +95,9 @@ Elige el tipo de capa de mapa con los botones (de izquierda a derecha):
 | **Satélite**        | Imágenes detalladas de satélite, sin etiquetas — la opción que requiere mayor ancho de banda |
 | **Híbrido** (predeterminado) | Imágenes de satélite con carreteras y etiquetas superpuestas                |
 
-La pestaña «Mapa» se abre en modo **Híbrido**. La opción elegida se aplica al cambiar de proveedor, siempre que este lo admita.***
+La pestaña «Mapa» se abre en modo **Híbrido**. La opción elegida se aplica al cambiar de proveedor, siempre que este lo admita.
+
+***
 
 ## Navegación por el mapa
 
@@ -141,7 +145,9 @@ La pestaña «Mapa» se abre en modo **Híbrido**. La opción elegida se aplica 
 
 ### El mapa está en blanco o los mosaicos dejan de cargarse
 
-Los proveedores de mosaicos son servicios en línea. Si dejan de cargarse los mosaicos, comprueba la conexión de red del dispositivo y, a continuación, prueba a cambiar de proveedor. Si tenías el zoom muy ampliado, pulsa el botón de reinicio **×** para volver a un nivel de zoom normal y deja que el mapa vuelva a solicitar los mosaicos.***
+Los proveedores de mosaicos son servicios en línea. Si dejan de cargarse los mosaicos, comprueba la conexión de red del dispositivo y, a continuación, prueba a cambiar de proveedor. Si tenías el zoom muy ampliado, pulsa el botón de reinicio **×** para volver a un nivel de zoom normal y deja que el mapa vuelva a solicitar los mosaicos.
+
+***
 
 ## Páginas relacionadas
 

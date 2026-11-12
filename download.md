@@ -195,7 +195,9 @@ Accede a funciones avanzadas con una suscripción a Chloros+:
 * **🐻 Método avanzado de eliminación de mosaico sensible a las texturas**: un método de eliminación de mosaico de alta calidad sensible a los bordes, combinado con un modelo de eliminación de ruido basado en IA/ML que elimina casi todo el ruido propio de la eliminación de mosaico.
 * 🧮 **Fórmulas personalizadas**: crea índices multiespectrales personalizados
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planes y precios de Chloros+</a></p>***
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planes y precios de Chloros+</a></p>
+
+***
 
 ## Ayuda para la instalación
 
@@ -236,7 +238,9 @@ Accede a funciones avanzadas con una suscripción a Chloros+:
 * 📧 **Correo electrónico**: info@mapir.camera
 * 🌐 **Página web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Documentación**: [Primeros pasos](./)
-* ❓ **Preguntas frecuentes**: [Preguntas frecuentes](faq.md)***
+* ❓ **Preguntas frecuentes**: [Preguntas frecuentes](faq.md)
+
+***
 
 ## Actualizaciones de software
 

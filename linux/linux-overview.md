@@ -10,7 +10,8 @@ Chloros 1.3.0 ofrece compatibilidad nativa con Linux para la **CLI**y el**Python
 
 ## Matriz de compatibilidad con plataformas
 
-| Característica | Windows (GUI) | Windows (CLI/SDK) | Linux amd64 (CLI/ --- | --- | --- | --- |
+| Característica | Windows (GUI) | Windows (CLI/SDK) | Linux amd64 (CLI/SDK) | Linux arm64 / Jetson (CLI/SDK) |
+| --- | --- | --- | --- | --- |
 | **Interfaz gráfica de escritorio** | Sí | N/A | No | No |
 | **Interfaz de línea de comandos (CLI)** (`chloros-cli`) | Sí | Sí | Sí | Sí |
 | **SDK de Python** (`chloros-sdk`) | Sí | Sí | Sí | Sí |
@@ -22,7 +23,9 @@ Chloros 1.3.0 ofrece compatibilidad nativa con Linux para la **CLI**y el**Python
 | **Desentrelazado con reconocimiento de texturas** (requiere una GPU con CUDA) | Sí (Chloros+) | Sí (Chloros+) | Sí (Chloros+) | Sí (Chloros+) |
 | **Adaptación dinámica de computación** | Sí | Sí | Sí | Sí |
 | **Backend como servicio del sistema** (`chloros-backend@<user>.service`) | No | No | Sí (opcional) | Sí (opcional) |
-| **Actualizador in situ** (`chloros-cli update`) | No (ejecutar el instalador) | No (ejecutar el instalador) | Sí | Sí |***
+| **Actualizador in situ** (`chloros-cli update`) | No (ejecutar el instalador) | No (ejecutar el instalador) | Sí | Sí |
+
+***
 
 ## Arquitecturas compatibles
 
@@ -35,7 +38,9 @@ Chloros 1.3.0 ofrece compatibilidad nativa con Linux para la **CLI**y el**Python
 
 * **Ubuntu 22.04 LTS o posterior** (amd64)
 * **Debian 12 o posterior** (amd64)
-* **NVIDIA JetPack 6** (arm64 — plataformas Jetson Orin)***
+* **NVIDIA JetPack 6** (arm64 — plataformas Jetson Orin)
+
+***
 
 ## Qué obtienen los usuarios de Linux
 
@@ -54,7 +59,9 @@ Chloros 1.3.0 ofrece compatibilidad nativa con Linux para la **CLI**y el**Python
 
 * **Interfaz gráfica de usuario (GUI) de escritorio**: no hay interfaz gráfica; toda la interacción se realiza a través de la CLI o el Python SDK
 * **Visor de imágenes**: no hay visor de imágenes interactivo, vista en cuadrícula ni marcadores de mapa
-* **Gestión visual de proyectos**: los proyectos se crean y gestionan mediante comandos de lCLI y llamadas al SDK (el propio hardware —cámaras, sensores, captura— sigue siendo totalmente controlable desde la terminal)***
+* **Gestión visual de proyectos**: los proyectos se crean y gestionan mediante comandos de lCLI y llamadas al SDK (el propio hardware —cámaras, sensores, captura— sigue siendo totalmente controlable desde la terminal)
+
+***
 
 ## Requisitos de licencia
 

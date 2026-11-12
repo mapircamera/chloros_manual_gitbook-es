@@ -34,7 +34,9 @@ de la barra lateral izquierda
 * **Opciones**: `Default (512 px)`, `1024 px`, `2048 px`, `Full resolution`
 * **Predeterminado**: Predeterminado (512 píxeles)
 * **Descripción**: Resolución (en el lado más largo, en píxeles) a la que se representan las miniaturas de la cuadrícula de imágenes. Los valores más altos se ven más nítidos al ampliar la imagen, pero tardan más en cargarse y consumen más memoria. La resolución completa corresponde al tamaño original de la imagen.
-* **Nota**: Solo para visualización: esto nunca afecta al procesamiento ni a los archivos exportados.***
+* **Nota**: Solo para visualización: esto nunca afecta al procesamiento ni a los archivos exportados.
+
+***
 
 ## Detección de objetivos
 
@@ -188,7 +190,9 @@ Las lecturas de **medición** por unidad se buscan mediante el número de serie 
   * Una cámara + un pin: el pin 2 se establece automáticamente en «No utilizar»
   * Una cámara + dos pines: el pin 2 se establece automáticamente en «No utilizar»
   * Varias cámaras: se requiere selección manual
-* **Nota**: No se puede asignar la misma cámara simultáneamente al pin 1 y al pin 2.***
+* **Nota**: No se puede asignar la misma cámara simultáneamente al pin 1 y al pin 2.
+
+***
 
 ## Sensor de luz DAQ
 
@@ -209,7 +213,9 @@ Cada fila muestra el archivo, el modelo de sensor y la corrección de la tapa di
 * **Descripción**: `Auto` utiliza el cap registrado en cada archivo (se asume el cap «Sunshine» cuando no se ha registrado nada, pero los modelos DAQ-U, DAQ-M y DAQ-E se suministran sin cap y Chloros no puede detectar cuál está instalado, por lo que el procesamiento muestra una advertencia sobre un límite supuesto: elige el límite que se instaló). Seleccionar un límite específico anula **todos** los archivos de radiación descendente del proyecto, excepto los de un DAQ-E-S, cuyo difusor forma parte de su calibración; un proyecto que contenga únicamente DAQ-E-S no muestra ningún menú desplegable: las grabaciones sin procesar se corrigen con él, y las grabaciones que ya llevan una tapa se re-referencian (se deshace la corrección grabada y se aplica la seleccionada).
 * **Importante**: La tapa seleccionada debe coincidir con la tapa que se instaló físicamente durante la grabación. Ni el sensor ni el software pueden detectar la tapa física; un ID de tapa incorrecto corrige erróneamente los espectros.
 
-Se ha optado deliberadamente por **un único** control para todo el proyecto en lugar de menús desplegables por archivo: la configuración se aplica a todas las fuentes descendentes del proyecto.***
+Se ha optado deliberadamente por **un único** control para todo el proyecto en lugar de menús desplegables por archivo: la configuración se aplica a todas las fuentes descendentes del proyecto.
+
+***
 
 ## Alineación de matrices
 

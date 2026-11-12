@@ -180,7 +180,9 @@ Una vez iniciado, todo el flujo se ejecuta automáticamente:
 * Una ejecución detenida informa con precisión de lo que ha completado (consulta las líneas `[RUN-SUMMARY]` en el registro)
 * Una nueva ejecución inicia el proceso desde el principio
 
-**Consejo de planificación:** Para proyectos muy grandes, plantéate procesar por lotes o utilizar la CLI para un mayor control.***
+**Consejo de planificación:** Para proyectos muy grandes, plantéate procesar por lotes o utilizar la CLI para un mayor control.
+
+***
 
 ## Supervisión del procesamiento
 
